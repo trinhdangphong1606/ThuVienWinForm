@@ -1,0 +1,9 @@
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\bin\Debug\DAL.dll
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\bin\Debug\DAL.pdb
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\bin\Debug\DTO.dll
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\bin\Debug\DTO.pdb
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\obj\Debug\DAL.dll
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DAL\obj\Debug\DAL.pdb
