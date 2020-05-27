@@ -35,7 +35,7 @@ namespace GUI
             LvDanhMucDS.Items.Clear();
             foreach (DanhMuc damuc in dsdanhmuc)
             {
-                ListViewItem lvi = new ListViewItem(damuc.TenDanhMuc + "");
+                ListViewItem lvi = new ListViewItem(damuc.TenDanhMuc+"");
                 lvi.SubItems.Add(damuc.NoiDungDanhMuc);
                 LvDanhMucDS.Items.Add(lvi);
             }

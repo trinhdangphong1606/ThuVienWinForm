@@ -46,7 +46,7 @@
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="NguoiMuonSachAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanTriVienAcces.cs" />
+    <Compile Include="QuanTriVienAccess.cs" />
     <Compile Include="SachAccess.cs" />
     <Compile Include="SachAccessAll.cs" />
   </ItemGroup>

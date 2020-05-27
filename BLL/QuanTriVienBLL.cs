@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
-using DAL.DAO;
+
 namespace BLL
 {
-    public class SachBLL
+    public class QuanTriVienBLL
     {
-        SachAccessAll sac = new SachAccessAll();
-        public List<Sach> LayAllToanBoSach()
+        QuanTriVienAccess qtvien = new QuanTriVienAccess();
+        public List<QuanTriVien> LayToanBoQuanTriVien()
         {
             
-            return sac.LayAllToanBoSach();
+            return qtvien.LayToanBoQuanTriVien();
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="FrmDanhMucQL.Designer.cs">
       <DependentUpon>FrmDanhMucQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDanhMucThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDanhMucThemMoi.Designer.cs">
+      <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNguoiMuonSachQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDanhMucQL.resx">
       <DependentUpon>FrmDanhMucQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDanhMucThemMoi.resx">
+      <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNguoiMuonSachQL.resx">
       <DependentUpon>FrmNguoiMuonSachQL.cs</DependentUpon>

@@ -22,3 +22,4 @@ C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.F
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.NguoiMuonSachQL.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmDanhMucThemMoi.resources

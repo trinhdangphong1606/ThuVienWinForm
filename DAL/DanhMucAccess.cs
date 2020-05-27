@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
-using DAL.DAO;
 using DTO;
 using System.IO;
 

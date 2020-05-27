@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DanhMucBLL.cs" />
+    <Compile Include="NguoiMuonSachBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTriVienBLL.cs" />
     <Compile Include="SachBLL.cs" />
   </ItemGroup>
   <ItemGroup>

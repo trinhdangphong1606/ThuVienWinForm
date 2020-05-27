@@ -32,7 +32,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnNguoiMuonCapNhat = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -46,7 +46,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvNguoiMuonSachDS = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.GrBChiTiet.Controls.Add(this.textBox5);
             this.GrBChiTiet.Controls.Add(this.label6);
             this.GrBChiTiet.Controls.Add(this.button3);
-            this.GrBChiTiet.Controls.Add(this.button2);
+            this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonCapNhat);
             this.GrBChiTiet.Controls.Add(this.textBox6);
             this.GrBChiTiet.Controls.Add(this.label7);
             this.GrBChiTiet.Controls.Add(this.textBox4);
@@ -103,18 +104,19 @@
             this.button3.Text = "Thêm Mới Người Mượn";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnNguoiMuonCapNhat
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnNguoiMuonCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(15, 129);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(319, 43);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Cập Nhật Thông Tin Người Mượn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnNguoiMuonCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(15, 129);
+            this.BtnNguoiMuonCapNhat.Name = "BtnNguoiMuonCapNhat";
+            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(319, 43);
+            this.BtnNguoiMuonCapNhat.TabIndex = 24;
+            this.BtnNguoiMuonCapNhat.Text = "Cập Nhật Thông Tin Người Mượn";
+            this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
+            this.BtnNguoiMuonCapNhat.Click += new System.EventHandler(this.BtnNguoiMuonCapNhat_Click);
             // 
             // textBox6
             // 
@@ -226,31 +228,32 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Quản Lý Người Mượn Sách";
             // 
-            // listView1
+            // lvNguoiMuonSachDS
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvNguoiMuonSachDS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 214);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(671, 148);
-            this.listView1.TabIndex = 16;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader5,
+            this.columnHeader3});
+            this.lvNguoiMuonSachDS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lvNguoiMuonSachDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvNguoiMuonSachDS.FullRowSelect = true;
+            this.lvNguoiMuonSachDS.GridLines = true;
+            this.lvNguoiMuonSachDS.HideSelection = false;
+            this.lvNguoiMuonSachDS.Location = new System.Drawing.Point(0, 214);
+            this.lvNguoiMuonSachDS.Name = "lvNguoiMuonSachDS";
+            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(671, 148);
+            this.lvNguoiMuonSachDS.TabIndex = 16;
+            this.lvNguoiMuonSachDS.UseCompatibleStateImageBehavior = false;
+            this.lvNguoiMuonSachDS.View = System.Windows.Forms.View.Details;
             // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 362);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvNguoiMuonSachDS);
             this.Controls.Add(this.GrBChiTiet);
             this.Controls.Add(this.label1);
             this.Name = "FrmNguoiMuonSachQL";
@@ -269,7 +272,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnNguoiMuonCapNhat;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
@@ -283,6 +286,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvNguoiMuonSachDS;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
