@@ -36,7 +36,9 @@ namespace DAL
                 dsDanhMuc.Add(dm);
             }
             reader.Close();
+            CloseConnection();
             return dsDanhMuc;
+
         }
     }
 }

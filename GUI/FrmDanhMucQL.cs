@@ -52,6 +52,13 @@ namespace GUI
                 richNoiDungDanhMuc.Text = noidungdanhmuccc;
             }    
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmDanhMucThemMoi frm1 = new FrmDanhMucThemMoi();
+            //frm1.MdiParent = this;
+            frm1.Show();
+        }
     }
 }
 

@@ -216,7 +216,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Địa Chỉ";
-            this.columnHeader5.Width = 240;
+            this.columnHeader5.Width = 92;
             // 
             // label1
             // 
@@ -247,6 +247,10 @@
             this.lvNguoiMuonSachDS.TabIndex = 16;
             this.lvNguoiMuonSachDS.UseCompatibleStateImageBehavior = false;
             this.lvNguoiMuonSachDS.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Width = 83;
             // 
             // FrmNguoiMuonSachQL
             // 

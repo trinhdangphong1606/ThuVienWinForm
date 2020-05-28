@@ -41,7 +41,7 @@ namespace DAL
                 dsNguoiMuonSach.Add(nms);
             }
             reader.Close();
-
+            CloseConnection();
             return dsNguoiMuonSach;
         }
     }

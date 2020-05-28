@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
-using DAL;
 
 namespace GUI
 {

@@ -22,24 +22,29 @@ namespace GUI
 
         private void BtnHienThiSach_Click(object sender, EventArgs e)
         {
-            SachBLL sacbll = new SachBLL();
-            List<Sach> dssach = sacbll.LayAllToanBoSach();
+            SachBLL2 sacbll = new SachBLL2();
+            List<SachDAO> dssach = sacbll.LayToanBoSach();
             lvSach.Items.Clear();
-            foreach(Sach sac in dssach)
+            foreach(SachDAO sac in dssach)
             {
                 ListViewItem lvi = new ListViewItem(sac.ID + "");
                 lvi.SubItems.Add(sac.TenSach);
                 lvi.SubItems.Add(sac.NamXuatBan+"");
-                lvi.SubItems.Add(sac.DanhMucID+"");
+                lvi.SubItems.Add(sac.TheLoai + "");
                 lvi.SubItems.Add(sac.TacGia);
                 lvi.SubItems.Add(sac.NgonNgu);
                 lvi.SubItems.Add(sac.NoiDungSach);
                 lvi.SubItems.Add(sac.SoLuong+"");
-                lvi.SubItems.Add(sac.TrangThai + "");
+                //lvi.SubItems.Add(sac.TrangThai + "");
 
                 lvSach.Items.Add(lvi);
             }
            
+        }
+
+        private void lvSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
