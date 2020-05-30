@@ -16,5 +16,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void BtnPMSMo_Click(object sender, EventArgs e)
+        {
+            FrmPhieuMuonSachMo frm1 = new FrmPhieuMuonSachMo();
+            frm1.Show();
+        }
+
+        private void BtnPMSDong_Click(object sender, EventArgs e)
+        {
+            FrmPhieuMuonSachDong frm1 = new FrmPhieuMuonSachDong();
+            frm1.Show();
+        }
     }
 }

@@ -70,6 +70,12 @@
     <Compile Include="FrmNguoiMuonSachQL.Designer.cs">
       <DependentUpon>FrmNguoiMuonSachQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPhieuMuonSachMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhieuMuonSachMo.Designer.cs">
+      <DependentUpon>FrmPhieuMuonSachMo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPhieuMuonSachQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +100,11 @@
     <Compile Include="FrmTongThe.Designer.cs">
       <DependentUpon>FrmTongThe.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiMuonSachQL.cs">
+    <Compile Include="FrmPhieuMuonSachDong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NguoiMuonSachQL.Designer.cs">
-      <DependentUpon>NguoiMuonSachQL.cs</DependentUpon>
+    <Compile Include="FrmPhieuMuonSachDong.Designer.cs">
+      <DependentUpon>FrmPhieuMuonSachDong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +120,9 @@
     <EmbeddedResource Include="FrmNguoiMuonSachQL.resx">
       <DependentUpon>FrmNguoiMuonSachQL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhieuMuonSachMo.resx">
+      <DependentUpon>FrmPhieuMuonSachMo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuMuonSachQL.resx">
       <DependentUpon>FrmPhieuMuonSachQL.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,8 +135,8 @@
     <EmbeddedResource Include="FrmTongThe.resx">
       <DependentUpon>FrmTongThe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NguoiMuonSachQL.resx">
-      <DependentUpon>NguoiMuonSachQL.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPhieuMuonSachDong.resx">
+      <DependentUpon>FrmPhieuMuonSachDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

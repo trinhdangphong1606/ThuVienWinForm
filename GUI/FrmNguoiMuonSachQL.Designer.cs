@@ -29,40 +29,39 @@
         private void InitializeComponent()
         {
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtNMSEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnNguoiMuonThem = new System.Windows.Forms.Button();
             this.BtnNguoiMuonCapNhat = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TxtNMSDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtNMSNamSinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtNMSSoDienThoai = new System.Windows.Forms.TextBox();
+            this.TxtNMSTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.lvNguoiMuonSachDS = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrBChiTiet
             // 
-            this.GrBChiTiet.Controls.Add(this.textBox5);
+            this.GrBChiTiet.Controls.Add(this.TxtNMSEmail);
             this.GrBChiTiet.Controls.Add(this.label6);
-            this.GrBChiTiet.Controls.Add(this.button3);
+            this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonThem);
             this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonCapNhat);
-            this.GrBChiTiet.Controls.Add(this.textBox6);
+            this.GrBChiTiet.Controls.Add(this.TxtNMSDiaChi);
             this.GrBChiTiet.Controls.Add(this.label7);
-            this.GrBChiTiet.Controls.Add(this.textBox4);
+            this.GrBChiTiet.Controls.Add(this.TxtNMSNamSinh);
             this.GrBChiTiet.Controls.Add(this.label5);
-            this.GrBChiTiet.Controls.Add(this.textBox3);
-            this.GrBChiTiet.Controls.Add(this.textBox2);
+            this.GrBChiTiet.Controls.Add(this.TxtNMSSoDienThoai);
+            this.GrBChiTiet.Controls.Add(this.TxtNMSTen);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(0, 36);
@@ -71,15 +70,14 @@
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
             // 
-            // textBox5
+            // TxtNMSEmail
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(87, 101);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(570, 23);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Text = "Truyện";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNMSEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNMSEmail.Location = new System.Drawing.Point(87, 101);
+            this.TxtNMSEmail.Name = "TxtNMSEmail";
+            this.TxtNMSEmail.Size = new System.Drawing.Size(570, 23);
+            this.TxtNMSEmail.TabIndex = 28;
+            this.TxtNMSEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -91,18 +89,18 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Email";
             // 
-            // button3
+            // BtnNguoiMuonThem
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnNguoiMuonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(340, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(317, 43);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Thêm Mới Người Mượn";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnNguoiMuonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNguoiMuonThem.Location = new System.Drawing.Point(340, 130);
+            this.BtnNguoiMuonThem.Name = "BtnNguoiMuonThem";
+            this.BtnNguoiMuonThem.Size = new System.Drawing.Size(317, 43);
+            this.BtnNguoiMuonThem.TabIndex = 25;
+            this.BtnNguoiMuonThem.Text = "Thêm Mới Người Mượn";
+            this.BtnNguoiMuonThem.UseVisualStyleBackColor = true;
             // 
             // BtnNguoiMuonCapNhat
             // 
@@ -118,15 +116,14 @@
             this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
             this.BtnNguoiMuonCapNhat.Click += new System.EventHandler(this.BtnNguoiMuonCapNhat_Click);
             // 
-            // textBox6
+            // TxtNMSDiaChi
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(87, 72);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(570, 23);
-            this.textBox6.TabIndex = 18;
-            this.textBox6.Text = "Truyện";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNMSDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNMSDiaChi.Location = new System.Drawing.Point(87, 72);
+            this.TxtNMSDiaChi.Name = "TxtNMSDiaChi";
+            this.TxtNMSDiaChi.Size = new System.Drawing.Size(570, 23);
+            this.TxtNMSDiaChi.TabIndex = 18;
+            this.TxtNMSDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -138,15 +135,14 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Địa Chỉ";
             // 
-            // textBox4
+            // TxtNMSNamSinh
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(525, 43);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 23);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.Text = "XXX";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNMSNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNMSNamSinh.Location = new System.Drawing.Point(491, 43);
+            this.TxtNMSNamSinh.Name = "TxtNMSNamSinh";
+            this.TxtNMSNamSinh.Size = new System.Drawing.Size(166, 23);
+            this.TxtNMSNamSinh.TabIndex = 16;
+            this.TxtNMSNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -158,25 +154,23 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Năm Sinh";
             // 
-            // textBox3
+            // TxtNMSSoDienThoai
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(123, 43);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 23);
-            this.textBox3.TabIndex = 14;
-            this.textBox3.Text = "Tô Hoài";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNMSSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNMSSoDienThoai.Location = new System.Drawing.Point(123, 43);
+            this.TxtNMSSoDienThoai.Name = "TxtNMSSoDienThoai";
+            this.TxtNMSSoDienThoai.Size = new System.Drawing.Size(260, 23);
+            this.TxtNMSSoDienThoai.TabIndex = 14;
+            this.TxtNMSSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // TxtNMSTen
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(186, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(471, 23);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "Dế Mèn phiêu lưu ký";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtNMSTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNMSTen.Location = new System.Drawing.Point(186, 14);
+            this.TxtNMSTen.Name = "TxtNMSTen";
+            this.TxtNMSTen.Size = new System.Drawing.Size(471, 23);
+            this.TxtNMSTen.TabIndex = 13;
+            this.TxtNMSTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -200,41 +194,30 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Tên Nhân Viên";
-            this.columnHeader1.Width = 201;
+            this.columnHeader1.Text = "Họ Tên";
+            this.columnHeader1.Width = 230;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số Điện Thoại";
-            this.columnHeader2.Width = 96;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Email";
-            this.columnHeader4.Width = 106;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Địa Chỉ";
-            this.columnHeader5.Width = 92;
+            this.columnHeader2.Width = 120;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(184, 3);
+            this.label1.Location = new System.Drawing.Point(236, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 25);
+            this.label1.Size = new System.Drawing.Size(177, 25);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Quản Lý Người Mượn Sách";
+            this.label1.Text = "Quản Lý Đọc Giả";
             // 
             // lvNguoiMuonSachDS
             // 
             this.lvNguoiMuonSachDS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader4,
-            this.columnHeader5,
             this.columnHeader3});
             this.lvNguoiMuonSachDS.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lvNguoiMuonSachDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,20 +226,27 @@
             this.lvNguoiMuonSachDS.HideSelection = false;
             this.lvNguoiMuonSachDS.Location = new System.Drawing.Point(0, 214);
             this.lvNguoiMuonSachDS.Name = "lvNguoiMuonSachDS";
-            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(671, 148);
+            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(673, 148);
             this.lvNguoiMuonSachDS.TabIndex = 16;
             this.lvNguoiMuonSachDS.UseCompatibleStateImageBehavior = false;
             this.lvNguoiMuonSachDS.View = System.Windows.Forms.View.Details;
+            this.lvNguoiMuonSachDS.SelectedIndexChanged += new System.EventHandler(this.lvNguoiMuonSachDS_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Width = 83;
+            this.columnHeader3.Text = "Địa Chỉ ";
+            this.columnHeader3.Width = 450;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Mã Đọc Giả";
+            this.columnHeader4.Width = 85;
             // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 362);
+            this.ClientSize = new System.Drawing.Size(673, 362);
             this.Controls.Add(this.lvNguoiMuonSachDS);
             this.Controls.Add(this.GrBChiTiet);
             this.Controls.Add(this.label1);
@@ -273,24 +263,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GrBChiTiet;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtNMSEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnNguoiMuonThem;
         private System.Windows.Forms.Button BtnNguoiMuonCapNhat;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TxtNMSDiaChi;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtNMSNamSinh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtNMSSoDienThoai;
+        private System.Windows.Forms.TextBox TxtNMSTen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvNguoiMuonSachDS;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

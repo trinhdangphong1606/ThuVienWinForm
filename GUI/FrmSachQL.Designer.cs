@@ -35,14 +35,15 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnCapNhatThongTinSach = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbboxSachDanhMuc = new System.Windows.Forms.ComboBox();
+            this.cbboxSachNXB = new System.Windows.Forms.ComboBox();
+            this.cbboxSachNgonNgu = new System.Windows.Forms.ComboBox();
             this.TxtNgonNgu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTenDanhMuc = new System.Windows.Forms.TextBox();
@@ -54,11 +55,10 @@
             this.richNoiDungSach = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbboxSachTacGia = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,11 @@
             this.columnHeader3.Text = "Năm Xuất Bản";
             this.columnHeader3.Width = 121;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Trạng Thái";
+            this.columnHeader6.Width = 100;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -124,9 +129,9 @@
             this.GrBChiTiet.Controls.Add(this.button4);
             this.GrBChiTiet.Controls.Add(this.button3);
             this.GrBChiTiet.Controls.Add(this.BtnCapNhatThongTinSach);
-            this.GrBChiTiet.Controls.Add(this.comboBox4);
-            this.GrBChiTiet.Controls.Add(this.comboBox3);
-            this.GrBChiTiet.Controls.Add(this.comboBox2);
+            this.GrBChiTiet.Controls.Add(this.cbboxSachDanhMuc);
+            this.GrBChiTiet.Controls.Add(this.cbboxSachNXB);
+            this.GrBChiTiet.Controls.Add(this.cbboxSachNgonNgu);
             this.GrBChiTiet.Controls.Add(this.TxtNgonNgu);
             this.GrBChiTiet.Controls.Add(this.label6);
             this.GrBChiTiet.Controls.Add(this.TxtTenDanhMuc);
@@ -138,7 +143,7 @@
             this.GrBChiTiet.Controls.Add(this.richNoiDungSach);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label3);
-            this.GrBChiTiet.Controls.Add(this.comboBox1);
+            this.GrBChiTiet.Controls.Add(this.cbboxSachTacGia);
             this.GrBChiTiet.Controls.Add(this.button1);
             this.GrBChiTiet.Controls.Add(this.textBox1);
             this.GrBChiTiet.Controls.Add(this.label2);
@@ -188,35 +193,35 @@
             this.BtnCapNhatThongTinSach.UseVisualStyleBackColor = true;
             this.BtnCapNhatThongTinSach.Click += new System.EventHandler(this.BtnCapNhatThongTinSach_Click);
             // 
-            // comboBox4
+            // cbboxSachDanhMuc
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(373, 235);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(89, 26);
-            this.comboBox4.TabIndex = 23;
-            this.comboBox4.Text = "Thể Loại";
+            this.cbboxSachDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxSachDanhMuc.FormattingEnabled = true;
+            this.cbboxSachDanhMuc.Location = new System.Drawing.Point(373, 235);
+            this.cbboxSachDanhMuc.Name = "cbboxSachDanhMuc";
+            this.cbboxSachDanhMuc.Size = new System.Drawing.Size(89, 26);
+            this.cbboxSachDanhMuc.TabIndex = 23;
+            this.cbboxSachDanhMuc.Text = "Thể Loại";
             // 
-            // comboBox3
+            // cbboxSachNXB
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(568, 235);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(125, 26);
-            this.comboBox3.TabIndex = 22;
-            this.comboBox3.Text = "Năm Xuất Bản";
+            this.cbboxSachNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxSachNXB.FormattingEnabled = true;
+            this.cbboxSachNXB.Location = new System.Drawing.Point(568, 235);
+            this.cbboxSachNXB.Name = "cbboxSachNXB";
+            this.cbboxSachNXB.Size = new System.Drawing.Size(125, 26);
+            this.cbboxSachNXB.TabIndex = 22;
+            this.cbboxSachNXB.Text = "Năm Xuất Bản";
             // 
-            // comboBox2
+            // cbboxSachNgonNgu
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(468, 234);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(97, 26);
-            this.comboBox2.TabIndex = 21;
-            this.comboBox2.Text = "Ngôn Ngữ";
+            this.cbboxSachNgonNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxSachNgonNgu.FormattingEnabled = true;
+            this.cbboxSachNgonNgu.Location = new System.Drawing.Point(468, 234);
+            this.cbboxSachNgonNgu.Name = "cbboxSachNgonNgu";
+            this.cbboxSachNgonNgu.Size = new System.Drawing.Size(97, 26);
+            this.cbboxSachNgonNgu.TabIndex = 21;
+            this.cbboxSachNgonNgu.Text = "Ngôn Ngữ";
             // 
             // TxtNgonNgu
             // 
@@ -327,15 +332,15 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nội Dung";
             // 
-            // comboBox1
+            // cbboxSachTacGia
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(229, 235);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 26);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Tác Giả";
+            this.cbboxSachTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxSachTacGia.FormattingEnabled = true;
+            this.cbboxSachTacGia.Location = new System.Drawing.Point(229, 235);
+            this.cbboxSachTacGia.Name = "cbboxSachTacGia";
+            this.cbboxSachTacGia.Size = new System.Drawing.Size(138, 26);
+            this.cbboxSachTacGia.TabIndex = 3;
+            this.cbboxSachTacGia.Text = "Tác Giả";
             // 
             // button1
             // 
@@ -368,11 +373,6 @@
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Sách ";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Trạng Thái";
-            this.columnHeader6.Width = 100;
             // 
             // FrmSachQL
             // 
@@ -407,9 +407,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnCapNhatThongTinSach;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbboxSachDanhMuc;
+        private System.Windows.Forms.ComboBox cbboxSachNXB;
+        private System.Windows.Forms.ComboBox cbboxSachNgonNgu;
         private System.Windows.Forms.TextBox TxtNgonNgu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtTenDanhMuc;
@@ -421,7 +421,7 @@
         private System.Windows.Forms.RichTextBox richNoiDungSach;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbboxSachTacGia;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

@@ -21,14 +21,19 @@ namespace GUI
         private void FrmSachQL_Load(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
+            CBBHienThiDSTacGia();
+            CBBHienThiDSDanhMuc();
         }
+
+        
 
         private void BtnCapNhatThongTinSach_Click(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
+            
         }
 
-        private void HienThiDanhSachSach()
+        public void HienThiDanhSachSach()
         {
             SachBLL sacBLL = new SachBLL();
             List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
@@ -64,6 +69,22 @@ namespace GUI
                 TxtNamXuatBan.Text = namxuatban;
                 richNoiDungSach.Text = noidung;
             }    
+        }
+        private void CBBHienThiDSDanhMuc()
+        {
+            DanhMucBLL damuBLL = new DanhMucBLL();
+            List<DanhMuc> dsdanhmuc = damuBLL.LayToanBoDanhMuc();
+            cbboxSachDanhMuc.Items.Clear();
+            cbboxSachDanhMuc.DataSource = dsdanhmuc;
+            cbboxSachDanhMuc.DisplayMember = "TenDanhMuc";
+        }
+        private void CBBHienThiDSTacGia()
+        {
+            SachBLL sacBLL = new SachBLL();
+            List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
+            cbboxSachTacGia.Items.Clear();
+            cbboxSachTacGia.DataSource = dsdsach;
+            cbboxSachTacGia.DisplayMember = "TacGia";
         }
     }
 }

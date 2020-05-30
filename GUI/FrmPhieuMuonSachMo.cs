@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI;
+using BLL;
+using DTO;
+
 
 namespace GUI
 {
-    public partial class NguoiMuonSachQL : Form
+    public partial class FrmPhieuMuonSachMo : Form //FrmSachQL
     {
-        public NguoiMuonSachQL()
+        public FrmPhieuMuonSachMo()
         {
             InitializeComponent();
+        }
+
+        private void FrmPhieuMuonSachMo_Load(object sender, EventArgs e)
+        {
+            //HienThiDanhSachSach();
         }
     }
 }
