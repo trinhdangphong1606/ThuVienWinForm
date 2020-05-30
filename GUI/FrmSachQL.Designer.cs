@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSachQL));
             this.LvSachQL = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -225,12 +224,12 @@
             // 
             // TxtNgonNgu
             // 
+            this.TxtNgonNgu.Enabled = false;
             this.TxtNgonNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNgonNgu.Location = new System.Drawing.Point(525, 71);
             this.TxtNgonNgu.Name = "TxtNgonNgu";
             this.TxtNgonNgu.Size = new System.Drawing.Size(132, 23);
             this.TxtNgonNgu.TabIndex = 20;
-            this.TxtNgonNgu.Text = "Việt Nam";
             this.TxtNgonNgu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -245,12 +244,12 @@
             // 
             // TxtTenDanhMuc
             // 
+            this.TxtTenDanhMuc.Enabled = false;
             this.TxtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenDanhMuc.Location = new System.Drawing.Point(87, 71);
             this.TxtTenDanhMuc.Name = "TxtTenDanhMuc";
             this.TxtTenDanhMuc.Size = new System.Drawing.Size(296, 23);
             this.TxtTenDanhMuc.TabIndex = 18;
-            this.TxtTenDanhMuc.Text = "Truyện";
             this.TxtTenDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -265,12 +264,12 @@
             // 
             // TxtNamXuatBan
             // 
+            this.TxtNamXuatBan.Enabled = false;
             this.TxtNamXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNamXuatBan.Location = new System.Drawing.Point(525, 42);
             this.TxtNamXuatBan.Name = "TxtNamXuatBan";
             this.TxtNamXuatBan.Size = new System.Drawing.Size(132, 23);
             this.TxtNamXuatBan.TabIndex = 16;
-            this.TxtNamXuatBan.Text = "XXX";
             this.TxtNamXuatBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -285,32 +284,33 @@
             // 
             // TxtTenTacGia
             // 
+            this.TxtTenTacGia.Enabled = false;
             this.TxtTenTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenTacGia.Location = new System.Drawing.Point(87, 42);
             this.TxtTenTacGia.Name = "TxtTenTacGia";
             this.TxtTenTacGia.Size = new System.Drawing.Size(296, 23);
             this.TxtTenTacGia.TabIndex = 14;
-            this.TxtTenTacGia.Text = "Tô Hoài";
             this.TxtTenTacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTenSach
             // 
+            this.TxtTenSach.Enabled = false;
             this.TxtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenSach.Location = new System.Drawing.Point(87, 13);
             this.TxtTenSach.Name = "TxtTenSach";
             this.TxtTenSach.Size = new System.Drawing.Size(570, 23);
             this.TxtTenSach.TabIndex = 13;
-            this.TxtTenSach.Text = "Dế Mèn phiêu lưu ký";
             this.TxtTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // richNoiDungSach
             // 
+            this.richNoiDungSach.Enabled = false;
             this.richNoiDungSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richNoiDungSach.Location = new System.Drawing.Point(87, 100);
             this.richNoiDungSach.Name = "richNoiDungSach";
             this.richNoiDungSach.Size = new System.Drawing.Size(583, 97);
             this.richNoiDungSach.TabIndex = 12;
-            this.richNoiDungSach.Text = resources.GetString("richNoiDungSach.Text");
+            this.richNoiDungSach.Text = "";
             // 
             // label4
             // 

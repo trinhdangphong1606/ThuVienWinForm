@@ -14,7 +14,6 @@ namespace BLL
         NguoiMuonSachAccess nguoimuons = new NguoiMuonSachAccess();
         public List<NguoiMuonSach> LayToanBoNguoiMuonSach()
         {
-            
             return nguoimuons.LayToanBoNguoiMuonSach();
         }
     }
