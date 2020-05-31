@@ -102,19 +102,23 @@
             // 
             // datetimeNgayTra
             // 
+            this.datetimeNgayTra.CustomFormat = "dd-MM-yyyy";
             this.datetimeNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeNgayTra.Location = new System.Drawing.Point(131, 196);
+            this.datetimeNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeNgayTra.Location = new System.Drawing.Point(188, 196);
             this.datetimeNgayTra.Name = "datetimeNgayTra";
-            this.datetimeNgayTra.Size = new System.Drawing.Size(236, 23);
+            this.datetimeNgayTra.Size = new System.Drawing.Size(103, 23);
             this.datetimeNgayTra.TabIndex = 108;
             // 
             // datetimeNgayMuon
             // 
+            this.datetimeNgayMuon.CustomFormat = "dd-MM-yyyy";
             this.datetimeNgayMuon.Enabled = false;
             this.datetimeNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeNgayMuon.Location = new System.Drawing.Point(131, 167);
+            this.datetimeNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeNgayMuon.Location = new System.Drawing.Point(188, 167);
             this.datetimeNgayMuon.Name = "datetimeNgayMuon";
-            this.datetimeNgayMuon.Size = new System.Drawing.Size(236, 23);
+            this.datetimeNgayMuon.Size = new System.Drawing.Size(103, 23);
             this.datetimeNgayMuon.TabIndex = 107;
             // 
             // btnXacNhanThongTinDong
@@ -313,20 +317,24 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(507, 196);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(572, 196);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(103, 23);
             this.dateTimePicker1.TabIndex = 138;
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(507, 167);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(572, 165);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(236, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(103, 23);
             this.dateTimePicker2.TabIndex = 137;
             // 
             // errorProvider1

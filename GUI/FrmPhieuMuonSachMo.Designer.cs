@@ -38,10 +38,10 @@
             this.lvPMSTDocGia = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTimSach = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTimTenNMS = new System.Windows.Forms.TextBox();
             this.btnXacNhanThongTin = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtReadyMaDocGia = new System.Windows.Forms.TextBox();
@@ -97,6 +97,7 @@
             this.btnTaoPhieu.TabIndex = 24;
             this.btnTaoPhieu.Text = "Tạo Phiếu";
             this.btnTaoPhieu.UseVisualStyleBackColor = true;
+            this.btnTaoPhieu.Click += new System.EventHandler(this.btnTaoPhieu_Click);
             // 
             // btnHuyTao
             // 
@@ -160,15 +161,15 @@
             this.columnHeader4.Text = "Tên Đọc Giả";
             this.columnHeader4.Width = 300;
             // 
-            // textBox5
+            // txtTimSach
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(390, 240);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 23);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.Text = "Nhập Tên Sách";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimSach.Location = new System.Drawing.Point(390, 240);
+            this.txtTimSach.Name = "txtTimSach";
+            this.txtTimSach.Size = new System.Drawing.Size(257, 23);
+            this.txtTimSach.TabIndex = 41;
+            this.txtTimSach.Text = "Nhập Tên Sách";
+            this.txtTimSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
@@ -190,15 +191,15 @@
             this.button4.Text = "Tìm";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtTimTenNMS
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(390, 50);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(257, 23);
-            this.textBox7.TabIndex = 43;
-            this.textBox7.Text = "Nhập Tên Đọc Giả";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimTenNMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTenNMS.Location = new System.Drawing.Point(390, 50);
+            this.txtTimTenNMS.Name = "txtTimTenNMS";
+            this.txtTimTenNMS.Size = new System.Drawing.Size(257, 23);
+            this.txtTimTenNMS.TabIndex = 43;
+            this.txtTimTenNMS.Text = "Nhập Tên Đọc Giả";
+            this.txtTimTenNMS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnXacNhanThongTin
             // 
@@ -276,21 +277,24 @@
             this.datetimeReadyNgayMuon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.datetimeReadyNgayMuon.CustomFormat = "";
+            this.datetimeReadyNgayMuon.CustomFormat = "dd-MM-yyyy";
             this.datetimeReadyNgayMuon.Enabled = false;
             this.datetimeReadyNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeReadyNgayMuon.Location = new System.Drawing.Point(136, 159);
+            this.datetimeReadyNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeReadyNgayMuon.Location = new System.Drawing.Point(206, 160);
             this.datetimeReadyNgayMuon.Name = "datetimeReadyNgayMuon";
             this.datetimeReadyNgayMuon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.datetimeReadyNgayMuon.Size = new System.Drawing.Size(236, 23);
+            this.datetimeReadyNgayMuon.Size = new System.Drawing.Size(104, 23);
             this.datetimeReadyNgayMuon.TabIndex = 68;
             // 
             // datetimeReadyNgayDuKienTra
             // 
+            this.datetimeReadyNgayDuKienTra.CustomFormat = "dd-MM-yyyy";
             this.datetimeReadyNgayDuKienTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeReadyNgayDuKienTra.Location = new System.Drawing.Point(136, 188);
+            this.datetimeReadyNgayDuKienTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeReadyNgayDuKienTra.Location = new System.Drawing.Point(206, 188);
             this.datetimeReadyNgayDuKienTra.Name = "datetimeReadyNgayDuKienTra";
-            this.datetimeReadyNgayDuKienTra.Size = new System.Drawing.Size(236, 23);
+            this.datetimeReadyNgayDuKienTra.Size = new System.Drawing.Size(104, 23);
             this.datetimeReadyNgayDuKienTra.TabIndex = 69;
             // 
             // label5
@@ -447,11 +451,13 @@
             // 
             // datetimeConfirmNgayDuKienTra
             // 
+            this.datetimeConfirmNgayDuKienTra.CustomFormat = "dd-MM-yyyy";
             this.datetimeConfirmNgayDuKienTra.Enabled = false;
             this.datetimeConfirmNgayDuKienTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeConfirmNgayDuKienTra.Location = new System.Drawing.Point(136, 382);
+            this.datetimeConfirmNgayDuKienTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeConfirmNgayDuKienTra.Location = new System.Drawing.Point(206, 382);
             this.datetimeConfirmNgayDuKienTra.Name = "datetimeConfirmNgayDuKienTra";
-            this.datetimeConfirmNgayDuKienTra.Size = new System.Drawing.Size(236, 23);
+            this.datetimeConfirmNgayDuKienTra.Size = new System.Drawing.Size(104, 23);
             this.datetimeConfirmNgayDuKienTra.TabIndex = 92;
             // 
             // datetimeConfirmNgayMuon
@@ -459,13 +465,14 @@
             this.datetimeConfirmNgayMuon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.datetimeConfirmNgayMuon.CustomFormat = "";
+            this.datetimeConfirmNgayMuon.CustomFormat = "dd-MM-yyyy";
             this.datetimeConfirmNgayMuon.Enabled = false;
             this.datetimeConfirmNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeConfirmNgayMuon.Location = new System.Drawing.Point(136, 356);
+            this.datetimeConfirmNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeConfirmNgayMuon.Location = new System.Drawing.Point(206, 356);
             this.datetimeConfirmNgayMuon.Name = "datetimeConfirmNgayMuon";
             this.datetimeConfirmNgayMuon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.datetimeConfirmNgayMuon.Size = new System.Drawing.Size(236, 23);
+            this.datetimeConfirmNgayMuon.Size = new System.Drawing.Size(104, 23);
             this.datetimeConfirmNgayMuon.TabIndex = 91;
             // 
             // FrmPhieuMuonSachMo
@@ -499,9 +506,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtTimTenNMS);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTimSach);
             this.Controls.Add(this.lvPMSTDocGia);
             this.Controls.Add(this.lvPMSTSach);
             this.Controls.Add(this.btnHuyTao);
@@ -530,10 +537,10 @@
         private System.Windows.Forms.ListView lvPMSTDocGia;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTimSach;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTimTenNMS;
         private System.Windows.Forms.Button btnXacNhanThongTin;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtReadyMaDocGia;

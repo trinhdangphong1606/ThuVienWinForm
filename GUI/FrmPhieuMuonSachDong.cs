@@ -19,12 +19,12 @@ namespace GUI
 
         private void btnXacNhanThongTinDong_Click(object sender, EventArgs e)
         {
-            /*errorProvider1.SetError(datetimeNgayTra, "");
-            if (datetimeNgayTra.Value <datetimeNgayMuon.Value)
+            errorProvider1.SetError(datetimeNgayTra, "");
+            if (datetimeNgayTra.Value<=datetimeNgayMuon.Value)
             {
                 errorProvider1.SetError(datetimeNgayTra, "Xin chọn ngày ...");
                 return;
-            }*/
+            }
             txtConfirmMaDocGia.Text = "Ok";
         }
     }

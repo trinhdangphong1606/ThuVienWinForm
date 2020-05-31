@@ -113,7 +113,25 @@ namespace GUI
             txtConfirmTenSach.Text = txtReadyTenSach.Text;
             datetimeConfirmNgayDuKienTra.Value = datetimeReadyNgayDuKienTra.Value;
             datetimeConfirmNgayMuon.Value = datetimeReadyNgayMuon.Value;
-            //txtConfirmNgayMuon.Text = 
+            //txtTimTenNMS.Text = datetimeReadyNgayDuKienTra.Value.ToString();
+            
+        }
+
+        private void btnTaoPhieu_Click(object sender, EventArgs e)
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.NguoiMuonSachId = int.Parse(txtConfirmMaDocGia.Text);
+            pms.SachId = int.Parse(txtConfirmMaSach.Text);
+            pms.NgayMuon = datetimeConfirmNgayMuon.Value;
+            pms.NgayDuKienTra = datetimeConfirmNgayDuKienTra.Value;
+
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool phieumoi = pmsbll.ThemPhieuMuon(pms);
+            if(phieumoi)
+            {
+                this.Close();
+            }    
+
         }
     }
 }

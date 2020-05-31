@@ -34,7 +34,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -68,8 +67,7 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader3,
-            this.columnHeader6});
+            this.columnHeader3});
             this.LvSachQL.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LvSachQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvSachQL.FullRowSelect = true;
@@ -107,11 +105,6 @@
             // 
             this.columnHeader3.Text = "Năm Xuất Bản";
             this.columnHeader3.Width = 121;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Trạng Thái";
-            this.columnHeader6.Width = 100;
             // 
             // label1
             // 
@@ -425,6 +418,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

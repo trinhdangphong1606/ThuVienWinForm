@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DatabaseAccess
     {
-        string strConn = "Server=localhost;Database=QLThuVien;User id=adminphongtd;pwd=Phong123@";
+        string strConn = "Server=localhost;Database=test;User id=adminphongtd;pwd=Phong123@";
         protected SqlConnection conn = null;
         public void OpenConnection()
         {

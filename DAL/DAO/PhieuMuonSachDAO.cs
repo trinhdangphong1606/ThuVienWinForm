@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace DAL.DAO
 {
-    public class PhieuMuonSach
+    public class PhieuMuonSachDAO
     {
         public int MaPhieuMuon { get; set; }
-        public int NguoiMuonSachId { get; set; }
-        public int SachId { get; set; }
+        public string TenNguoiMuonSach { get; set; }
+        public string TenSach { get; set; }
         
         public DateTime NgayMuon { get; set; }
         public DateTime NgayDuKienTra { get; set; }
-        public DateTime NgayTraSach { get; set; }
-        
+        public Nullable<DateTime> NgayTraSach { get; set; }
+
     }
 }
