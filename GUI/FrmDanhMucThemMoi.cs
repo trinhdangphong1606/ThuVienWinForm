@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class NguoiMuonSachQL : Form
+    public partial class FrmDanhMucThemMoi : Form
     {
-        public NguoiMuonSachQL()
+        public FrmDanhMucThemMoi()
         {
             InitializeComponent();
         }

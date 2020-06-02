@@ -21,6 +21,11 @@ C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.F
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmNguoiMuonSachQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienQL.resources
+<<<<<<< HEAD
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmDanhMucThemMoi.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachDong.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachMo.resources
+=======
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.NguoiMuonSachQL.resources
 D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\GUI.exe.config
 D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\GUI.exe
@@ -47,3 +52,4 @@ D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.exe
 D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.pdb
 D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmThemDanhMuc.resources
+>>>>>>> KhoaCode

@@ -60,6 +60,7 @@
             this.lvSach.TabIndex = 0;
             this.lvSach.UseCompatibleStateImageBehavior = false;
             this.lvSach.View = System.Windows.Forms.View.Details;
+            this.lvSach.SelectedIndexChanged += new System.EventHandler(this.lvSach_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

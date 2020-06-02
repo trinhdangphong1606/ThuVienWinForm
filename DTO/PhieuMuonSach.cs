@@ -8,12 +8,13 @@ namespace DTO
 {
     public class PhieuMuonSach
     {
-        public int NguoiMuonSachID { get; set; }
-        public int SachID { get; set; }
-        public int QuanTriVienID { get; set; }
+        public int MaPhieuMuon { get; set; }
+        public int NguoiMuonSachId { get; set; }
+        public int SachId { get; set; }
+        
         public DateTime NgayMuon { get; set; }
         public DateTime NgayDuKienTra { get; set; }
         public DateTime NgayTraSach { get; set; }
-        public string DiaChi { get; set; }
+        
     }
 }

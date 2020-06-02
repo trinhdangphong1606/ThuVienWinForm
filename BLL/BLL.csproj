@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DanhMucBLL.cs" />
+    <Compile Include="NguoiMuonSachBLL.cs" />
+    <Compile Include="PhieuMuonSachBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTriVienBLL.cs" />
     <Compile Include="SachBLL.cs" />
+    <Compile Include="SachBLL2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

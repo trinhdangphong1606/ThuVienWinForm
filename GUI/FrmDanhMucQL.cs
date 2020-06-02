@@ -35,7 +35,7 @@ namespace GUI
             LvDanhMucDS.Items.Clear();
             foreach (DanhMuc damuc in dsdanhmuc)
             {
-                ListViewItem lvi = new ListViewItem(damuc.TenDanhMuc + "");
+                ListViewItem lvi = new ListViewItem(damuc.TenDanhMuc+"");
                 lvi.SubItems.Add(damuc.NoiDungDanhMuc);
                 LvDanhMucDS.Items.Add(lvi);
             }
@@ -51,6 +51,13 @@ namespace GUI
                 txtTenDanhMuc.Text = tendanhmuccc;
                 richNoiDungDanhMuc.Text = noidungdanhmuccc;
             }    
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmDanhMucThemMoi frm1 = new FrmDanhMucThemMoi();
+            //frm1.MdiParent = this;
+            frm1.Show();
         }
     }
 }

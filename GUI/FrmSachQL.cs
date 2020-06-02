@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DAL.DAO;
 namespace GUI
 {
     public partial class FrmSachQL : Form
@@ -21,26 +21,31 @@ namespace GUI
         private void FrmSachQL_Load(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
+            CBBHienThiDSTacGia();
+            CBBHienThiDSDanhMuc();
         }
+
+        
 
         private void BtnCapNhatThongTinSach_Click(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
+            
         }
 
-        private void HienThiDanhSachSach()
+        public void HienThiDanhSachSach()
         {
-            SachBLL sacBLL = new SachBLL();
-            List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
+            SachBLL2 sacBLL = new SachBLL2();
+            List<SachDAO> dsdsach = sacBLL.LayToanBoSach();
             LvSachQL.Items.Clear();
-            foreach (Sach scBLL in dsdsach)
+            foreach (SachDAO scBLL in dsdsach)
             {
                 ListViewItem lvi = new ListViewItem(scBLL.TenSach + "");
                 lvi.SubItems.Add(scBLL.TacGia);
-                lvi.SubItems.Add(scBLL.DanhMucID+"");
+                lvi.SubItems.Add(scBLL.TheLoai);
                 lvi.SubItems.Add(scBLL.NgonNgu);
                 lvi.SubItems.Add(scBLL.NamXuatBan+"");
-                lvi.SubItems.Add(scBLL.TrangThai + "");
+                //lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
                 LvSachQL.Items.Add(lvi);
             }
@@ -56,7 +61,7 @@ namespace GUI
                 string danhmuc = lvi.SubItems[2].Text;
                 string ngonngu = lvi.SubItems[3].Text;
                 string namxuatban = lvi.SubItems[4].Text;
-                string noidung = lvi.SubItems[6].Text;
+                string noidung = lvi.SubItems[5].Text;
                 TxtTenSach.Text = tensach;
                 TxtTenTacGia.Text = tacgia;
                 TxtTenDanhMuc.Text = danhmuc;
@@ -64,6 +69,22 @@ namespace GUI
                 TxtNamXuatBan.Text = namxuatban;
                 richNoiDungSach.Text = noidung;
             }    
+        }
+        private void CBBHienThiDSDanhMuc()
+        {
+            DanhMucBLL damuBLL = new DanhMucBLL();
+            List<DanhMuc> dsdanhmuc = damuBLL.LayToanBoDanhMuc();
+            cbboxSachDanhMuc.Items.Clear();
+            cbboxSachDanhMuc.DataSource = dsdanhmuc;
+            cbboxSachDanhMuc.DisplayMember = "TenDanhMuc";
+        }
+        private void CBBHienThiDSTacGia()
+        {
+            SachBLL sacBLL = new SachBLL();
+            List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
+            cbboxSachTacGia.Items.Clear();
+            cbboxSachTacGia.DataSource = dsdsach;
+            cbboxSachTacGia.DisplayMember = "TacGia";
         }
     }
 }
