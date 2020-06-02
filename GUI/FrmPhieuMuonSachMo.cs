@@ -119,6 +119,19 @@ namespace GUI
 
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
+            if(txtConfirmMaDocGia.Text=="")
+            {
+                MessageBox.Show("Xác nhận thông tin trước khi tạo phiếu", "Thông Báo");
+            }
+            else
+            {
+                TaoPhieuMoi();
+            }    
+                
+
+        }
+        private void TaoPhieuMoi()
+        {
             PhieuMuonSach pms = new PhieuMuonSach();
             pms.NguoiMuonSachId = int.Parse(txtConfirmMaDocGia.Text);
             pms.SachId = int.Parse(txtConfirmMaSach.Text);
@@ -127,11 +140,10 @@ namespace GUI
 
             PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
             bool phieumoi = pmsbll.ThemPhieuMuon(pms);
-            if(phieumoi)
+            if (phieumoi)
             {
                 this.Close();
-            }    
-
+            }
         }
     }
 }

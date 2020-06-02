@@ -31,14 +31,13 @@ namespace DAL
                 DateTime ngaymuon = reader.GetDateTime(3);
                 DateTime ngaydukientra = reader.GetDateTime(4);
                 DateTime? ngaytra;
-                //DateTime? ngaytra = !reader.IsDBNull(5) ? reader.GetDateTime(5) : (DateTime?) null;
-                if(!reader.IsDBNull(5))
+                if(reader.IsDBNull(5))
                 {
-                    ngaytra = reader.GetDateTime(5);
+                    ngaytra= (DateTime?)null;
                 }
                 else
                 {
-                    ngaytra= (DateTime?)null;
+                    ngaytra = reader.GetDateTime(5);
                 }
                 PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
                 pms.MaPhieuMuon = idphieu;

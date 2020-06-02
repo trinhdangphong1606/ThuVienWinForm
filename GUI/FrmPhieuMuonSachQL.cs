@@ -52,5 +52,25 @@ namespace GUI
             }
         }
 
+        private void lvDSPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lvDSPhieuMuon.SelectedItems.Count>0)
+            {
+                ListViewItem lvi = lvDSPhieuMuon.SelectedItems[0];
+                string maphieumuon = lvi.SubItems[0].Text;
+                string tendocgia = lvi.SubItems[1].Text;
+                string tensach = lvi.SubItems[2].Text;
+                string ngaymuon = lvi.SubItems[3].Text;
+                string ngaydukientra = lvi.SubItems[4].Text;
+                string ngaytra = lvi.SubItems[5].Text;
+                txtMaPhieuMuon.Text = maphieumuon;
+                txtTenDocGia.Text = tendocgia;
+                txtTenSach.Text = tensach;
+                dtpickerNgayMuon.Value = Convert.ToDateTime(ngaymuon);
+                dtpickerNgayDuKienTra.Value = Convert.ToDateTime(ngaydukientra);
+                dtpickerNgayTra.Value = Convert.ToDateTime(ngaytra);
+                
+            }    
+        }
     }
 }
