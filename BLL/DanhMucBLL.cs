@@ -11,11 +11,15 @@ namespace BLL
 {
     public class DanhMucBLL
     {
-        DanhMucAccess damuc = new DanhMucAccess();
+        DanhMucAccess access = new DanhMucAccess();
         public List<DanhMuc> LayToanBoDanhMuc()
         {
+            return access.LayToanBoDanhMuc();
+        }
 
-            return damuc.LayToanBoDanhMuc();
+        public bool InsertDanhMuc(string TenDanhMuc, string NoiDungDanhMuc)
+        {
+            return access.InsertDanhMuc(TenDanhMuc, NoiDungDanhMuc);
         }
     }
 }

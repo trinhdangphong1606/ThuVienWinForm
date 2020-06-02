@@ -82,6 +82,12 @@
     <Compile Include="FrmSachQL.Designer.cs">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThemDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemDanhMuc.Designer.cs">
+      <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTongThe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSachQL.resx">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemDanhMuc.resx">
+      <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTongThe.resx">
       <DependentUpon>FrmTongThe.cs</DependentUpon>

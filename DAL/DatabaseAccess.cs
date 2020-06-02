@@ -10,8 +10,11 @@ namespace DAL
 {
     public class DatabaseAccess
     {
-        string strConn = "Server=localhost;Database=QuanLyThuVien;User id=adminphongtd;pwd=Phong123@";
+        string strConn = "Data Source = DESKTOP-2ASN71L\\SQLEXPRESS ; Initial Catalog = QuanLyThuVien ; Integrated Security = True ";
         protected SqlConnection conn = null;
+
+        public static object Instance { get; internal set; }
+
         public void OpenConnection()
         {
             if (conn == null)
