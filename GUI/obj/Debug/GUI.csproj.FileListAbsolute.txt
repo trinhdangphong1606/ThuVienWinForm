@@ -21,6 +21,35 @@ C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.F
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmNguoiMuonSachQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachQL.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienQL.resources
+<<<<<<< HEAD
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmDanhMucThemMoi.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachDong.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachMo.resources
+=======
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.NguoiMuonSachQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\GUI.exe.config
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\GUI.exe
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\GUI.pdb
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\BLL.dll
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\DAL.dll
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\DTO.dll
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\BLL.pdb
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\DAL.pdb
+D:\Code\codePhong\ThuVienWinForm\GUI\bin\Debug\DTO.pdb
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.Form1.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmDanhMucQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmNguoiMuonSachQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmPhieuMuonSachQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmQuanTriVienQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmSachQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmTongThe.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.NguoiMuonSachQL.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.exe
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.pdb
+D:\Code\codePhong\ThuVienWinForm\GUI\obj\Debug\GUI.FrmThemDanhMuc.resources
+>>>>>>> KhoaCode

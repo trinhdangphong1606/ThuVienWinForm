@@ -249,6 +249,20 @@
             this.lvQuanTriVienDS.TabIndex = 13;
             this.lvQuanTriVienDS.UseCompatibleStateImageBehavior = false;
             this.lvQuanTriVienDS.View = System.Windows.Forms.View.Details;
+            this.columnHeader5});
+            /**
+            // this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            // this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // this.listView1.FullRowSelect = true;
+            // this.listView1.GridLines = true;
+            // this.listView1.HideSelection = false;
+            // this.listView1.Location = new System.Drawing.Point(0, 206);
+            // this.listView1.Name = "listView1";
+            // this.listView1.Size = new System.Drawing.Size(686, 177);
+            // this.listView1.TabIndex = 13;
+            // this.listView1.UseCompatibleStateImageBehavior = false;
+            // this.listView1.View = System.Windows.Forms.View.Details;
+            **/
             // 
             // GrBChiTiet
             // 
@@ -275,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 383);
+            this.ClientSize = new System.Drawing.Size(686, 383);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvQuanTriVienDS);
             this.Controls.Add(this.GrBChiTiet);

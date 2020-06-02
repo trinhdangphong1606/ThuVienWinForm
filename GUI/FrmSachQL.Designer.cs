@@ -34,6 +34,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@
             this.LvSachQL.HideSelection = false;
             this.LvSachQL.Location = new System.Drawing.Point(0, 313);
             this.LvSachQL.Name = "LvSachQL";
-            this.LvSachQL.Size = new System.Drawing.Size(706, 216);
+            this.LvSachQL.Size = new System.Drawing.Size(795, 216);
             this.LvSachQL.TabIndex = 10;
             this.LvSachQL.UseCompatibleStateImageBehavior = false;
             this.LvSachQL.View = System.Windows.Forms.View.Details;
@@ -105,6 +106,11 @@
             // 
             this.columnHeader3.Text = "Năm Xuất Bản";
             this.columnHeader3.Width = 121;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Trạng Thái";
+            this.columnHeader6.Width = 100;
             // 
             // label1
             // 
@@ -371,7 +377,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 529);
+            this.ClientSize = new System.Drawing.Size(795, 529);
             this.Controls.Add(this.LvSachQL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);

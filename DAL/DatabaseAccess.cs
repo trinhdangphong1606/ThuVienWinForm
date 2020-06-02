@@ -12,6 +12,9 @@ namespace DAL
     {
         string strConn = "Server=localhost;Database=test;User id=adminphongtd;pwd=Phong123@";
         protected SqlConnection conn = null;
+
+        public static object Instance { get; internal set; }
+
         public void OpenConnection()
         {
             if (conn == null)

@@ -40,5 +40,23 @@ namespace DAL
             return dsDanhMuc;
 
         }
+
+        public bool InsertDanhMuc(string TenDanhMuc, string NoiDungDanhMuc)
+        {
+            OpenConnection();
+            string query = string.Format("INSERT INTO dbo.DanhMuc (TenDanhMuc,NoiDungDanhMuc) VALUES (N'{0}',N'{1}')", TenDanhMuc, NoiDungDanhMuc);
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            int result = command.ExecuteNonQuery();
+
+            if (result > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
