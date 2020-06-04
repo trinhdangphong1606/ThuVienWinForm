@@ -62,6 +62,17 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return true;
         }
-
+        
+        public bool DongPhieuMuon(PhieuMuonSach pms)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' where PhieuId='"+pms.MaPhieuMuon  +"'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return true;
+        }
+        
     }
 }

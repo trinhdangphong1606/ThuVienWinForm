@@ -142,6 +142,7 @@ namespace GUI
             bool phieumoi = pmsbll.ThemPhieuMuon(pms);
             if (phieumoi)
             {
+                MessageBox.Show("Nhấn nút cập nhật nhé!!!","Thông Báo");
                 this.Close();
             }
         }

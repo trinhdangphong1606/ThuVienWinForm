@@ -20,5 +20,9 @@ namespace BLL
         {
             return phieums.ThemPhieuMuon(newphieu);
         }
+        public bool DongPhieuMuon(PhieuMuonSach closephieu)
+        {
+            return phieums.DongPhieuMuon(closephieu);
+        }
     }
 }

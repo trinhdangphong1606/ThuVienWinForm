@@ -42,7 +42,7 @@ namespace GUI
                 lvi.SubItems.Add(qtvien.DiaChi);
 
                 lvQuanTriVienDS.Items.Add(lvi);
-            }    
+            }
         }
 
         private void btnQuanTriVienCapNhat_Click(object sender, EventArgs e)

@@ -38,11 +38,14 @@
             this.btnTimMaPhieu = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.dtpickerNgayDuKienTra = new System.Windows.Forms.DateTimePicker();
+            this.dtpickerNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.dtpickerNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTrangThaiPhieu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,9 +63,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvDSPhieuMuon = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dtpickerNgayMuon = new System.Windows.Forms.DateTimePicker();
-            this.dtpickerNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.dtpickerNgayDuKienTra = new System.Windows.Forms.DateTimePicker();
+            this.btnCapNhatTrangThaiPhieu = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,9 +71,9 @@
             // BtnPMSDong
             // 
             this.BtnPMSDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPMSDong.Location = new System.Drawing.Point(568, 14);
+            this.BtnPMSDong.Location = new System.Drawing.Point(569, 14);
             this.BtnPMSDong.Name = "BtnPMSDong";
-            this.BtnPMSDong.Size = new System.Drawing.Size(157, 63);
+            this.BtnPMSDong.Size = new System.Drawing.Size(157, 51);
             this.BtnPMSDong.TabIndex = 19;
             this.BtnPMSDong.Text = "Đóng Phiếu Mượn";
             this.BtnPMSDong.UseVisualStyleBackColor = true;
@@ -83,7 +84,7 @@
             this.BtnPMSMo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPMSMo.Location = new System.Drawing.Point(398, 14);
             this.BtnPMSMo.Name = "BtnPMSMo";
-            this.BtnPMSMo.Size = new System.Drawing.Size(158, 63);
+            this.BtnPMSMo.Size = new System.Drawing.Size(158, 51);
             this.BtnPMSMo.TabIndex = 18;
             this.BtnPMSMo.Text = "Mở Mới Phiếu";
             this.BtnPMSMo.UseVisualStyleBackColor = true;
@@ -158,6 +159,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnCapNhatTrangThaiPhieu);
             this.GrBChiTiet.Controls.Add(this.dtpickerNgayDuKienTra);
             this.GrBChiTiet.Controls.Add(this.dtpickerNgayTra);
             this.GrBChiTiet.Controls.Add(this.dtpickerNgayMuon);
@@ -165,7 +167,7 @@
             this.GrBChiTiet.Controls.Add(this.groupBox1);
             this.GrBChiTiet.Controls.Add(this.BtnPMSMo);
             this.GrBChiTiet.Controls.Add(this.BtnPMSDong);
-            this.GrBChiTiet.Controls.Add(this.textBox7);
+            this.GrBChiTiet.Controls.Add(this.txtTrangThaiPhieu);
             this.GrBChiTiet.Controls.Add(this.label6);
             this.GrBChiTiet.Controls.Add(this.label5);
             this.GrBChiTiet.Controls.Add(this.label3);
@@ -180,6 +182,51 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(737, 217);
             this.GrBChiTiet.TabIndex = 16;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // dtpickerNgayDuKienTra
+            // 
+            this.dtpickerNgayDuKienTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpickerNgayDuKienTra.CustomFormat = "dd-MM-yyyy";
+            this.dtpickerNgayDuKienTra.Enabled = false;
+            this.dtpickerNgayDuKienTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerNgayDuKienTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpickerNgayDuKienTra.Location = new System.Drawing.Point(206, 132);
+            this.dtpickerNgayDuKienTra.Name = "dtpickerNgayDuKienTra";
+            this.dtpickerNgayDuKienTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpickerNgayDuKienTra.Size = new System.Drawing.Size(104, 23);
+            this.dtpickerNgayDuKienTra.TabIndex = 71;
+            // 
+            // dtpickerNgayTra
+            // 
+            this.dtpickerNgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpickerNgayTra.CustomFormat = "dd-MM-yyyy";
+            this.dtpickerNgayTra.Enabled = false;
+            this.dtpickerNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpickerNgayTra.Location = new System.Drawing.Point(206, 156);
+            this.dtpickerNgayTra.Name = "dtpickerNgayTra";
+            this.dtpickerNgayTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpickerNgayTra.Size = new System.Drawing.Size(104, 23);
+            this.dtpickerNgayTra.TabIndex = 70;
+            // 
+            // dtpickerNgayMuon
+            // 
+            this.dtpickerNgayMuon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpickerNgayMuon.CustomFormat = "dd-MM-yyyy";
+            this.dtpickerNgayMuon.Enabled = false;
+            this.dtpickerNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpickerNgayMuon.Location = new System.Drawing.Point(206, 103);
+            this.dtpickerNgayMuon.Name = "dtpickerNgayMuon";
+            this.dtpickerNgayMuon.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpickerNgayMuon.Size = new System.Drawing.Size(104, 23);
+            this.dtpickerNgayMuon.TabIndex = 69;
             // 
             // label9
             // 
@@ -202,7 +249,7 @@
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(389, 83);
+            this.groupBox1.Location = new System.Drawing.Point(389, 112);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(342, 99);
             this.groupBox1.TabIndex = 36;
@@ -227,15 +274,15 @@
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Nhập Mã Phiếu";
             // 
-            // textBox7
+            // txtTrangThaiPhieu
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(206, 188);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 23);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTrangThaiPhieu.Enabled = false;
+            this.txtTrangThaiPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangThaiPhieu.Location = new System.Drawing.Point(183, 188);
+            this.txtTrangThaiPhieu.Name = "txtTrangThaiPhieu";
+            this.txtTrangThaiPhieu.Size = new System.Drawing.Size(171, 23);
+            this.txtTrangThaiPhieu.TabIndex = 24;
+            this.txtTrangThaiPhieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -389,50 +436,16 @@
             this.columnHeader3.Text = "Tên Sách";
             this.columnHeader3.Width = 103;
             // 
-            // dtpickerNgayMuon
+            // btnCapNhatTrangThaiPhieu
             // 
-            this.dtpickerNgayMuon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpickerNgayMuon.CustomFormat = "dd-MM-yyyy";
-            this.dtpickerNgayMuon.Enabled = false;
-            this.dtpickerNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpickerNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpickerNgayMuon.Location = new System.Drawing.Point(206, 103);
-            this.dtpickerNgayMuon.Name = "dtpickerNgayMuon";
-            this.dtpickerNgayMuon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpickerNgayMuon.Size = new System.Drawing.Size(104, 23);
-            this.dtpickerNgayMuon.TabIndex = 69;
-            // 
-            // dtpickerNgayTra
-            // 
-            this.dtpickerNgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpickerNgayTra.CustomFormat = "dd-MM-yyyy";
-            this.dtpickerNgayTra.Enabled = false;
-            this.dtpickerNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpickerNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpickerNgayTra.Location = new System.Drawing.Point(206, 156);
-            this.dtpickerNgayTra.Name = "dtpickerNgayTra";
-            this.dtpickerNgayTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpickerNgayTra.Size = new System.Drawing.Size(104, 23);
-            this.dtpickerNgayTra.TabIndex = 70;
-            // 
-            // dtpickerNgayDuKienTra
-            // 
-            this.dtpickerNgayDuKienTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpickerNgayDuKienTra.CustomFormat = "dd-MM-yyyy";
-            this.dtpickerNgayDuKienTra.Enabled = false;
-            this.dtpickerNgayDuKienTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpickerNgayDuKienTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpickerNgayDuKienTra.Location = new System.Drawing.Point(206, 132);
-            this.dtpickerNgayDuKienTra.Name = "dtpickerNgayDuKienTra";
-            this.dtpickerNgayDuKienTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpickerNgayDuKienTra.Size = new System.Drawing.Size(104, 23);
-            this.dtpickerNgayDuKienTra.TabIndex = 71;
+            this.btnCapNhatTrangThaiPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatTrangThaiPhieu.Location = new System.Drawing.Point(398, 71);
+            this.btnCapNhatTrangThaiPhieu.Name = "btnCapNhatTrangThaiPhieu";
+            this.btnCapNhatTrangThaiPhieu.Size = new System.Drawing.Size(328, 35);
+            this.btnCapNhatTrangThaiPhieu.TabIndex = 73;
+            this.btnCapNhatTrangThaiPhieu.Text = "Cập Nhật Thông Tin";
+            this.btnCapNhatTrangThaiPhieu.UseVisualStyleBackColor = true;
+            this.btnCapNhatTrangThaiPhieu.Click += new System.EventHandler(this.btnCapNhatTrangThaiPhieu_Click);
             // 
             // FrmPhieuMuonSachQL
             // 
@@ -467,7 +480,7 @@
         private System.Windows.Forms.Button btnTimMaPhieu;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.GroupBox GrBChiTiet;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTrangThaiPhieu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -492,5 +505,6 @@
         private System.Windows.Forms.DateTimePicker dtpickerNgayDuKienTra;
         private System.Windows.Forms.DateTimePicker dtpickerNgayTra;
         private System.Windows.Forms.DateTimePicker dtpickerNgayMuon;
+        private System.Windows.Forms.Button btnCapNhatTrangThaiPhieu;
     }
 }

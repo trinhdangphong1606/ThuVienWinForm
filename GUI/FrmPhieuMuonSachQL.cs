@@ -13,8 +13,13 @@ using DAL.DAO;
 
 namespace GUI
 {
+    
     public partial class FrmPhieuMuonSachQL : Form
     {
+        public static string PassMaPhieuMuon = "";
+        public static string PassTenDocGia = "";
+        public static string PassTenSach = "";
+        public static DateTime PassNgayMuon ;
         private void FrmPhieuMuonSachQL_Load(object sender, EventArgs e)
         {
             HienThiDSPhieuMuonSach();
@@ -32,8 +37,33 @@ namespace GUI
 
         private void BtnPMSDong_Click(object sender, EventArgs e)
         {
-            FrmPhieuMuonSachDong frm1 = new FrmPhieuMuonSachDong();
-            frm1.Show();
+            if(txtMaPhieuMuon.Text=="")
+            {
+                MessageBox.Show("Chọn Phiếu Muốn Đóng", "Thông báo");
+            }    
+            else
+            {
+                if(txtTrangThaiPhieu.Text=="Phiếu Đã Đóng")
+                {
+                    MessageBox.Show("Phiếu này đã đóng", "Thông báo");
+                }
+                else
+                {
+                    DongPhieuMuon();
+                }    
+            }    
+            
+        }
+
+        private void DongPhieuMuon()
+        {
+            PassMaPhieuMuon = txtMaPhieuMuon.Text;
+            PassTenDocGia = txtTenDocGia.Text;
+            PassTenSach = txtTenSach.Text;
+            PassNgayMuon = dtpickerNgayMuon.Value;
+
+            FrmPhieuMuonSachDong frm2 = new FrmPhieuMuonSachDong();
+            frm2.Show();
         }
         private void HienThiDSPhieuMuonSach()
         {
@@ -62,15 +92,29 @@ namespace GUI
                 string tensach = lvi.SubItems[2].Text;
                 string ngaymuon = lvi.SubItems[3].Text;
                 string ngaydukientra = lvi.SubItems[4].Text;
-                string ngaytra = lvi.SubItems[5].Text;
+                if(lvi.SubItems[5].Text=="")
+                {
+                    txtTrangThaiPhieu.Text = "Phiếu Đang Mở";
+                }
+                else
+                {
+                    string ngaytra = lvi.SubItems[5].Text;
+                    dtpickerNgayTra.Value = Convert.ToDateTime(ngaytra);
+                    txtTrangThaiPhieu.Text = "Phiếu Đã Đóng";
+                }
                 txtMaPhieuMuon.Text = maphieumuon;
                 txtTenDocGia.Text = tendocgia;
                 txtTenSach.Text = tensach;
                 dtpickerNgayMuon.Value = Convert.ToDateTime(ngaymuon);
                 dtpickerNgayDuKienTra.Value = Convert.ToDateTime(ngaydukientra);
-                dtpickerNgayTra.Value = Convert.ToDateTime(ngaytra);
+                
                 
             }    
+        }
+
+        private void btnCapNhatTrangThaiPhieu_Click(object sender, EventArgs e)
+        {
+            HienThiDSPhieuMuonSach();
         }
     }
 }

@@ -64,11 +64,23 @@
     <Compile Include="FrmDanhMucThemMoi.Designer.cs">
       <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNguoiMuonSachCapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNguoiMuonSachCapNhat.Designer.cs">
+      <DependentUpon>FrmNguoiMuonSachCapNhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNguoiMuonSachQL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNguoiMuonSachQL.Designer.cs">
       <DependentUpon>FrmNguoiMuonSachQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNguoiMuonSachThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNguoiMuonSachThemMoi.Designer.cs">
+      <DependentUpon>FrmNguoiMuonSachThemMoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPhieuMuonSachMo.cs">
       <SubType>Form</SubType>
@@ -123,8 +135,14 @@
     <EmbeddedResource Include="FrmDanhMucThemMoi.resx">
       <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNguoiMuonSachCapNhat.resx">
+      <DependentUpon>FrmNguoiMuonSachCapNhat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNguoiMuonSachQL.resx">
       <DependentUpon>FrmNguoiMuonSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNguoiMuonSachThemMoi.resx">
+      <DependentUpon>FrmNguoiMuonSachThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuMuonSachMo.resx">
       <DependentUpon>FrmPhieuMuonSachMo.cs</DependentUpon>

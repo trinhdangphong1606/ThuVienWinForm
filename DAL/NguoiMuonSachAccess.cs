@@ -28,9 +28,9 @@ namespace DAL
                 string hoten = reader.GetString(1);
                 string sodienthoai = reader.GetString(2);
                 string diachi = reader.GetString(3);
-                string bieuhien = reader.GetString(4);
-                string email = reader.GetString(5);
-                int namsinh = reader.GetInt32(6);
+                
+                string email = reader.GetString(4);
+                int namsinh = reader.GetInt32(5);
 
                 NguoiMuonSach nms = new NguoiMuonSach();
 
@@ -38,7 +38,7 @@ namespace DAL
                 nms.HoTen = hoten;
                 nms.SoDienThoai = sodienthoai;
                 nms.DiaChi = diachi;
-                nms.BieuHien = bieuhien;
+                
                 nms.Email = email;
                 nms.NamSinh = namsinh;
 

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class FrmNguoiMuonSachQL
+    partial class FrmNguoiMuonSachThemMoi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.txtNMSMa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnHuyThaoTac = new System.Windows.Forms.Button();
+            this.btnThemMoiDG = new System.Windows.Forms.Button();
             this.TxtNMSEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnNguoiMuonThem = new System.Windows.Forms.Button();
-            this.BtnNguoiMuonCapNhat = new System.Windows.Forms.Button();
             this.TxtNMSDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtNMSNamSinh = new System.Windows.Forms.TextBox();
@@ -43,23 +42,25 @@
             this.TxtNMSTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.lvNguoiMuonSachDS = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(236, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Thêm Mới Đọc Giả";
+            // 
             // GrBChiTiet
             // 
-            this.GrBChiTiet.Controls.Add(this.txtNMSMa);
-            this.GrBChiTiet.Controls.Add(this.label3);
+            this.GrBChiTiet.Controls.Add(this.btnHuyThaoTac);
+            this.GrBChiTiet.Controls.Add(this.btnThemMoiDG);
             this.GrBChiTiet.Controls.Add(this.TxtNMSEmail);
             this.GrBChiTiet.Controls.Add(this.label6);
-            this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonThem);
-            this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonCapNhat);
             this.GrBChiTiet.Controls.Add(this.TxtNMSDiaChi);
             this.GrBChiTiet.Controls.Add(this.label7);
             this.GrBChiTiet.Controls.Add(this.TxtNMSNamSinh);
@@ -68,35 +69,42 @@
             this.GrBChiTiet.Controls.Add(this.TxtNMSTen);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label2);
-            this.GrBChiTiet.Location = new System.Drawing.Point(0, 36);
+            this.GrBChiTiet.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GrBChiTiet.Location = new System.Drawing.Point(0, 30);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(671, 280);
-            this.GrBChiTiet.TabIndex = 17;
+            this.GrBChiTiet.Size = new System.Drawing.Size(670, 194);
+            this.GrBChiTiet.TabIndex = 32;
             this.GrBChiTiet.TabStop = false;
             // 
-            // txtNMSMa
+            // btnHuyThaoTac
             // 
-            this.txtNMSMa.Enabled = false;
-            this.txtNMSMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNMSMa.Location = new System.Drawing.Point(555, 14);
-            this.txtNMSMa.Name = "txtNMSMa";
-            this.txtNMSMa.Size = new System.Drawing.Size(99, 23);
-            this.txtNMSMa.TabIndex = 30;
-            this.txtNMSMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnHuyThaoTac.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyThaoTac.Location = new System.Drawing.Point(330, 130);
+            this.btnHuyThaoTac.Name = "btnHuyThaoTac";
+            this.btnHuyThaoTac.Size = new System.Drawing.Size(327, 52);
+            this.btnHuyThaoTac.TabIndex = 33;
+            this.btnHuyThaoTac.Text = "Hủy";
+            this.btnHuyThaoTac.UseVisualStyleBackColor = true;
+            this.btnHuyThaoTac.Click += new System.EventHandler(this.btnHuyThaoTac_Click);
             // 
-            // label3
+            // btnThemMoiDG
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(511, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 17);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Mã";
+            this.btnThemMoiDG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemMoiDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMoiDG.Location = new System.Drawing.Point(15, 130);
+            this.btnThemMoiDG.Name = "btnThemMoiDG";
+            this.btnThemMoiDG.Size = new System.Drawing.Size(309, 52);
+            this.btnThemMoiDG.TabIndex = 32;
+            this.btnThemMoiDG.Text = "Thêm Mới";
+            this.btnThemMoiDG.UseVisualStyleBackColor = true;
             // 
             // TxtNMSEmail
             // 
-            this.TxtNMSEmail.Enabled = false;
             this.TxtNMSEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNMSEmail.Location = new System.Drawing.Point(87, 101);
             this.TxtNMSEmail.Name = "TxtNMSEmail";
@@ -114,37 +122,8 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Email";
             // 
-            // BtnNguoiMuonThem
-            // 
-            this.BtnNguoiMuonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNguoiMuonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNguoiMuonThem.Location = new System.Drawing.Point(340, 130);
-            this.BtnNguoiMuonThem.Name = "BtnNguoiMuonThem";
-            this.BtnNguoiMuonThem.Size = new System.Drawing.Size(317, 43);
-            this.BtnNguoiMuonThem.TabIndex = 25;
-            this.BtnNguoiMuonThem.Text = "Thêm Mới Đọc Giả";
-            this.BtnNguoiMuonThem.UseVisualStyleBackColor = true;
-            this.BtnNguoiMuonThem.Click += new System.EventHandler(this.BtnNguoiMuonThem_Click);
-            // 
-            // BtnNguoiMuonCapNhat
-            // 
-            this.BtnNguoiMuonCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNguoiMuonCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(15, 129);
-            this.BtnNguoiMuonCapNhat.Name = "BtnNguoiMuonCapNhat";
-            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(319, 43);
-            this.BtnNguoiMuonCapNhat.TabIndex = 24;
-            this.BtnNguoiMuonCapNhat.Text = "Cập Nhật Thông Tin Đọc Giả";
-            this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
-            this.BtnNguoiMuonCapNhat.Click += new System.EventHandler(this.BtnNguoiMuonCapNhat_Click);
-            // 
             // TxtNMSDiaChi
             // 
-            this.TxtNMSDiaChi.Enabled = false;
             this.TxtNMSDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNMSDiaChi.Location = new System.Drawing.Point(87, 72);
             this.TxtNMSDiaChi.Name = "TxtNMSDiaChi";
@@ -164,7 +143,6 @@
             // 
             // TxtNMSNamSinh
             // 
-            this.TxtNMSNamSinh.Enabled = false;
             this.TxtNMSNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNMSNamSinh.Location = new System.Drawing.Point(491, 43);
             this.TxtNMSNamSinh.Name = "TxtNMSNamSinh";
@@ -184,7 +162,6 @@
             // 
             // TxtNMSSoDienThoai
             // 
-            this.TxtNMSSoDienThoai.Enabled = false;
             this.TxtNMSSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNMSSoDienThoai.Location = new System.Drawing.Point(123, 43);
             this.TxtNMSSoDienThoai.Name = "TxtNMSSoDienThoai";
@@ -194,11 +171,10 @@
             // 
             // TxtNMSTen
             // 
-            this.TxtNMSTen.Enabled = false;
             this.TxtNMSTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNMSTen.Location = new System.Drawing.Point(123, 14);
             this.TxtNMSTen.Name = "TxtNMSTen";
-            this.TxtNMSTen.Size = new System.Drawing.Size(362, 23);
+            this.TxtNMSTen.Size = new System.Drawing.Size(534, 23);
             this.TxtNMSTen.TabIndex = 13;
             this.TxtNMSTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -222,68 +198,15 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Đọc Giả";
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Họ Tên";
-            this.columnHeader1.Width = 230;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số Điện Thoại";
-            this.columnHeader2.Width = 120;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(236, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Quản Lý Đọc Giả";
-            // 
-            // lvNguoiMuonSachDS
-            // 
-            this.lvNguoiMuonSachDS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.lvNguoiMuonSachDS.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lvNguoiMuonSachDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvNguoiMuonSachDS.FullRowSelect = true;
-            this.lvNguoiMuonSachDS.GridLines = true;
-            this.lvNguoiMuonSachDS.HideSelection = false;
-            this.lvNguoiMuonSachDS.Location = new System.Drawing.Point(0, 214);
-            this.lvNguoiMuonSachDS.Name = "lvNguoiMuonSachDS";
-            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(673, 148);
-            this.lvNguoiMuonSachDS.TabIndex = 16;
-            this.lvNguoiMuonSachDS.UseCompatibleStateImageBehavior = false;
-            this.lvNguoiMuonSachDS.View = System.Windows.Forms.View.Details;
-            this.lvNguoiMuonSachDS.SelectedIndexChanged += new System.EventHandler(this.lvNguoiMuonSachDS_SelectedIndexChanged);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Mã Đọc Giả";
-            this.columnHeader4.Width = 85;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Địa Chỉ ";
-            this.columnHeader3.Width = 450;
-            // 
-            // FrmNguoiMuonSachQL
+            // FrmNguoiMuonSachThemMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 362);
-            this.Controls.Add(this.lvNguoiMuonSachDS);
-            this.Controls.Add(this.GrBChiTiet);
+            this.ClientSize = new System.Drawing.Size(670, 224);
             this.Controls.Add(this.label1);
-            this.Name = "FrmNguoiMuonSachQL";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNguoiMuonSachQL";
-            this.Load += new System.EventHandler(this.FrmNguoiMuonSachQL_Load);
+            this.Controls.Add(this.GrBChiTiet);
+            this.Name = "FrmNguoiMuonSachThemMoi";
+            this.Text = "FrmNguoiMuonSachThemMoi";
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
             this.ResumeLayout(false);
@@ -293,11 +216,12 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrBChiTiet;
+        private System.Windows.Forms.Button btnHuyThaoTac;
+        private System.Windows.Forms.Button btnThemMoiDG;
         private System.Windows.Forms.TextBox TxtNMSEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnNguoiMuonThem;
-        private System.Windows.Forms.Button BtnNguoiMuonCapNhat;
         private System.Windows.Forms.TextBox TxtNMSDiaChi;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtNMSNamSinh;
@@ -306,13 +230,5 @@
         private System.Windows.Forms.TextBox TxtNMSTen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lvNguoiMuonSachDS;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox txtNMSMa;
-        private System.Windows.Forms.Label label3;
     }
 }
