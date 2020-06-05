@@ -49,11 +49,13 @@
             this.lvNguoiMuonSachDS = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCapNhatForm = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnCapNhatForm);
             this.GrBChiTiet.Controls.Add(this.txtNMSMa);
             this.GrBChiTiet.Controls.Add(this.label3);
             this.GrBChiTiet.Controls.Add(this.TxtNMSEmail);
@@ -70,7 +72,7 @@
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(0, 36);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(671, 280);
+            this.GrBChiTiet.Size = new System.Drawing.Size(673, 280);
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
             // 
@@ -80,7 +82,7 @@
             this.txtNMSMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNMSMa.Location = new System.Drawing.Point(555, 14);
             this.txtNMSMa.Name = "txtNMSMa";
-            this.txtNMSMa.Size = new System.Drawing.Size(99, 23);
+            this.txtNMSMa.Size = new System.Drawing.Size(102, 23);
             this.txtNMSMa.TabIndex = 30;
             this.txtNMSMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -120,9 +122,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnNguoiMuonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNguoiMuonThem.Location = new System.Drawing.Point(340, 130);
+            this.BtnNguoiMuonThem.Location = new System.Drawing.Point(263, 130);
             this.BtnNguoiMuonThem.Name = "BtnNguoiMuonThem";
-            this.BtnNguoiMuonThem.Size = new System.Drawing.Size(317, 43);
+            this.BtnNguoiMuonThem.Size = new System.Drawing.Size(288, 43);
             this.BtnNguoiMuonThem.TabIndex = 25;
             this.BtnNguoiMuonThem.Text = "Thêm Mới Đọc Giả";
             this.BtnNguoiMuonThem.UseVisualStyleBackColor = true;
@@ -134,11 +136,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnNguoiMuonCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(15, 129);
+            this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(12, 129);
             this.BtnNguoiMuonCapNhat.Name = "BtnNguoiMuonCapNhat";
-            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(319, 43);
+            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(247, 43);
             this.BtnNguoiMuonCapNhat.TabIndex = 24;
-            this.BtnNguoiMuonCapNhat.Text = "Cập Nhật Thông Tin Đọc Giả";
+            this.BtnNguoiMuonCapNhat.Text = "Thay Đổi Thông Tin Đọc Giả";
             this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
             this.BtnNguoiMuonCapNhat.Click += new System.EventHandler(this.BtnNguoiMuonCapNhat_Click);
             // 
@@ -256,7 +258,7 @@
             this.lvNguoiMuonSachDS.HideSelection = false;
             this.lvNguoiMuonSachDS.Location = new System.Drawing.Point(0, 214);
             this.lvNguoiMuonSachDS.Name = "lvNguoiMuonSachDS";
-            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(673, 148);
+            this.lvNguoiMuonSachDS.Size = new System.Drawing.Size(669, 148);
             this.lvNguoiMuonSachDS.TabIndex = 16;
             this.lvNguoiMuonSachDS.UseCompatibleStateImageBehavior = false;
             this.lvNguoiMuonSachDS.View = System.Windows.Forms.View.Details;
@@ -272,11 +274,25 @@
             this.columnHeader3.Text = "Địa Chỉ ";
             this.columnHeader3.Width = 450;
             // 
+            // btnCapNhatForm
+            // 
+            this.btnCapNhatForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhatForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatForm.Location = new System.Drawing.Point(555, 130);
+            this.btnCapNhatForm.Name = "btnCapNhatForm";
+            this.btnCapNhatForm.Size = new System.Drawing.Size(104, 43);
+            this.btnCapNhatForm.TabIndex = 31;
+            this.btnCapNhatForm.Text = "Cập Nhật";
+            this.btnCapNhatForm.UseVisualStyleBackColor = true;
+            this.btnCapNhatForm.Click += new System.EventHandler(this.btnCapNhatForm_Click);
+            // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 362);
+            this.ClientSize = new System.Drawing.Size(669, 362);
             this.Controls.Add(this.lvNguoiMuonSachDS);
             this.Controls.Add(this.GrBChiTiet);
             this.Controls.Add(this.label1);
@@ -314,5 +330,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox txtNMSMa;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCapNhatForm;
     }
 }

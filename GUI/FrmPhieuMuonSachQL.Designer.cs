@@ -38,13 +38,14 @@
             this.btnTimMaPhieu = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnCapNhatTrangThaiPhieu = new System.Windows.Forms.Button();
             this.dtpickerNgayDuKienTra = new System.Windows.Forms.DateTimePicker();
             this.dtpickerNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtpickerNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimMaPhieu = new System.Windows.Forms.TextBox();
             this.txtTrangThaiPhieu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvDSPhieuMuon = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnCapNhatTrangThaiPhieu = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -147,6 +147,7 @@
             this.btnTimMaPhieu.TabIndex = 30;
             this.btnTimMaPhieu.Text = "Tìm";
             this.btnTimMaPhieu.UseVisualStyleBackColor = true;
+            this.btnTimMaPhieu.Click += new System.EventHandler(this.btnTimMaPhieu_Click);
             // 
             // textBox8
             // 
@@ -182,6 +183,17 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(737, 217);
             this.GrBChiTiet.TabIndex = 16;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // btnCapNhatTrangThaiPhieu
+            // 
+            this.btnCapNhatTrangThaiPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatTrangThaiPhieu.Location = new System.Drawing.Point(398, 71);
+            this.btnCapNhatTrangThaiPhieu.Name = "btnCapNhatTrangThaiPhieu";
+            this.btnCapNhatTrangThaiPhieu.Size = new System.Drawing.Size(328, 35);
+            this.btnCapNhatTrangThaiPhieu.TabIndex = 73;
+            this.btnCapNhatTrangThaiPhieu.Text = "Cập Nhật Thông Tin";
+            this.btnCapNhatTrangThaiPhieu.UseVisualStyleBackColor = true;
+            this.btnCapNhatTrangThaiPhieu.Click += new System.EventHandler(this.btnCapNhatTrangThaiPhieu_Click);
             // 
             // dtpickerNgayDuKienTra
             // 
@@ -242,7 +254,7 @@
             // 
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTimMaPhieu);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.btnTimMaPhieu);
@@ -265,14 +277,14 @@
             this.label8.TabIndex = 37;
             this.label8.Text = "Tìm Phiếu ";
             // 
-            // textBox1
+            // txtTimMaPhieu
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 23);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Nhập Mã Phiếu";
+            this.txtTimMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimMaPhieu.Location = new System.Drawing.Point(6, 43);
+            this.txtTimMaPhieu.Name = "txtTimMaPhieu";
+            this.txtTimMaPhieu.Size = new System.Drawing.Size(99, 23);
+            this.txtTimMaPhieu.TabIndex = 4;
+            this.txtTimMaPhieu.Text = "Nhập Mã Phiếu";
             // 
             // txtTrangThaiPhieu
             // 
@@ -436,17 +448,6 @@
             this.columnHeader3.Text = "Tên Sách";
             this.columnHeader3.Width = 103;
             // 
-            // btnCapNhatTrangThaiPhieu
-            // 
-            this.btnCapNhatTrangThaiPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatTrangThaiPhieu.Location = new System.Drawing.Point(398, 71);
-            this.btnCapNhatTrangThaiPhieu.Name = "btnCapNhatTrangThaiPhieu";
-            this.btnCapNhatTrangThaiPhieu.Size = new System.Drawing.Size(328, 35);
-            this.btnCapNhatTrangThaiPhieu.TabIndex = 73;
-            this.btnCapNhatTrangThaiPhieu.Text = "Cập Nhật Thông Tin";
-            this.btnCapNhatTrangThaiPhieu.UseVisualStyleBackColor = true;
-            this.btnCapNhatTrangThaiPhieu.Click += new System.EventHandler(this.btnCapNhatTrangThaiPhieu_Click);
-            // 
             // FrmPhieuMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,7 +490,7 @@
         private System.Windows.Forms.TextBox txtTenDocGia;
         private System.Windows.Forms.TextBox txtMaPhieuMuon;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimMaPhieu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label1;

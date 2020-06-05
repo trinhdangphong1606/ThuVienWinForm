@@ -73,6 +73,43 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return true;
         }
-        
+        public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSach pms)
+        {
+            List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT pms.PhieuId,nms.HoTen,s.TenSach,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach FROM PhieuMuonSach pms, NguoiMuonSach nms, Sach s WHERE pms.NguoiMuonSachId = nms.Id and pms.SachID = s.ID and PhieuId like '"+pms.NgayTraSach+"'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int idphieu = reader.GetInt32(0);
+                string tennguoimuon = reader.GetString(1);
+                string tensach = reader.GetString(2);
+                DateTime ngaymuon = reader.GetDateTime(3);
+                DateTime ngaydukientra = reader.GetDateTime(4);
+                DateTime? ngaytra;
+                if (reader.IsDBNull(5))
+                {
+                    ngaytra = (DateTime?)null;
+                }
+                else
+                {
+                    ngaytra = reader.GetDateTime(5);
+                }
+                PhieuMuonSachDAO pmsdao = new PhieuMuonSachDAO();
+                pmsdao.MaPhieuMuon = idphieu;
+                pmsdao.TenNguoiMuonSach = tennguoimuon;
+                pmsdao.TenSach = tensach;
+                pmsdao.NgayMuon = ngaymuon;
+                pmsdao.NgayDuKienTra = ngaydukientra;
+                pmsdao.NgayTraSach = ngaytra;
+                dsPhieuMuon.Add(pmsdao);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsPhieuMuon;
+        }
     }
 }

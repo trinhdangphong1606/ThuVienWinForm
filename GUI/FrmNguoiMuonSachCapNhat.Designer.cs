@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.txtNMSMa = new System.Windows.Forms.TextBox();
+            this.btnHuyThaoTac = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.txtMa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtNMSEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtNMSDiaChi = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtNMSNamSinh = new System.Windows.Forms.TextBox();
+            this.txtNamSinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtNMSSoDienThoai = new System.Windows.Forms.TextBox();
-            this.TxtNMSTen = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnHuyThaoTac = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,16 +51,16 @@
             // 
             this.GrBChiTiet.Controls.Add(this.btnHuyThaoTac);
             this.GrBChiTiet.Controls.Add(this.btnCapNhat);
-            this.GrBChiTiet.Controls.Add(this.txtNMSMa);
+            this.GrBChiTiet.Controls.Add(this.txtMa);
             this.GrBChiTiet.Controls.Add(this.label3);
-            this.GrBChiTiet.Controls.Add(this.TxtNMSEmail);
+            this.GrBChiTiet.Controls.Add(this.txtEmail);
             this.GrBChiTiet.Controls.Add(this.label6);
-            this.GrBChiTiet.Controls.Add(this.TxtNMSDiaChi);
+            this.GrBChiTiet.Controls.Add(this.txtDiaChi);
             this.GrBChiTiet.Controls.Add(this.label7);
-            this.GrBChiTiet.Controls.Add(this.TxtNMSNamSinh);
+            this.GrBChiTiet.Controls.Add(this.txtNamSinh);
             this.GrBChiTiet.Controls.Add(this.label5);
-            this.GrBChiTiet.Controls.Add(this.TxtNMSSoDienThoai);
-            this.GrBChiTiet.Controls.Add(this.TxtNMSTen);
+            this.GrBChiTiet.Controls.Add(this.txtSoDienThoai);
+            this.GrBChiTiet.Controls.Add(this.txtTen);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -70,15 +70,42 @@
             this.GrBChiTiet.TabIndex = 18;
             this.GrBChiTiet.TabStop = false;
             // 
-            // txtNMSMa
+            // btnHuyThaoTac
             // 
-            this.txtNMSMa.Enabled = false;
-            this.txtNMSMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNMSMa.Location = new System.Drawing.Point(555, 14);
-            this.txtNMSMa.Name = "txtNMSMa";
-            this.txtNMSMa.Size = new System.Drawing.Size(102, 23);
-            this.txtNMSMa.TabIndex = 30;
-            this.txtNMSMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnHuyThaoTac.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 130);
+            this.btnHuyThaoTac.Name = "btnHuyThaoTac";
+            this.btnHuyThaoTac.Size = new System.Drawing.Size(319, 52);
+            this.btnHuyThaoTac.TabIndex = 33;
+            this.btnHuyThaoTac.Text = "Hủy Thao Tác";
+            this.btnHuyThaoTac.UseVisualStyleBackColor = true;
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(15, 130);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(319, 52);
+            this.btnCapNhat.TabIndex = 32;
+            this.btnCapNhat.Text = "Cập Nhật Thông Tin ";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // txtMa
+            // 
+            this.txtMa.Enabled = false;
+            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Location = new System.Drawing.Point(555, 14);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(102, 23);
+            this.txtMa.TabIndex = 30;
+            this.txtMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -90,14 +117,14 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Mã";
             // 
-            // TxtNMSEmail
+            // txtEmail
             // 
-            this.TxtNMSEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNMSEmail.Location = new System.Drawing.Point(87, 101);
-            this.TxtNMSEmail.Name = "TxtNMSEmail";
-            this.TxtNMSEmail.Size = new System.Drawing.Size(570, 23);
-            this.TxtNMSEmail.TabIndex = 28;
-            this.TxtNMSEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(87, 101);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(570, 23);
+            this.txtEmail.TabIndex = 28;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -109,14 +136,14 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Email";
             // 
-            // TxtNMSDiaChi
+            // txtDiaChi
             // 
-            this.TxtNMSDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNMSDiaChi.Location = new System.Drawing.Point(87, 72);
-            this.TxtNMSDiaChi.Name = "TxtNMSDiaChi";
-            this.TxtNMSDiaChi.Size = new System.Drawing.Size(570, 23);
-            this.TxtNMSDiaChi.TabIndex = 18;
-            this.TxtNMSDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(87, 72);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(570, 23);
+            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -128,14 +155,14 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Địa Chỉ";
             // 
-            // TxtNMSNamSinh
+            // txtNamSinh
             // 
-            this.TxtNMSNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNMSNamSinh.Location = new System.Drawing.Point(491, 43);
-            this.TxtNMSNamSinh.Name = "TxtNMSNamSinh";
-            this.TxtNMSNamSinh.Size = new System.Drawing.Size(166, 23);
-            this.TxtNMSNamSinh.TabIndex = 16;
-            this.TxtNMSNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamSinh.Location = new System.Drawing.Point(491, 43);
+            this.txtNamSinh.Name = "txtNamSinh";
+            this.txtNamSinh.Size = new System.Drawing.Size(166, 23);
+            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -147,23 +174,23 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Năm Sinh";
             // 
-            // TxtNMSSoDienThoai
+            // txtSoDienThoai
             // 
-            this.TxtNMSSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNMSSoDienThoai.Location = new System.Drawing.Point(123, 43);
-            this.TxtNMSSoDienThoai.Name = "TxtNMSSoDienThoai";
-            this.TxtNMSSoDienThoai.Size = new System.Drawing.Size(260, 23);
-            this.TxtNMSSoDienThoai.TabIndex = 14;
-            this.TxtNMSSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Location = new System.Drawing.Point(123, 43);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(260, 23);
+            this.txtSoDienThoai.TabIndex = 14;
+            this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TxtNMSTen
+            // txtTen
             // 
-            this.TxtNMSTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNMSTen.Location = new System.Drawing.Point(123, 14);
-            this.TxtNMSTen.Name = "TxtNMSTen";
-            this.TxtNMSTen.Size = new System.Drawing.Size(362, 23);
-            this.TxtNMSTen.TabIndex = 13;
-            this.TxtNMSTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTen.Location = new System.Drawing.Point(123, 14);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(362, 23);
+            this.txtTen.TabIndex = 13;
+            this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -195,32 +222,6 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Cập Nhật Thông Tin Đọc Giả";
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(15, 130);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(319, 52);
-            this.btnCapNhat.TabIndex = 32;
-            this.btnCapNhat.Text = "Cập Nhật Thông Tin ";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            // 
-            // btnHuyThaoTac
-            // 
-            this.btnHuyThaoTac.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 130);
-            this.btnHuyThaoTac.Name = "btnHuyThaoTac";
-            this.btnHuyThaoTac.Size = new System.Drawing.Size(319, 52);
-            this.btnHuyThaoTac.TabIndex = 33;
-            this.btnHuyThaoTac.Text = "Hủy Thao Tác";
-            this.btnHuyThaoTac.UseVisualStyleBackColor = true;
-            // 
             // FrmNguoiMuonSachCapNhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +231,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmNguoiMuonSachCapNhat";
             this.Text = "FrmNguoiMuonSachCapNhat";
+            this.Load += new System.EventHandler(this.FrmNguoiMuonSachCapNhat_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
             this.ResumeLayout(false);
@@ -240,16 +242,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GrBChiTiet;
-        private System.Windows.Forms.TextBox txtNMSMa;
+        private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtNMSEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtNMSDiaChi;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtNMSNamSinh;
+        private System.Windows.Forms.TextBox txtNamSinh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtNMSSoDienThoai;
-        private System.Windows.Forms.TextBox TxtNMSTen;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

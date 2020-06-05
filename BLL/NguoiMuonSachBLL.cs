@@ -16,5 +16,13 @@ namespace BLL
         {
             return nguoimuons.LayToanBoNguoiMuonSach();
         }
+        public bool CapNhatDocGia(NguoiMuonSach CapNhatDG)
+        {
+            return nguoimuons.CapNhatDocGia(CapNhatDG);
+        }
+        public bool ThemDocGia(NguoiMuonSach ThemDG)
+        {
+            return nguoimuons.ThemDocGia(ThemDG);
+        }
     }
 }

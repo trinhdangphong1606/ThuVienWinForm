@@ -75,7 +75,7 @@ namespace GUI
             bool closephieu = pmsbll.DongPhieuMuon(pms);
             if(closephieu)
             {
-                
+                MessageBox.Show("Nhấn nút cập nhật nhé!!!", "Thông Báo");
                 this.Close();
             }    
         }

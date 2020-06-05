@@ -14,6 +14,12 @@ namespace GUI
 {
     public partial class FrmNguoiMuonSachQL : Form
     {
+        public static string PassMa="";
+        public static string PassTen = "";
+        public static string PassSoDienThoai = "";
+        public static string PassNamSinh = "";
+        public static string PassDiaChi = "";
+        public static string PassEmail = "";
         public FrmNguoiMuonSachQL()
         {
             InitializeComponent();
@@ -22,18 +28,37 @@ namespace GUI
         {
             HienThiNguoiMuonSachDS();
         }
+        private void btnCapNhatForm_Click(object sender, EventArgs e)
+        {
+            HienThiNguoiMuonSachDS();
+        }
         private void BtnNguoiMuonCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNguoiMuonSachCapNhat Frm1 = new FrmNguoiMuonSachCapNhat();
-            Frm1.Show();
+            if (txtNMSMa.Text == "")
+            {
+                MessageBox.Show("Chọn Đọc Giả Cần Thay Đổi Thông Tin", "Thông Báp");
+            }
+            else
+            {
+                PassMa = txtNMSMa.Text;
+                PassTen = TxtNMSTen.Text;
+                PassSoDienThoai = TxtNMSSoDienThoai.Text;
+                PassNamSinh = TxtNMSNamSinh.Text;
+                PassEmail = TxtNMSEmail.Text;
+                PassDiaChi = TxtNMSDiaChi.Text;
+                FrmNguoiMuonSachCapNhat Frm2 = new FrmNguoiMuonSachCapNhat();
+                Frm2.Show();
+            }
         }
         private void BtnNguoiMuonThem_Click(object sender, EventArgs e)
         {
             FrmNguoiMuonSachThemMoi Frm1 = new FrmNguoiMuonSachThemMoi();
             Frm1.Show();
         }
+         
         private void HienThiNguoiMuonSachDS()
         {
+           
             NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
             List<NguoiMuonSach> dsngmsach = ngmsachbll.LayToanBoNguoiMuonSach();
             lvNguoiMuonSachDS.Items.Clear();
@@ -71,6 +96,6 @@ namespace GUI
             }
         }
 
-        
+       
     }
 }

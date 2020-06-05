@@ -55,7 +55,7 @@ namespace GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmDanhMucThemMoi frm1 = new FrmDanhMucThemMoi();
+            FrmThemDanhMuc frm1 = new FrmThemDanhMuc();
             //frm1.MdiParent = this;
             frm1.Show();
         }

@@ -54,6 +54,10 @@ namespace GUI
             }    
             
         }
+        private void btnCapNhatTrangThaiPhieu_Click(object sender, EventArgs e)
+        {
+            HienThiDSPhieuMuonSach();
+        }
 
         private void DongPhieuMuon()
         {
@@ -92,9 +96,10 @@ namespace GUI
                 string tensach = lvi.SubItems[2].Text;
                 string ngaymuon = lvi.SubItems[3].Text;
                 string ngaydukientra = lvi.SubItems[4].Text;
+
                 if(lvi.SubItems[5].Text=="")
                 {
-                    txtTrangThaiPhieu.Text = "Phiếu Đang Mở";
+                    txtTrangThaiPhieu.Text = "Phiếu Đang Mở Chưa trả sách";
                 }
                 else
                 {
@@ -112,9 +117,26 @@ namespace GUI
             }    
         }
 
-        private void btnCapNhatTrangThaiPhieu_Click(object sender, EventArgs e)
+        private void btnTimMaPhieu_Click(object sender, EventArgs e)
         {
-            HienThiDSPhieuMuonSach();
+            /*
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.MaPhieuMuon = int.Parse(txtTimMaPhieu.Text);
+
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayToanBoPhieuMuon();
+            lvDSPhieuMuon.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvDSPhieuMuon.Items.Add(lvi);
+            }
+            */
         }
     }
 }

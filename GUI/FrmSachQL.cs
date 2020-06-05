@@ -84,7 +84,7 @@ namespace GUI
             List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
             cbboxSachTacGia.Items.Clear();
             cbboxSachTacGia.DataSource = dsdsach;
-            cbboxSachTacGia.DisplayMember = "TacGia";
+            cbboxSachTacGia.DisplayMember = "NgonNgu";
         }
     }
 }
