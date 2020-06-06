@@ -29,21 +29,46 @@ namespace DAL
                 string hoten = reader.GetString(1);
                 string sodienthoai = reader.GetString(2);
                 string diachi = reader.GetString(3);
-                
                 string email = reader.GetString(4);
                 int namsinh = reader.GetInt32(5);
-
                 NguoiMuonSach nms = new NguoiMuonSach();
-
                 nms.Id = id;
                 nms.HoTen = hoten;
                 nms.SoDienThoai = sodienthoai;
                 nms.DiaChi = diachi;
-                
                 nms.Email = email;
                 nms.NamSinh = namsinh;
-
                 dsNguoiMuonSach.Add(nms);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsNguoiMuonSach;
+        }
+        public List<NguoiMuonSach> TimTenNguoiMuon(NguoiMuonSach nms)
+        {
+            List<NguoiMuonSach> dsNguoiMuonSach = new List<NguoiMuonSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "exec TimTenNguoiMuon @ten ='" + nms.HoTen + "'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string hoten = reader.GetString(1);
+                string sodienthoai = reader.GetString(2);
+                string diachi = reader.GetString(3);
+                string email = reader.GetString(4);
+                int namsinh = reader.GetInt32(5);
+                NguoiMuonSach tennms = new NguoiMuonSach();
+                tennms.Id = id;
+                tennms.HoTen = hoten;
+                nms.SoDienThoai = sodienthoai;
+                nms.DiaChi = diachi;
+                nms.Email = email;
+                nms.NamSinh = namsinh;
+                dsNguoiMuonSach.Add(tennms);
             }
             reader.Close();
             CloseConnection();

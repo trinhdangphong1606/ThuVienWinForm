@@ -35,7 +35,7 @@ namespace GUI
 
         public void HienThiDanhSachSach()
         {
-            SachBLL2 sacBLL = new SachBLL2();
+            SachBLL sacBLL = new SachBLL();
             List<SachDAO> dsdsach = sacBLL.LayToanBoSach();
             LvSachQL.Items.Clear();
             foreach (SachDAO scBLL in dsdsach)

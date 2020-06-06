@@ -24,9 +24,21 @@ namespace BLL
         {
             return phieums.DongPhieuMuon(closephieu);
         }
-        public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSach timmaphieu)
+        public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSachDAO timmaphieu)
         {
             return phieums.TimPhieuTheoMa(timmaphieu);
+        }
+        public List<PhieuMuonSachDAO> TimPhieuTheoten(PhieuMuonSachDAO timtenphieu)
+        {
+            return phieums.TimPhieuTheoten(timtenphieu);
+        }
+        public List<PhieuMuonSachDAO> LayPhieuDangMo()
+        {
+            return phieums.LayPhieuDangMo();
+        }
+        public List<PhieuMuonSachDAO> LayPhieuDaDong()
+        {
+            return phieums.LayPhieuDaDong();
         }
     }
 }

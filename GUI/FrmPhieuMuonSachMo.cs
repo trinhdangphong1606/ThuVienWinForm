@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GUI;
 using BLL;
 using DTO;
+using DAL.DAO;
 
 
 namespace GUI
@@ -144,6 +145,28 @@ namespace GUI
             {
                 MessageBox.Show("Nhấn nút cập nhật nhé!!!","Thông Báo");
                 this.Close();
+            }
+        }
+
+        private void btnTimTenDocGia_Click(object sender, EventArgs e)
+        {
+            errorTimDocGia.SetError(txtTimTenNMS, "");
+            if(txtTimTenNMS.Text=="")
+            {
+                errorTimDocGia.SetError(txtTimTenNMS, "Nhập Tên Đọc Giả Cần Tìm");
+                return;
+            }
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.HoTen = txtTimTenNMS.Text;
+
+            NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
+            List<NguoiMuonSach> dsngmsach = ngmsachbll.TimTenNguoiMuon(nms);
+            lvPMSTDocGia.Items.Clear();
+            foreach (NguoiMuonSach nmsbll in dsngmsach)
+            {
+                ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
+                lvi.SubItems.Add(nmsbll.HoTen);
+                lvPMSTDocGia.Items.Add(lvi);
             }
         }
     }

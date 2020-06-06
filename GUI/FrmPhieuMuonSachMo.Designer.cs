@@ -39,8 +39,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtTimSach = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnTimTenSach = new System.Windows.Forms.Button();
+            this.btnTimTenDocGia = new System.Windows.Forms.Button();
             this.txtTimTenNMS = new System.Windows.Forms.TextBox();
             this.btnXacNhanThongTin = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,9 +70,15 @@
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.datetimeConfirmNgayDuKienTra = new System.Windows.Forms.DateTimePicker();
             this.datetimeConfirmNgayMuon = new System.Windows.Forms.DateTimePicker();
+            this.errorTimDocGia = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTimTenSach = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTimDocGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTimTenSach)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +139,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên Sách";
-            this.columnHeader2.Width = 300;
+            this.columnHeader2.Width = 245;
             // 
             // lvPMSTDocGia
             // 
@@ -159,46 +165,45 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Tên Đọc Giả";
-            this.columnHeader4.Width = 300;
+            this.columnHeader4.Width = 225;
             // 
             // txtTimSach
             // 
             this.txtTimSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimSach.Location = new System.Drawing.Point(390, 240);
+            this.txtTimSach.Location = new System.Drawing.Point(470, 240);
             this.txtTimSach.Name = "txtTimSach";
-            this.txtTimSach.Size = new System.Drawing.Size(257, 23);
+            this.txtTimSach.Size = new System.Drawing.Size(162, 23);
             this.txtTimSach.TabIndex = 41;
-            this.txtTimSach.Text = "Nhập Tên Sách";
             this.txtTimSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button3
+            // btnTimTenSach
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(653, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 25);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Tìm";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTenSach.Location = new System.Drawing.Point(653, 240);
+            this.btnTimTenSach.Name = "btnTimTenSach";
+            this.btnTimTenSach.Size = new System.Drawing.Size(56, 25);
+            this.btnTimTenSach.TabIndex = 42;
+            this.btnTimTenSach.Text = "Tìm";
+            this.btnTimTenSach.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnTimTenDocGia
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(653, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 25);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "Tìm";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTimTenDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTenDocGia.Location = new System.Drawing.Point(653, 50);
+            this.btnTimTenDocGia.Name = "btnTimTenDocGia";
+            this.btnTimTenDocGia.Size = new System.Drawing.Size(56, 25);
+            this.btnTimTenDocGia.TabIndex = 44;
+            this.btnTimTenDocGia.Text = "Tìm";
+            this.btnTimTenDocGia.UseVisualStyleBackColor = true;
+            this.btnTimTenDocGia.Click += new System.EventHandler(this.btnTimTenDocGia_Click);
             // 
             // txtTimTenNMS
             // 
             this.txtTimTenNMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimTenNMS.Location = new System.Drawing.Point(390, 50);
+            this.txtTimTenNMS.Location = new System.Drawing.Point(490, 50);
             this.txtTimTenNMS.Name = "txtTimTenNMS";
-            this.txtTimTenNMS.Size = new System.Drawing.Size(257, 23);
+            this.txtTimTenNMS.Size = new System.Drawing.Size(142, 23);
             this.txtTimTenNMS.TabIndex = 43;
-            this.txtTimTenNMS.Text = "Nhập Tên Đọc Giả";
             this.txtTimTenNMS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnXacNhanThongTin
@@ -475,11 +480,41 @@
             this.datetimeConfirmNgayMuon.Size = new System.Drawing.Size(104, 23);
             this.datetimeConfirmNgayMuon.TabIndex = 91;
             // 
+            // errorTimDocGia
+            // 
+            this.errorTimDocGia.ContainerControl = this;
+            // 
+            // errorTimTenSach
+            // 
+            this.errorTimTenSach.ContainerControl = this;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(387, 53);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 17);
+            this.label14.TabIndex = 93;
+            this.label14.Text = "Tìm Đọc Giả";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(389, 243);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 17);
+            this.label15.TabIndex = 94;
+            this.label15.Text = "Tìm Sách";
+            // 
             // FrmPhieuMuonSachMo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.datetimeConfirmNgayDuKienTra);
             this.Controls.Add(this.datetimeConfirmNgayMuon);
             this.Controls.Add(this.txtReadyTenSach);
@@ -505,9 +540,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnTimTenDocGia);
             this.Controls.Add(this.txtTimTenNMS);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnTimTenSach);
             this.Controls.Add(this.txtTimSach);
             this.Controls.Add(this.lvPMSTDocGia);
             this.Controls.Add(this.lvPMSTSach);
@@ -521,6 +556,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTimDocGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTimTenSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,8 +575,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox txtTimSach;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnTimTenSach;
+        private System.Windows.Forms.Button btnTimTenDocGia;
         private System.Windows.Forms.TextBox txtTimTenNMS;
         private System.Windows.Forms.Button btnXacNhanThongTin;
         private System.Windows.Forms.Label label6;
@@ -569,5 +606,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.DateTimePicker datetimeConfirmNgayDuKienTra;
         private System.Windows.Forms.DateTimePicker datetimeConfirmNgayMuon;
+        private System.Windows.Forms.ErrorProvider errorTimDocGia;
+        private System.Windows.Forms.ErrorProvider errorTimTenSach;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

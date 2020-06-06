@@ -24,5 +24,9 @@ namespace BLL
         {
             return nguoimuons.ThemDocGia(ThemDG);
         }
+        public List<NguoiMuonSach> TimTenNguoiMuon(NguoiMuonSach timten)
+        {
+            return nguoimuons.TimTenNguoiMuon(timten);
+        }
     }
 }

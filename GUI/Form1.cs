@@ -22,7 +22,7 @@ namespace GUI
 
         private void BtnHienThiSach_Click(object sender, EventArgs e)
         {
-            SachBLL2 sacbll = new SachBLL2();
+            SachBLL sacbll = new SachBLL();
             List<SachDAO> dssach = sacbll.LayToanBoSach();
             lvSach.Items.Clear();
             foreach(SachDAO sac in dssach)

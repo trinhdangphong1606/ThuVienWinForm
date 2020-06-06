@@ -10,11 +10,16 @@ namespace BLL
 {
     public class SachBLL
     {
-        SachAccessAll sac = new SachAccessAll();
+        SachAccess sac = new SachAccess();
         public List<Sach> LayAllToanBoSach()
         {
             
             return sac.LayAllToanBoSach();
+        }
+        public List<SachDAO> LayToanBoSach()
+        {
+
+            return sac.LayToanBoSach();
         }
     }
 }
