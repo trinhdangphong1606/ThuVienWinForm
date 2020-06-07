@@ -40,5 +40,9 @@ namespace BLL
         {
             return phieums.LayPhieuDaDong();
         }
+        public List<PhieuMuonSachDAO> TimphieuTheoNgay(PhieuMuonSachDAO timngayphieu)
+        {
+            return phieums.TimPhieuTheoNgay(timngayphieu);
+        }
     }
 }

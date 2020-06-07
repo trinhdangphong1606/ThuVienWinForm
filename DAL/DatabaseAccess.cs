@@ -18,9 +18,11 @@ namespace DAL
         public void OpenConnection()
         {
             if (conn == null)
+                //Nếu đối tượng connection = null thì ta tạo connection
                 conn = new SqlConnection(strConn);
-
+            
             if (conn.State == ConnectionState.Closed)
+                //Nếu connection đang trạng thái close thì mở 
                 conn.Open();
         }
         public void CloseConnection()

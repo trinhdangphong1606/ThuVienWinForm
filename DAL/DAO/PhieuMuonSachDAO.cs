@@ -16,5 +16,9 @@ namespace DAL.DAO
         public DateTime NgayDuKienTra { get; set; }
         public Nullable<DateTime> NgayTraSach { get; set; }
 
+        public int ngay { get; set; }
+        public int thang { get; set; }
+        public int nam { get; set; }
+
     }
 }

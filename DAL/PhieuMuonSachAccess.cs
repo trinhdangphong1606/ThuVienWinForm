@@ -52,7 +52,6 @@ namespace DAL
             CloseConnection();
             return dsPhieuMuon;
         }
-        
         public bool ThemPhieuMuon(PhieuMuonSach pms)
         {
             OpenConnection();
@@ -61,9 +60,8 @@ namespace DAL
             command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra) values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+"')";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
-            return true;
+            return ketqua > 0;
         }
-        
         public bool DongPhieuMuon(PhieuMuonSach pms)
         {
             OpenConnection();
@@ -72,10 +70,8 @@ namespace DAL
             command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' where PhieuId='"+pms.MaPhieuMuon  +"'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
-            return true;
+            return ketqua > 0;
         }
-        
-        //Fixing
         public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSachDAO pms)
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
@@ -114,7 +110,6 @@ namespace DAL
             CloseConnection();
             return dsPhieuMuon;
         }
-
         public List<PhieuMuonSachDAO> TimPhieuTheoten(PhieuMuonSachDAO pms)
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
@@ -153,7 +148,6 @@ namespace DAL
             CloseConnection();
             return dsPhieuMuon;
         }
-
         public List<PhieuMuonSachDAO> LayPhieuDangMo()
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
@@ -192,7 +186,6 @@ namespace DAL
             CloseConnection();
             return dsPhieuMuon;
         }
-
         public List<PhieuMuonSachDAO> LayPhieuDaDong()
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
@@ -226,6 +219,44 @@ namespace DAL
                 pms.NgayDuKienTra = ngaydukientra;
                 pms.NgayTraSach = ngaytra;
                 dsPhieuMuon.Add(pms);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsPhieuMuon;
+        }
+        public List<PhieuMuonSachDAO> TimPhieuTheoNgay(PhieuMuonSachDAO pms)
+        {
+            List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "exec TimPhieuTheoNgay @ngay='"+pms.ngay+ "', @thang='" + pms.thang + "', @nam='" + pms.nam + "'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int idphieu = reader.GetInt32(0);
+                string tennguoimuon = reader.GetString(1);
+                string tensach = reader.GetString(2);
+                DateTime ngaymuon = reader.GetDateTime(3);
+                DateTime ngaydukientra = reader.GetDateTime(4);
+                DateTime? ngaytra;
+                if (reader.IsDBNull(5))
+                {
+                    ngaytra = (DateTime?)null;
+                }
+                else
+                {
+                    ngaytra = reader.GetDateTime(5);
+                }
+                PhieuMuonSachDAO timpms = new PhieuMuonSachDAO();
+                timpms.MaPhieuMuon = idphieu;
+                timpms.TenNguoiMuonSach = tennguoimuon;
+                timpms.TenSach = tensach;
+                timpms.NgayMuon = ngaymuon;
+                timpms.NgayDuKienTra = ngaydukientra;
+                timpms.NgayTraSach = ngaytra;
+                dsPhieuMuon.Add(timpms);
             }
             reader.Close();
             CloseConnection();

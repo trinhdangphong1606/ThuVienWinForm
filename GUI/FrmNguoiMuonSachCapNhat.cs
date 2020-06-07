@@ -34,14 +34,14 @@ namespace GUI
             nms.HoTen = txtTen.Text;
             nms.NamSinh = int.Parse(txtNamSinh.Text);
             nms.SoDienThoai = txtSoDienThoai.Text;
-            nms.DiaChi = txtSoDienThoai.Text;
+            nms.DiaChi = txtDiaChi.Text;
             nms.Email = txtEmail.Text;
 
             NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
             bool capnhat = nmsbll.CapNhatDocGia(nms);
             if(capnhat)
             {
-                MessageBox.Show("Ok", "Thông Báo");
+                MessageBox.Show("Đã Thay Đổi Thành Công, Nhấn Cập Nhật Nhé ...", "Thông Báo");
                 this.Close();
             }    
         }

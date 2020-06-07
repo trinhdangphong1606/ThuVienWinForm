@@ -36,9 +36,10 @@ namespace GUI
         public void HienThiDanhSachSach()
         {
             SachBLL sacBLL = new SachBLL();
-            List<SachDAO> dsdsach = sacBLL.LayToanBoSach();
+            List<SachDAO> dssach = sacBLL.LayToanBoSach(); //call sachbll để trả về dssach
             LvSachQL.Items.Clear();
-            foreach (SachDAO scBLL in dsdsach)
+            foreach (SachDAO scBLL in dssach)
+                //duyệt tuần tự các phần tử trong mảng dssach
             {
                 ListViewItem lvi = new ListViewItem(scBLL.TenSach + "");
                 lvi.SubItems.Add(scBLL.TacGia);
@@ -47,6 +48,7 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.NamXuatBan+"");
                 //lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
+
                 LvSachQL.Items.Add(lvi);
             }
         }

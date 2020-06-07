@@ -185,6 +185,7 @@
             this.btnTimTenSach.TabIndex = 42;
             this.btnTimTenSach.Text = "Tìm";
             this.btnTimTenSach.UseVisualStyleBackColor = true;
+            this.btnTimTenSach.Click += new System.EventHandler(this.btnTimTenSach_Click);
             // 
             // btnTimTenDocGia
             // 

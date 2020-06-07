@@ -23,6 +23,21 @@ namespace GUI
         private void FrmPhieuMuonSachQL_Load(object sender, EventArgs e)
         {
             HienThiDSPhieuMuonSach();
+            txtTimNgay.Text= dtpickerNgayMuon.Value.ToString("dd");
+            txtTimThang.Text = dtpickerNgayMuon.Value.ToString("MM");
+            txtTimNam.Text = dtpickerNgayMuon.Value.ToString("yyyy");
+        }
+        private void txtTimThang_Click(object sender, EventArgs e)
+        {
+            txtTimThang.Text = "";
+        }
+        private void txtTimNgay_Click(object sender, EventArgs e)
+        {
+            txtTimNgay.Text = "";
+        }
+        private void txtTimNam_Click(object sender, EventArgs e)
+        {
+            txtTimNam.Text = "";
         }
         public FrmPhieuMuonSachQL()
         {
@@ -95,6 +110,8 @@ namespace GUI
                 lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
                 lvDSPhieuMuon.Items.Add(lvi);
             }
+            txtTimMaPhieu.Text = "";
+            txtTimPhieuTheoTen.Text = "";
         }
         private void HienThiDSPhieuMuonSachDangMo()
         {
@@ -111,6 +128,8 @@ namespace GUI
                 lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
                 lvDSPhieuMuon.Items.Add(lvi);
             }
+            txtTimMaPhieu.Text = "";
+            txtTimPhieuTheoTen.Text = "";
         }
         private void HienThiDSPhieuMuonSachDaDong()
         {
@@ -127,8 +146,9 @@ namespace GUI
                 lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
                 lvDSPhieuMuon.Items.Add(lvi);
             }
+            txtTimMaPhieu.Text = "";
+            txtTimPhieuTheoTen.Text = "";
         }
-
         private void lvDSPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lvDSPhieuMuon.SelectedItems.Count>0)
@@ -159,7 +179,6 @@ namespace GUI
                 
             }    
         }
-
         private void btnTimTheoMa_Click(object sender, EventArgs e)
         {
             errorTimMaPhieu.SetError(txtTimMaPhieu, "");
@@ -184,8 +203,8 @@ namespace GUI
                 lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
                 lvDSPhieuMuon.Items.Add(lvi);
             }
+            txtTimPhieuTheoTen.Text = "";
         }
-
         private void btnTimTheoTen_Click(object sender, EventArgs e)
         {
             errorTimTenDocGia.SetError(txtTimPhieuTheoTen, "");
@@ -210,6 +229,29 @@ namespace GUI
                 lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
                 lvDSPhieuMuon.Items.Add(lvi);
             }
+            txtTimMaPhieu.Text = "";
         }
+        private void btnTimThoiGianTao_Click(object sender, EventArgs e)
+        {
+            PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
+            pms.ngay = int.Parse(txtTimNgay.Text);
+            pms.thang = int.Parse(txtTimThang.Text);
+            pms.nam = int.Parse(txtTimNam.Text);
+
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.TimphieuTheoNgay(pms);
+            lvDSPhieuMuon.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvDSPhieuMuon.Items.Add(lvi);
+            }
+        }
+
     }
 }

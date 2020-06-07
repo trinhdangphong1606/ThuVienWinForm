@@ -169,5 +169,27 @@ namespace GUI
                 lvPMSTDocGia.Items.Add(lvi);
             }
         }
+
+        private void btnTimTenSach_Click(object sender, EventArgs e)
+        {
+            errorTimTenSach.SetError(txtTimSach, "");
+            if(txtTimSach.Text=="")
+            {
+                errorTimTenSach.SetError(txtTimSach, "Nhập Tên Sách Cần Tìm");
+                return;
+            }
+            SachDAO sac = new SachDAO();
+            sac.TenSach = txtTimSach.Text;
+
+            SachBLL sacbll = new SachBLL();
+            List<SachDAO> dssachtim = sacbll.TimTenSach(sac);
+            lvPMSTSach.Items.Clear();
+            foreach(SachDAO sachtim in dssachtim)
+            {
+                ListViewItem lvi = new ListViewItem(sachtim.ID + "");
+                lvi.SubItems.Add(sachtim.TenSach);
+                lvPMSTSach.Items.Add(lvi);
+            }    
+        }
     }
 }

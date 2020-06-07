@@ -42,6 +42,8 @@
             this.dtpickerNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTimTheoTen = new System.Windows.Forms.Button();
+            this.btnTimTheoMa = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,10 +66,15 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvDSPhieuMuon = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnTimTheoMa = new System.Windows.Forms.Button();
-            this.btnTimTheoTen = new System.Windows.Forms.Button();
             this.errorTimMaPhieu = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTimTenDocGia = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnTimThoiGianTao = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTimNgay = new System.Windows.Forms.TextBox();
+            this.txtTimThang = new System.Windows.Forms.TextBox();
+            this.txtTimNam = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMaPhieu)).BeginInit();
@@ -99,7 +106,7 @@
             // txtTimPhieuTheoTen
             // 
             this.txtTimPhieuTheoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimPhieuTheoTen.Location = new System.Drawing.Point(129, 64);
+            this.txtTimPhieuTheoTen.Location = new System.Drawing.Point(129, 59);
             this.txtTimPhieuTheoTen.Name = "txtTimPhieuTheoTen";
             this.txtTimPhieuTheoTen.Size = new System.Drawing.Size(144, 23);
             this.txtTimPhieuTheoTen.TabIndex = 6;
@@ -130,14 +137,14 @@
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(-1, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(737, 259);
+            this.GrBChiTiet.Size = new System.Drawing.Size(737, 263);
             this.GrBChiTiet.TabIndex = 16;
             this.GrBChiTiet.TabStop = false;
             // 
             // BtnXemTatCa
             // 
             this.BtnXemTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnXemTatCa.Location = new System.Drawing.Point(569, 217);
+            this.BtnXemTatCa.Location = new System.Drawing.Point(569, 221);
             this.BtnXemTatCa.Name = "BtnXemTatCa";
             this.BtnXemTatCa.Size = new System.Drawing.Size(162, 35);
             this.BtnXemTatCa.TabIndex = 10;
@@ -148,7 +155,7 @@
             // btnPhieuDaDong
             // 
             this.btnPhieuDaDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhieuDaDong.Location = new System.Drawing.Point(290, 218);
+            this.btnPhieuDaDong.Location = new System.Drawing.Point(290, 222);
             this.btnPhieuDaDong.Name = "btnPhieuDaDong";
             this.btnPhieuDaDong.Size = new System.Drawing.Size(266, 35);
             this.btnPhieuDaDong.TabIndex = 9;
@@ -159,7 +166,7 @@
             // btnPhieuDangMo
             // 
             this.btnPhieuDangMo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhieuDangMo.Location = new System.Drawing.Point(18, 218);
+            this.btnPhieuDangMo.Location = new System.Drawing.Point(18, 222);
             this.btnPhieuDangMo.Name = "btnPhieuDangMo";
             this.btnPhieuDangMo.Size = new System.Drawing.Size(266, 35);
             this.btnPhieuDangMo.TabIndex = 8;
@@ -235,6 +242,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtTimNam);
+            this.groupBox1.Controls.Add(this.txtTimThang);
+            this.groupBox1.Controls.Add(this.btnTimThoiGianTao);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txtTimNgay);
             this.groupBox1.Controls.Add(this.btnTimTheoTen);
             this.groupBox1.Controls.Add(this.btnTimTheoMa);
             this.groupBox1.Controls.Add(this.label11);
@@ -242,31 +256,53 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTimMaPhieu);
             this.groupBox1.Controls.Add(this.txtTimPhieuTheoTen);
-            this.groupBox1.Location = new System.Drawing.Point(389, 113);
+            this.groupBox1.Location = new System.Drawing.Point(389, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 99);
+            this.groupBox1.Size = new System.Drawing.Size(342, 113);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
+            // 
+            // btnTimTheoTen
+            // 
+            this.btnTimTheoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTheoTen.Location = new System.Drawing.Point(293, 59);
+            this.btnTimTheoTen.Name = "btnTimTheoTen";
+            this.btnTimTheoTen.Size = new System.Drawing.Size(44, 23);
+            this.btnTimTheoTen.TabIndex = 7;
+            this.btnTimTheoTen.Text = "Tìm";
+            this.btnTimTheoTen.UseVisualStyleBackColor = true;
+            this.btnTimTheoTen.Click += new System.EventHandler(this.btnTimTheoTen_Click);
+            // 
+            // btnTimTheoMa
+            // 
+            this.btnTimTheoMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTheoMa.Location = new System.Drawing.Point(292, 34);
+            this.btnTimTheoMa.Name = "btnTimTheoMa";
+            this.btnTimTheoMa.Size = new System.Drawing.Size(45, 23);
+            this.btnTimTheoMa.TabIndex = 5;
+            this.btnTimTheoMa.Text = "Tìm";
+            this.btnTimTheoMa.UseVisualStyleBackColor = true;
+            this.btnTimTheoMa.Click += new System.EventHandler(this.btnTimTheoMa_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 67);
+            this.label11.Location = new System.Drawing.Point(6, 62);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 17);
+            this.label11.Size = new System.Drawing.Size(104, 17);
             this.label11.TabIndex = 78;
-            this.label11.Text = "Nhập Đọc Giả:";
+            this.label11.Text = "Tên Đọc Giả:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 41);
+            this.label10.Location = new System.Drawing.Point(6, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 17);
+            this.label10.Size = new System.Drawing.Size(80, 17);
             this.label10.TabIndex = 77;
-            this.label10.Text = "Nhập Mã Phiếu:";
+            this.label10.Text = "Mã Phiếu:";
             // 
             // label8
             // 
@@ -281,7 +317,7 @@
             // txtTimMaPhieu
             // 
             this.txtTimMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimMaPhieu.Location = new System.Drawing.Point(129, 39);
+            this.txtTimMaPhieu.Location = new System.Drawing.Point(129, 34);
             this.txtTimMaPhieu.Name = "txtTimMaPhieu";
             this.txtTimMaPhieu.Size = new System.Drawing.Size(144, 23);
             this.txtTimMaPhieu.TabIndex = 4;
@@ -389,7 +425,7 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "Ngày Trả Sách";
-            this.columnHeader6.Width = 130;
+            this.columnHeader6.Width = 150;
             // 
             // label1
             // 
@@ -414,12 +450,12 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Ngày Mượn";
-            this.columnHeader4.Width = 130;
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Dự Kiến Trả";
-            this.columnHeader5.Width = 130;
+            this.columnHeader5.Width = 150;
             // 
             // lvDSPhieuMuon
             // 
@@ -435,9 +471,9 @@
             this.lvDSPhieuMuon.FullRowSelect = true;
             this.lvDSPhieuMuon.GridLines = true;
             this.lvDSPhieuMuon.HideSelection = false;
-            this.lvDSPhieuMuon.Location = new System.Drawing.Point(0, 307);
+            this.lvDSPhieuMuon.Location = new System.Drawing.Point(0, 304);
             this.lvDSPhieuMuon.Name = "lvDSPhieuMuon";
-            this.lvDSPhieuMuon.Size = new System.Drawing.Size(737, 191);
+            this.lvDSPhieuMuon.Size = new System.Drawing.Size(737, 210);
             this.lvDSPhieuMuon.TabIndex = 15;
             this.lvDSPhieuMuon.UseCompatibleStateImageBehavior = false;
             this.lvDSPhieuMuon.View = System.Windows.Forms.View.Details;
@@ -448,28 +484,6 @@
             this.columnHeader3.Text = "Tên Sách";
             this.columnHeader3.Width = 103;
             // 
-            // btnTimTheoMa
-            // 
-            this.btnTimTheoMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTheoMa.Location = new System.Drawing.Point(292, 38);
-            this.btnTimTheoMa.Name = "btnTimTheoMa";
-            this.btnTimTheoMa.Size = new System.Drawing.Size(45, 23);
-            this.btnTimTheoMa.TabIndex = 5;
-            this.btnTimTheoMa.Text = "Tìm";
-            this.btnTimTheoMa.UseVisualStyleBackColor = true;
-            this.btnTimTheoMa.Click += new System.EventHandler(this.btnTimTheoMa_Click);
-            // 
-            // btnTimTheoTen
-            // 
-            this.btnTimTheoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTheoTen.Location = new System.Drawing.Point(292, 64);
-            this.btnTimTheoTen.Name = "btnTimTheoTen";
-            this.btnTimTheoTen.Size = new System.Drawing.Size(44, 23);
-            this.btnTimTheoTen.TabIndex = 7;
-            this.btnTimTheoTen.Text = "Tìm";
-            this.btnTimTheoTen.UseVisualStyleBackColor = true;
-            this.btnTimTheoTen.Click += new System.EventHandler(this.btnTimTheoTen_Click);
-            // 
             // errorTimMaPhieu
             // 
             this.errorTimMaPhieu.ContainerControl = this;
@@ -478,11 +492,85 @@
             // 
             this.errorTimTenDocGia.ContainerControl = this;
             // 
+            // btnTimThoiGianTao
+            // 
+            this.btnTimThoiGianTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimThoiGianTao.Location = new System.Drawing.Point(293, 84);
+            this.btnTimThoiGianTao.Name = "btnTimThoiGianTao";
+            this.btnTimThoiGianTao.Size = new System.Drawing.Size(44, 23);
+            this.btnTimThoiGianTao.TabIndex = 80;
+            this.btnTimThoiGianTao.Text = "Tìm";
+            this.btnTimThoiGianTao.UseVisualStyleBackColor = true;
+            this.btnTimThoiGianTao.Click += new System.EventHandler(this.btnTimThoiGianTao_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 17);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "Ngày Tạo :";
+            // 
+            // txtTimNgay
+            // 
+            this.txtTimNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimNgay.Location = new System.Drawing.Point(129, 85);
+            this.txtTimNgay.Name = "txtTimNgay";
+            this.txtTimNgay.Size = new System.Drawing.Size(32, 23);
+            this.txtTimNgay.TabIndex = 79;
+            this.txtTimNgay.Tag = "";
+            this.txtTimNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimNgay.Click += new System.EventHandler(this.txtTimNgay_Click);
+            // 
+            // txtTimThang
+            // 
+            this.txtTimThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimThang.Location = new System.Drawing.Point(177, 85);
+            this.txtTimThang.Name = "txtTimThang";
+            this.txtTimThang.Size = new System.Drawing.Size(32, 23);
+            this.txtTimThang.TabIndex = 82;
+            this.txtTimThang.Tag = "";
+            this.txtTimThang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimThang.Click += new System.EventHandler(this.txtTimThang_Click);
+            // 
+            // txtTimNam
+            // 
+            this.txtTimNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimNam.Location = new System.Drawing.Point(228, 85);
+            this.txtTimNam.Name = "txtTimNam";
+            this.txtTimNam.Size = new System.Drawing.Size(45, 23);
+            this.txtTimNam.TabIndex = 83;
+            this.txtTimNam.Tag = "";
+            this.txtTimNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimNam.Click += new System.EventHandler(this.txtTimNam_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(163, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 17);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(212, 87);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 17);
+            this.label14.TabIndex = 85;
+            this.label14.Text = "-";
+            // 
             // FrmPhieuMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 498);
+            this.ClientSize = new System.Drawing.Size(737, 514);
             this.Controls.Add(this.GrBChiTiet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvDSPhieuMuon);
@@ -542,5 +630,12 @@
         private System.Windows.Forms.Button btnTimTheoMa;
         private System.Windows.Forms.ErrorProvider errorTimMaPhieu;
         private System.Windows.Forms.ErrorProvider errorTimTenDocGia;
+        private System.Windows.Forms.Button btnTimThoiGianTao;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtTimNgay;
+        private System.Windows.Forms.TextBox txtTimNam;
+        private System.Windows.Forms.TextBox txtTimThang;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
