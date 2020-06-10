@@ -44,6 +44,8 @@
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtQuyen = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCapNhat = new System.Windows.Forms.Button();
@@ -54,8 +56,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtQuyen = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnResetMatKhau = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,6 +194,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnResetMatKhau);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
             this.GrBChiTiet.Controls.Add(this.label9);
             this.GrBChiTiet.Controls.Add(this.txtAccount);
@@ -217,6 +219,26 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(681, 209);
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // txtQuyen
+            // 
+            this.txtQuyen.Enabled = false;
+            this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuyen.Location = new System.Drawing.Point(524, 68);
+            this.txtQuyen.Name = "txtQuyen";
+            this.txtQuyen.Size = new System.Drawing.Size(145, 23);
+            this.txtQuyen.TabIndex = 38;
+            this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(452, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 17);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Quyen";
             // 
             // txtAccount
             // 
@@ -278,11 +300,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnThemMoi.Location = new System.Drawing.Point(279, 158);
+            this.BtnThemMoi.Location = new System.Drawing.Point(186, 158);
             this.BtnThemMoi.Name = "BtnThemMoi";
-            this.BtnThemMoi.Size = new System.Drawing.Size(240, 45);
+            this.BtnThemMoi.Size = new System.Drawing.Size(195, 45);
             this.BtnThemMoi.TabIndex = 30;
-            this.BtnThemMoi.Text = "Thêm Mới Nhân Viên";
+            this.BtnThemMoi.Text = "Thêm Mới";
             this.BtnThemMoi.UseVisualStyleBackColor = true;
             this.BtnThemMoi.Click += new System.EventHandler(this.BtnThemMoi_Click);
             // 
@@ -294,7 +316,7 @@
             this.BtnThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnThayDoi.Location = new System.Drawing.Point(15, 158);
             this.BtnThayDoi.Name = "BtnThayDoi";
-            this.BtnThayDoi.Size = new System.Drawing.Size(244, 45);
+            this.BtnThayDoi.Size = new System.Drawing.Size(165, 45);
             this.BtnThayDoi.TabIndex = 29;
             this.BtnThayDoi.Text = "Thay Đổi Thông Tin";
             this.BtnThayDoi.UseVisualStyleBackColor = true;
@@ -330,25 +352,19 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Quản Lý Quản Trị Viên Thư Viện ";
             // 
-            // txtQuyen
+            // btnResetMatKhau
             // 
-            this.txtQuyen.Enabled = false;
-            this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuyen.Location = new System.Drawing.Point(524, 68);
-            this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Size = new System.Drawing.Size(145, 23);
-            this.txtQuyen.TabIndex = 38;
-            this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(452, 71);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 17);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Quyen";
+            this.btnResetMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetMatKhau.Location = new System.Drawing.Point(387, 158);
+            this.btnResetMatKhau.Name = "btnResetMatKhau";
+            this.btnResetMatKhau.Size = new System.Drawing.Size(144, 46);
+            this.btnResetMatKhau.TabIndex = 39;
+            this.btnResetMatKhau.Text = "Reset Mật Khẩu";
+            this.btnResetMatKhau.UseVisualStyleBackColor = true;
+            this.btnResetMatKhau.Click += new System.EventHandler(this.btnResetMatKhau_Click);
             // 
             // FrmQuanTriVienQL
             // 
@@ -398,5 +414,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtQuyen;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnResetMatKhau;
     }
 }

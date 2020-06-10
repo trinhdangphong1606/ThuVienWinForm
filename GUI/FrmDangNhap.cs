@@ -21,11 +21,17 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            errorUsername.SetError(txtUsername,"");
-            if(txtUsername.Text=="")
+            CanhBaoDangNhap();
+            DangNhap();
+            
+        }
+        private void CanhBaoDangNhap()
+        {
+            errorUsername.SetError(txtUsername, "");
+            if (txtUsername.Text == "")
             {
                 errorUsername.SetError(txtUsername, "Nhập");
                 return;
@@ -36,13 +42,16 @@ namespace GUI
                 errorPassword.SetError(txtPassword, "Nhập");
                 return;
             }
+        }
+        private void DangNhap()
+        {
             QuanTriVien qtv = new QuanTriVien();
             qtv.TenDangNhap = txtUsername.Text;
             qtv.MatKhau = txtPassword.Text;
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
             List<QuanTriVien> dsqtv = qtvbll.DangNhap(qtv);
-            foreach(QuanTriVien qtvlogin in dsqtv)
+            foreach (QuanTriVien qtvlogin in dsqtv)
             {
                 lbTenDangNhap.Text = qtvlogin.TenDangNhap;
                 lbQuyen.Text = qtvlogin.Quyen;
@@ -56,18 +65,14 @@ namespace GUI
                 FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text);
                 frm1.ShowDialog();
                 this.Close();
-                
+
             }
             else
             {
                 MessageBox.Show("Kiểm Tra Lại Tài Khoản và Mật Khẩu nhé,...", "Thông báo");
             }
-            
+
         }
-        /*private void FormTongThe_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,6 +83,17 @@ namespace GUI
         {
             FrmDangKy frm1 = new FrmDangKy();
             frm1.Show();
+        }
+
+        private void btnRestoreMatKhau_Click(object sender, EventArgs e)
+        {
+            FrmRestoreMatKhau frm1 = new FrmRestoreMatKhau();
+            frm1.Show();
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            DangNhap();
         }
     }
 }

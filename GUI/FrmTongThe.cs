@@ -22,23 +22,47 @@ namespace GUI
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSachQL frm1 = new FrmSachQL();
-            frm1.MdiParent = this;
-            frm1.Show();    
+            if(quyen!="User")
+            {
+                FrmSachQL frm1 = new FrmSachQL();
+                frm1.MdiParent = this;
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền", "Thông Báo");
+            }    
+               
         }
 
         private void phiếuMượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPhieuMuonSachQL frm1 = new FrmPhieuMuonSachQL();
-            frm1.MdiParent = this;
-            frm1.Show();
+            if (quyen != "User")
+            {
+                FrmPhieuMuonSachQL frm1 = new FrmPhieuMuonSachQL();
+                frm1.MdiParent = this;
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền", "Thông Báo");
+            }
+            
         }
 
         private void danhMụcSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDanhMucQL frm1 = new FrmDanhMucQL();
-            frm1.MdiParent = this;
-            frm1.Show();
+            if (quyen != "User")
+            {
+                FrmDanhMucQL frm1 = new FrmDanhMucQL();
+                frm1.MdiParent = this;
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền", "Thông Báo");
+            }
+            
         }
 
         private void testingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,9 +72,17 @@ namespace GUI
 
         private void ngườiMượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNguoiMuonSachQL frm1 = new FrmNguoiMuonSachQL();
-            frm1.MdiParent = this;
-            frm1.Show();
+            if (quyen != "User")
+            {
+                FrmNguoiMuonSachQL frm1 = new FrmNguoiMuonSachQL();
+                frm1.MdiParent = this;
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền", "Thông Báo");
+            }
+            
         }
 
         private void quảnTrịViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,7 +102,9 @@ namespace GUI
 
         private void xemSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmSachXem frm1 = new FrmSachXem();
+            frm1.MdiParent = this;
+            frm1.Show();
         }
     }
 }

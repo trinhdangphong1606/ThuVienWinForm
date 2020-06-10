@@ -118,6 +118,12 @@
     <Compile Include="FrmQuanTriVienQL.Designer.cs">
       <DependentUpon>FrmQuanTriVienQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanTriVienResetMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanTriVienResetMatKhau.Designer.cs">
+      <DependentUpon>FrmQuanTriVienResetMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanTriVienThemMoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="FrmSachQL.Designer.cs">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSachXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSachXem.Designer.cs">
+      <DependentUpon>FrmSachXem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThemDanhMuc.cs">
       <SubType>Form</SubType>
@@ -150,6 +162,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmRestoreMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRestoreMatKhau.Designer.cs">
+      <DependentUpon>FrmRestoreMatKhau.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,11 +204,17 @@
     <EmbeddedResource Include="FrmQuanTriVienQL.resx">
       <DependentUpon>FrmQuanTriVienQL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanTriVienResetMatKhau.resx">
+      <DependentUpon>FrmQuanTriVienResetMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanTriVienThemMoi.resx">
       <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSachQL.resx">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSachXem.resx">
+      <DependentUpon>FrmSachXem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemDanhMuc.resx">
       <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
@@ -210,6 +234,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmRestoreMatKhau.resx">
+      <DependentUpon>FrmRestoreMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

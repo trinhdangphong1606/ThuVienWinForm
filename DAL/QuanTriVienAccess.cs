@@ -118,13 +118,24 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
-        public bool ResetMatKhau (QuanTriVien qtvien)
+        public bool RestoreMatKhau (QuanTriVien qtvien)
         {
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "update QuanTriVien set MatKhau ='"+qtvien.MatKhau+"' where Id='"+qtvien.ID+"' and KeyRestore='"+qtvien.KeyRestore+"'" +
-                "";
+            command.CommandText = "update QuanTriVien set MatKhau ='"+qtvien.MatKhau+"' where KeyRestore='"+qtvien.KeyRestore+"'" +
+                "and TenDangNhap ='"+qtvien.TenDangNhap+ "' and Email ='"+qtvien.Email+ "' and SoDienThoai='"+qtvien.SoDienThoai+"'" ;
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
+        public bool ResetMatKhau(QuanTriVien qtvien)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update QuanTriVien set MatKhau ='" + qtvien.MatKhau + "' where TenDangNhap " +
+                "='" + qtvien.TenDangNhap + "' and ID ='"+qtvien.ID+"'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;

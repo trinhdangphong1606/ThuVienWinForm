@@ -90,7 +90,7 @@
             this.txtEmail.Location = new System.Drawing.Point(131, 72);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(526, 23);
-            this.txtEmail.TabIndex = 35;
+            this.txtEmail.TabIndex = 5;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -119,7 +119,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(131, 101);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(526, 23);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TabIndex = 6;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -138,7 +138,7 @@
             this.txtNamSinh.Location = new System.Drawing.Point(556, 17);
             this.txtNamSinh.Name = "txtNamSinh";
             this.txtNamSinh.Size = new System.Drawing.Size(101, 23);
-            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.TabIndex = 2;
             this.txtNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -157,7 +157,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(556, 46);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(101, 23);
-            this.txtSoDienThoai.TabIndex = 14;
+            this.txtSoDienThoai.TabIndex = 4;
             this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTen
@@ -166,7 +166,7 @@
             this.txtTen.Location = new System.Drawing.Point(131, 14);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(294, 23);
-            this.txtTen.TabIndex = 13;
+            this.txtTen.TabIndex = 1;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -224,7 +224,7 @@
             this.txtQuyen.Location = new System.Drawing.Point(131, 188);
             this.txtQuyen.Name = "txtQuyen";
             this.txtQuyen.Size = new System.Drawing.Size(252, 23);
-            this.txtQuyen.TabIndex = 44;
+            this.txtQuyen.TabIndex = 9;
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnQuyenStaff
@@ -236,7 +236,7 @@
             this.btnQuyenStaff.Location = new System.Drawing.Point(532, 186);
             this.btnQuyenStaff.Name = "btnQuyenStaff";
             this.btnQuyenStaff.Size = new System.Drawing.Size(125, 25);
-            this.btnQuyenStaff.TabIndex = 43;
+            this.btnQuyenStaff.TabIndex = 11;
             this.btnQuyenStaff.Text = "Staff";
             this.btnQuyenStaff.UseVisualStyleBackColor = true;
             this.btnQuyenStaff.Click += new System.EventHandler(this.btnQuyenStaff_Click);
@@ -250,7 +250,7 @@
             this.btnQuyenAdmin.Location = new System.Drawing.Point(397, 186);
             this.btnQuyenAdmin.Name = "btnQuyenAdmin";
             this.btnQuyenAdmin.Size = new System.Drawing.Size(118, 25);
-            this.btnQuyenAdmin.TabIndex = 38;
+            this.btnQuyenAdmin.TabIndex = 10;
             this.btnQuyenAdmin.Text = "Admin";
             this.btnQuyenAdmin.UseVisualStyleBackColor = true;
             this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
@@ -271,7 +271,7 @@
             this.txtKey1.Location = new System.Drawing.Point(131, 159);
             this.txtKey1.Name = "txtKey1";
             this.txtKey1.Size = new System.Drawing.Size(526, 23);
-            this.txtKey1.TabIndex = 40;
+            this.txtKey1.TabIndex = 8;
             this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -290,7 +290,7 @@
             this.txtAccount.Location = new System.Drawing.Point(131, 43);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(294, 23);
-            this.txtAccount.TabIndex = 38;
+            this.txtAccount.TabIndex = 3;
             this.txtAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -309,7 +309,7 @@
             this.txtMatKhau1.Location = new System.Drawing.Point(131, 130);
             this.txtMatKhau1.Name = "txtMatKhau1";
             this.txtMatKhau1.Size = new System.Drawing.Size(526, 23);
-            this.txtMatKhau1.TabIndex = 28;
+            this.txtMatKhau1.TabIndex = 7;
             this.txtMatKhau1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnHuyThaoTac
@@ -321,7 +321,7 @@
             this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 270);
             this.btnHuyThaoTac.Name = "btnHuyThaoTac";
             this.btnHuyThaoTac.Size = new System.Drawing.Size(320, 39);
-            this.btnHuyThaoTac.TabIndex = 37;
+            this.btnHuyThaoTac.TabIndex = 13;
             this.btnHuyThaoTac.Text = "Hủy Thao Tác";
             this.btnHuyThaoTac.UseVisualStyleBackColor = true;
             // 
@@ -334,7 +334,7 @@
             this.btnThemMoi.Location = new System.Drawing.Point(10, 270);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(320, 39);
-            this.btnThemMoi.TabIndex = 36;
+            this.btnThemMoi.TabIndex = 12;
             this.btnThemMoi.Text = "Thêm Mới Nhân Viên";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);

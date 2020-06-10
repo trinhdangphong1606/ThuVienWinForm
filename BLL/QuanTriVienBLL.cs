@@ -36,5 +36,9 @@ namespace BLL
         {
             return qtvien.RestoreMatKhau(qtv);
         }
+        public bool ResetMatKhau(QuanTriVien qtv)
+        {
+            return qtvien.ResetMatKhau(qtv);
+        }
     }
 }

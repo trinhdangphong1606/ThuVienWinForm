@@ -118,5 +118,26 @@ namespace GUI
             FrmQuanTriVienThemMoi frm1 = new FrmQuanTriVienThemMoi();
             frm1.Show();
         }
+
+        private void btnResetMatKhau_Click(object sender, EventArgs e)
+        {
+            if (txtMa.Text == "")
+            {
+                MessageBox.Show("Chọn quản trị viên muốn Reset Mật Khẩu", "Thông Báo");
+            }
+            else
+            {
+                ResetMatKhauQuanTriVien();
+            }
+        }
+
+        private void ResetMatKhauQuanTriVien()
+        {
+            PassMa = txtMa.Text;
+            passAccount = txtAccount.Text;
+
+            FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau();
+            frm1.Show();
+        }
     }
 }

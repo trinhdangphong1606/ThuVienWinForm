@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
             this.btnQuyenStaff = new System.Windows.Forms.Button();
             this.btnQuyenAdmin = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,20 @@
             this.GrBChiTiet.TabIndex = 32;
             this.GrBChiTiet.TabStop = false;
             // 
+            // btnQuyenUser
+            // 
+            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenUser.Location = new System.Drawing.Point(345, 128);
+            this.btnQuyenUser.Name = "btnQuyenUser";
+            this.btnQuyenUser.Size = new System.Drawing.Size(102, 25);
+            this.btnQuyenUser.TabIndex = 8;
+            this.btnQuyenUser.Text = "User";
+            this.btnQuyenUser.UseVisualStyleBackColor = true;
+            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
+            // 
             // txtQuyen
             // 
             this.txtQuyen.Enabled = false;
@@ -100,7 +114,7 @@
             this.txtQuyen.Location = new System.Drawing.Point(123, 130);
             this.txtQuyen.Name = "txtQuyen";
             this.txtQuyen.Size = new System.Drawing.Size(216, 23);
-            this.txtQuyen.TabIndex = 48;
+            this.txtQuyen.TabIndex = 7;
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnQuyenStaff
@@ -112,7 +126,7 @@
             this.btnQuyenStaff.Location = new System.Drawing.Point(453, 128);
             this.btnQuyenStaff.Name = "btnQuyenStaff";
             this.btnQuyenStaff.Size = new System.Drawing.Size(103, 25);
-            this.btnQuyenStaff.TabIndex = 47;
+            this.btnQuyenStaff.TabIndex = 9;
             this.btnQuyenStaff.Text = "Staff";
             this.btnQuyenStaff.UseVisualStyleBackColor = true;
             this.btnQuyenStaff.Click += new System.EventHandler(this.btnQuyenStaff_Click);
@@ -126,7 +140,7 @@
             this.btnQuyenAdmin.Location = new System.Drawing.Point(562, 130);
             this.btnQuyenAdmin.Name = "btnQuyenAdmin";
             this.btnQuyenAdmin.Size = new System.Drawing.Size(95, 25);
-            this.btnQuyenAdmin.TabIndex = 45;
+            this.btnQuyenAdmin.TabIndex = 10;
             this.btnQuyenAdmin.Text = "Admin";
             this.btnQuyenAdmin.UseVisualStyleBackColor = true;
             this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
@@ -147,7 +161,7 @@
             this.txtAccount.Location = new System.Drawing.Point(544, 72);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(113, 23);
-            this.txtAccount.TabIndex = 35;
+            this.txtAccount.TabIndex = 5;
             this.txtAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -169,9 +183,10 @@
             this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 159);
             this.btnHuyThaoTac.Name = "btnHuyThaoTac";
             this.btnHuyThaoTac.Size = new System.Drawing.Size(319, 55);
-            this.btnHuyThaoTac.TabIndex = 33;
+            this.btnHuyThaoTac.TabIndex = 12;
             this.btnHuyThaoTac.Text = "Hủy Thao Tác";
             this.btnHuyThaoTac.UseVisualStyleBackColor = true;
+            this.btnHuyThaoTac.Click += new System.EventHandler(this.btnHuyThaoTac_Click);
             // 
             // btnCapNhat
             // 
@@ -182,7 +197,7 @@
             this.btnCapNhat.Location = new System.Drawing.Point(15, 159);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(300, 55);
-            this.btnCapNhat.TabIndex = 32;
+            this.btnCapNhat.TabIndex = 1;
             this.btnCapNhat.Text = "Cập Nhật Thông Tin ";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
@@ -213,7 +228,7 @@
             this.txtEmail.Location = new System.Drawing.Point(123, 72);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(329, 23);
-            this.txtEmail.TabIndex = 28;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -232,7 +247,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(123, 101);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(534, 23);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TabIndex = 6;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -251,7 +266,7 @@
             this.txtNamSinh.Location = new System.Drawing.Point(544, 43);
             this.txtNamSinh.Name = "txtNamSinh";
             this.txtNamSinh.Size = new System.Drawing.Size(113, 23);
-            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.TabIndex = 3;
             this.txtNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -270,7 +285,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(123, 43);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(329, 23);
-            this.txtSoDienThoai.TabIndex = 14;
+            this.txtSoDienThoai.TabIndex = 2;
             this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTen
@@ -279,7 +294,7 @@
             this.txtTen.Location = new System.Drawing.Point(123, 14);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(329, 23);
-            this.txtTen.TabIndex = 13;
+            this.txtTen.TabIndex = 1;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -301,20 +316,6 @@
             this.label1.Size = new System.Drawing.Size(349, 25);
             this.label1.TabIndex = 33;
             this.label1.Text = "Cập Nhật Thông Tin Quản Trị Viên";
-            // 
-            // btnQuyenUser
-            // 
-            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenUser.Location = new System.Drawing.Point(345, 128);
-            this.btnQuyenUser.Name = "btnQuyenUser";
-            this.btnQuyenUser.Size = new System.Drawing.Size(102, 25);
-            this.btnQuyenUser.TabIndex = 49;
-            this.btnQuyenUser.Text = "User";
-            this.btnQuyenUser.UseVisualStyleBackColor = true;
-            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
             // 
             // FrmQuanTriVienCapNhat
             // 

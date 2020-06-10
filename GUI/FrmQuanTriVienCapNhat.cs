@@ -70,5 +70,10 @@ namespace GUI
         {
             txtQuyen.Text = "User";
         }
+
+        private void btnHuyThaoTac_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
