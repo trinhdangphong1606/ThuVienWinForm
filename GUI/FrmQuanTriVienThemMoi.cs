@@ -78,12 +78,6 @@ namespace GUI
                 errorMatKhau1.SetError(txtMatKhau1, "Xin Nhập Mật Khẩu:");
                 return;
             }
-            errorMatKhau2.SetError(txtMatKhau2, "");
-            if (txtMatKhau2.Text == "")
-            {
-                errorMatKhau2.SetError(txtMatKhau2, "Xin Nhập Lại Mật Khẩu:");
-                return;
-            }
             
             errorKey1.SetError(txtKey1, "");
             if (txtKey1.Text == "")
@@ -91,30 +85,14 @@ namespace GUI
                 errorKey1.SetError(txtKey1, "Xin Nhập Key Restore Mật Khẩu:");
                 return;
             }
-            errorKey2.SetError(txtKey2, "");
-            if (txtKey2.Text == "")
-            {
-                errorKey2.SetError(txtKey2, "Xin Nhập Lại Key:");
-                return;
-            }
+            
             errorQuyen.SetError(txtQuyen, "");
             if(txtQuyen.Text=="")
             {
                 errorQuyen.SetError(txtQuyen, "Chọn Quyền Cho Nhân Viên");
                 return;
             }
-            errorMatKhauRepeat.SetError(txtMatKhau2, "");
-            if(txtMatKhau1.Text!=txtMatKhau2.Text)
-            {
-                errorMatKhauRepeat.SetError(txtMatKhau2, "Hai Mật Khẩu Bắt Buộc Giống Nhau");
-                return;
-            }
-            errorKeyRepeat.SetError(txtKey2, "");
-            if (txtKey1.Text != txtKey2.Text)
-            {
-                errorKeyRepeat.SetError(txtKey2, "Hai Mật Khẩu Bắt Buộc Giống Nhau");
-                return;
-            }
+            
             QuanTriVien qtv = new QuanTriVien();
             qtv.HoTen = txtTen.Text;
             qtv.NamSinh = int.Parse(txtNamSinh.Text);
@@ -131,7 +109,7 @@ namespace GUI
             if(qtvnew)
             {
                 MessageBox.Show("Thêm Thành Công", "Thông báo");
-
+                this.Close();
             }    
         }
     }

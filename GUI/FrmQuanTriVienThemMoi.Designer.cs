@@ -46,12 +46,10 @@
             this.btnQuyenStaff = new System.Windows.Forms.Button();
             this.btnQuyenAdmin = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtKey2 = new System.Windows.Forms.TextBox();
             this.txtKey1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtMatKhau2 = new System.Windows.Forms.TextBox();
             this.txtMatKhau1 = new System.Windows.Forms.TextBox();
             this.btnHuyThaoTac = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -62,12 +60,8 @@
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDiaChi = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMatKhau1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMatKhau2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorKey1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorKey2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorQuyen = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMatKhauRepeat = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorKeyRepeat = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorHoTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDangNhap)).BeginInit();
@@ -76,12 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDiaChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKey2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMatKhauRepeat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKeyRepeat)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -205,12 +195,10 @@
             this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Controls.Add(this.btnQuyenAdmin);
             this.GrBChiTiet.Controls.Add(this.label11);
-            this.GrBChiTiet.Controls.Add(this.txtKey2);
             this.GrBChiTiet.Controls.Add(this.txtKey1);
             this.GrBChiTiet.Controls.Add(this.label10);
             this.GrBChiTiet.Controls.Add(this.txtAccount);
             this.GrBChiTiet.Controls.Add(this.label9);
-            this.GrBChiTiet.Controls.Add(this.txtMatKhau2);
             this.GrBChiTiet.Controls.Add(this.txtEmail);
             this.GrBChiTiet.Controls.Add(this.label8);
             this.GrBChiTiet.Controls.Add(this.txtMatKhau1);
@@ -277,21 +265,12 @@
             this.label11.TabIndex = 42;
             this.label11.Text = "Quyền";
             // 
-            // txtKey2
-            // 
-            this.txtKey2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKey2.Location = new System.Drawing.Point(397, 159);
-            this.txtKey2.Name = "txtKey2";
-            this.txtKey2.Size = new System.Drawing.Size(260, 23);
-            this.txtKey2.TabIndex = 41;
-            this.txtKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtKey1
             // 
             this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey1.Location = new System.Drawing.Point(131, 159);
             this.txtKey1.Name = "txtKey1";
-            this.txtKey1.Size = new System.Drawing.Size(252, 23);
+            this.txtKey1.Size = new System.Drawing.Size(526, 23);
             this.txtKey1.TabIndex = 40;
             this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -324,21 +303,12 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Email";
             // 
-            // txtMatKhau2
-            // 
-            this.txtMatKhau2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau2.Location = new System.Drawing.Point(397, 130);
-            this.txtMatKhau2.Name = "txtMatKhau2";
-            this.txtMatKhau2.Size = new System.Drawing.Size(260, 23);
-            this.txtMatKhau2.TabIndex = 36;
-            this.txtMatKhau2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtMatKhau1
             // 
             this.txtMatKhau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau1.Location = new System.Drawing.Point(131, 130);
             this.txtMatKhau1.Name = "txtMatKhau1";
-            this.txtMatKhau1.Size = new System.Drawing.Size(252, 23);
+            this.txtMatKhau1.Size = new System.Drawing.Size(526, 23);
             this.txtMatKhau1.TabIndex = 28;
             this.txtMatKhau1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -350,7 +320,7 @@
             this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 270);
             this.btnHuyThaoTac.Name = "btnHuyThaoTac";
-            this.btnHuyThaoTac.Size = new System.Drawing.Size(318, 39);
+            this.btnHuyThaoTac.Size = new System.Drawing.Size(320, 39);
             this.btnHuyThaoTac.TabIndex = 37;
             this.btnHuyThaoTac.Text = "Hủy Thao Tác";
             this.btnHuyThaoTac.UseVisualStyleBackColor = true;
@@ -397,29 +367,13 @@
             // 
             this.errorMatKhau1.ContainerControl = this;
             // 
-            // errorMatKhau2
-            // 
-            this.errorMatKhau2.ContainerControl = this;
-            // 
             // errorKey1
             // 
             this.errorKey1.ContainerControl = this;
             // 
-            // errorKey2
-            // 
-            this.errorKey2.ContainerControl = this;
-            // 
             // errorQuyen
             // 
             this.errorQuyen.ContainerControl = this;
-            // 
-            // errorMatKhauRepeat
-            // 
-            this.errorMatKhauRepeat.ContainerControl = this;
-            // 
-            // errorKeyRepeat
-            // 
-            this.errorKeyRepeat.ContainerControl = this;
             // 
             // FrmQuanTriVienThemMoi
             // 
@@ -442,12 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDiaChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKey2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMatKhauRepeat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKeyRepeat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,10 +419,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GrBChiTiet;
         private System.Windows.Forms.TextBox txtMatKhau1;
-        private System.Windows.Forms.TextBox txtMatKhau2;
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtKey2;
         private System.Windows.Forms.TextBox txtKey1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -488,11 +436,7 @@
         private System.Windows.Forms.ErrorProvider errorEmail;
         private System.Windows.Forms.ErrorProvider errorDiaChi;
         private System.Windows.Forms.ErrorProvider errorMatKhau1;
-        private System.Windows.Forms.ErrorProvider errorMatKhau2;
         private System.Windows.Forms.ErrorProvider errorKey1;
-        private System.Windows.Forms.ErrorProvider errorKey2;
         private System.Windows.Forms.ErrorProvider errorQuyen;
-        private System.Windows.Forms.ErrorProvider errorMatKhauRepeat;
-        private System.Windows.Forms.ErrorProvider errorKeyRepeat;
     }
 }

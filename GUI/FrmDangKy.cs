@@ -1,8 +1,11 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,6 +94,29 @@ namespace GUI
                 errorKeyRepeat.SetError(txtKey2,"Key Restore Phải Giống Nhau");
                 return;
             }
+            DangKyUser();
+        }
+
+        private void DangKyUser()
+        {
+            QuanTriVien qtvien = new QuanTriVien();
+            qtvien.HoTen = txtTen.Text;
+            qtvien.NamSinh = int.Parse(txtNamSinh.Text);
+            qtvien.TenDangNhap = txtTenDangNhap.Text;
+            qtvien.SoDienThoai = txtSoDienThoai.Text;
+            qtvien.Email = txtEmail.Text;
+            qtvien.DiaChi = txtDiaChi.Text;
+            qtvien.MatKhau = txtMatKhau1.Text;
+            qtvien.KeyRestore = txtKey1.Text;
+            qtvien.Quyen = txtQuyen.Text;
+
+            QuanTriVienBLL qtvbbl = new QuanTriVienBLL();
+            bool qtvienbll = qtvbbl.DangKy(qtvien);
+            if(qtvienbll)
+            {
+                MessageBox.Show("Đăng Ký Thành Công", "Thông Báo");
+                this.Close();
+            }    
         }
     }
 }

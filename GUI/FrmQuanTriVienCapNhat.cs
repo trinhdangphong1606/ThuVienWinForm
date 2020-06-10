@@ -65,5 +65,10 @@ namespace GUI
         {
             txtQuyen.Text = "Staff";
         }
+
+        private void btnQuyenUser_Click(object sender, EventArgs e)
+        {
+            txtQuyen.Text = "User";
+        }
     }
 }

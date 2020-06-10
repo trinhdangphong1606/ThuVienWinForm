@@ -32,5 +32,9 @@ namespace BLL
         {
             return qtvien.DangKy(qtv);
         }
+        public bool RestoreMatKhau(QuanTriVien qtv)
+        {
+            return qtvien.RestoreMatKhau(qtv);
+        }
     }
 }

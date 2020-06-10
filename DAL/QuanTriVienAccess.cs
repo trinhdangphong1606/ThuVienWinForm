@@ -118,5 +118,16 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+        public bool ResetMatKhau (QuanTriVien qtvien)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update QuanTriVien set MatKhau ='"+qtvien.MatKhau+"' where Id='"+qtvien.ID+"' and KeyRestore='"+qtvien.KeyRestore+"'" +
+                "";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
     }
 }

@@ -30,6 +30,10 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtQuyen = new System.Windows.Forms.TextBox();
+            this.btnQuyenStaff = new System.Windows.Forms.Button();
+            this.btnQuyenAdmin = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnHuyThaoTac = new System.Windows.Forms.Button();
@@ -46,10 +50,7 @@
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtQuyen = new System.Windows.Forms.TextBox();
-            this.btnQuyenStaff = new System.Windows.Forms.Button();
-            this.btnQuyenAdmin = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnQuyenUser);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
             this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Controls.Add(this.btnQuyenAdmin);
@@ -90,6 +92,54 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(677, 226);
             this.GrBChiTiet.TabIndex = 32;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // txtQuyen
+            // 
+            this.txtQuyen.Enabled = false;
+            this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuyen.Location = new System.Drawing.Point(123, 130);
+            this.txtQuyen.Name = "txtQuyen";
+            this.txtQuyen.Size = new System.Drawing.Size(216, 23);
+            this.txtQuyen.TabIndex = 48;
+            this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnQuyenStaff
+            // 
+            this.btnQuyenStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuyenStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenStaff.Location = new System.Drawing.Point(453, 128);
+            this.btnQuyenStaff.Name = "btnQuyenStaff";
+            this.btnQuyenStaff.Size = new System.Drawing.Size(103, 25);
+            this.btnQuyenStaff.TabIndex = 47;
+            this.btnQuyenStaff.Text = "Staff";
+            this.btnQuyenStaff.UseVisualStyleBackColor = true;
+            this.btnQuyenStaff.Click += new System.EventHandler(this.btnQuyenStaff_Click);
+            // 
+            // btnQuyenAdmin
+            // 
+            this.btnQuyenAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuyenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenAdmin.Location = new System.Drawing.Point(562, 130);
+            this.btnQuyenAdmin.Name = "btnQuyenAdmin";
+            this.btnQuyenAdmin.Size = new System.Drawing.Size(95, 25);
+            this.btnQuyenAdmin.TabIndex = 45;
+            this.btnQuyenAdmin.Text = "Admin";
+            this.btnQuyenAdmin.UseVisualStyleBackColor = true;
+            this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(15, 133);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 17);
+            this.label11.TabIndex = 46;
+            this.label11.Text = "Quyền";
             // 
             // txtAccount
             // 
@@ -118,7 +168,7 @@
             this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 159);
             this.btnHuyThaoTac.Name = "btnHuyThaoTac";
-            this.btnHuyThaoTac.Size = new System.Drawing.Size(322, 55);
+            this.btnHuyThaoTac.Size = new System.Drawing.Size(319, 55);
             this.btnHuyThaoTac.TabIndex = 33;
             this.btnHuyThaoTac.Text = "Hủy Thao Tác";
             this.btnHuyThaoTac.UseVisualStyleBackColor = true;
@@ -162,7 +212,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(123, 72);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(317, 23);
+            this.txtEmail.Size = new System.Drawing.Size(329, 23);
             this.txtEmail.TabIndex = 28;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -219,7 +269,7 @@
             this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienThoai.Location = new System.Drawing.Point(123, 43);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(317, 23);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(329, 23);
             this.txtSoDienThoai.TabIndex = 14;
             this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -228,7 +278,7 @@
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(123, 14);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(317, 23);
+            this.txtTen.Size = new System.Drawing.Size(329, 23);
             this.txtTen.TabIndex = 13;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -252,53 +302,19 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Cập Nhật Thông Tin Quản Trị Viên";
             // 
-            // txtQuyen
+            // btnQuyenUser
             // 
-            this.txtQuyen.Enabled = false;
-            this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuyen.Location = new System.Drawing.Point(123, 130);
-            this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Size = new System.Drawing.Size(262, 23);
-            this.txtQuyen.TabIndex = 48;
-            this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnQuyenStaff
-            // 
-            this.btnQuyenStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuyenStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenStaff.Location = new System.Drawing.Point(524, 129);
-            this.btnQuyenStaff.Name = "btnQuyenStaff";
-            this.btnQuyenStaff.Size = new System.Drawing.Size(135, 25);
-            this.btnQuyenStaff.TabIndex = 47;
-            this.btnQuyenStaff.Text = "Staff";
-            this.btnQuyenStaff.UseVisualStyleBackColor = true;
-            this.btnQuyenStaff.Click += new System.EventHandler(this.btnQuyenStaff_Click);
-            // 
-            // btnQuyenAdmin
-            // 
-            this.btnQuyenAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuyenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenAdmin.Location = new System.Drawing.Point(389, 129);
-            this.btnQuyenAdmin.Name = "btnQuyenAdmin";
-            this.btnQuyenAdmin.Size = new System.Drawing.Size(128, 25);
-            this.btnQuyenAdmin.TabIndex = 45;
-            this.btnQuyenAdmin.Text = "Admin";
-            this.btnQuyenAdmin.UseVisualStyleBackColor = true;
-            this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 133);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 17);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Quyền";
+            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenUser.Location = new System.Drawing.Point(345, 128);
+            this.btnQuyenUser.Name = "btnQuyenUser";
+            this.btnQuyenUser.Size = new System.Drawing.Size(102, 25);
+            this.btnQuyenUser.TabIndex = 49;
+            this.btnQuyenUser.Text = "User";
+            this.btnQuyenUser.UseVisualStyleBackColor = true;
+            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
             // 
             // FrmQuanTriVienCapNhat
             // 
@@ -341,5 +357,6 @@
         private System.Windows.Forms.Button btnQuyenStaff;
         private System.Windows.Forms.Button btnQuyenAdmin;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnQuyenUser;
     }
 }
