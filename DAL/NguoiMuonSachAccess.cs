@@ -61,13 +61,16 @@ namespace DAL
                 string diachi = reader.GetString(3);
                 string email = reader.GetString(4);
                 int namsinh = reader.GetInt32(5);
+
                 NguoiMuonSach tennms = new NguoiMuonSach();
+
                 tennms.Id = id;
                 tennms.HoTen = hoten;
                 nms.SoDienThoai = sodienthoai;
                 nms.DiaChi = diachi;
                 nms.Email = email;
                 nms.NamSinh = namsinh;
+
                 dsNguoiMuonSach.Add(tennms);
             }
             reader.Close();

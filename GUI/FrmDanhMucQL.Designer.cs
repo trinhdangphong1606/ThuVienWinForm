@@ -105,10 +105,10 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(396, 15);
+            this.label4.Location = new System.Drawing.Point(388, 14);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(4);
-            this.label4.Size = new System.Drawing.Size(269, 25);
+            this.label4.Size = new System.Drawing.Size(303, 25);
             this.label4.TabIndex = 26;
             this.label4.Text = "Danh Sách Danh Mục";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +166,6 @@
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
             this.txtTenDanhMuc.Size = new System.Drawing.Size(192, 23);
             this.txtTenDanhMuc.TabIndex = 13;
-            this.txtTenDanhMuc.Text = "Truyện";
             this.txtTenDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // richNoiDungDanhMuc

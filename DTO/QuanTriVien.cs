@@ -17,5 +17,6 @@ namespace DTO
         public string KeyRestore { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
+        public string Quyen { get; set; }
     }
 }

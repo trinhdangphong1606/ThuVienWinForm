@@ -92,8 +92,8 @@ namespace GUI
             PassTenSach = txtTenSach.Text;
             PassNgayMuon = dtpickerNgayMuon.Value;
 
-            FrmPhieuMuonSachDong frm2 = new FrmPhieuMuonSachDong();
-            frm2.Show();
+            FrmPhieuMuonSachDong frm1 = new FrmPhieuMuonSachDong();
+            frm1.Show();
         }
         private void HienThiDSPhieuMuonSach()
         {

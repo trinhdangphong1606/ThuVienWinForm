@@ -46,6 +46,9 @@ namespace GUI
             }    
         }
 
-        
+        private void btnHuyThaoTac_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

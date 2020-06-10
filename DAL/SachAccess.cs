@@ -60,7 +60,7 @@ namespace DAL
             command.CommandType = CommandType.Text;
             command.CommandText = "SELECT s.Id, s.TenSach, s.NamXuatBan, dm.TenDanhMuc, s.TacGia, s.NgonNgu, s.NoiDungSach, s.SoLuong FROM Sach s INNER JOIN DanhMuc dm ON s.DanhMucID = dm.IdDanhMuc";
             command.Connection = conn;
-            SqlDataReader reader = command.ExecuteReader();// truy vấn trả về dòng dữ liệu, ExecuteReader trả về đầu đọc quản lý bảng dữ liệu đó 
+            SqlDataReader reader = command.ExecuteReader();// truy vấn trả về nhiều dòng dữ liệu, ExecuteReader trả về đầu đọc quản lý bảng dữ liệu đó 
             while (reader.Read())//Đọc cho đến khi hết dữ liệu trả về từ db, khi hết dữ liệu sẽ trả về False -> dừng vòng lặp
             {
                 int masach = reader.GetInt32(0); //gán vị trí đầu tiên trong đầu đọc là masach
@@ -81,6 +81,7 @@ namespace DAL
                 sc.NgonNgu = ngonngu;
                 sc.NoiDungSach = noidung;
                 sc.SoLuong = soluong;
+
                 dsSach.Add(sc); //đưa sach vào dssach
             }
             reader.Close();

@@ -12,9 +12,12 @@ namespace GUI
 {
     public partial class FrmTongThe : Form
     {
-        public FrmTongThe()
+        string quyen = "";
+
+        public FrmTongThe(string quyen)
         {
             InitializeComponent();
+            this.quyen = quyen;
         }
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace GUI
             frm1.Show();
         }
 
+        private void testingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+               
+        }
+
         private void ngườiMượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmNguoiMuonSachQL frm1 = new FrmNguoiMuonSachQL();
@@ -47,9 +55,22 @@ namespace GUI
 
         private void quảnTrịViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmQuanTriVienQL frm1 = new FrmQuanTriVienQL();
-            frm1.MdiParent = this;
-            frm1.Show();
+            if (quyen == "Admin")
+            {
+                FrmQuanTriVienQL frm1 = new FrmQuanTriVienQL();
+                frm1.MdiParent = this;
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền", "Thông Báo");
+            }
+            
+        }
+
+        private void xemSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

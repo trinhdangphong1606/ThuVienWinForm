@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangKy.Designer.cs">
+      <DependentUpon>FrmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDanhMucQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +106,23 @@
     <Compile Include="FrmPhieuMuonSachQL.Designer.cs">
       <DependentUpon>FrmPhieuMuonSachQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanTriVienCapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanTriVienCapNhat.Designer.cs">
+      <DependentUpon>FrmQuanTriVienCapNhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanTriVienQL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQuanTriVienQL.Designer.cs">
       <DependentUpon>FrmQuanTriVienQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanTriVienThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanTriVienThemMoi.Designer.cs">
+      <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSachQL.cs">
       <SubType>Form</SubType>
@@ -129,6 +153,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKy.resx">
+      <DependentUpon>FrmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDanhMucQL.resx">
       <DependentUpon>FrmDanhMucQL.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,8 +180,14 @@
     <EmbeddedResource Include="FrmPhieuMuonSachQL.resx">
       <DependentUpon>FrmPhieuMuonSachQL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanTriVienCapNhat.resx">
+      <DependentUpon>FrmQuanTriVienCapNhat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanTriVienQL.resx">
       <DependentUpon>FrmQuanTriVienQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanTriVienThemMoi.resx">
+      <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSachQL.resx">
       <DependentUpon>FrmSachQL.cs</DependentUpon>

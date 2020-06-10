@@ -16,5 +16,21 @@ namespace BLL
             
             return qtvien.LayToanBoQuanTriVien();
         }
+        public bool ThemQuanTriVien(QuanTriVien newqtv)
+        {
+            return qtvien.ThemQuanTriVien(newqtv);
+        }
+        public bool ChinhSuaQuanTriVien(QuanTriVien qtv)
+        {
+            return qtvien.ChinhSuaQuanTriVien(qtv);
+        }
+        public List<QuanTriVien> DangNhap(QuanTriVien qtv)
+        {
+            return qtvien.DangNhap(qtv);
+        }
+        public bool DangKy(QuanTriVien qtv)
+        {
+            return qtvien.DangKy(qtv);
+        }
     }
 }

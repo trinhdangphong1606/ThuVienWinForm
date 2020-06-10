@@ -156,9 +156,11 @@ namespace GUI
                 errorTimDocGia.SetError(txtTimTenNMS, "Nhập Tên Đọc Giả Cần Tìm");
                 return;
             }
+
+
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.HoTen = txtTimTenNMS.Text;
-
+            
             NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
             List<NguoiMuonSach> dsngmsach = ngmsachbll.TimTenNguoiMuon(nms);
             lvPMSTDocGia.Items.Clear();

@@ -57,7 +57,8 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra) values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+"')";
+            command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra) " +
+                "values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+"')";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;

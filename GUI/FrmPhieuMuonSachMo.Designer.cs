@@ -232,7 +232,7 @@
             // 
             this.txtReadyMaDocGia.Enabled = false;
             this.txtReadyMaDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReadyMaDocGia.Location = new System.Drawing.Point(136, 50);
+            this.txtReadyMaDocGia.Location = new System.Drawing.Point(136, 52);
             this.txtReadyMaDocGia.Name = "txtReadyMaDocGia";
             this.txtReadyMaDocGia.Size = new System.Drawing.Size(236, 23);
             this.txtReadyMaDocGia.TabIndex = 66;

@@ -75,7 +75,7 @@
             this.LvSachQL.HideSelection = false;
             this.LvSachQL.Location = new System.Drawing.Point(0, 313);
             this.LvSachQL.Name = "LvSachQL";
-            this.LvSachQL.Size = new System.Drawing.Size(795, 216);
+            this.LvSachQL.Size = new System.Drawing.Size(700, 216);
             this.LvSachQL.TabIndex = 10;
             this.LvSachQL.UseCompatibleStateImageBehavior = false;
             this.LvSachQL.View = System.Windows.Forms.View.Details;
@@ -141,7 +141,7 @@
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(0, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(699, 265);
+            this.GrBChiTiet.Size = new System.Drawing.Size(700, 265);
             this.GrBChiTiet.TabIndex = 11;
             this.GrBChiTiet.TabStop = false;
             // 
@@ -153,7 +153,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(565, 200);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 28);
+            this.button4.Size = new System.Drawing.Size(129, 28);
             this.button4.TabIndex = 26;
             this.button4.Text = "Xóa Sách";
             this.button4.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(345, 201);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 28);
+            this.button3.Size = new System.Drawing.Size(215, 28);
             this.button3.TabIndex = 25;
             this.button3.Text = "Thêm Sách Mới Vào Thư Viện";
             this.button3.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.BtnCapNhatThongTinSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCapNhatThongTinSach.Location = new System.Drawing.Point(87, 201);
             this.BtnCapNhatThongTinSach.Name = "BtnCapNhatThongTinSach";
-            this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(252, 28);
+            this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(253, 28);
             this.BtnCapNhatThongTinSach.TabIndex = 24;
             this.BtnCapNhatThongTinSach.Text = "Cập Nhật Thông Tin Sách";
             this.BtnCapNhatThongTinSach.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             // 
             this.TxtNgonNgu.Enabled = false;
             this.TxtNgonNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNgonNgu.Location = new System.Drawing.Point(525, 71);
+            this.TxtNgonNgu.Location = new System.Drawing.Point(561, 71);
             this.TxtNgonNgu.Name = "TxtNgonNgu";
             this.TxtNgonNgu.Size = new System.Drawing.Size(132, 23);
             this.TxtNgonNgu.TabIndex = 20;
@@ -229,7 +229,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(424, 74);
+            this.label6.Location = new System.Drawing.Point(460, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 19;
@@ -241,7 +241,7 @@
             this.TxtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenDanhMuc.Location = new System.Drawing.Point(87, 71);
             this.TxtTenDanhMuc.Name = "TxtTenDanhMuc";
-            this.TxtTenDanhMuc.Size = new System.Drawing.Size(296, 23);
+            this.TxtTenDanhMuc.Size = new System.Drawing.Size(351, 23);
             this.TxtTenDanhMuc.TabIndex = 18;
             this.TxtTenDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -259,7 +259,7 @@
             // 
             this.TxtNamXuatBan.Enabled = false;
             this.TxtNamXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNamXuatBan.Location = new System.Drawing.Point(525, 42);
+            this.TxtNamXuatBan.Location = new System.Drawing.Point(561, 42);
             this.TxtNamXuatBan.Name = "TxtNamXuatBan";
             this.TxtNamXuatBan.Size = new System.Drawing.Size(132, 23);
             this.TxtNamXuatBan.TabIndex = 16;
@@ -269,7 +269,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(408, 45);
+            this.label5.Location = new System.Drawing.Point(444, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 17);
             this.label5.TabIndex = 15;
@@ -281,7 +281,7 @@
             this.TxtTenTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenTacGia.Location = new System.Drawing.Point(87, 42);
             this.TxtTenTacGia.Name = "TxtTenTacGia";
-            this.TxtTenTacGia.Size = new System.Drawing.Size(296, 23);
+            this.TxtTenTacGia.Size = new System.Drawing.Size(351, 23);
             this.TxtTenTacGia.TabIndex = 14;
             this.TxtTenTacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -291,7 +291,7 @@
             this.TxtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenSach.Location = new System.Drawing.Point(87, 13);
             this.TxtTenSach.Name = "TxtTenSach";
-            this.TxtTenSach.Size = new System.Drawing.Size(570, 23);
+            this.TxtTenSach.Size = new System.Drawing.Size(606, 23);
             this.TxtTenSach.TabIndex = 13;
             this.TxtTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -301,7 +301,7 @@
             this.richNoiDungSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richNoiDungSach.Location = new System.Drawing.Point(87, 100);
             this.richNoiDungSach.Name = "richNoiDungSach";
-            this.richNoiDungSach.Size = new System.Drawing.Size(583, 97);
+            this.richNoiDungSach.Size = new System.Drawing.Size(606, 97);
             this.richNoiDungSach.TabIndex = 12;
             this.richNoiDungSach.Text = "";
             // 
@@ -343,7 +343,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(184, 233);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 28);
+            this.button1.Size = new System.Drawing.Size(40, 28);
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
@@ -371,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 529);
+            this.ClientSize = new System.Drawing.Size(700, 529);
             this.Controls.Add(this.LvSachQL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);

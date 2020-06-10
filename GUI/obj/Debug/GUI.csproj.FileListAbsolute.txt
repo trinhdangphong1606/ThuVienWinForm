@@ -27,3 +27,7 @@ C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.e
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.pdb
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmNguoiMuonSachCapNhat.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmNguoiMuonSachThemMoi.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienCapNhat.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmDangNhap.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienThemMoi.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmDangKy.resources
