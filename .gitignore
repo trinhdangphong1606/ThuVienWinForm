@@ -1,0 +1,10 @@
+BLL/bin
+BLL/obj
+ClassLibrary1/obj
+DAL/bin
+DAL/obj
+DAO/obj
+DTO/bin
+DTO/obj
+GUI/bin
+GUI/obj
