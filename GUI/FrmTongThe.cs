@@ -13,11 +13,13 @@ namespace GUI
     public partial class FrmTongThe : Form
     {
         string quyen = "";
+        string id = "";
 
-        public FrmTongThe(string quyen)
+        public FrmTongThe(string quyen,string id)
         {
             InitializeComponent();
             this.quyen = quyen;
+            this.id = id;
         }
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace GUI
 
         private void quảnTrịViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (quyen == "Admin")
+            if (quyen == "Admin" )
             {
                 FrmQuanTriVienQL frm1 = new FrmQuanTriVienQL();
                 frm1.MdiParent = this;
@@ -103,6 +105,13 @@ namespace GUI
         private void xemSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmSachXem frm1 = new FrmSachXem();
+            frm1.MdiParent = this;
+            frm1.Show();
+        }
+
+        private void cÁNHÂNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmThongTinCaNhan frm1 = new FrmThongTinCaNhan(id,quyen);
             frm1.MdiParent = this;
             frm1.Show();
         }

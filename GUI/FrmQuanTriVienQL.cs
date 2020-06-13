@@ -57,6 +57,7 @@ namespace GUI
                 ListViewItem lvi = new ListViewItem(qtvien.HoTen);
                 lvi.SubItems.Add(qtvien.SoDienThoai);
                 lvi.SubItems.Add(qtvien.TenDangNhap);
+                lvi.SubItems.Add(qtvien.Quyen);
                 lvi.SubItems.Add(qtvien.Email);
                 lvi.SubItems.Add(qtvien.NamSinh + "");
                 lvi.SubItems.Add(qtvien.DiaChi);
@@ -75,13 +76,14 @@ namespace GUI
                 string hoten = lvi.SubItems[0].Text;
                 string sodienthoai = lvi.SubItems[1].Text;
                 string tendangnhap = lvi.SubItems[2].Text;
-                string email = lvi.SubItems[3].Text;
-                string namsinh = lvi.SubItems[4].Text;
-                string diachi = lvi.SubItems[5].Text;
-                string id = lvi.SubItems[6].Text;
-                string keyrestore = lvi.SubItems[7].Text;
-                string matkhau = lvi.SubItems[8].Text;
-                string quyen = lvi.SubItems[9].Text;
+                string quyen = lvi.SubItems[3].Text;
+                string email = lvi.SubItems[4].Text;
+                string namsinh = lvi.SubItems[5].Text;
+                string diachi = lvi.SubItems[6].Text;
+                string id = lvi.SubItems[7].Text;
+                string keyrestore = lvi.SubItems[8].Text;
+                string matkhau = lvi.SubItems[9].Text;
+                
 
                 txtTen.Text = hoten;
                 txtEmail.Text = email;

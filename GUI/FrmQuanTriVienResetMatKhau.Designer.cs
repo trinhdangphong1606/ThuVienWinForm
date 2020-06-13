@@ -80,6 +80,7 @@
             this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoi.Location = new System.Drawing.Point(145, 82);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(277, 23);
             this.txtMatKhauMoi.TabIndex = 1;
             this.txtMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -161,6 +162,7 @@
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmQuanTriVienResetMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanTriVienResetMatKhau";
             this.Load += new System.EventHandler(this.FrmQuanTriVienResetMatKhau_Load);
             this.groupBox1.ResumeLayout(false);

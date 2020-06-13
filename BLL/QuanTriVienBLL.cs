@@ -40,5 +40,17 @@ namespace BLL
         {
             return qtvien.ResetMatKhau(qtv);
         }
+        public List<QuanTriVien> LayThongTinCaNhan(QuanTriVien qtv)
+        {
+            return qtvien.LayThongTinCaNhan(qtv);
+        }
+        public List<QuanTriVien> KiemTraKey(QuanTriVien qtv)
+        {
+            return qtvien.KiemTraKey(qtv);
+        }
+        public bool DoiKeyRestore(QuanTriVien qtv)
+        {
+            return qtvien.DoiKeyRestore(qtv);
+        }
     }
 }

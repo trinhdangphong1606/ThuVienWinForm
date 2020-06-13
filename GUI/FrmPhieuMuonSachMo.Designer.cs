@@ -74,6 +74,8 @@
             this.errorTimTenSach = new System.Windows.Forms.ErrorProvider(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTrangThai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -120,7 +122,8 @@
             // 
             this.lvPMSTSach.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader5});
             this.lvPMSTSach.FullRowSelect = true;
             this.lvPMSTSach.GridLines = true;
             this.lvPMSTSach.HideSelection = false;
@@ -509,11 +512,26 @@
             this.label15.TabIndex = 94;
             this.label15.Text = "Tìm Sách";
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Trạng Thái";
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.Enabled = false;
+            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangThai.Location = new System.Drawing.Point(316, 160);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(56, 23);
+            this.txtTrangThai.TabIndex = 95;
+            this.txtTrangThai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmPhieuMuonSachMo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
+            this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.datetimeConfirmNgayDuKienTra);
@@ -611,5 +629,7 @@
         private System.Windows.Forms.ErrorProvider errorTimTenSach;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.TextBox txtTrangThai;
     }
 }

@@ -148,6 +148,18 @@
     <Compile Include="FrmThemDanhMuc.Designer.cs">
       <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhan.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhanDoiKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhanDoiKey.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhanDoiKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTongThe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     </Compile>
     <Compile Include="FrmRestoreMatKhau.Designer.cs">
       <DependentUpon>FrmRestoreMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhanDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhanDoiMK.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhanDoiMK.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -218,6 +236,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemDanhMuc.resx">
       <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinCaNhan.resx">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinCaNhanDoiMK.resx">
+      <DependentUpon>FrmThongTinCaNhanDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinCaNhanDoiKey.resx">
+      <DependentUpon>FrmThongTinCaNhanDoiKey.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTongThe.resx">
       <DependentUpon>FrmTongThe.cs</DependentUpon>

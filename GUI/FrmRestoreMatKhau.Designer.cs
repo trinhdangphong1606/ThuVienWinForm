@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMatKhau2 = new System.Windows.Forms.TextBox();
             this.txtKey = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMatKhau2 = new System.Windows.Forms.TextBox();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.errorTenDangNhap = new System.Windows.Forms.ErrorProvider(this.components);
@@ -80,11 +80,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // txtMatKhau2
+            // 
+            this.txtMatKhau2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau2.Location = new System.Drawing.Point(404, 103);
+            this.txtMatKhau2.Name = "txtMatKhau2";
+            this.txtMatKhau2.PasswordChar = '*';
+            this.txtMatKhau2.Size = new System.Drawing.Size(249, 23);
+            this.txtMatKhau2.TabIndex = 6;
+            this.txtMatKhau2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtKey
             // 
             this.txtKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey.Location = new System.Drawing.Point(142, 74);
             this.txtKey.Name = "txtKey";
+            this.txtKey.PasswordChar = '*';
             this.txtKey.Size = new System.Drawing.Size(511, 23);
             this.txtKey.TabIndex = 4;
             this.txtKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -142,6 +153,7 @@
             this.txtMatKhau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau1.Location = new System.Drawing.Point(141, 102);
             this.txtMatKhau1.Name = "txtMatKhau1";
+            this.txtMatKhau1.PasswordChar = '*';
             this.txtMatKhau1.Size = new System.Drawing.Size(241, 23);
             this.txtMatKhau1.TabIndex = 5;
             this.txtMatKhau1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -184,15 +196,6 @@
             this.label1.Size = new System.Drawing.Size(185, 25);
             this.label1.TabIndex = 34;
             this.label1.Text = "Restore Mật Khẩu";
-            // 
-            // txtMatKhau2
-            // 
-            this.txtMatKhau2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau2.Location = new System.Drawing.Point(404, 103);
-            this.txtMatKhau2.Name = "txtMatKhau2";
-            this.txtMatKhau2.Size = new System.Drawing.Size(249, 23);
-            this.txtMatKhau2.TabIndex = 6;
-            this.txtMatKhau2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCapNhat
             // 
@@ -260,6 +263,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmRestoreMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RestoreMatKhau";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

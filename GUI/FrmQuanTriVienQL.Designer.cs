@@ -32,6 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,6 +45,7 @@
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnResetMatKhau = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
@@ -56,7 +58,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnResetMatKhau = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader6,
+            this.columnHeader7,
             this.columnHeader4,
             this.columnHeader3,
             this.columnHeader5});
@@ -96,6 +98,10 @@
             // 
             this.columnHeader6.Text = "Account";
             this.columnHeader6.Width = 68;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Quyền";
             // 
             // columnHeader4
             // 
@@ -219,6 +225,20 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(681, 209);
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // btnResetMatKhau
+            // 
+            this.btnResetMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetMatKhau.Location = new System.Drawing.Point(387, 158);
+            this.btnResetMatKhau.Name = "btnResetMatKhau";
+            this.btnResetMatKhau.Size = new System.Drawing.Size(144, 46);
+            this.btnResetMatKhau.TabIndex = 39;
+            this.btnResetMatKhau.Text = "Reset Mật Khẩu";
+            this.btnResetMatKhau.UseVisualStyleBackColor = true;
+            this.btnResetMatKhau.Click += new System.EventHandler(this.btnResetMatKhau_Click);
             // 
             // txtQuyen
             // 
@@ -352,20 +372,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Quản Lý Quản Trị Viên Thư Viện ";
             // 
-            // btnResetMatKhau
-            // 
-            this.btnResetMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetMatKhau.Location = new System.Drawing.Point(387, 158);
-            this.btnResetMatKhau.Name = "btnResetMatKhau";
-            this.btnResetMatKhau.Size = new System.Drawing.Size(144, 46);
-            this.btnResetMatKhau.TabIndex = 39;
-            this.btnResetMatKhau.Text = "Reset Mật Khẩu";
-            this.btnResetMatKhau.UseVisualStyleBackColor = true;
-            this.btnResetMatKhau.Click += new System.EventHandler(this.btnResetMatKhau_Click);
-            // 
             // FrmQuanTriVienQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +381,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Controls.Add(this.label1);
             this.Name = "FrmQuanTriVienQL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanTriVienQL";
             this.Load += new System.EventHandler(this.FrmQuanTriVienQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
@@ -415,5 +422,6 @@
         private System.Windows.Forms.TextBox txtQuyen;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnResetMatKhau;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

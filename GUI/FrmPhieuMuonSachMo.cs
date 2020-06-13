@@ -36,7 +36,9 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(scBLL.ID + "");
                 lvi.SubItems.Add(scBLL.TenSach);
+                lvi.SubItems.Add(scBLL.TrangThai);
                 lvPMSTSach.Items.Add(lvi);
+                
             }
         }
         private void HienThiNguoiMuonSachDS()
@@ -71,8 +73,11 @@ namespace GUI
                 ListViewItem lvi = lvPMSTSach.SelectedItems[0];
                 string id = lvi.SubItems[0].Text;
                 string tensach = lvi.SubItems[1].Text;
+                string trangthai = lvi.SubItems[2].Text;
                 txtReadyMaSach.Text = id;
                 txtReadyTenSach.Text = tensach;
+                txtTrangThai.Text = trangthai;
+
             }
         }
 

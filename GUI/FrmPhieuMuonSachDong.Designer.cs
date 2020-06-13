@@ -60,6 +60,7 @@
             // dtpReadyNgayTra
             // 
             this.dtpReadyNgayTra.CustomFormat = "dd-MM-yyyy";
+            this.dtpReadyNgayTra.Enabled = false;
             this.dtpReadyNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpReadyNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpReadyNgayTra.Location = new System.Drawing.Point(188, 176);

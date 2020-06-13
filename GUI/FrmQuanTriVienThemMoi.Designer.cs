@@ -62,6 +62,7 @@
             this.errorMatKhau1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorKey1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorQuyen = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorIntNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorHoTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDangNhap)).BeginInit();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -270,6 +272,7 @@
             this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey1.Location = new System.Drawing.Point(131, 159);
             this.txtKey1.Name = "txtKey1";
+            this.txtKey1.PasswordChar = '*';
             this.txtKey1.Size = new System.Drawing.Size(526, 23);
             this.txtKey1.TabIndex = 8;
             this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -308,6 +311,7 @@
             this.txtMatKhau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau1.Location = new System.Drawing.Point(131, 130);
             this.txtMatKhau1.Name = "txtMatKhau1";
+            this.txtMatKhau1.PasswordChar = '*';
             this.txtMatKhau1.Size = new System.Drawing.Size(526, 23);
             this.txtMatKhau1.TabIndex = 7;
             this.txtMatKhau1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -324,6 +328,7 @@
             this.btnHuyThaoTac.TabIndex = 13;
             this.btnHuyThaoTac.Text = "Hủy Thao Tác";
             this.btnHuyThaoTac.UseVisualStyleBackColor = true;
+            this.btnHuyThaoTac.Click += new System.EventHandler(this.btnHuyThaoTac_Click);
             // 
             // btnThemMoi
             // 
@@ -375,6 +380,10 @@
             // 
             this.errorQuyen.ContainerControl = this;
             // 
+            // errorIntNamSinh
+            // 
+            this.errorIntNamSinh.ContainerControl = this;
+            // 
             // FrmQuanTriVienThemMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,6 +394,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmQuanTriVienThemMoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanTriVienThemMoi";
             this.Load += new System.EventHandler(this.FrmQuanTriVienThemMoi_Load);
             this.GrBChiTiet.ResumeLayout(false);
@@ -398,6 +408,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +449,6 @@
         private System.Windows.Forms.ErrorProvider errorMatKhau1;
         private System.Windows.Forms.ErrorProvider errorKey1;
         private System.Windows.Forms.ErrorProvider errorQuyen;
+        private System.Windows.Forms.ErrorProvider errorIntNamSinh;
     }
 }

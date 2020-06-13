@@ -34,7 +34,7 @@ namespace DAL
                 string ngonngu = reader.GetString(5);
                 string noidung = reader.GetString(6);
                 int soluong = reader.GetInt32(7);
-                //string trangthai = reader.GetString(8);
+                string trangthai = reader.GetString(8);
 
                 Sach scc = new Sach();
                 scc.ID = masach;
@@ -45,7 +45,7 @@ namespace DAL
                 scc.NgonNgu = ngonngu;
                 scc.NoiDungSach = noidung;
                 scc.SoLuong = soluong;
-                //scc.TrangThai = trangthai;
+                scc.TrangThai = trangthai;
                 dsSachAll.Add(scc);
 
             }
@@ -80,7 +80,7 @@ namespace DAL
                 sc.TacGia = tacgia;
                 sc.NgonNgu = ngonngu;
                 sc.NoiDungSach = noidung;
-                sc.SoLuong = soluong;
+                //sc.SoLuong = soluong;
 
                 dsSach.Add(sc); //đưa sach vào dssach
             }

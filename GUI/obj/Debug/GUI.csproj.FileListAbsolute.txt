@@ -34,3 +34,6 @@ C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.F
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmRestoreMatKhau.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmSachXem.resources
 C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmQuanTriVienResetMatKhau.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmThongTinCaNhan.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmThongTinCaNhanDoiMK.resources
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\GUI\obj\Debug\GUI.FrmThongTinCaNhanDoiKey.resources

@@ -146,8 +146,9 @@
             this.txtKey2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey2.Location = new System.Drawing.Point(397, 159);
             this.txtKey2.Name = "txtKey2";
+            this.txtKey2.PasswordChar = '*';
             this.txtKey2.Size = new System.Drawing.Size(260, 23);
-            this.txtKey2.TabIndex = 41;
+            this.txtKey2.TabIndex = 10;
             this.txtKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtKey1
@@ -155,8 +156,9 @@
             this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey1.Location = new System.Drawing.Point(131, 159);
             this.txtKey1.Name = "txtKey1";
+            this.txtKey1.PasswordChar = '*';
             this.txtKey1.Size = new System.Drawing.Size(252, 23);
-            this.txtKey1.TabIndex = 40;
+            this.txtKey1.TabIndex = 9;
             this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -175,7 +177,7 @@
             this.txtTenDangNhap.Location = new System.Drawing.Point(131, 43);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(294, 23);
-            this.txtTenDangNhap.TabIndex = 38;
+            this.txtTenDangNhap.TabIndex = 3;
             this.txtTenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -193,8 +195,9 @@
             this.txtMatKhau2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau2.Location = new System.Drawing.Point(397, 130);
             this.txtMatKhau2.Name = "txtMatKhau2";
+            this.txtMatKhau2.PasswordChar = '*';
             this.txtMatKhau2.Size = new System.Drawing.Size(260, 23);
-            this.txtMatKhau2.TabIndex = 36;
+            this.txtMatKhau2.TabIndex = 8;
             this.txtMatKhau2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtEmail
@@ -203,7 +206,7 @@
             this.txtEmail.Location = new System.Drawing.Point(131, 72);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(526, 23);
-            this.txtEmail.TabIndex = 35;
+            this.txtEmail.TabIndex = 5;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -221,8 +224,9 @@
             this.txtMatKhau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau1.Location = new System.Drawing.Point(131, 130);
             this.txtMatKhau1.Name = "txtMatKhau1";
+            this.txtMatKhau1.PasswordChar = '*';
             this.txtMatKhau1.Size = new System.Drawing.Size(252, 23);
-            this.txtMatKhau1.TabIndex = 28;
+            this.txtMatKhau1.TabIndex = 7;
             this.txtMatKhau1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -241,7 +245,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(131, 101);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(526, 23);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TabIndex = 6;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -260,7 +264,7 @@
             this.txtNamSinh.Location = new System.Drawing.Point(556, 17);
             this.txtNamSinh.Name = "txtNamSinh";
             this.txtNamSinh.Size = new System.Drawing.Size(101, 23);
-            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.TabIndex = 2;
             this.txtNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -279,7 +283,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(556, 46);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(101, 23);
-            this.txtSoDienThoai.TabIndex = 14;
+            this.txtSoDienThoai.TabIndex = 4;
             this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTen
@@ -288,7 +292,7 @@
             this.txtTen.Location = new System.Drawing.Point(131, 14);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(294, 23);
-            this.txtTen.TabIndex = 13;
+            this.txtTen.TabIndex = 1;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -406,6 +410,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmDangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDangKy";
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

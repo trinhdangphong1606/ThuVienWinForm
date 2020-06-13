@@ -1,6 +1,4 @@
-﻿using BLL;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,46 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
+using BLL;
 
 namespace GUI
 {
-    public partial class FrmQuanTriVienCapNhat : Form
+    public partial class FrmThongTinCaNhan : Form
     {
-        public FrmQuanTriVienCapNhat()
+        string id = "";
+        string quyen = "";
+        public FrmThongTinCaNhan(string id, string quyen)
         {
             InitializeComponent();
+            this.id = id ;
+            this.quyen = quyen;
         }
 
-        private void FrmQuanTriVienCapNhat_Load(object sender, EventArgs e)
+        private void FrmThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            txtAccount.Text = FrmQuanTriVienQL.passAccount;
-            txtDiaChi.Text = FrmQuanTriVienQL.passDiaChi;
-            txtEmail.Text = FrmQuanTriVienQL.passEmail;
-            txtMa.Text = FrmQuanTriVienQL.PassMa;
-            txtNamSinh.Text = FrmQuanTriVienQL.passNamSinh;
-            txtSoDienThoai.Text = FrmQuanTriVienQL.PassSoDT;
-            txtTen.Text = FrmQuanTriVienQL.PassTen;
-            txtQuyen.Text = FrmQuanTriVienQL.passQuyen;
-        }
-        private void ThayDoiThongTin()
-        {
+            txtMa.Text = id;
+            txtQuyen.Text = quyen;
+
             QuanTriVien qtv = new QuanTriVien();
-            qtv.TenDangNhap = txtAccount.Text;
-            qtv.DiaChi = txtDiaChi.Text;
-            qtv.Email = txtEmail.Text;
             qtv.ID = int.Parse(txtMa.Text);
-            qtv.NamSinh = int.Parse(txtNamSinh.Text);
-            qtv.SoDienThoai = txtSoDienThoai.Text;
-            qtv.HoTen = txtTen.Text;
-            qtv.Quyen = txtQuyen.Text;
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
-            bool capnhat = qtvbll.ChinhSuaQuanTriVien(qtv);
-            if(capnhat)
+            List<QuanTriVien> qtvien = qtvbll.LayThongTinCaNhan(qtv);
+            foreach(QuanTriVien qtvtt in qtvien)
             {
-                MessageBox.Show("Đã thay đổi thông tin \n Nhấn nút cập nhật nhé.", "Thông Báo");
-                this.Close();
-            }    
+                txtAccount.Text = qtvtt.TenDangNhap;
+                txtTen.Text = qtvtt.HoTen;
+                txtSoDienThoai.Text = qtvtt.SoDienThoai;
+                txtNamSinh.Text = qtvtt.NamSinh+"";
+                txtDiaChi.Text = qtvtt.DiaChi;
+                txtEmail.Text = qtvtt.Email;
+            }
+
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -95,27 +90,18 @@ namespace GUI
                 errorIntNamSinh.SetError(txtNamSinh, "Năm Sinh Là Số ");
                 return;
             }
-            ThayDoiThongTin();
         }
 
-        private void btnQuyenAdmin_Click(object sender, EventArgs e)
+        private void BtnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            txtQuyen.Text = "Admin";
+            FrmThongTinCaNhanDoiMK frm1 = new FrmThongTinCaNhanDoiMK(id,txtAccount.Text);
+            frm1.Show();
         }
 
-        private void btnQuyenStaff_Click(object sender, EventArgs e)
+        private void btnDoiKey_Click(object sender, EventArgs e)
         {
-            txtQuyen.Text = "Staff";
-        }
-
-        private void btnQuyenUser_Click(object sender, EventArgs e)
-        {
-            txtQuyen.Text = "User";
-        }
-
-        private void btnHuyThaoTac_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            FrmThongTinCaNhanDoiKey frm1 = new FrmThongTinCaNhanDoiKey(id, txtAccount.Text);
+            frm1.Show();
         }
     }
 }
