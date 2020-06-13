@@ -37,10 +37,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LvDanhMucDS = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtMa = new System.Windows.Forms.TextBox();
             this.txtTenDanhMuc = new System.Windows.Forms.TextBox();
             this.richNoiDungDanhMuc = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCapNhatThongTin = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,15 +63,18 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnCapNhatThongTin);
             this.GrBChiTiet.Controls.Add(this.button4);
             this.GrBChiTiet.Controls.Add(this.button3);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.BtnCapNhatDanhMuc);
             this.GrBChiTiet.Controls.Add(this.label7);
             this.GrBChiTiet.Controls.Add(this.LvDanhMucDS);
+            this.GrBChiTiet.Controls.Add(this.txtMa);
             this.GrBChiTiet.Controls.Add(this.txtTenDanhMuc);
             this.GrBChiTiet.Controls.Add(this.richNoiDungDanhMuc);
             this.GrBChiTiet.Controls.Add(this.label3);
+            this.GrBChiTiet.Controls.Add(this.label5);
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(12, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
@@ -105,7 +112,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(388, 14);
+            this.label4.Location = new System.Drawing.Point(390, 12);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(4);
             this.label4.Size = new System.Drawing.Size(303, 25);
@@ -123,7 +130,7 @@
             this.BtnCapNhatDanhMuc.Name = "BtnCapNhatDanhMuc";
             this.BtnCapNhatDanhMuc.Size = new System.Drawing.Size(260, 33);
             this.BtnCapNhatDanhMuc.TabIndex = 25;
-            this.BtnCapNhatDanhMuc.Text = "Cập Nhật Thông Tin Danh Mục";
+            this.BtnCapNhatDanhMuc.Text = "Chỉnh Sửa Thông Tin Danh Mục";
             this.BtnCapNhatDanhMuc.UseVisualStyleBackColor = true;
             this.BtnCapNhatDanhMuc.Click += new System.EventHandler(this.BtnCapNhatDanhMuc_Click);
             // 
@@ -140,7 +147,8 @@
             // LvDanhMucDS
             // 
             this.LvDanhMucDS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader2});
             this.LvDanhMucDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvDanhMucDS.FullRowSelect = true;
             this.LvDanhMucDS.GridLines = true;
@@ -157,14 +165,27 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Danh Sách Danh Mục";
-            this.columnHeader1.Width = 340;
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Width = 150;
+            // 
+            // txtMa
+            // 
+            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Location = new System.Drawing.Point(298, 13);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(72, 23);
+            this.txtMa.TabIndex = 13;
+            this.txtMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTenDanhMuc
             // 
             this.txtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDanhMuc.Location = new System.Drawing.Point(139, 13);
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
-            this.txtTenDanhMuc.Size = new System.Drawing.Size(192, 23);
+            this.txtTenDanhMuc.Size = new System.Drawing.Size(108, 23);
             this.txtTenDanhMuc.TabIndex = 13;
             this.txtTenDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -188,6 +209,16 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nội Dung";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(253, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Mã :";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -197,6 +228,16 @@
             this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Danh Mục";
+            // 
+            // btnCapNhatThongTin
+            // 
+            this.btnCapNhatThongTin.Location = new System.Drawing.Point(15, 311);
+            this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
+            this.btnCapNhatThongTin.Size = new System.Drawing.Size(72, 33);
+            this.btnCapNhatThongTin.TabIndex = 29;
+            this.btnCapNhatThongTin.Text = "Cập Nhật Thông Tin";
+            this.btnCapNhatThongTin.UseVisualStyleBackColor = true;
+            this.btnCapNhatThongTin.Click += new System.EventHandler(this.btnCapNhatThongTin_Click);
             // 
             // FrmDanhMucQL
             // 
@@ -226,10 +267,14 @@
         private System.Windows.Forms.Button BtnCapNhatDanhMuc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView LvDanhMucDS;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.TextBox txtTenDanhMuc;
         private System.Windows.Forms.RichTextBox richNoiDungDanhMuc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button btnCapNhatThongTin;
     }
 }

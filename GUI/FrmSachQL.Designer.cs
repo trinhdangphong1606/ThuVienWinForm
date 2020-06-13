@@ -49,6 +49,7 @@
             this.TxtNamXuatBan = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtTenTacGia = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.TextBox();
             this.TxtTenSach = new System.Windows.Forms.TextBox();
             this.richNoiDungSach = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +57,9 @@
             this.cbboxSachTacGia = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCapNhatThongTin = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +121,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnCapNhatThongTin);
             this.GrBChiTiet.Controls.Add(this.button4);
             this.GrBChiTiet.Controls.Add(this.button3);
             this.GrBChiTiet.Controls.Add(this.BtnCapNhatThongTinSach);
@@ -131,6 +135,7 @@
             this.GrBChiTiet.Controls.Add(this.TxtNamXuatBan);
             this.GrBChiTiet.Controls.Add(this.label5);
             this.GrBChiTiet.Controls.Add(this.TxtTenTacGia);
+            this.GrBChiTiet.Controls.Add(this.txtMa);
             this.GrBChiTiet.Controls.Add(this.TxtTenSach);
             this.GrBChiTiet.Controls.Add(this.richNoiDungSach);
             this.GrBChiTiet.Controls.Add(this.label4);
@@ -138,6 +143,7 @@
             this.GrBChiTiet.Controls.Add(this.cbboxSachTacGia);
             this.GrBChiTiet.Controls.Add(this.button1);
             this.GrBChiTiet.Controls.Add(this.textBox1);
+            this.GrBChiTiet.Controls.Add(this.label8);
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(0, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
@@ -170,6 +176,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Thêm Sách Mới Vào Thư Viện";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnCapNhatThongTinSach
             // 
@@ -181,7 +188,7 @@
             this.BtnCapNhatThongTinSach.Name = "BtnCapNhatThongTinSach";
             this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(253, 28);
             this.BtnCapNhatThongTinSach.TabIndex = 24;
-            this.BtnCapNhatThongTinSach.Text = "Cập Nhật Thông Tin Sách";
+            this.BtnCapNhatThongTinSach.Text = "Chỉnh Sửa Thông Tin Sách";
             this.BtnCapNhatThongTinSach.UseVisualStyleBackColor = true;
             this.BtnCapNhatThongTinSach.Click += new System.EventHandler(this.BtnCapNhatThongTinSach_Click);
             // 
@@ -285,13 +292,23 @@
             this.TxtTenTacGia.TabIndex = 14;
             this.TxtTenTacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtMa
+            // 
+            this.txtMa.Enabled = false;
+            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Location = new System.Drawing.Point(366, 13);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(202, 23);
+            this.txtMa.TabIndex = 13;
+            this.txtMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // TxtTenSach
             // 
             this.TxtTenSach.Enabled = false;
             this.TxtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenSach.Location = new System.Drawing.Point(87, 13);
             this.TxtTenSach.Name = "TxtTenSach";
-            this.TxtTenSach.Size = new System.Drawing.Size(606, 23);
+            this.TxtTenSach.Size = new System.Drawing.Size(202, 23);
             this.TxtTenSach.TabIndex = 13;
             this.TxtTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -357,6 +374,16 @@
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Nhập tên sách cần tìm";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(316, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Mã : ";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -366,6 +393,16 @@
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Sách ";
+            // 
+            // btnCapNhatThongTin
+            // 
+            this.btnCapNhatThongTin.Location = new System.Drawing.Point(6, 205);
+            this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
+            this.btnCapNhatThongTin.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhatThongTin.TabIndex = 27;
+            this.btnCapNhatThongTin.Text = "Cập Nhật";
+            this.btnCapNhatThongTin.UseVisualStyleBackColor = true;
+            this.btnCapNhatThongTin.Click += new System.EventHandler(this.btnCapNhatThongTin_Click);
             // 
             // FrmSachQL
             // 
@@ -418,5 +455,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnCapNhatThongTin;
     }
 }

@@ -14,6 +14,9 @@ namespace GUI
 {
     public partial class FrmDanhMucQL : Form
     {
+        public static string PassMa = "";
+        public static string PassTenDanhMuc = "";
+        public static string PassNoiDungDM = "";
         public FrmDanhMucQL()
         {
             InitializeComponent();
@@ -25,8 +28,19 @@ namespace GUI
 
         private void BtnCapNhatDanhMuc_Click(object sender, EventArgs e)
         {
+            if(txtMa.Text == "")
+            {
+                MessageBox.Show("Chọn Danh Mục Cần Thay Đổi Thông Tin", "Thông Báo");
+            }
+            else
+            {
+                PassMa = txtMa.Text;
+                PassTenDanhMuc = txtTenDanhMuc.Text;
+                PassNoiDungDM = richNoiDungDanhMuc.Text;
+                FrmDanhMucUpdate frm1 = new FrmDanhMucUpdate();
+                frm1.Show();
+            }
             HienThiDSDanhMuc();
-
         }
         private void HienThiDSDanhMuc()
         {
@@ -35,7 +49,8 @@ namespace GUI
             LvDanhMucDS.Items.Clear();
             foreach (DanhMuc damuc in dsdanhmuc)
             {
-                ListViewItem lvi = new ListViewItem(damuc.TenDanhMuc+"");
+                ListViewItem lvi = new ListViewItem(damuc.IdDanhMuc +"");
+                lvi.SubItems.Add(damuc.TenDanhMuc);
                 lvi.SubItems.Add(damuc.NoiDungDanhMuc);
                 LvDanhMucDS.Items.Add(lvi);
             }
@@ -46,8 +61,10 @@ namespace GUI
             if(LvDanhMucDS.SelectedItems.Count>0)
             {
                 ListViewItem lvi = LvDanhMucDS.SelectedItems[0];
-                string tendanhmuccc = lvi.SubItems[0].Text;
-                string noidungdanhmuccc = lvi.SubItems[1].Text;
+                string iddanhmuccc = lvi.SubItems[0].Text;
+                string tendanhmuccc = lvi.SubItems[1].Text;
+                string noidungdanhmuccc = lvi.SubItems[2].Text;
+                txtMa.Text = iddanhmuccc;
                 txtTenDanhMuc.Text = tendanhmuccc;
                 richNoiDungDanhMuc.Text = noidungdanhmuccc;
             }    
@@ -55,9 +72,15 @@ namespace GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmThemDanhMuc frm1 = new FrmThemDanhMuc();
+            FrmDanhMucThem frm1 = new FrmDanhMucThem();
             //frm1.MdiParent = this;
             frm1.Show();
+        }
+
+        private void btnCapNhatThongTin_Click(object sender, EventArgs e)
+        {
+            HienThiDSDanhMuc();
+            MessageBox.Show("Dữ Liệu Đã Được Cập Nhật ");
         }
     }
 }

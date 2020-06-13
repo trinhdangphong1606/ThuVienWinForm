@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class FrmThemDanhMuc
+    partial class FrmDanhMucThem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.richNoiDung = new System.Windows.Forms.RichTextBox();
@@ -36,7 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemDanhMuc = new System.Windows.Forms.Button();
             this.btnHuyThemMoi = new System.Windows.Forms.Button();
+            this.errorTenDM = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNoiDung = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTenDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNoiDung)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +121,15 @@
             this.btnHuyThemMoi.UseVisualStyleBackColor = true;
             this.btnHuyThemMoi.Click += new System.EventHandler(this.btnHuyThemMoi_Click);
             // 
-            // FrmThemDanhMuc
+            // errorTenDM
+            // 
+            this.errorTenDM.ContainerControl = this;
+            // 
+            // errorNoiDung
+            // 
+            this.errorNoiDung.ContainerControl = this;
+            // 
+            // FrmDanhMucThem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,10 +140,12 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "FrmThemDanhMuc";
+            this.Name = "FrmDanhMucThem";
             this.Text = "FrmThemDanhMuc";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTenDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNoiDung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +161,7 @@
         private System.Windows.Forms.RichTextBox richNoiDung;
         private System.Windows.Forms.Button btnThemDanhMuc;
         private System.Windows.Forms.Button btnHuyThemMoi;
+        private System.Windows.Forms.ErrorProvider errorTenDM;
+        private System.Windows.Forms.ErrorProvider errorNoiDung;
     }
 }

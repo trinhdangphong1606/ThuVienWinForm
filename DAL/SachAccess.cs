@@ -34,7 +34,7 @@ namespace DAL
                 string ngonngu = reader.GetString(5);
                 string noidung = reader.GetString(6);
                 int soluong = reader.GetInt32(7);
-                //string trangthai = reader.GetString(8);
+                string trangthai = reader.GetString(8);
 
                 Sach scc = new Sach();
                 scc.ID = masach;
@@ -45,7 +45,7 @@ namespace DAL
                 scc.NgonNgu = ngonngu;
                 scc.NoiDungSach = noidung;
                 scc.SoLuong = soluong;
-                //scc.TrangThai = trangthai;
+                scc.TrangThai = trangthai;
                 dsSachAll.Add(scc);
 
             }
@@ -70,7 +70,7 @@ namespace DAL
                 string tacgia = reader.GetString(4);
                 string ngonngu = reader.GetString(5);
                 string noidung = reader.GetString(6);
-                int soluong = reader.GetInt32(7);
+                //int soluong = reader.GetInt32(7);
 
                 SachDAO sc = new SachDAO(); //Nạp vào đối tượng SachDAO
                 sc.ID = masach;
@@ -80,7 +80,7 @@ namespace DAL
                 sc.TacGia = tacgia;
                 sc.NgonNgu = ngonngu;
                 sc.NoiDungSach = noidung;
-                sc.SoLuong = soluong;
+                //sc.SoLuong = soluong;
 
                 dsSach.Add(sc); //đưa sach vào dssach
             }
@@ -123,6 +123,36 @@ namespace DAL
             reader.Close();
             return dsSach;
         
+        }
+        public bool ThemSach (Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "insert into Sach(TenSach,TacGia,NamXuatBan,NgonNgu,NoiDungSach,DanhMucID)values(N'" + sac.TenSach + "', N'" + sac.TacGia + "', '" + sac.NamXuatBan + "', N'" + sac.NgonNgu + "', N'" + sac.NoiDungSach + "', '" + sac.DanhMucID + "')";
+            command.Connection = conn;
+            int kq = command.ExecuteNonQuery();
+            return true;
+        }
+        //public bool CapNhatDocGia(NguoiMuonSach nms)
+        //{
+        //    OpenConnection();
+        //    SqlCommand command = new SqlCommand();
+        //    command.CommandType = CommandType.Text;
+        //    command.CommandText = "Update NguoiMuonSach set HoTen=N'" + nms.HoTen + "', SoDienThoai ='" + nms.SoDienThoai + "', DiaChi =N'" + nms.DiaChi + "', Email='" + nms.Email + "' where ID='" + nms.Id + "'";
+        //    command.Connection = conn;
+        //    int ketqua = command.ExecuteNonQuery();
+        //    return true;
+        //}
+        public bool SuaSach (Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "Update Sach set TenSach =N'" + sac.TenSach + "', NamXuatBan ='" + sac.NamXuatBan + "',DanhMucID =N'" + sac.DanhMucID + "', TacGia =N'" + sac.TacGia + "', NgonNgu =N'" + sac.NgonNgu+ "',NoiDungSach =N'" + sac.NoiDungSach + "' where ID='" + sac.ID + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
         }
     }
 }

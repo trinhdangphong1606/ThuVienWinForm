@@ -29,7 +29,7 @@ namespace DAL
                 string noidungdanhmuc = reader.GetString(2);
 
                 DanhMuc dm = new DanhMuc();
-
+                dm.IdDanhMuc = id;
                 dm.TenDanhMuc = tendanhmuc;
                 dm.NoiDungDanhMuc = noidungdanhmuc;
 
@@ -57,6 +57,16 @@ namespace DAL
             }
 
             return false;
+        }
+        public bool CapNhatDanhMuc (DanhMuc dm)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "Update DanhMuc set TenDanhMuc =N'" + dm.TenDanhMuc + "', NoiDungDanhMuc  =N'" + dm.NoiDungDanhMuc + "' where IdDanhMuc ='" + dm.IdDanhMuc + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return true;
         }
     }
 }

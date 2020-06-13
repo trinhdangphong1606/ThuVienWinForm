@@ -70,11 +70,11 @@
     <Compile Include="FrmDanhMucQL.Designer.cs">
       <DependentUpon>FrmDanhMucQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDanhMucThemMoi.cs">
+    <Compile Include="FrmDanhMucUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDanhMucThemMoi.Designer.cs">
-      <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
+    <Compile Include="FrmDanhMucUpdate.Designer.cs">
+      <DependentUpon>FrmDanhMucUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNguoiMuonSachCapNhat.cs">
       <SubType>Form</SubType>
@@ -130,11 +130,23 @@
     <Compile Include="FrmQuanTriVienThemMoi.Designer.cs">
       <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSachCapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSachCapNhat.Designer.cs">
+      <DependentUpon>FrmSachCapNhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSachQL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSachQL.Designer.cs">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSachThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSachThem.Designer.cs">
+      <DependentUpon>FrmSachThem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSachXem.cs">
       <SubType>Form</SubType>
@@ -142,11 +154,11 @@
     <Compile Include="FrmSachXem.Designer.cs">
       <DependentUpon>FrmSachXem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmThemDanhMuc.cs">
+    <Compile Include="FrmDanhMucThem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmThemDanhMuc.Designer.cs">
-      <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
+    <Compile Include="FrmDanhMucThem.Designer.cs">
+      <DependentUpon>FrmDanhMucThem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTongThe.cs">
       <SubType>Form</SubType>
@@ -180,8 +192,8 @@
     <EmbeddedResource Include="FrmDanhMucQL.resx">
       <DependentUpon>FrmDanhMucQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDanhMucThemMoi.resx">
-      <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDanhMucUpdate.resx">
+      <DependentUpon>FrmDanhMucUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNguoiMuonSachCapNhat.resx">
       <DependentUpon>FrmNguoiMuonSachCapNhat.cs</DependentUpon>
@@ -210,14 +222,20 @@
     <EmbeddedResource Include="FrmQuanTriVienThemMoi.resx">
       <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSachCapNhat.resx">
+      <DependentUpon>FrmSachCapNhat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSachQL.resx">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSachThem.resx">
+      <DependentUpon>FrmSachThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSachXem.resx">
       <DependentUpon>FrmSachXem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmThemDanhMuc.resx">
-      <DependentUpon>FrmThemDanhMuc.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDanhMucThem.resx">
+      <DependentUpon>FrmDanhMucThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTongThe.resx">
       <DependentUpon>FrmTongThe.cs</DependentUpon>

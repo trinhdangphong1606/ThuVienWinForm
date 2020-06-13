@@ -112,13 +112,12 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(377, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 17);
             this.label3.TabIndex = 45;
-            this.label3.Text = "Liên Hệ Quản Trị Viên Để Thêm Quyền";
+            this.label3.Text = "Liên Hệ Quản Trị Viên Để Mượn Sách\r\n\r\n";
             // 
             // txtQuyen
             // 
@@ -315,11 +314,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(289, 9);
+            this.label1.Location = new System.Drawing.Point(178, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 25);
+            this.label1.Size = new System.Drawing.Size(306, 25);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Đăng Ký";
+            this.label1.Text = "Đăng Ký Xem Thông Tin Sách";
             // 
             // btnDangKy
             // 

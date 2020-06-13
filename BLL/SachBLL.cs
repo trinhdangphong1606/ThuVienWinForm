@@ -26,5 +26,17 @@ namespace BLL
         {
             return sac.TimTenSach(TimTenSach);
         }
+        //public bool CapNhatDanhMuc(DanhMuc CapNhatDM)
+        //{
+        //    return access.CapNhatDanhMuc(CapNhatDM);
+        //}
+        public bool ThemSach(Sach Thems)
+        {
+            return sac.ThemSach(Thems);
+        }
+        public bool SuaSach(Sach Suas)
+        {
+            return sac.SuaSach(Suas);
+        }
     }
 }

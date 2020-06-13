@@ -14,6 +14,13 @@ namespace GUI
 {
     public partial class FrmSachQL : Form
     {
+        public static string PassMaSach = "";
+        public static string PassTen = "";
+        public static string PassTacGia = "";
+        public static string PassTenDanhMuc = "";
+        public static string PassNamSanXuat = "";
+        public static string PassNgonNgu = "";
+        public static string PassNoiDung = "";
         public FrmSachQL()
         {
             InitializeComponent();
@@ -30,7 +37,23 @@ namespace GUI
         private void BtnCapNhatThongTinSach_Click(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
-            
+            if(txtMa.Text == "")
+            {
+                MessageBox.Show("Chọn Danh Mục Cần Thay Đổi Thông Tin", "Thông Báo");
+            }
+            else
+            {
+                PassMaSach = txtMa.Text;
+                PassTen = TxtTenSach.Text;
+                PassTacGia = TxtTenTacGia.Text;
+                PassNgonNgu = TxtNgonNgu.Text;
+                PassNamSanXuat = TxtNamXuatBan.Text;
+                PassNoiDung = richNoiDungSach.Text;
+                PassTenDanhMuc = TxtTenDanhMuc.Text;
+                FrmSachCapNhat frm5 = new FrmSachCapNhat();
+                frm5.Show();
+            }
+
         }
 
         public void HienThiDanhSachSach()
@@ -48,6 +71,7 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.NamXuatBan+"");
                 //lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
+                lvi.SubItems.Add(scBLL.ID + "");
 
                 LvSachQL.Items.Add(lvi);
             }
@@ -64,6 +88,8 @@ namespace GUI
                 string ngonngu = lvi.SubItems[3].Text;
                 string namxuatban = lvi.SubItems[4].Text;
                 string noidung = lvi.SubItems[5].Text;
+                string masach = lvi.SubItems[6].Text;
+                txtMa.Text = masach;
                 TxtTenSach.Text = tensach;
                 TxtTenTacGia.Text = tacgia;
                 TxtTenDanhMuc.Text = danhmuc;
@@ -87,6 +113,18 @@ namespace GUI
             cbboxSachTacGia.Items.Clear();
             cbboxSachTacGia.DataSource = dsdsach;
             cbboxSachTacGia.DisplayMember = "NgonNgu";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSachThem frm1 = new FrmSachThem();
+            frm1.Show();
+        }
+
+        private void btnCapNhatThongTin_Click(object sender, EventArgs e)
+        {
+            HienThiDanhSachSach();
+            MessageBox.Show("Dữ liệu đã được cập nhật ");
         }
     }
 }
