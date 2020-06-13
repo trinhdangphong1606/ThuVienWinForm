@@ -173,6 +173,7 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
                 lvi.SubItems.Add(nmsbll.HoTen);
+                
                 lvPMSTDocGia.Items.Add(lvi);
             }
         }
@@ -195,6 +196,7 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(sachtim.ID + "");
                 lvi.SubItems.Add(sachtim.TenSach);
+                lvi.SubItems.Add(sachtim.TrangThai);
                 lvPMSTSach.Items.Add(lvi);
             }    
         }

@@ -17,7 +17,6 @@ namespace DAL
         {
             List<Sach> dsSachAll = new List<Sach>();
             OpenConnection();
-            OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = "select * from Sach";
@@ -91,13 +90,17 @@ namespace DAL
         {
             List<SachDAO> dsSach = new List<SachDAO>();
             OpenConnection();
+            string cmd = "exec TimSachTheoTen @ten=N'" + timsach.TenSach + "'";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "exec TimSachTheoTen @ten='" + timsach.TenSach + "'";
+            command.CommandText = cmd;
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
+            //Console.WriteLine("Inside " + cmd);
             while (reader.Read())
             {
+                //Console.WriteLine("In loop");
+
                 int masach = reader.GetInt32(0);
                 string tensach = reader.GetString(1);
                 int namxuatban = reader.GetInt32(2);
@@ -106,6 +109,7 @@ namespace DAL
                 string ngonngu = reader.GetString(5);
                 string noidung = reader.GetString(6);
                 int soluong = reader.GetInt32(7);
+                string trangthai = reader.GetString(8);
 
                 SachDAO sc = new SachDAO();
 
@@ -117,12 +121,45 @@ namespace DAL
                 sc.NgonNgu = ngonngu;
                 sc.NoiDungSach = noidung;
                 sc.SoLuong = soluong;
+                sc.TrangThai = trangthai;
 
                 dsSach.Add(sc);
             }
             reader.Close();
             return dsSach;
-        
+
+        }
+        public bool CapNhatPhieuMuon(Sach pms)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update Sach set TrangThai=N'Trống where Id='" + pms.ID + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
+        public List<Sach> TimMaSach(Sach timsach)
+        {
+            OpenConnection();
+            List<Sach> dsSach = new List<Sach>();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select Id,TenSach from Sach where TenSach='" + timsach.TenSach + "'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int masach = reader.GetInt32(0);
+                string tensach = reader.GetString(1);
+                Sach sc = new Sach();
+                sc.ID = masach;
+                sc.TenSach = tensach;
+                dsSach.Add(sc);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsSach;
         }
     }
 }

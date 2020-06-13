@@ -58,7 +58,8 @@ namespace DAL
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra) " +
-                "values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+"')";
+                "values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+ "')" +
+                " update Sach set TrangThai=N'Đang cho mượn' where Id='" + pms.SachId + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
@@ -68,11 +69,13 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' where PhieuId='"+pms.MaPhieuMuon  +"'";
+            command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' where PhieuId='"+pms.MaPhieuMuon  + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+       
+
         public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSachDAO pms)
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
