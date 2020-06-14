@@ -66,10 +66,43 @@ namespace DAL
 
                 tennms.Id = id;
                 tennms.HoTen = hoten;
-                nms.SoDienThoai = sodienthoai;
-                nms.DiaChi = diachi;
-                nms.Email = email;
-                nms.NamSinh = namsinh;
+                tennms.SoDienThoai = sodienthoai;
+                tennms.DiaChi = diachi;
+                tennms.Email = email;
+                tennms.NamSinh = namsinh;
+
+                dsNguoiMuonSach.Add(tennms);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsNguoiMuonSach;
+        }
+        public List<NguoiMuonSach> TimNguoiMuonTheoMa(NguoiMuonSach nms)
+        {
+            List<NguoiMuonSach> dsNguoiMuonSach = new List<NguoiMuonSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "exec TimNguoiMuonTheoMa @ma ='" + nms.Id + "'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string hoten = reader.GetString(1);
+                string sodienthoai = reader.GetString(2);
+                string diachi = reader.GetString(3);
+                string email = reader.GetString(4);
+                int namsinh = reader.GetInt32(5);
+
+                NguoiMuonSach tennms = new NguoiMuonSach();
+
+                tennms.Id = id;
+                tennms.HoTen = hoten;
+                tennms.SoDienThoai = sodienthoai;
+                tennms.DiaChi = diachi;
+                tennms.Email = email;
+                tennms.NamSinh = namsinh;
 
                 dsNguoiMuonSach.Add(tennms);
             }

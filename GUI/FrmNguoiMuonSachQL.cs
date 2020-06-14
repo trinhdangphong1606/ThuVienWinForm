@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using DAL.DAO;
 
 namespace GUI
 {
@@ -93,9 +94,83 @@ namespace GUI
                 TxtNMSEmail.Text = email;
                 TxtNMSNamSinh.Text = namsinh;
 
+                PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
+                pms.TenNguoiMuonSach = TxtNMSTen.Text;
+
+                PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+                List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.TimPhieuChuaDongTheoTen(pms);
+                lvDSPhieuMuonMo.Items.Clear();
+                foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+                {
+                    ListViewItem lvii = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                    lvii.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                    lvii.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                    lvDSPhieuMuonMo.Items.Add(lvii);
+                }
             }
         }
 
-       
+        private void txtNMSMa_TextChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void lvDSPhieuMuonMo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvDSPhieuMuonMo.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvDSPhieuMuonMo.SelectedItems[0];
+                string maphieumuon = lvi.SubItems[0].Text;
+                string ngaymuon = lvi.SubItems[1].Text;
+                string ngaydukientra = lvi.SubItems[2].Text;
+                dtNgayMuon.Value = Convert.ToDateTime(ngaymuon);
+                dtDuKienTra.Value = Convert.ToDateTime(ngaydukientra);
+
+
+            }
+        }
+
+        private void btnTimTen_Click(object sender, EventArgs e)
+        {
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.HoTen = txtTimTen.Text;
+
+            NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
+            List<NguoiMuonSach> dsngmsach = ngmsachbll.TimTenNguoiMuon(nms);
+            lvNguoiMuonSachDS.Items.Clear();
+            foreach (NguoiMuonSach nmsbll in dsngmsach)
+            {
+                ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
+                lvi.SubItems.Add(nmsbll.HoTen);
+                lvi.SubItems.Add(nmsbll.SoDienThoai);
+                //lvi.SubItems.Add(nms.BieuHien);
+                lvi.SubItems.Add(nmsbll.DiaChi);
+                lvi.SubItems.Add(nmsbll.Email);
+                lvi.SubItems.Add(nmsbll.NamSinh + "");
+                lvNguoiMuonSachDS.Items.Add(lvi);
+            }
+        }
+
+        private void btnTimMa_Click(object sender, EventArgs e)
+        {
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.Id = int.Parse(txtTimMa.Text);
+
+            NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
+            List<NguoiMuonSach> dsngmsach = ngmsachbll.TimNguoiMuonTheoMa(nms);
+            lvNguoiMuonSachDS.Items.Clear();
+            foreach (NguoiMuonSach nmsbll in dsngmsach)
+            {
+                ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
+                lvi.SubItems.Add(nmsbll.HoTen);
+                lvi.SubItems.Add(nmsbll.SoDienThoai);
+                //lvi.SubItems.Add(nms.BieuHien);
+                lvi.SubItems.Add(nmsbll.DiaChi);
+                lvi.SubItems.Add(nmsbll.Email);
+                lvi.SubItems.Add(nmsbll.NamSinh + "");
+                lvNguoiMuonSachDS.Items.Add(lvi);
+            }
+        }
     }
 }

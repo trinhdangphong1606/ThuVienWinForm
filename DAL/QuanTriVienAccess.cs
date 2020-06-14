@@ -313,5 +313,46 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+        public List<QuanTriVien> TimTenQTVTheoMa(QuanTriVien qtvien)
+        {
+            List<QuanTriVien> dsQuanTriVien = new List<QuanTriVien>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "exec TimQuanTriVienTheoMa @ma='" + qtvien.ID + "'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string tendangnhap = reader.GetString(1);
+                string email = reader.GetString(2);
+                int namsinh = reader.GetInt32(3);
+                string matkhau = reader.GetString(4);
+                string hoten = reader.GetString(5);
+                string keyrestore = reader.GetString(6);
+                string sodienthoai = reader.GetString(7);
+                string diachi = reader.GetString(8);
+                string quyen = reader.GetString(9);
+
+                QuanTriVien qtv = new QuanTriVien();
+
+                qtv.ID = id;
+                qtv.TenDangNhap = tendangnhap;
+                qtv.Email = email;
+                qtv.NamSinh = namsinh;
+                qtv.MatKhau = matkhau;
+                qtv.HoTen = hoten;
+                qtv.KeyRestore = keyrestore;
+                qtv.SoDienThoai = sodienthoai;
+                qtv.DiaChi = diachi;
+                qtv.Quyen = quyen;
+
+                dsQuanTriVien.Add(qtv);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsQuanTriVien;
+        }
     }
 }

@@ -28,5 +28,9 @@ namespace BLL
         {
             return nguoimuons.TimTenNguoiMuon(timten);
         }
+        public List<NguoiMuonSach> TimNguoiMuonTheoMa(NguoiMuonSach timten)
+        {
+            return nguoimuons.TimNguoiMuonTheoMa(timten);
+        }
     }
 }

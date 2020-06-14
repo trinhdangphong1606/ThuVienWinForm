@@ -60,6 +60,11 @@ namespace BLL
         {
             return qtvien.TimQTVTheoQuyen(qtv);
         }
+        
+        public List<QuanTriVien> TimTenQTVTheoMa(QuanTriVien qtv)
+        {
+            return qtvien.TimTenQTVTheoMa(qtv);
+        }
         public bool DoiThongTinCaNhan(QuanTriVien qtv)
         {
             return qtvien.DoiThongTinCaNhan(qtv);
