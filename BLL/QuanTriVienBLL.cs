@@ -13,7 +13,7 @@ namespace BLL
         QuanTriVienAccess qtvien = new QuanTriVienAccess();
         public List<QuanTriVien> LayToanBoQuanTriVien()
         {
-            
+
             return qtvien.LayToanBoQuanTriVien();
         }
         public bool ThemQuanTriVien(QuanTriVien newqtv)
@@ -39,6 +39,26 @@ namespace BLL
         public bool ResetMatKhau(QuanTriVien qtv)
         {
             return qtvien.ResetMatKhau(qtv);
+        }
+        public List<QuanTriVien> LayThongTinCaNhan(QuanTriVien qtv)
+        {
+            return qtvien.LayThongTinCaNhan(qtv);
+        }
+        public List<QuanTriVien> KiemTraKey(QuanTriVien qtv)
+        {
+            return qtvien.KiemTraKey(qtv);
+        }
+        public bool DoiKeyRestore(QuanTriVien qtv)
+        {
+            return qtvien.DoiKeyRestore(qtv);
+        }
+        public List<QuanTriVien> TimTenQTV(QuanTriVien qtv)
+        {
+            return qtvien.TimTenQTV(qtv);
+        }
+        public List<QuanTriVien> TimQTVTheoQuyen(QuanTriVien qtv)
+        {
+            return qtvien.TimQTVTheoQuyen(qtv);
         }
     }
 }

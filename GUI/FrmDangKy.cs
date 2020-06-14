@@ -112,11 +112,24 @@ namespace GUI
 
             QuanTriVienBLL qtvbbl = new QuanTriVienBLL();
             bool qtvienbll = qtvbbl.DangKy(qtvien);
-            if(qtvienbll)
+
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.HoTen = txtTen.Text;
+            nms.SoDienThoai = txtSoDienThoai.Text;
+            nms.DiaChi = txtDiaChi.Text;
+            nms.Email = txtEmail.Text;
+            nms.NamSinh = int.Parse(txtNamSinh.Text);
+
+            NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
+            bool nmsnew = nmsbll.ThemDocGia(nms);
+
+            if (qtvienbll && nmsnew)
             {
                 MessageBox.Show("Đăng Ký Thành Công", "Thông Báo");
                 this.Close();
             }    
         }
+        
     }
+
 }

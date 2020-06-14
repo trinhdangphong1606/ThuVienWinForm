@@ -36,7 +36,9 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(scBLL.ID + "");
                 lvi.SubItems.Add(scBLL.TenSach);
+                lvi.SubItems.Add(scBLL.TrangThai);
                 lvPMSTSach.Items.Add(lvi);
+                
             }
         }
         private void HienThiNguoiMuonSachDS()
@@ -71,8 +73,11 @@ namespace GUI
                 ListViewItem lvi = lvPMSTSach.SelectedItems[0];
                 string id = lvi.SubItems[0].Text;
                 string tensach = lvi.SubItems[1].Text;
+                string trangthai = lvi.SubItems[2].Text;
                 txtReadyMaSach.Text = id;
                 txtReadyTenSach.Text = tensach;
+                txtTrangThai.Text = trangthai;
+
             }
         }
 
@@ -100,8 +105,16 @@ namespace GUI
             {
                 errorProvider3.SetError(datetimeReadyNgayDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
                 return;
+            }
+            if(txtTrangThai.Text == "Đang cho mượn")
+            {
+                MessageBox.Show("Sách Đang Cho Mượn \n Xin Mượn Sách Khác", "Thông Báo");
+            }
+            else
+            {
+                XacNhanThongTin();
             }    
-            XacNhanThongTin();
+            
                
             
             
@@ -150,13 +163,13 @@ namespace GUI
 
         private void btnTimTenDocGia_Click(object sender, EventArgs e)
         {
-            errorTimDocGia.SetError(txtTimTenNMS, "");
+            /*errorTimDocGia.SetError(txtTimTenNMS, "");
             if(txtTimTenNMS.Text=="")
             {
                 errorTimDocGia.SetError(txtTimTenNMS, "Nhập Tên Đọc Giả Cần Tìm");
                 return;
             }
-
+            */
 
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.HoTen = txtTimTenNMS.Text;
@@ -168,18 +181,19 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
                 lvi.SubItems.Add(nmsbll.HoTen);
+                
                 lvPMSTDocGia.Items.Add(lvi);
             }
         }
 
         private void btnTimTenSach_Click(object sender, EventArgs e)
         {
-            errorTimTenSach.SetError(txtTimSach, "");
-            if(txtTimSach.Text=="")
-            {
-                errorTimTenSach.SetError(txtTimSach, "Nhập Tên Sách Cần Tìm");
-                return;
-            }
+            //errorTimTenSach.SetError(txtTimSach, "");
+            //if(txtTimSach.Text=="")
+            //{
+            //    errorTimTenSach.SetError(txtTimSach, "Nhập Tên Sách Cần Tìm");
+            //    return;
+            //}
             SachDAO sac = new SachDAO();
             sac.TenSach = txtTimSach.Text;
 
@@ -190,6 +204,7 @@ namespace GUI
             {
                 ListViewItem lvi = new ListViewItem(sachtim.ID + "");
                 lvi.SubItems.Add(sachtim.TenSach);
+                lvi.SubItems.Add(sachtim.TrangThai);
                 lvPMSTSach.Items.Add(lvi);
             }    
         }

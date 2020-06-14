@@ -35,8 +35,8 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.TheLoai);
                 lvi.SubItems.Add(scBLL.NgonNgu);
                 lvi.SubItems.Add(scBLL.NamXuatBan + "");
-                //lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
+                lvi.SubItems.Add(scBLL.TrangThai + "");
 
                 LvSachQL.Items.Add(lvi);
             }
@@ -52,6 +52,7 @@ namespace GUI
                 string ngonngu = lvi.SubItems[3].Text;
                 string namxuatban = lvi.SubItems[4].Text;
                 string noidung = lvi.SubItems[5].Text;
+                string trangthai = lvi.SubItems[6].Text;
                 TxtTenSach.Text = tensach;
                 TxtTenTacGia.Text = tacgia;
                 TxtTenDanhMuc.Text = danhmuc;
@@ -61,6 +62,14 @@ namespace GUI
             }
         }
 
-        
+        private void txtTimTenSach_Click(object sender, EventArgs e)
+        {
+            txtTimTenSach.Clear();
+        }
+
+        private void btnTimTenSach_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

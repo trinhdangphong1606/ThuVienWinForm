@@ -25,8 +25,6 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             CanhBaoDangNhap();
-            DangNhap();
-            
         }
         private void CanhBaoDangNhap()
         {
@@ -42,6 +40,7 @@ namespace GUI
                 errorPassword.SetError(txtPassword, "Nhập");
                 return;
             }
+            DangNhap();
         }
         private void DangNhap()
         {
@@ -55,14 +54,16 @@ namespace GUI
             {
                 lbTenDangNhap.Text = qtvlogin.TenDangNhap;
                 lbQuyen.Text = qtvlogin.Quyen;
+                lbId.Text = "" +qtvlogin.ID;
 
             }
             if (lbTenDangNhap.Text != "...")
             {
                 lbChao.Text = "Xin Chào";
+                lbChao2.Text = "Mã     :";
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông báo");
                 this.Hide();
-                FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text);
+                FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text,lbId.Text);
                 frm1.ShowDialog();
                 this.Close();
 

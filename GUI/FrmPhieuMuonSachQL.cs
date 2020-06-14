@@ -233,6 +233,42 @@ namespace GUI
         }
         private void btnTimThoiGianTao_Click(object sender, EventArgs e)
         {
+            errorNgay.SetError(txtTimNgay, "");
+            if(!txtTimNgay.Text.All(char.IsDigit) && txtTimNgay.Text!="")
+            {
+                errorNgay.SetError(txtTimNgay, "Xin Nhập Ngày");
+                return;
+            }
+            errorNgay.SetError(txtTimNgay, "");
+            if (txtTimNgay.Text == "")
+            {
+                errorNgay.SetError(txtTimNgay, "Xin Nhập Ngày");
+                return;
+            }
+            errorThang.SetError(txtTimThang, "");
+            if (!txtTimThang.Text.All(char.IsDigit) && txtTimThang.Text != "")
+            {
+                errorThang.SetError(txtTimThang, "Xin Nhập Tháng");
+                return;
+            }
+            errorThang.SetError(txtTimThang, "");
+            if (txtTimThang.Text == "")
+            {
+                errorThang.SetError(txtTimThang, "Xin Nhập Tháng");
+                return;
+            }
+            errorNam.SetError(txtTimNam, "");
+            if (!txtTimNam.Text.All(char.IsDigit) && txtTimNam.Text != "")
+            {
+                errorNam.SetError(txtTimNam, "Xin Nhập Năm");
+                return;
+            }
+            errorNam.SetError(txtTimNam, "");
+            if (txtTimNam.Text == "")
+            {
+                errorNam.SetError(txtTimNam, "Xin Nhập Năm");
+                return;
+            }
             PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
             pms.ngay = int.Parse(txtTimNgay.Text);
             pms.thang = int.Parse(txtTimThang.Text);

@@ -43,6 +43,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnRestoreMatKhau = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
+            this.lbChao2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +123,7 @@
             // 
             this.lbTenDangNhap.AutoSize = true;
             this.lbTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenDangNhap.Location = new System.Drawing.Point(141, 94);
+            this.lbTenDangNhap.Location = new System.Drawing.Point(155, 94);
             this.lbTenDangNhap.Name = "lbTenDangNhap";
             this.lbTenDangNhap.Size = new System.Drawing.Size(23, 17);
             this.lbTenDangNhap.TabIndex = 19;
@@ -130,7 +133,7 @@
             // 
             this.lbQuyen.AutoSize = true;
             this.lbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuyen.Location = new System.Drawing.Point(92, 94);
+            this.lbQuyen.Location = new System.Drawing.Point(102, 94);
             this.lbQuyen.Name = "lbQuyen";
             this.lbQuyen.Size = new System.Drawing.Size(23, 17);
             this.lbQuyen.TabIndex = 20;
@@ -177,11 +180,48 @@
             this.btnRestoreMatKhau.UseVisualStyleBackColor = true;
             this.btnRestoreMatKhau.Click += new System.EventHandler(this.btnRestoreMatKhau_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(69, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 17);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "    ";
+            // 
+            // lbId
+            // 
+            this.lbId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(145, 127);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(33, 17);
+            this.lbId.TabIndex = 23;
+            this.lbId.Text = "     ";
+            this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbChao2
+            // 
+            this.lbChao2.AutoSize = true;
+            this.lbChao2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChao2.Location = new System.Drawing.Point(76, 127);
+            this.lbChao2.Name = "lbChao2";
+            this.lbChao2.Size = new System.Drawing.Size(28, 17);
+            this.lbChao2.TabIndex = 25;
+            this.lbChao2.Text = "    ";
+            // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(254, 391);
+            this.Controls.Add(this.lbChao2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbId);
             this.Controls.Add(this.btnRestoreMatKhau);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lbQuyen);
@@ -220,5 +260,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnRestoreMatKhau;
+        private System.Windows.Forms.Label lbChao2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbId;
     }
 }

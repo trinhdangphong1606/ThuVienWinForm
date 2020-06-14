@@ -41,6 +41,10 @@ namespace GUI
                 MessageBox.Show("Reset Mật Khẩu Thành Công", "Thông Báo");
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Kiểm Tra Lại Thông Tin Nhé", "Thông Báo");
+            }    
         }
     }
 }

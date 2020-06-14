@@ -231,6 +231,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmNguoiMuonSachCapNhat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNguoiMuonSachCapNhat";
             this.Load += new System.EventHandler(this.FrmNguoiMuonSachCapNhat_Load);
             this.GrBChiTiet.ResumeLayout(false);

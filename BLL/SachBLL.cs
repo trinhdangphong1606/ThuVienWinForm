@@ -16,15 +16,25 @@ namespace BLL
             
             return sac.LayAllToanBoSach();
         }
+        public bool CapNhatPhieuMuon(Sach trangthai)
+        {
+            return sac.CapNhatPhieuMuon(trangthai);
+        }
         public List<SachDAO> LayToanBoSach()
         {
 
             return sac.LayToanBoSach();
         }
 
-        public List<SachDAO> TimTenSach(SachDAO TimTenSach)
+        public List<SachDAO> TimTenSach(SachDAO TenSach)
         {
-            return sac.TimTenSach(TimTenSach);
+            return sac.TimTenSach(TenSach);
         }
+        public List<Sach> TimMaSach(Sach sc)
+        {
+            return sac.TimMaSach(sc);
+        }
+            
+
     }
 }

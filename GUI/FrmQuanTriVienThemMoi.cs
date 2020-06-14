@@ -92,7 +92,12 @@ namespace GUI
                 errorQuyen.SetError(txtQuyen, "Chọn Quyền Cho Nhân Viên");
                 return;
             }
-            
+            errorIntNamSinh.SetError(txtNamSinh, "");
+            if (!txtNamSinh.Text.All(char.IsDigit))
+            {
+                errorIntNamSinh.SetError(txtNamSinh, "Năm Sinh Là Số ");
+                return;
+            }
             QuanTriVien qtv = new QuanTriVien();
             qtv.HoTen = txtTen.Text;
             qtv.NamSinh = int.Parse(txtNamSinh.Text);
@@ -111,6 +116,11 @@ namespace GUI
                 MessageBox.Show("Thêm Thành Công", "Thông báo");
                 this.Close();
             }    
+        }
+
+        private void btnHuyThaoTac_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

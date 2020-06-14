@@ -121,6 +121,7 @@
             this.Controls.Add(this.richNoiDungDanhMucMoi);
             this.Controls.Add(this.label2);
             this.Name = "FrmDanhMucThemMoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDanhMucThemMoi";
             this.ResumeLayout(false);
             this.PerformLayout();

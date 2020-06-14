@@ -42,6 +42,13 @@
             this.dtpickerNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTimNam = new System.Windows.Forms.TextBox();
+            this.txtTimThang = new System.Windows.Forms.TextBox();
+            this.btnTimThoiGianTao = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTimNgay = new System.Windows.Forms.TextBox();
             this.btnTimTheoTen = new System.Windows.Forms.Button();
             this.btnTimTheoMa = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,17 +75,16 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorTimMaPhieu = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTimTenDocGia = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnTimThoiGianTao = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTimNgay = new System.Windows.Forms.TextBox();
-            this.txtTimThang = new System.Windows.Forms.TextBox();
-            this.txtTimNam = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.errorNgay = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorThang = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNam = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMaPhieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimTenDocGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNgay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorThang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNam)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnPMSDong
@@ -261,6 +267,80 @@
             this.groupBox1.Size = new System.Drawing.Size(342, 113);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(212, 87);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 17);
+            this.label14.TabIndex = 85;
+            this.label14.Text = "-";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(163, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 17);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "-";
+            // 
+            // txtTimNam
+            // 
+            this.txtTimNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimNam.Location = new System.Drawing.Point(228, 85);
+            this.txtTimNam.Name = "txtTimNam";
+            this.txtTimNam.Size = new System.Drawing.Size(45, 23);
+            this.txtTimNam.TabIndex = 83;
+            this.txtTimNam.Tag = "";
+            this.txtTimNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimNam.Click += new System.EventHandler(this.txtTimNam_Click);
+            // 
+            // txtTimThang
+            // 
+            this.txtTimThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimThang.Location = new System.Drawing.Point(177, 85);
+            this.txtTimThang.Name = "txtTimThang";
+            this.txtTimThang.Size = new System.Drawing.Size(32, 23);
+            this.txtTimThang.TabIndex = 82;
+            this.txtTimThang.Tag = "";
+            this.txtTimThang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimThang.Click += new System.EventHandler(this.txtTimThang_Click);
+            // 
+            // btnTimThoiGianTao
+            // 
+            this.btnTimThoiGianTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimThoiGianTao.Location = new System.Drawing.Point(293, 84);
+            this.btnTimThoiGianTao.Name = "btnTimThoiGianTao";
+            this.btnTimThoiGianTao.Size = new System.Drawing.Size(44, 23);
+            this.btnTimThoiGianTao.TabIndex = 80;
+            this.btnTimThoiGianTao.Text = "Tìm";
+            this.btnTimThoiGianTao.UseVisualStyleBackColor = true;
+            this.btnTimThoiGianTao.Click += new System.EventHandler(this.btnTimThoiGianTao_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 17);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "Ngày Tạo :";
+            // 
+            // txtTimNgay
+            // 
+            this.txtTimNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimNgay.Location = new System.Drawing.Point(129, 85);
+            this.txtTimNgay.Name = "txtTimNgay";
+            this.txtTimNgay.Size = new System.Drawing.Size(32, 23);
+            this.txtTimNgay.TabIndex = 79;
+            this.txtTimNgay.Tag = "";
+            this.txtTimNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimNgay.Click += new System.EventHandler(this.txtTimNgay_Click);
             // 
             // btnTimTheoTen
             // 
@@ -492,79 +572,17 @@
             // 
             this.errorTimTenDocGia.ContainerControl = this;
             // 
-            // btnTimThoiGianTao
+            // errorNgay
             // 
-            this.btnTimThoiGianTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimThoiGianTao.Location = new System.Drawing.Point(293, 84);
-            this.btnTimThoiGianTao.Name = "btnTimThoiGianTao";
-            this.btnTimThoiGianTao.Size = new System.Drawing.Size(44, 23);
-            this.btnTimThoiGianTao.TabIndex = 80;
-            this.btnTimThoiGianTao.Text = "Tìm";
-            this.btnTimThoiGianTao.UseVisualStyleBackColor = true;
-            this.btnTimThoiGianTao.Click += new System.EventHandler(this.btnTimThoiGianTao_Click);
+            this.errorNgay.ContainerControl = this;
             // 
-            // label12
+            // errorThang
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 87);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 17);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "Ngày Tạo :";
+            this.errorThang.ContainerControl = this;
             // 
-            // txtTimNgay
+            // errorNam
             // 
-            this.txtTimNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimNgay.Location = new System.Drawing.Point(129, 85);
-            this.txtTimNgay.Name = "txtTimNgay";
-            this.txtTimNgay.Size = new System.Drawing.Size(32, 23);
-            this.txtTimNgay.TabIndex = 79;
-            this.txtTimNgay.Tag = "";
-            this.txtTimNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimNgay.Click += new System.EventHandler(this.txtTimNgay_Click);
-            // 
-            // txtTimThang
-            // 
-            this.txtTimThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimThang.Location = new System.Drawing.Point(177, 85);
-            this.txtTimThang.Name = "txtTimThang";
-            this.txtTimThang.Size = new System.Drawing.Size(32, 23);
-            this.txtTimThang.TabIndex = 82;
-            this.txtTimThang.Tag = "";
-            this.txtTimThang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimThang.Click += new System.EventHandler(this.txtTimThang_Click);
-            // 
-            // txtTimNam
-            // 
-            this.txtTimNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimNam.Location = new System.Drawing.Point(228, 85);
-            this.txtTimNam.Name = "txtTimNam";
-            this.txtTimNam.Size = new System.Drawing.Size(45, 23);
-            this.txtTimNam.TabIndex = 83;
-            this.txtTimNam.Tag = "";
-            this.txtTimNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimNam.Click += new System.EventHandler(this.txtTimNam_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(163, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 17);
-            this.label13.TabIndex = 84;
-            this.label13.Text = "-";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(212, 87);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(14, 17);
-            this.label14.TabIndex = 85;
-            this.label14.Text = "-";
+            this.errorNam.ContainerControl = this;
             // 
             // FrmPhieuMuonSachQL
             // 
@@ -584,6 +602,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMaPhieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimTenDocGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNgay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorThang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,5 +658,8 @@
         private System.Windows.Forms.TextBox txtTimThang;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ErrorProvider errorNgay;
+        private System.Windows.Forms.ErrorProvider errorThang;
+        private System.Windows.Forms.ErrorProvider errorNam;
     }
 }

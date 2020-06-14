@@ -1,15 +1,18 @@
-﻿using BLL;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
+using DAL;
+using DAL.DAO;
+using DTO;
 namespace GUI
 {
     public partial class FrmPhieuMuonSachDong : Form
@@ -24,7 +27,21 @@ namespace GUI
             txtReadyTenDocGia.Text = FrmPhieuMuonSachQL.PassTenDocGia;
             txtReadyTenSach.Text = FrmPhieuMuonSachQL.PassTenSach;
             dtpReadyNgayMuon.Value = FrmPhieuMuonSachQL.PassNgayMuon;
+
+            SachDAO sac = new SachDAO();
+            sac.TenSach = txtReadyTenSach.Text;
+
+            SachBLL sacbll = new SachBLL();
+            List<SachDAO> dssachtim = sacbll.TimTenSach(sac);
+            foreach (SachDAO sachtim in dssachtim)
+            {
+                txtMaSach.Text = sachtim.ID + "";
+
+            }
+
+
         }
+        
         private void btnXacNhanThongTinDong_Click(object sender, EventArgs e)
         {
             errorProvider1.SetError(dtpReadyNgayTra, "");
@@ -35,6 +52,8 @@ namespace GUI
             }
             else
             {
+                
+
                 XacNhanThongTinDong();
             }
             
@@ -73,13 +92,22 @@ namespace GUI
 
             PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
             bool closephieu = pmsbll.DongPhieuMuon(pms);
-            if(closephieu)
+
+            Sach sac = new Sach();
+            sac.ID = int.Parse(txtMaSach.Text) ;
+            SachBLL scbll = new SachBLL();
+            bool trangthai = scbll.CapNhatPhieuMuon(sac);
+
+            if(closephieu && trangthai)
             {
                 MessageBox.Show("Nhấn nút cập nhật nhé!!!", "Thông Báo");
                 this.Close();
             }    
         }
 
-        
+        private void test_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

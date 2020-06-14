@@ -54,12 +54,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnDongPhieuMuon = new System.Windows.Forms.Button();
+            this.txtMaSach = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpReadyNgayTra
             // 
             this.dtpReadyNgayTra.CustomFormat = "dd-MM-yyyy";
+            this.dtpReadyNgayTra.Enabled = false;
             this.dtpReadyNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpReadyNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpReadyNgayTra.Location = new System.Drawing.Point(188, 176);
@@ -225,7 +227,7 @@
             this.txtReadyTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReadyTenSach.Location = new System.Drawing.Point(131, 112);
             this.txtReadyTenSach.Name = "txtReadyTenSach";
-            this.txtReadyTenSach.Size = new System.Drawing.Size(236, 23);
+            this.txtReadyTenSach.Size = new System.Drawing.Size(204, 23);
             this.txtReadyTenSach.TabIndex = 146;
             this.txtReadyTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -310,11 +312,22 @@
             this.btnDongPhieuMuon.UseVisualStyleBackColor = true;
             this.btnDongPhieuMuon.Click += new System.EventHandler(this.btnDongPhieuMuon_Click);
             // 
+            // txtMaSach
+            // 
+            this.txtMaSach.Enabled = false;
+            this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSach.Location = new System.Drawing.Point(339, 112);
+            this.txtMaSach.Name = "txtMaSach";
+            this.txtMaSach.Size = new System.Drawing.Size(28, 23);
+            this.txtMaSach.TabIndex = 156;
+            this.txtMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmPhieuMuonSachDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 280);
+            this.Controls.Add(this.txtMaSach);
             this.Controls.Add(this.btnDongPhieuMuon);
             this.Controls.Add(this.txtConfirmTenSach);
             this.Controls.Add(this.txtConfirmTenDocGia);
@@ -375,5 +388,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnDongPhieuMuon;
+        private System.Windows.Forms.TextBox txtMaSach;
     }
 }
