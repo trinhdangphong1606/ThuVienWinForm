@@ -36,10 +36,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTimTenSach = new System.Windows.Forms.Button();
+            this.txtTimTenSach = new System.Windows.Forms.TextBox();
             this.TxtNgonNgu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTenDanhMuc = new System.Windows.Forms.TextBox();
@@ -113,10 +111,8 @@
             // 
             // GrBChiTiet
             // 
-            this.GrBChiTiet.Controls.Add(this.button2);
-            this.GrBChiTiet.Controls.Add(this.textBox2);
-            this.GrBChiTiet.Controls.Add(this.button1);
-            this.GrBChiTiet.Controls.Add(this.textBox1);
+            this.GrBChiTiet.Controls.Add(this.btnTimTenSach);
+            this.GrBChiTiet.Controls.Add(this.txtTimTenSach);
             this.GrBChiTiet.Controls.Add(this.TxtNgonNgu);
             this.GrBChiTiet.Controls.Add(this.label6);
             this.GrBChiTiet.Controls.Add(this.TxtTenDanhMuc);
@@ -135,49 +131,29 @@
             this.GrBChiTiet.TabIndex = 14;
             this.GrBChiTiet.TabStop = false;
             // 
-            // button2
+            // btnTimTenSach
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTimTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(655, 199);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 28);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Tìm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTenSach.Location = new System.Drawing.Point(358, 201);
+            this.btnTimTenSach.Name = "btnTimTenSach";
+            this.btnTimTenSach.Size = new System.Drawing.Size(40, 23);
+            this.btnTimTenSach.TabIndex = 24;
+            this.btnTimTenSach.Text = "Tìm";
+            this.btnTimTenSach.UseVisualStyleBackColor = true;
+            this.btnTimTenSach.Click += new System.EventHandler(this.btnTimTenSach_Click);
             // 
-            // textBox2
+            // txtTimTenSach
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(404, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 24);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Nhập tên danh mục cần tìm";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(358, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 28);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(87, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 24);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Nhập tên sách cần tìm";
+            this.txtTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTenSach.Location = new System.Drawing.Point(87, 200);
+            this.txtTimTenSach.Name = "txtTimTenSach";
+            this.txtTimTenSach.Size = new System.Drawing.Size(265, 24);
+            this.txtTimTenSach.TabIndex = 23;
+            this.txtTimTenSach.Text = "Nhập tên sách cần tìm";
+            this.txtTimTenSach.Click += new System.EventHandler(this.txtTimTenSach_Click);
             // 
             // TxtNgonNgu
             // 
@@ -340,9 +316,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnTimTenSach;
+        private System.Windows.Forms.TextBox txtTimTenSach;
     }
 }

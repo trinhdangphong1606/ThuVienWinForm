@@ -141,5 +141,120 @@ namespace GUI
             FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau();
             frm1.Show();
         }
+
+        private void btnAllUser_Click(object sender, EventArgs e)
+        {
+            HienThiDanhSachQuanTriVien();
+        }
+
+        private void btnTimTen_Click(object sender, EventArgs e)
+        {
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.HoTen = txtTimTen.Text;
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            List<QuanTriVien> dsquanntrivien = qtvbll.TimTenQTV(qtv);
+            lvQuanTriVienDS.Items.Clear();
+            foreach (QuanTriVien qtvien in dsquanntrivien)
+            {
+                ListViewItem lvi = new ListViewItem(qtvien.HoTen);
+                lvi.SubItems.Add(qtvien.SoDienThoai);
+                lvi.SubItems.Add(qtvien.TenDangNhap);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvi.SubItems.Add(qtvien.Email);
+                lvi.SubItems.Add(qtvien.NamSinh + "");
+                lvi.SubItems.Add(qtvien.DiaChi);
+                lvi.SubItems.Add(qtvien.ID + "");
+                lvi.SubItems.Add(qtvien.KeyRestore);
+                lvi.SubItems.Add(qtvien.MatKhau);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvQuanTriVienDS.Items.Add(lvi);
+            }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.Quyen = btnAdmin.Text;
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);
+            lvQuanTriVienDS.Items.Clear();
+            foreach (QuanTriVien qtvien in dsquanntrivien)
+            {
+                ListViewItem lvi = new ListViewItem(qtvien.HoTen);
+                lvi.SubItems.Add(qtvien.SoDienThoai);
+                lvi.SubItems.Add(qtvien.TenDangNhap);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvi.SubItems.Add(qtvien.Email);
+                lvi.SubItems.Add(qtvien.NamSinh + "");
+                lvi.SubItems.Add(qtvien.DiaChi);
+                lvi.SubItems.Add(qtvien.ID + "");
+                lvi.SubItems.Add(qtvien.KeyRestore);
+                lvi.SubItems.Add(qtvien.MatKhau);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvQuanTriVienDS.Items.Add(lvi);
+            }
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.Quyen = btnStaff.Text;
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);
+            lvQuanTriVienDS.Items.Clear();
+            foreach (QuanTriVien qtvien in dsquanntrivien)
+            {
+                ListViewItem lvi = new ListViewItem(qtvien.HoTen);
+                lvi.SubItems.Add(qtvien.SoDienThoai);
+                lvi.SubItems.Add(qtvien.TenDangNhap);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvi.SubItems.Add(qtvien.Email);
+                lvi.SubItems.Add(qtvien.NamSinh + "");
+                lvi.SubItems.Add(qtvien.DiaChi);
+                lvi.SubItems.Add(qtvien.ID + "");
+                lvi.SubItems.Add(qtvien.KeyRestore);
+                lvi.SubItems.Add(qtvien.MatKhau);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvQuanTriVienDS.Items.Add(lvi);
+            }
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.Quyen = btnUser.Text;
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);
+            lvQuanTriVienDS.Items.Clear();
+            foreach (QuanTriVien qtvien in dsquanntrivien)
+            {
+                ListViewItem lvi = new ListViewItem(qtvien.HoTen);
+                lvi.SubItems.Add(qtvien.SoDienThoai);
+                lvi.SubItems.Add(qtvien.TenDangNhap);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvi.SubItems.Add(qtvien.Email);
+                lvi.SubItems.Add(qtvien.NamSinh + "");
+                lvi.SubItems.Add(qtvien.DiaChi);
+                lvi.SubItems.Add(qtvien.ID + "");
+                lvi.SubItems.Add(qtvien.KeyRestore);
+                lvi.SubItems.Add(qtvien.MatKhau);
+                lvi.SubItems.Add(qtvien.Quyen);
+                lvQuanTriVienDS.Items.Add(lvi);
+            }
+        }
+
+        private void txtTimTen_TextChanged(object sender, EventArgs e)
+        {
+            txtTimTen.Text="";
+        }
+
+        private void txtTimTen_Click(object sender, EventArgs e)
+        {
+            txtTimTen.Clear();
+        }
     }
 }

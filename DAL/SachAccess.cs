@@ -134,7 +134,7 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "update Sach set TrangThai=N'Trống where Id='" + pms.ID + "'";
+            command.CommandText = "update Sach set TrangThai=N'Trống' where Id='" + pms.ID + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;

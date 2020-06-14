@@ -105,8 +105,16 @@ namespace GUI
             {
                 errorProvider3.SetError(datetimeReadyNgayDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
                 return;
+            }
+            if(txtTrangThai.Text == "Đang cho mượn")
+            {
+                MessageBox.Show("Sách Đang Cho Mượn \n Xin Mượn Sách Khác", "Thông Báo");
+            }
+            else
+            {
+                XacNhanThongTin();
             }    
-            XacNhanThongTin();
+            
                
             
             
@@ -155,13 +163,13 @@ namespace GUI
 
         private void btnTimTenDocGia_Click(object sender, EventArgs e)
         {
-            errorTimDocGia.SetError(txtTimTenNMS, "");
+            /*errorTimDocGia.SetError(txtTimTenNMS, "");
             if(txtTimTenNMS.Text=="")
             {
                 errorTimDocGia.SetError(txtTimTenNMS, "Nhập Tên Đọc Giả Cần Tìm");
                 return;
             }
-
+            */
 
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.HoTen = txtTimTenNMS.Text;
@@ -180,12 +188,12 @@ namespace GUI
 
         private void btnTimTenSach_Click(object sender, EventArgs e)
         {
-            errorTimTenSach.SetError(txtTimSach, "");
-            if(txtTimSach.Text=="")
-            {
-                errorTimTenSach.SetError(txtTimSach, "Nhập Tên Sách Cần Tìm");
-                return;
-            }
+            //errorTimTenSach.SetError(txtTimSach, "");
+            //if(txtTimSach.Text=="")
+            //{
+            //    errorTimTenSach.SetError(txtTimSach, "Nhập Tên Sách Cần Tìm");
+            //    return;
+            //}
             SachDAO sac = new SachDAO();
             sac.TenSach = txtTimSach.Text;
 

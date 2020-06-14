@@ -27,8 +27,17 @@ namespace GUI
             txtReadyTenDocGia.Text = FrmPhieuMuonSachQL.PassTenDocGia;
             txtReadyTenSach.Text = FrmPhieuMuonSachQL.PassTenSach;
             dtpReadyNgayMuon.Value = FrmPhieuMuonSachQL.PassNgayMuon;
-            
 
+            SachDAO sac = new SachDAO();
+            sac.TenSach = txtReadyTenSach.Text;
+
+            SachBLL sacbll = new SachBLL();
+            List<SachDAO> dssachtim = sacbll.TimTenSach(sac);
+            foreach (SachDAO sachtim in dssachtim)
+            {
+                txtMaSach.Text = sachtim.ID + "";
+
+            }
 
 
         }
@@ -98,16 +107,7 @@ namespace GUI
 
         private void test_Click(object sender, EventArgs e)
         {
-            SachDAO sac = new SachDAO();
-            sac.TenSach = txtReadyTenSach.Text;
-
-            SachBLL sacbll = new SachBLL();
-            List<SachDAO> dssachtim = sacbll.TimTenSach(sac);
-            foreach (SachDAO sachtim in dssachtim)
-            {
-                 lbtest.Text= sachtim.ID+"";
-                
-            }
+            
         }
     }
 }

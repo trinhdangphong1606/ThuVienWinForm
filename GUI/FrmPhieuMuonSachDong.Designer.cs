@@ -55,8 +55,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnDongPhieuMuon = new System.Windows.Forms.Button();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.test = new System.Windows.Forms.Button();
-            this.lbtest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -316,6 +314,7 @@
             // 
             // txtMaSach
             // 
+            this.txtMaSach.Enabled = false;
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(339, 112);
             this.txtMaSach.Name = "txtMaSach";
@@ -323,33 +322,11 @@
             this.txtMaSach.TabIndex = 156;
             this.txtMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // test
-            // 
-            this.test.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.test.Location = new System.Drawing.Point(310, 148);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(129, 25);
-            this.test.TabIndex = 157;
-            this.test.Text = "test";
-            this.test.UseVisualStyleBackColor = true;
-            this.test.Click += new System.EventHandler(this.test_Click);
-            // 
-            // lbtest
-            // 
-            this.lbtest.AutoSize = true;
-            this.lbtest.Location = new System.Drawing.Point(156, 33);
-            this.lbtest.Name = "lbtest";
-            this.lbtest.Size = new System.Drawing.Size(35, 13);
-            this.lbtest.TabIndex = 158;
-            this.lbtest.Text = "label2";
-            // 
             // FrmPhieuMuonSachDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 280);
-            this.Controls.Add(this.lbtest);
-            this.Controls.Add(this.test);
             this.Controls.Add(this.txtMaSach);
             this.Controls.Add(this.btnDongPhieuMuon);
             this.Controls.Add(this.txtConfirmTenSach);
@@ -412,7 +389,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnDongPhieuMuon;
         private System.Windows.Forms.TextBox txtMaSach;
-        private System.Windows.Forms.Button test;
-        private System.Windows.Forms.Label lbtest;
     }
 }

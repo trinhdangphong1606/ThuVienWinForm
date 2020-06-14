@@ -1,0 +1,6 @@
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\bin\Debug\DTO.dll
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\bin\Debug\DTO.pdb
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\obj\Debug\DTO.dll
+C:\Users\DevBlock-PhongTD\source\repos\QuanLyThuVien-WinForm\DTO\obj\Debug\DTO.pdb

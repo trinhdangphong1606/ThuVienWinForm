@@ -85,17 +85,18 @@ namespace DAL
             command.CommandText = "Update NguoiMuonSach set HoTen=N'"+nms.HoTen+"', SoDienThoai ='" + nms.SoDienThoai+"', DiaChi =N'" + nms.DiaChi+"', Email='" + nms.Email+"' where ID='"+nms.Id+"'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
-            return true;
+            return ketqua>0;
         }
         public bool ThemDocGia(NguoiMuonSach nms)
         {
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "insert into NguoiMuonSach(HoTen,SoDienThoai,DiaChi,Email,NamSinh)values(N'"+nms.HoTen+"','"+nms.SoDienThoai+"', N'"+nms.DiaChi+"', '"+nms.Email+"', '"+nms.NamSinh+"')";
+            command.CommandText = "insert into NguoiMuonSach(HoTen,SoDienThoai,DiaChi,Email,NamSinh)values" +
+                "(N'"+nms.HoTen+"','"+nms.SoDienThoai+"', N'"+nms.DiaChi+"', '"+nms.Email+"', '"+nms.NamSinh+"')";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
-            return true;
+            return ketqua > 0;
         }
     }
 
