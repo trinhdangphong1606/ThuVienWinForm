@@ -76,7 +76,7 @@ namespace GUI
                 errorMatKhau2.SetError(txtMatKhauMoi2, "");
                 if (txtMatKhauMoi2.Text != txtMatKhauMoi1.Text)
                 {
-                    errorMatKhau2.SetError(txtMatKhauMoi1, "Kiểm Tra Nhập Lại Mật Khẩu");
+                    errorMatKhau2.SetError(txtMatKhauMoi2, "Kiểm Tra Nhập Lại Mật Khẩu");
                     return;
                 }
                 QuanTriVien qtvbll = new QuanTriVien();

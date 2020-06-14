@@ -254,7 +254,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmThongTinCaNhanDoiKey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmThongTinCaNhanKey";
+            this.Text = "Thay Đổi Key Restore";
             this.Load += new System.EventHandler(this.FrmThongTinCaNhanDoiKey_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorKey2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).EndInit();

@@ -207,7 +207,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmDanhMucQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDanhMucQL";
+            this.Text = "Danh Mục Sách";
             this.Load += new System.EventHandler(this.FrmDanhMucQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

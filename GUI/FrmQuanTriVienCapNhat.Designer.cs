@@ -369,7 +369,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmQuanTriVienCapNhat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmQuanTriVienCapNhat";
+            this.Text = "Cập Nhật Thông Tin";
             this.Load += new System.EventHandler(this.FrmQuanTriVienCapNhat_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

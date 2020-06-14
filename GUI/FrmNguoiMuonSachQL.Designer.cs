@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnCapNhatForm = new System.Windows.Forms.Button();
             this.txtNMSMa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtNMSEmail = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.lvNguoiMuonSachDS = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnCapNhatForm = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,20 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(673, 280);
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // btnCapNhatForm
+            // 
+            this.btnCapNhatForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhatForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatForm.Location = new System.Drawing.Point(555, 130);
+            this.btnCapNhatForm.Name = "btnCapNhatForm";
+            this.btnCapNhatForm.Size = new System.Drawing.Size(104, 43);
+            this.btnCapNhatForm.TabIndex = 31;
+            this.btnCapNhatForm.Text = "Cập Nhật";
+            this.btnCapNhatForm.UseVisualStyleBackColor = true;
+            this.btnCapNhatForm.Click += new System.EventHandler(this.btnCapNhatForm_Click);
             // 
             // txtNMSMa
             // 
@@ -274,20 +288,6 @@
             this.columnHeader3.Text = "Địa Chỉ ";
             this.columnHeader3.Width = 450;
             // 
-            // btnCapNhatForm
-            // 
-            this.btnCapNhatForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapNhatForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatForm.Location = new System.Drawing.Point(555, 130);
-            this.btnCapNhatForm.Name = "btnCapNhatForm";
-            this.btnCapNhatForm.Size = new System.Drawing.Size(104, 43);
-            this.btnCapNhatForm.TabIndex = 31;
-            this.btnCapNhatForm.Text = "Cập Nhật";
-            this.btnCapNhatForm.UseVisualStyleBackColor = true;
-            this.btnCapNhatForm.Click += new System.EventHandler(this.btnCapNhatForm_Click);
-            // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +298,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmNguoiMuonSachQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNguoiMuonSachQL";
+            this.Text = "Quản Lý Đọc Giả";
             this.Load += new System.EventHandler(this.FrmNguoiMuonSachQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

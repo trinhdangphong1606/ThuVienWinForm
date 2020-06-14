@@ -69,7 +69,25 @@ namespace GUI
 
         private void btnTimTenSach_Click(object sender, EventArgs e)
         {
-            
+            SachDAO tims = new SachDAO();
+            tims.TenSach = txtTimTenSach.Text;
+
+            SachBLL sacBLL = new SachBLL();
+            List<SachDAO> dssach = sacBLL.TimTenSach(tims); //call sachbll để trả về dssach
+            LvSachQL.Items.Clear();
+            foreach (SachDAO scBLL in dssach)
+            //duyệt tuần tự các phần tử trong mảng dssach
+            {
+                ListViewItem lvi = new ListViewItem(scBLL.TenSach + "");
+                lvi.SubItems.Add(scBLL.TacGia);
+                lvi.SubItems.Add(scBLL.TheLoai);
+                lvi.SubItems.Add(scBLL.NgonNgu);
+                lvi.SubItems.Add(scBLL.NamXuatBan + "");
+                lvi.SubItems.Add(scBLL.NoiDungSach + "");
+                lvi.SubItems.Add(scBLL.TrangThai + "");
+
+                LvSachQL.Items.Add(lvi);
+            }
         }
     }
 }

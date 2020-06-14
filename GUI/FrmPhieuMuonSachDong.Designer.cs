@@ -354,7 +354,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmPhieuMuonSachDong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NguoiMuonSachQL";
+            this.Text = "Đóng Phiếu Mượn Sách";
             this.Load += new System.EventHandler(this.FrmPhieuMuonSachDong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

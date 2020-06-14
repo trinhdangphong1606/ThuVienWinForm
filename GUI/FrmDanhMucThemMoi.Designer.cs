@@ -122,7 +122,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FrmDanhMucThemMoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDanhMucThemMoi";
+            this.Text = "Thêm Mới Danh Mục";
             this.ResumeLayout(false);
             this.PerformLayout();
 

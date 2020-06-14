@@ -232,7 +232,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmNguoiMuonSachCapNhat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNguoiMuonSachCapNhat";
+            this.Text = "Cập Nhật Thông Tin";
             this.Load += new System.EventHandler(this.FrmNguoiMuonSachCapNhat_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

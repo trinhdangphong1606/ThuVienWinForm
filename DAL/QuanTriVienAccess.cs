@@ -301,5 +301,17 @@ namespace DAL
             CloseConnection();
             return dsQuanTriVien;
         }
+        public bool DoiThongTinCaNhan(QuanTriVien qtvien)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update QuanTriVien set TenDangNhap='" + qtvien.TenDangNhap + "',Email='" + qtvien.Email + "'," +
+                "NamSinh='" + qtvien.NamSinh + "', HoTen=N'" + qtvien.HoTen + "', SoDienThoai = '" + qtvien.SoDienThoai + "', " +
+                "DiaChi=N'" + qtvien.DiaChi + "'  where Id='" + qtvien.ID + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
     }
 }

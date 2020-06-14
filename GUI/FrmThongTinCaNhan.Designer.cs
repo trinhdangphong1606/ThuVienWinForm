@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.btnDoiKey = new System.Windows.Forms.Button();
+            this.BtnHuy = new System.Windows.Forms.Button();
             this.BtnDoiMatKhau = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorIntNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.BtnHuy = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTen)).BeginInit();
@@ -110,6 +110,19 @@
             this.btnDoiKey.UseVisualStyleBackColor = true;
             this.btnDoiKey.Click += new System.EventHandler(this.btnDoiKey_Click);
             // 
+            // BtnHuy
+            // 
+            this.BtnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHuy.Location = new System.Drawing.Point(288, 235);
+            this.BtnHuy.Name = "BtnHuy";
+            this.BtnHuy.Size = new System.Drawing.Size(254, 36);
+            this.BtnHuy.TabIndex = 42;
+            this.BtnHuy.Text = "Hủy Thao Tác";
+            this.BtnHuy.UseVisualStyleBackColor = true;
+            // 
             // BtnDoiMatKhau
             // 
             this.BtnDoiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -123,6 +136,20 @@
             this.BtnDoiMatKhau.Text = "Đổi Mật Khẩu";
             this.BtnDoiMatKhau.UseVisualStyleBackColor = true;
             this.BtnDoiMatKhau.Click += new System.EventHandler(this.BtnDoiMatKhau_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(19, 235);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(254, 36);
+            this.btnCapNhat.TabIndex = 41;
+            this.btnCapNhat.Text = "Cập Nhật Thông Tin";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // txtQuyen
             // 
@@ -316,33 +343,6 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Thông Tin Cá Nhân";
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(19, 235);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(254, 36);
-            this.btnCapNhat.TabIndex = 41;
-            this.btnCapNhat.Text = "Cập Nhật Thông Tin";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
-            // BtnHuy
-            // 
-            this.BtnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHuy.Location = new System.Drawing.Point(288, 235);
-            this.BtnHuy.Name = "BtnHuy";
-            this.BtnHuy.Size = new System.Drawing.Size(254, 36);
-            this.BtnHuy.TabIndex = 42;
-            this.BtnHuy.Text = "Hủy Thao Tác";
-            this.BtnHuy.UseVisualStyleBackColor = true;
-            // 
             // FrmThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,7 +352,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmThongTinCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmThongTinCaNhan";
+            this.Text = "Thông Tin Cá Nhân";
             this.Load += new System.EventHandler(this.FrmThongTinCaNhan_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

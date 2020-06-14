@@ -239,7 +239,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmNguoiMuonSachThemMoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNguoiMuonSachThemMoi";
+            this.Text = "Thêm Mới Đọc Giả";
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTen)).EndInit();

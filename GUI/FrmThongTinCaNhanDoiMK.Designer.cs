@@ -121,6 +121,7 @@
             this.txtMatKhauMoi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoi2.Location = new System.Drawing.Point(230, 159);
             this.txtMatKhauMoi2.Name = "txtMatKhauMoi2";
+            this.txtMatKhauMoi2.PasswordChar = '*';
             this.txtMatKhauMoi2.Size = new System.Drawing.Size(219, 23);
             this.txtMatKhauMoi2.TabIndex = 56;
             this.txtMatKhauMoi2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -130,6 +131,7 @@
             this.txtMatKhauMoi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoi1.Location = new System.Drawing.Point(230, 130);
             this.txtMatKhauMoi1.Name = "txtMatKhauMoi1";
+            this.txtMatKhauMoi1.PasswordChar = '*';
             this.txtMatKhauMoi1.Size = new System.Drawing.Size(219, 23);
             this.txtMatKhauMoi1.TabIndex = 55;
             this.txtMatKhauMoi1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -139,6 +141,7 @@
             this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauCu.Location = new System.Drawing.Point(230, 74);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.PasswordChar = '*';
             this.txtMatKhauCu.Size = new System.Drawing.Size(219, 23);
             this.txtMatKhauCu.TabIndex = 54;
             this.txtMatKhauCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -250,7 +253,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmThongTinCaNhanDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThongTinCaNhanDoiMK";
+            this.Text = "Thay Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.FrmThongTinCaNhanDoiMK_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

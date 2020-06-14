@@ -264,7 +264,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmRestoreMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RestoreMatKhau";
+            this.Text = "Restore Mật Khẩu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDangNhap)).EndInit();

@@ -163,7 +163,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmQuanTriVienResetMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmQuanTriVienResetMatKhau";
+            this.Text = "Reset Mật Khẩu";
             this.Load += new System.EventHandler(this.FrmQuanTriVienResetMatKhau_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

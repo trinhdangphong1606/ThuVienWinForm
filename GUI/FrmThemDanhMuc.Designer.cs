@@ -129,7 +129,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmThemDanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmThemDanhMuc";
+            this.Text = "Thêm Mới Danh Mục";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

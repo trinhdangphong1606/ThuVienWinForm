@@ -90,6 +90,27 @@ namespace GUI
                 errorIntNamSinh.SetError(txtNamSinh, "Năm Sinh Là Số ");
                 return;
             }
+
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.ID = int.Parse(txtMa.Text);
+            qtv.HoTen = txtTen.Text;
+            qtv.TenDangNhap = txtAccount.Text;
+            qtv.SoDienThoai = txtSoDienThoai.Text;
+            qtv.NamSinh = int.Parse(txtNamSinh.Text);
+            qtv.DiaChi = txtDiaChi.Text;
+            qtv.Email = txtEmail.Text;
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            bool update = qtvbll.DoiThongTinCaNhan(qtv);
+            if(update)
+            {
+                MessageBox.Show("Thay Đổi Thông Tin Thành Công", "Thông Báo");
+                this.Close();
+            }    
+            else
+            {
+                MessageBox.Show("Tèo", "Thông Báo");
+            }    
         }
 
         private void BtnDoiMatKhau_Click(object sender, EventArgs e)

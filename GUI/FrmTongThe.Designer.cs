@@ -59,8 +59,8 @@
             // xemSáchToolStripMenuItem
             // 
             this.xemSáchToolStripMenuItem.Name = "xemSáchToolStripMenuItem";
-            this.xemSáchToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.xemSáchToolStripMenuItem.Text = "Xem Sách";
+            this.xemSáchToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.xemSáchToolStripMenuItem.Text = "Tìm Sách";
             this.xemSáchToolStripMenuItem.Click += new System.EventHandler(this.xemSáchToolStripMenuItem_Click);
             // 
             // quảnLýSáchToolStripMenuItem
@@ -87,8 +87,8 @@
             // ngườiMượnSáchToolStripMenuItem
             // 
             this.ngườiMượnSáchToolStripMenuItem.Name = "ngườiMượnSáchToolStripMenuItem";
-            this.ngườiMượnSáchToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
-            this.ngườiMượnSáchToolStripMenuItem.Text = "Người Mượn Sách";
+            this.ngườiMượnSáchToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.ngườiMượnSáchToolStripMenuItem.Text = "Đọc Giả";
             this.ngườiMượnSáchToolStripMenuItem.Click += new System.EventHandler(this.ngườiMượnSáchToolStripMenuItem_Click);
             // 
             // quảnTrịViênToolStripMenuItem
@@ -117,7 +117,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTongThe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmTongThe";
+            this.Text = "Quản Lý Thông Tin Thư Viện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

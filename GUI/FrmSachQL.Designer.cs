@@ -378,7 +378,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmSachQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSachQL";
+            this.Text = "Quản Lý Sách";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmSachQL_Load);
             this.GrBChiTiet.ResumeLayout(false);

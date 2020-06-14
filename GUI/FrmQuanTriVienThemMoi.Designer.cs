@@ -395,7 +395,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmQuanTriVienThemMoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmQuanTriVienThemMoi";
+            this.Text = "Thêm Mới Quản Trị Viên";
             this.Load += new System.EventHandler(this.FrmQuanTriVienThemMoi_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

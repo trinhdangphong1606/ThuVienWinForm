@@ -475,7 +475,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmQuanTriVienQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmQuanTriVienQL";
+            this.Text = "Quản Lý Quản Trị Viên";
             this.Load += new System.EventHandler(this.FrmQuanTriVienQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

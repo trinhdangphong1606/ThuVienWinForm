@@ -594,7 +594,7 @@
             this.Controls.Add(this.lvDSPhieuMuon);
             this.Name = "FrmPhieuMuonSachQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPhieuMuonSachQL";
+            this.Text = "Quản Lý Phiếu Mượn Sách";
             this.Load += new System.EventHandler(this.FrmPhieuMuonSachQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

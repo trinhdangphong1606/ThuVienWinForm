@@ -285,7 +285,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmSachXem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSachXem";
+            this.Text = "Danh Sách Sách";
             this.Load += new System.EventHandler(this.FrmSachXem_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();

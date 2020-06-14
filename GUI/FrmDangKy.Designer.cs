@@ -411,7 +411,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDangKy";
+            this.Text = "Đăng Ký";
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTen)).EndInit();

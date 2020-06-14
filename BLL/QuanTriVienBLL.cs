@@ -60,5 +60,10 @@ namespace BLL
         {
             return qtvien.TimQTVTheoQuyen(qtv);
         }
+        public bool DoiThongTinCaNhan(QuanTriVien qtv)
+        {
+            return qtvien.DoiThongTinCaNhan(qtv);
+        }
+        
     }
 }
