@@ -128,9 +128,9 @@
             this.lvPMSTSach.FullRowSelect = true;
             this.lvPMSTSach.GridLines = true;
             this.lvPMSTSach.HideSelection = false;
-            this.lvPMSTSach.Location = new System.Drawing.Point(390, 265);
+            this.lvPMSTSach.Location = new System.Drawing.Point(392, 265);
             this.lvPMSTSach.Name = "lvPMSTSach";
-            this.lvPMSTSach.Size = new System.Drawing.Size(319, 163);
+            this.lvPMSTSach.Size = new System.Drawing.Size(317, 163);
             this.lvPMSTSach.TabIndex = 39;
             this.lvPMSTSach.UseCompatibleStateImageBehavior = false;
             this.lvPMSTSach.View = System.Windows.Forms.View.Details;

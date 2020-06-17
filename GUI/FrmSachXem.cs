@@ -89,5 +89,10 @@ namespace GUI
                 LvSachQL.Items.Add(lvi);
             }
         }
+
+        private void txtTimTenSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

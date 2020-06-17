@@ -122,6 +122,7 @@
             this.BtnHuy.TabIndex = 42;
             this.BtnHuy.Text = "Hủy Thao Tác";
             this.BtnHuy.UseVisualStyleBackColor = true;
+            this.BtnHuy.Click += new System.EventHandler(this.BtnHuy_Click);
             // 
             // BtnDoiMatKhau
             // 

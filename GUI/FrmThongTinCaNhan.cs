@@ -124,5 +124,10 @@ namespace GUI
             FrmThongTinCaNhanDoiKey frm1 = new FrmThongTinCaNhanDoiKey(id, txtAccount.Text);
             frm1.Show();
         }
+
+        private void BtnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

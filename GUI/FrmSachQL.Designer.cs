@@ -54,8 +54,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbboxSachTacGia = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTimTenSach = new System.Windows.Forms.Button();
+            this.txtTimTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
@@ -136,8 +136,8 @@
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label3);
             this.GrBChiTiet.Controls.Add(this.cbboxSachTacGia);
-            this.GrBChiTiet.Controls.Add(this.button1);
-            this.GrBChiTiet.Controls.Add(this.textBox1);
+            this.GrBChiTiet.Controls.Add(this.btnTimTenSach);
+            this.GrBChiTiet.Controls.Add(this.txtTimTenSach);
             this.GrBChiTiet.Controls.Add(this.label2);
             this.GrBChiTiet.Location = new System.Drawing.Point(0, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
@@ -335,28 +335,29 @@
             this.cbboxSachTacGia.TabIndex = 3;
             this.cbboxSachTacGia.Text = "Tác Giả";
             // 
-            // button1
+            // btnTimTenSach
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTimTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(184, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 28);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTenSach.Location = new System.Drawing.Point(184, 233);
+            this.btnTimTenSach.Name = "btnTimTenSach";
+            this.btnTimTenSach.Size = new System.Drawing.Size(40, 28);
+            this.btnTimTenSach.TabIndex = 5;
+            this.btnTimTenSach.Text = "Tìm";
+            this.btnTimTenSach.UseVisualStyleBackColor = true;
+            this.btnTimTenSach.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtTimTenSach
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 235);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 24);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Nhập tên sách cần tìm";
+            this.txtTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTenSach.Location = new System.Drawing.Point(3, 235);
+            this.txtTimTenSach.Name = "txtTimTenSach";
+            this.txtTimTenSach.Size = new System.Drawing.Size(175, 24);
+            this.txtTimTenSach.TabIndex = 4;
+            this.txtTimTenSach.Text = "Nhập tên sách cần tìm";
+            this.txtTimTenSach.Click += new System.EventHandler(this.txtTimTenSach_Click);
             // 
             // label2
             // 
@@ -416,8 +417,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbboxSachTacGia;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnTimTenSach;
+        private System.Windows.Forms.TextBox txtTimTenSach;
         private System.Windows.Forms.Label label2;
     }
 }

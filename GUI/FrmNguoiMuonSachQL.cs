@@ -133,6 +133,12 @@ namespace GUI
 
         private void btnTimTen_Click(object sender, EventArgs e)
         {
+            errorTimTen.SetError(txtTimMa, "");
+            if (txtTimTen.Text == "")
+            {
+                errorTimTen.SetError(txtTimTen, "Vui lòng nhập tên càn tìm");
+                return;
+            }
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.HoTen = txtTimTen.Text;
 
@@ -154,6 +160,12 @@ namespace GUI
 
         private void btnTimMa_Click(object sender, EventArgs e)
         {
+            errorTimMa.SetError(txtTimMa, "");
+            if(txtTimMa.Text == "")
+            {
+                errorTimMa.SetError(txtTimMa, "Vui lòng nhập mã càn tìm");
+                return;
+            }
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.Id = int.Parse(txtTimMa.Text);
 

@@ -154,6 +154,7 @@
             this.txtTimTenSach.TabIndex = 23;
             this.txtTimTenSach.Text = "Nhập tên sách cần tìm";
             this.txtTimTenSach.Click += new System.EventHandler(this.txtTimTenSach_Click);
+            this.txtTimTenSach.TextChanged += new System.EventHandler(this.txtTimTenSach_TextChanged);
             // 
             // TxtNgonNgu
             // 
