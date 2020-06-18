@@ -34,6 +34,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.btnTimTenSach = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,6 +101,11 @@
             this.columnHeader3.Text = "Năm Xuất Bản";
             this.columnHeader3.Width = 121;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Trạng Thái";
+            this.columnHeader6.Width = 130;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -132,6 +137,7 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(700, 235);
             this.GrBChiTiet.TabIndex = 14;
             this.GrBChiTiet.TabStop = false;
+            this.GrBChiTiet.Enter += new System.EventHandler(this.GrBChiTiet_Enter);
             // 
             // btnTimTenSach
             // 
@@ -278,11 +284,6 @@
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Sách ";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Trạng Thái";
-            this.columnHeader6.Width = 130;
             // 
             // FrmSachXem
             // 

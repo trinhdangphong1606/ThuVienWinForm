@@ -85,14 +85,19 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.TheLoai);
                 lvi.SubItems.Add(scBLL.NgonNgu);
                 lvi.SubItems.Add(scBLL.NamXuatBan + "");
-                lvi.SubItems.Add(scBLL.NoiDungSach + "");
                 lvi.SubItems.Add(scBLL.TrangThai + "");
+                lvi.SubItems.Add(scBLL.NoiDungSach + "");
 
                 LvSachQL.Items.Add(lvi);
             }
         }
 
         private void txtTimTenSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GrBChiTiet_Enter(object sender, EventArgs e)
         {
 
         }
