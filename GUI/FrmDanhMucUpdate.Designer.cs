@@ -80,9 +80,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(239, 271);
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(257, 271);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(105, 42);
+            this.btnThoat.Size = new System.Drawing.Size(95, 42);
             this.btnThoat.TabIndex = 24;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -90,9 +91,10 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(90, 271);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(90, 42);
+            this.btnUpdate.Size = new System.Drawing.Size(119, 42);
             this.btnUpdate.TabIndex = 23;
             this.btnUpdate.Text = "Chỉnh Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -100,34 +102,37 @@
             // 
             // richNoiDungDM
             // 
+            this.richNoiDungDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richNoiDungDM.Location = new System.Drawing.Point(149, 137);
             this.richNoiDungDM.Name = "richNoiDungDM";
             this.richNoiDungDM.Size = new System.Drawing.Size(276, 110);
-            this.richNoiDungDM.TabIndex = 22;
+            this.richNoiDungDM.TabIndex = 3;
             this.richNoiDungDM.Text = "";
             // 
             // txtTenDM
             // 
+            this.txtTenDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDM.Location = new System.Drawing.Point(149, 95);
             this.txtTenDM.Name = "txtTenDM";
-            this.txtTenDM.Size = new System.Drawing.Size(276, 20);
-            this.txtTenDM.TabIndex = 20;
+            this.txtTenDM.Size = new System.Drawing.Size(276, 23);
+            this.txtTenDM.TabIndex = 2;
             // 
             // txtMa
             // 
             this.txtMa.Enabled = false;
+            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa.Location = new System.Drawing.Point(149, 64);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(276, 20);
-            this.txtMa.TabIndex = 21;
+            this.txtMa.Size = new System.Drawing.Size(276, 23);
+            this.txtMa.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 12);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 25);
+            this.label1.Size = new System.Drawing.Size(218, 25);
             this.label1.TabIndex = 19;
             this.label1.Text = "Chỉnh Sửa Danh Mục";
             // 
@@ -169,7 +174,8 @@
             this.ClientSize = new System.Drawing.Size(455, 337);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDanhMucUpdate";
-            this.Text = "FrmDanhMucUpdate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cập Nhật Thông Tin Danh Mục";
             ((System.ComponentModel.ISupportInitialize)(this.ErrorID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDanhMuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorNoiDung)).EndInit();

@@ -144,6 +144,16 @@ namespace GUI
             txtNamXuatBan.Text = FrmSachQL.PassNamSanXuat;
             richNoiDung.Text = FrmSachQL.PassNoiDung;
             txtTacGia.Text = FrmSachQL.PassTacGia;
+
+            DanhMuc damuc = new DanhMuc();
+            damuc.TenDanhMuc = txtTenDanhMuc.Text;
+
+            DanhMucBLL damucbll = new DanhMucBLL();
+            List<DanhMuc> dsDanhMuc = damucbll.TimMaTheoTen(damuc);
+            foreach(DanhMuc dm in dsDanhMuc)
+            {
+                TxtMaDanhMuc.Text = dm.IdDanhMuc + "";
+            }    
         }
 
         private void lvDanhMuc_SelectedIndexChanged_1(object sender, EventArgs e)

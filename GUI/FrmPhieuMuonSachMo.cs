@@ -30,7 +30,7 @@ namespace GUI
         public void HienThiDanhSachSach()
         {
             SachBLL sacBLL = new SachBLL();
-            List<Sach> dsdsach = sacBLL.LayAllToanBoSach();
+            List<Sach> dsdsach = sacBLL.LayAllToanBoSachTrong();
             lvPMSTSach.Items.Clear();
             foreach (Sach scBLL in dsdsach)
             {
@@ -198,7 +198,7 @@ namespace GUI
             sac.TenSach = txtTimSach.Text;
 
             SachBLL sacbll = new SachBLL();
-            List<SachDAO> dssachtim = sacbll.TimTenSach(sac);
+            List<SachDAO> dssachtim = sacbll.TimSachTrongTheoTen(sac);
             lvPMSTSach.Items.Clear();
             foreach(SachDAO sachtim in dssachtim)
             {

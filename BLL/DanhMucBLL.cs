@@ -25,5 +25,9 @@ namespace BLL
         {
             return access.CapNhatDanhMuc(CapNhatDM);
         }
+        public List<DanhMuc> TimMaTheoTen(DanhMuc dmuc)
+        {
+            return access.TimMaTheoTen(dmuc);
+        }
     }
 }

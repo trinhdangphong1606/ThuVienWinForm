@@ -78,6 +78,7 @@
             this.errorNgay = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorThang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorNam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorIntMaPhieu = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMaPhieu)).BeginInit();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNgay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorThang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorNam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntMaPhieu)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnPMSDong
@@ -584,6 +586,10 @@
             // 
             this.errorNam.ContainerControl = this;
             // 
+            // errorIntMaPhieu
+            // 
+            this.errorIntMaPhieu.ContainerControl = this;
+            // 
             // FrmPhieuMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,6 +611,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNgay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorThang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorNam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntMaPhieu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,5 +668,6 @@
         private System.Windows.Forms.ErrorProvider errorNgay;
         private System.Windows.Forms.ErrorProvider errorThang;
         private System.Windows.Forms.ErrorProvider errorNam;
+        private System.Windows.Forms.ErrorProvider errorIntMaPhieu;
     }
 }

@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrBChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader6});
             this.LvSachQL.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LvSachQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvSachQL.FullRowSelect = true;
@@ -103,11 +105,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(308, 10);
+            this.label1.Location = new System.Drawing.Point(290, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.Size = new System.Drawing.Size(104, 25);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Xem Sách";
+            this.label1.Text = "Tìm Sách";
             // 
             // GrBChiTiet
             // 
@@ -136,10 +138,10 @@
             this.btnTimTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTenSach.Location = new System.Drawing.Point(358, 201);
+            this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTenSach.Location = new System.Drawing.Point(562, 206);
             this.btnTimTenSach.Name = "btnTimTenSach";
-            this.btnTimTenSach.Size = new System.Drawing.Size(40, 23);
+            this.btnTimTenSach.Size = new System.Drawing.Size(128, 24);
             this.btnTimTenSach.TabIndex = 24;
             this.btnTimTenSach.Text = "Tìm";
             this.btnTimTenSach.UseVisualStyleBackColor = true;
@@ -147,12 +149,13 @@
             // 
             // txtTimTenSach
             // 
-            this.txtTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimTenSach.Location = new System.Drawing.Point(87, 200);
+            this.txtTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTenSach.Location = new System.Drawing.Point(88, 206);
             this.txtTimTenSach.Name = "txtTimTenSach";
-            this.txtTimTenSach.Size = new System.Drawing.Size(265, 24);
+            this.txtTimTenSach.Size = new System.Drawing.Size(468, 23);
             this.txtTimTenSach.TabIndex = 23;
             this.txtTimTenSach.Text = "Nhập tên sách cần tìm";
+            this.txtTimTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTimTenSach.Click += new System.EventHandler(this.txtTimTenSach_Click);
             this.txtTimTenSach.TextChanged += new System.EventHandler(this.txtTimTenSach_TextChanged);
             // 
@@ -276,6 +279,11 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Sách ";
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Trạng Thái";
+            this.columnHeader6.Width = 130;
+            // 
             // FrmSachXem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,7 +294,7 @@
             this.Controls.Add(this.GrBChiTiet);
             this.Name = "FrmSachXem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh Sách Sách";
+            this.Text = "Tìm Sách";
             this.Load += new System.EventHandler(this.FrmSachXem_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
@@ -319,5 +327,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTimTenSach;
         private System.Windows.Forms.TextBox txtTimTenSach;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

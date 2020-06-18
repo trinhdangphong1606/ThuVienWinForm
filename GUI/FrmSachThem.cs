@@ -32,6 +32,10 @@ namespace GUI
                 lvi.SubItems.Add(damuc.NoiDungDanhMuc);
                 lvDanhMuc.Items.Add(lvi);
             }
+            /*
+            DanhMuc damuc = new DanhMuc();
+            damuc.TenDanhMuc = 
+            */
         }
         private void lvDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {

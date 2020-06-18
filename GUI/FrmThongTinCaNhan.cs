@@ -105,7 +105,7 @@ namespace GUI
             if(update)
             {
                 MessageBox.Show("Thay Đổi Thông Tin Thành Công", "Thông Báo");
-                this.Close();
+                
             }    
             else
             {

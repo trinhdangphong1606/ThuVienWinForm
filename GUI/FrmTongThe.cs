@@ -115,5 +115,11 @@ namespace GUI
             frm1.MdiParent = this;
             frm1.Show();
         }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Run(new FrmDangNhap());
+        }
     }
 }

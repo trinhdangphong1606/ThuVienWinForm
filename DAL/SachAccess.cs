@@ -51,13 +51,51 @@ namespace DAL
             reader.Close();
             return dsSachAll;
         }
+        public List<Sach> LayAllToanBoSachTrong()
+        {
+            List<Sach> dsSachAll = new List<Sach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from Sach where TrangThai=N'Trống'";
+            command.Connection = conn;
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int masach = reader.GetInt32(0);
+                string tensach = reader.GetString(1);
+                int namxuatban = reader.GetInt32(2);
+                int danhmuc = reader.GetInt32(3);
+                string tacgia = reader.GetString(4);
+                string ngonngu = reader.GetString(5);
+                string noidung = reader.GetString(6);
+                int soluong = reader.GetInt32(7);
+                string trangthai = reader.GetString(8);
+
+                Sach scc = new Sach();
+                scc.ID = masach;
+                scc.TenSach = tensach;
+                scc.NamXuatBan = namxuatban;
+                scc.DanhMucID = danhmuc;
+                scc.TacGia = tacgia;
+                scc.NgonNgu = ngonngu;
+                scc.NoiDungSach = noidung;
+                scc.SoLuong = soluong;
+                scc.TrangThai = trangthai;
+                dsSachAll.Add(scc);
+
+            }
+            reader.Close();
+            return dsSachAll;
+        }
         public List<SachDAO> LayToanBoSach()
         {
             List<SachDAO> dsSach = new List<SachDAO>();
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT s.Id, s.TenSach, s.NamXuatBan, dm.TenDanhMuc, s.TacGia, s.NgonNgu, s.NoiDungSach, s.SoLuong FROM Sach s INNER JOIN DanhMuc dm ON s.DanhMucID = dm.IdDanhMuc";
+            command.CommandText = "SELECT s.Id, s.TenSach, s.NamXuatBan, dm.TenDanhMuc, s.TacGia, s.NgonNgu, s.NoiDungSach,s.TrangThai,s.SoLuong FROM Sach s INNER JOIN DanhMuc dm ON s.DanhMucID = dm.IdDanhMuc";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();// truy vấn trả về nhiều dòng dữ liệu, ExecuteReader trả về đầu đọc quản lý bảng dữ liệu đó 
             while (reader.Read())//Đọc cho đến khi hết dữ liệu trả về từ db, khi hết dữ liệu sẽ trả về False -> dừng vòng lặp
@@ -69,7 +107,8 @@ namespace DAL
                 string tacgia = reader.GetString(4);
                 string ngonngu = reader.GetString(5);
                 string noidung = reader.GetString(6);
-                int soluong = reader.GetInt32(7);
+                string trangthai = reader.GetString(7);
+                int soluong = reader.GetInt32(8);
 
                 SachDAO sc = new SachDAO(); //Nạp vào đối tượng SachDAO
                 sc.ID = masach;
@@ -79,6 +118,7 @@ namespace DAL
                 sc.TacGia = tacgia;
                 sc.NgonNgu = ngonngu;
                 sc.NoiDungSach = noidung;
+                sc.TrangThai = trangthai;
                 //sc.SoLuong = soluong;
 
                 dsSach.Add(sc); //đưa sach vào dssach
@@ -91,6 +131,49 @@ namespace DAL
             List<SachDAO> dsSach = new List<SachDAO>();
             OpenConnection();
             string cmd = "exec TimSachTheoTen @ten=N'" + timsach.TenSach + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = cmd;
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            //Console.WriteLine("Inside " + cmd);
+            while (reader.Read())
+            {
+                //Console.WriteLine("In loop");
+
+                int masach = reader.GetInt32(0);
+                string tensach = reader.GetString(1);
+                int namxuatban = reader.GetInt32(2);
+                string theloai = reader.GetString(3);
+                string tacgia = reader.GetString(4);
+                string ngonngu = reader.GetString(5);
+                string noidung = reader.GetString(6);
+                int soluong = reader.GetInt32(7);
+                string trangthai = reader.GetString(8);
+
+                SachDAO sc = new SachDAO();
+
+                sc.ID = masach;
+                sc.TenSach = tensach;
+                sc.NamXuatBan = namxuatban;
+                sc.TheLoai = theloai;
+                sc.TacGia = tacgia;
+                sc.NgonNgu = ngonngu;
+                sc.NoiDungSach = noidung;
+                sc.SoLuong = soluong;
+                sc.TrangThai = trangthai;
+
+                dsSach.Add(sc);
+            }
+            reader.Close();
+            return dsSach;
+
+        }
+        public List<SachDAO> TimSachTrongTheoTen(SachDAO timsach)
+        {
+            List<SachDAO> dsSach = new List<SachDAO>();
+            OpenConnection();
+            string cmd = "exec TimSachTrongTheoTen @ten=N'" + timsach.TenSach + "'";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = cmd;

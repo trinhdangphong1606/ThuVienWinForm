@@ -40,6 +40,32 @@ namespace DAL
             return dsDanhMuc;
 
         }
+        public List<DanhMuc> TimMaTheoTen(DanhMuc dmuc)
+        {
+            List<DanhMuc> dsDanhMuc = new List<DanhMuc>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from DanhMuc where TenDanhMuc=N'"+dmuc.TenDanhMuc+"' ";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string tendanhmuc = reader.GetString(1);
+                string noidungdanhmuc = reader.GetString(2);
+
+                DanhMuc dm = new DanhMuc();
+                dm.IdDanhMuc = id;
+                dm.TenDanhMuc = tendanhmuc;
+                dm.NoiDungDanhMuc = noidungdanhmuc;
+
+                dsDanhMuc.Add(dm);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsDanhMuc;
+        }
 
         public bool InsertDanhMuc(string TenDanhMuc, string NoiDungDanhMuc)
         {

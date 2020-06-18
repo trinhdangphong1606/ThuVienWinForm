@@ -16,6 +16,11 @@ namespace BLL
             
             return sac.LayAllToanBoSach();
         }
+        public List<Sach> LayAllToanBoSachTrong()
+        {
+
+            return sac.LayAllToanBoSachTrong();
+        }
         public bool CapNhatPhieuMuon(Sach trangthai)
         {
             return sac.CapNhatPhieuMuon(trangthai);
@@ -30,6 +35,10 @@ namespace BLL
         {
             return sac.TimTenSach(TenSach);
         }
+        public List<SachDAO> TimSachTrongTheoTen(SachDAO timsach)
+        {
+            return sac.TimSachTrongTheoTen(timsach);
+        }    
         public List<Sach> TimMaSach(Sach sc)
         {
             return sac.TimMaSach(sc);

@@ -166,6 +166,12 @@ namespace GUI
                 errorTimMa.SetError(txtTimMa, "Vui lòng nhập mã càn tìm");
                 return;
             }
+            errorIntTimMa.SetError(txtTimMa, "");
+            if(!txtTimMa.Text.All(char.IsDigit))
+            {
+                errorTimMa.SetError(txtTimMa, "Mã là số");
+                return;
+            }    
             NguoiMuonSach nms = new NguoiMuonSach();
             nms.Id = int.Parse(txtTimMa.Text);
 

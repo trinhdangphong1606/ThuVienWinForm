@@ -101,8 +101,8 @@
             // cÁNHÂNToolStripMenuItem
             // 
             this.cÁNHÂNToolStripMenuItem.Name = "cÁNHÂNToolStripMenuItem";
-            this.cÁNHÂNToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.cÁNHÂNToolStripMenuItem.Text = "Cá Nhân";
+            this.cÁNHÂNToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.cÁNHÂNToolStripMenuItem.Text = "Thông Tin Cá Nhân";
             this.cÁNHÂNToolStripMenuItem.Click += new System.EventHandler(this.cÁNHÂNToolStripMenuItem_Click);
             // 
             // FrmTongThe

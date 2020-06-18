@@ -65,10 +65,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorTimMa = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTimTen = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorIntTimMa = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimTen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntTimMa)).BeginInit();
             this.SuspendLayout();
             // 
             // GrBChiTiet
@@ -461,6 +463,10 @@
             // 
             this.errorTimTen.ContainerControl = this;
             // 
+            // errorIntTimMa
+            // 
+            this.errorIntTimMa.ContainerControl = this;
+            // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +484,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimTen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntTimMa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,5 +528,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider errorTimMa;
         private System.Windows.Forms.ErrorProvider errorTimTen;
+        private System.Windows.Forms.ErrorProvider errorIntTimMa;
     }
 }

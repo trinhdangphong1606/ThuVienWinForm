@@ -81,6 +81,9 @@ namespace GUI
         {
             HienThiDSDanhMuc();
             MessageBox.Show("Dữ Liệu Đã Được Cập Nhật ");
+            txtMa.Text = "";
+            txtTenDanhMuc.Text = "";
+            GrBChiTiet.Text = "";
         }
     }
 }

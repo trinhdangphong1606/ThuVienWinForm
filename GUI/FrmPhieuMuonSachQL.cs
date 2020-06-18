@@ -186,6 +186,12 @@ namespace GUI
             {
                 errorTimMaPhieu.SetError(txtTimMaPhieu, "Nhập Mã Phiếu Muốn Tìm");
                 return;
+            }
+            errorIntMaPhieu.SetError(txtTimMaPhieu, "");
+            if(!txtTimMaPhieu.Text.All(char.IsDigit))
+            {
+                errorIntMaPhieu.SetError(txtTimMaPhieu, "Mã Phiếu là số");
+                return;
             }    
             PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
             pms.MaPhieuMuon = int.Parse(txtTimMaPhieu.Text);

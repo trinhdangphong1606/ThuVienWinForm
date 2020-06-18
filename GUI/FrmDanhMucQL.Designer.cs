@@ -84,7 +84,7 @@
             // 
             this.txtMa.Enabled = false;
             this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMa.Location = new System.Drawing.Point(296, 13);
+            this.txtMa.Location = new System.Drawing.Point(298, 13);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(72, 23);
             this.txtMa.TabIndex = 30;
@@ -94,7 +94,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(251, 16);
+            this.label5.Location = new System.Drawing.Point(253, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 17);
             this.label5.TabIndex = 29;
@@ -105,7 +105,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(555, 311);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 33);
@@ -119,12 +119,12 @@
             this.BtnCapNhatDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCapNhatDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCapNhatDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCapNhatDanhMuc.Location = new System.Drawing.Point(400, 311);
             this.BtnCapNhatDanhMuc.Name = "BtnCapNhatDanhMuc";
             this.BtnCapNhatDanhMuc.Size = new System.Drawing.Size(149, 33);
             this.BtnCapNhatDanhMuc.TabIndex = 27;
-            this.BtnCapNhatDanhMuc.Text = "Thêm Mới Danh Mục";
+            this.BtnCapNhatDanhMuc.Text = "Thêm Mới";
             this.BtnCapNhatDanhMuc.UseVisualStyleBackColor = true;
             this.BtnCapNhatDanhMuc.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -144,12 +144,12 @@
             this.btnCapNhatThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapNhatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatThongTin.Location = new System.Drawing.Point(110, 311);
             this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
             this.btnCapNhatThongTin.Size = new System.Drawing.Size(260, 33);
             this.btnCapNhatThongTin.TabIndex = 25;
-            this.btnCapNhatThongTin.Text = "Chỉnh Sửa Thông Tin Danh Mục";
+            this.btnCapNhatThongTin.Text = "Chỉnh Sửa Thông Tin\r\n";
             this.btnCapNhatThongTin.UseVisualStyleBackColor = true;
             this.btnCapNhatThongTin.Click += new System.EventHandler(this.BtnCapNhatDanhMuc_Click);
             // 
@@ -193,15 +193,17 @@
             // 
             // txtTenDanhMuc
             // 
+            this.txtTenDanhMuc.Enabled = false;
             this.txtTenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDanhMuc.Location = new System.Drawing.Point(139, 13);
+            this.txtTenDanhMuc.Location = new System.Drawing.Point(125, 13);
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
-            this.txtTenDanhMuc.Size = new System.Drawing.Size(106, 23);
+            this.txtTenDanhMuc.Size = new System.Drawing.Size(122, 23);
             this.txtTenDanhMuc.TabIndex = 13;
             this.txtTenDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // richNoiDungDanhMuc
             // 
+            this.richNoiDungDanhMuc.Enabled = false;
             this.richNoiDungDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richNoiDungDanhMuc.Location = new System.Drawing.Point(110, 42);
             this.richNoiDungDanhMuc.Name = "richNoiDungDanhMuc";

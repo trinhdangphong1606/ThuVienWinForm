@@ -94,6 +94,12 @@ namespace GUI
                 errorKeyRepeat.SetError(txtKey2,"Key Restore Phải Giống Nhau");
                 return;
             }
+            errorIntNamSinh.SetError(txtNamSinh, "");
+            if(!txtNamSinh.Text.All(char.IsDigit))
+            {
+                errorIntNamSinh.SetError(txtNamSinh, "Năm Sinh Phải Là Số");
+                return;
+            }
             DangKyUser();
         }
 
@@ -129,7 +135,11 @@ namespace GUI
                 this.Close();
             }    
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

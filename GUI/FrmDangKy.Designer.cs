@@ -66,6 +66,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.errorMatKhauRepeat = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorKeyRepeat = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorIntNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorNamSinh)).BeginInit();
@@ -79,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorKey2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhauRepeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKeyRepeat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // GrBChiTiet
@@ -391,6 +393,7 @@
             this.button1.TabIndex = 47;
             this.button1.Text = "Hủy Thao Tác";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // errorMatKhauRepeat
             // 
@@ -399,6 +402,10 @@
             // errorKeyRepeat
             // 
             this.errorKeyRepeat.ContainerControl = this;
+            // 
+            // errorIntNamSinh
+            // 
+            this.errorIntNamSinh.ContainerControl = this;
             // 
             // FrmDangKy
             // 
@@ -426,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorKey2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhauRepeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorKeyRepeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,5 +478,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorMatKhauRepeat;
         private System.Windows.Forms.ErrorProvider errorKeyRepeat;
+        private System.Windows.Forms.ErrorProvider errorIntNamSinh;
     }
 }

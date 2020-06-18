@@ -28,8 +28,8 @@ namespace GUI
         private void FrmSachQL_Load(object sender, EventArgs e)
         {
             HienThiDanhSachSach();
-            CBBHienThiDSTacGia();
-            CBBHienThiDSDanhMuc();
+            //CBBHienThiDSTacGia();
+            //CBBHienThiDSDanhMuc();
         }
 
         
@@ -67,9 +67,9 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.TacGia);
                 lvi.SubItems.Add(scBLL.TheLoai);
                 lvi.SubItems.Add(scBLL.NgonNgu);
-                lvi.SubItems.Add(scBLL.NamXuatBan+"");
+                lvi.SubItems.Add(scBLL.NamXuatBan + "");
+                lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
-                //lvi.SubItems.Add(scBLL.TrangThai + "");
                 lvi.SubItems.Add(scBLL.ID + "");
                 LvSachQL.Items.Add(lvi);
             }
@@ -85,8 +85,9 @@ namespace GUI
                 string danhmuc = lvi.SubItems[2].Text;
                 string ngonngu = lvi.SubItems[3].Text;
                 string namxuatban = lvi.SubItems[4].Text;
-                string noidung = lvi.SubItems[5].Text;
-                string masach = lvi.SubItems[6].Text;
+                string trangthai = lvi.SubItems[5].Text;
+                string noidung = lvi.SubItems[6].Text;
+                string masach = lvi.SubItems[7].Text;
                 TxtTenSach.Text = tensach;
                 TxtTenTacGia.Text = tacgia;
                 TxtTenDanhMuc.Text = danhmuc;
@@ -96,6 +97,7 @@ namespace GUI
                 txtMa.Text = masach;
             }    
         }
+        /*
         private void CBBHienThiDSDanhMuc()
         {
             DanhMucBLL damuBLL = new DanhMucBLL();
@@ -112,7 +114,7 @@ namespace GUI
             cbboxSachTacGia.DataSource = dsdsach;
             cbboxSachTacGia.DisplayMember = "NgonNgu";
         }
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             SachDAO tims = new SachDAO();

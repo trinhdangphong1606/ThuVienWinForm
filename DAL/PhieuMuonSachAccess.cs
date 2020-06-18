@@ -120,7 +120,7 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "EXEC TimPhieuTheoTen @ten ='" + pms.TenNguoiMuonSach + "'";
+            command.CommandText = "EXEC TimPhieuTheoTen @ten =N'" + pms.TenNguoiMuonSach + "'";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
