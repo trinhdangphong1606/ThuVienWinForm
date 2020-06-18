@@ -65,7 +65,7 @@ namespace GUI
                 this.Hide();
                 FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text,lbId.Text);
                 frm1.ShowDialog();
-                //this.Close();
+                this.Close();
             }
             else
             {

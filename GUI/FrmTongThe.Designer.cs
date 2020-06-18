@@ -119,6 +119,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Quản Lý Thông Tin Thư Viện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Leave += new System.EventHandler(this.FrmTongThe_Leave);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

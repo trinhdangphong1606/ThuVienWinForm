@@ -121,5 +121,10 @@ namespace GUI
             this.Close();
             Application.Run(new FrmDangNhap());
         }
+
+        private void FrmTongThe_Leave(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
