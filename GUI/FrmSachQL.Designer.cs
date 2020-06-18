@@ -36,12 +36,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnCapNhatThongTinSach = new System.Windows.Forms.Button();
-            this.cbboxSachDanhMuc = new System.Windows.Forms.ComboBox();
-            this.cbboxSachNXB = new System.Windows.Forms.ComboBox();
-            this.cbboxSachNgonNgu = new System.Windows.Forms.ComboBox();
             this.TxtNgonNgu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTenDanhMuc = new System.Windows.Forms.TextBox();
@@ -53,7 +52,6 @@
             this.richNoiDungSach = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbboxSachTacGia = new System.Windows.Forms.ComboBox();
             this.btnTimTenSach = new System.Windows.Forms.Button();
             this.txtTimTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -118,12 +116,11 @@
             // 
             // GrBChiTiet
             // 
-            this.GrBChiTiet.Controls.Add(this.button4);
+            this.GrBChiTiet.Controls.Add(this.txtMa);
+            this.GrBChiTiet.Controls.Add(this.label8);
+            this.GrBChiTiet.Controls.Add(this.btnCapNhat);
             this.GrBChiTiet.Controls.Add(this.button3);
             this.GrBChiTiet.Controls.Add(this.BtnCapNhatThongTinSach);
-            this.GrBChiTiet.Controls.Add(this.cbboxSachDanhMuc);
-            this.GrBChiTiet.Controls.Add(this.cbboxSachNXB);
-            this.GrBChiTiet.Controls.Add(this.cbboxSachNgonNgu);
             this.GrBChiTiet.Controls.Add(this.TxtNgonNgu);
             this.GrBChiTiet.Controls.Add(this.label6);
             this.GrBChiTiet.Controls.Add(this.TxtTenDanhMuc);
@@ -135,7 +132,6 @@
             this.GrBChiTiet.Controls.Add(this.richNoiDungSach);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label3);
-            this.GrBChiTiet.Controls.Add(this.cbboxSachTacGia);
             this.GrBChiTiet.Controls.Add(this.btnTimTenSach);
             this.GrBChiTiet.Controls.Add(this.txtTimTenSach);
             this.GrBChiTiet.Controls.Add(this.label2);
@@ -145,18 +141,39 @@
             this.GrBChiTiet.TabIndex = 11;
             this.GrBChiTiet.TabStop = false;
             // 
-            // button4
+            // txtMa
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMa.Enabled = false;
+            this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Location = new System.Drawing.Point(561, 13);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(133, 23);
+            this.txtMa.TabIndex = 28;
+            this.txtMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(460, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 17);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Mã Sách : ";
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(565, 200);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 28);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Xóa Sách";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(565, 200);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(129, 28);
+            this.btnCapNhat.TabIndex = 26;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // button3
             // 
@@ -170,6 +187,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Thêm Sách Mới Vào Thư Viện";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnCapNhatThongTinSach
             // 
@@ -181,39 +199,9 @@
             this.BtnCapNhatThongTinSach.Name = "BtnCapNhatThongTinSach";
             this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(253, 28);
             this.BtnCapNhatThongTinSach.TabIndex = 24;
-            this.BtnCapNhatThongTinSach.Text = "Cập Nhật Thông Tin Sách";
+            this.BtnCapNhatThongTinSach.Text = "Chỉnh Sửa Thông Tin Sách";
             this.BtnCapNhatThongTinSach.UseVisualStyleBackColor = true;
             this.BtnCapNhatThongTinSach.Click += new System.EventHandler(this.BtnCapNhatThongTinSach_Click);
-            // 
-            // cbboxSachDanhMuc
-            // 
-            this.cbboxSachDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxSachDanhMuc.FormattingEnabled = true;
-            this.cbboxSachDanhMuc.Location = new System.Drawing.Point(373, 235);
-            this.cbboxSachDanhMuc.Name = "cbboxSachDanhMuc";
-            this.cbboxSachDanhMuc.Size = new System.Drawing.Size(89, 26);
-            this.cbboxSachDanhMuc.TabIndex = 23;
-            this.cbboxSachDanhMuc.Text = "Thể Loại";
-            // 
-            // cbboxSachNXB
-            // 
-            this.cbboxSachNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxSachNXB.FormattingEnabled = true;
-            this.cbboxSachNXB.Location = new System.Drawing.Point(568, 235);
-            this.cbboxSachNXB.Name = "cbboxSachNXB";
-            this.cbboxSachNXB.Size = new System.Drawing.Size(125, 26);
-            this.cbboxSachNXB.TabIndex = 22;
-            this.cbboxSachNXB.Text = "Năm Xuất Bản";
-            // 
-            // cbboxSachNgonNgu
-            // 
-            this.cbboxSachNgonNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxSachNgonNgu.FormattingEnabled = true;
-            this.cbboxSachNgonNgu.Location = new System.Drawing.Point(468, 234);
-            this.cbboxSachNgonNgu.Name = "cbboxSachNgonNgu";
-            this.cbboxSachNgonNgu.Size = new System.Drawing.Size(97, 26);
-            this.cbboxSachNgonNgu.TabIndex = 21;
-            this.cbboxSachNgonNgu.Text = "Ngôn Ngữ";
             // 
             // TxtNgonNgu
             // 
@@ -291,7 +279,7 @@
             this.TxtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTenSach.Location = new System.Drawing.Point(87, 13);
             this.TxtTenSach.Name = "TxtTenSach";
-            this.TxtTenSach.Size = new System.Drawing.Size(606, 23);
+            this.TxtTenSach.Size = new System.Drawing.Size(351, 23);
             this.TxtTenSach.TabIndex = 13;
             this.TxtTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -325,23 +313,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nội Dung";
             // 
-            // cbboxSachTacGia
-            // 
-            this.cbboxSachTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxSachTacGia.FormattingEnabled = true;
-            this.cbboxSachTacGia.Location = new System.Drawing.Point(229, 235);
-            this.cbboxSachTacGia.Name = "cbboxSachTacGia";
-            this.cbboxSachTacGia.Size = new System.Drawing.Size(138, 26);
-            this.cbboxSachTacGia.TabIndex = 3;
-            this.cbboxSachTacGia.Text = "Tác Giả";
-            // 
             // btnTimTenSach
             // 
             this.btnTimTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTenSach.Location = new System.Drawing.Point(184, 233);
+            this.btnTimTenSach.Location = new System.Drawing.Point(653, 234);
             this.btnTimTenSach.Name = "btnTimTenSach";
             this.btnTimTenSach.Size = new System.Drawing.Size(40, 28);
             this.btnTimTenSach.TabIndex = 5;
@@ -354,7 +332,7 @@
             this.txtTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimTenSach.Location = new System.Drawing.Point(3, 235);
             this.txtTimTenSach.Name = "txtTimTenSach";
-            this.txtTimTenSach.Size = new System.Drawing.Size(175, 24);
+            this.txtTimTenSach.Size = new System.Drawing.Size(644, 24);
             this.txtTimTenSach.TabIndex = 4;
             this.txtTimTenSach.Text = "Nhập tên sách cần tìm";
             this.txtTimTenSach.Click += new System.EventHandler(this.txtTimTenSach_Click);
@@ -399,12 +377,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrBChiTiet;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnCapNhatThongTinSach;
-        private System.Windows.Forms.ComboBox cbboxSachDanhMuc;
-        private System.Windows.Forms.ComboBox cbboxSachNXB;
-        private System.Windows.Forms.ComboBox cbboxSachNgonNgu;
         private System.Windows.Forms.TextBox TxtNgonNgu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtTenDanhMuc;
@@ -416,9 +391,10 @@
         private System.Windows.Forms.RichTextBox richNoiDungSach;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbboxSachTacGia;
         private System.Windows.Forms.Button btnTimTenSach;
         private System.Windows.Forms.TextBox txtTimTenSach;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class FrmDanhMucThemMoi
+    partial class FrmDanhMucThem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTenDanhMucMoi = new System.Windows.Forms.TextBox();
-            this.richNoiDungDanhMucMoi = new System.Windows.Forms.RichTextBox();
+            this.txtDanhMuc = new System.Windows.Forms.TextBox();
+            this.richNoiDung = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnDanhMucCapNhat = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThemDanhMuc = new System.Windows.Forms.Button();
+            this.btnHuyThemMoi = new System.Windows.Forms.Button();
+            this.errorTenDM = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNoiDung = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorTenDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNoiDung)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,23 +65,23 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Nội Dung: ";
             // 
-            // txtTenDanhMucMoi
+            // txtDanhMuc
             // 
-            this.txtTenDanhMucMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDanhMucMoi.Location = new System.Drawing.Point(126, 40);
-            this.txtTenDanhMucMoi.Name = "txtTenDanhMucMoi";
-            this.txtTenDanhMucMoi.Size = new System.Drawing.Size(489, 23);
-            this.txtTenDanhMucMoi.TabIndex = 20;
-            this.txtTenDanhMucMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDanhMuc.Location = new System.Drawing.Point(126, 40);
+            this.txtDanhMuc.Name = "txtDanhMuc";
+            this.txtDanhMuc.Size = new System.Drawing.Size(489, 23);
+            this.txtDanhMuc.TabIndex = 20;
+            this.txtDanhMuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // richNoiDungDanhMucMoi
+            // richNoiDung
             // 
-            this.richNoiDungDanhMucMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richNoiDungDanhMucMoi.Location = new System.Drawing.Point(126, 69);
-            this.richNoiDungDanhMucMoi.Name = "richNoiDungDanhMucMoi";
-            this.richNoiDungDanhMucMoi.Size = new System.Drawing.Size(489, 101);
-            this.richNoiDungDanhMucMoi.TabIndex = 19;
-            this.richNoiDungDanhMucMoi.Text = "";
+            this.richNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richNoiDung.Location = new System.Drawing.Point(126, 69);
+            this.richNoiDung.Name = "richNoiDung";
+            this.richNoiDung.Size = new System.Drawing.Size(489, 101);
+            this.richNoiDung.TabIndex = 19;
+            this.richNoiDung.Text = "";
             // 
             // label2
             // 
@@ -88,41 +93,53 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Tên Danh Mục:";
             // 
-            // BtnDanhMucCapNhat
+            // btnThemDanhMuc
             // 
-            this.BtnDanhMucCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDanhMucCapNhat.Location = new System.Drawing.Point(126, 176);
-            this.BtnDanhMucCapNhat.Name = "BtnDanhMucCapNhat";
-            this.BtnDanhMucCapNhat.Size = new System.Drawing.Size(337, 25);
-            this.BtnDanhMucCapNhat.TabIndex = 23;
-            this.BtnDanhMucCapNhat.Text = "Thêm Danh Mục";
-            this.BtnDanhMucCapNhat.UseVisualStyleBackColor = true;
+            this.btnThemDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemDanhMuc.Location = new System.Drawing.Point(126, 176);
+            this.btnThemDanhMuc.Name = "btnThemDanhMuc";
+            this.btnThemDanhMuc.Size = new System.Drawing.Size(337, 25);
+            this.btnThemDanhMuc.TabIndex = 23;
+            this.btnThemDanhMuc.Text = "Thêm Danh Mục";
+            this.btnThemDanhMuc.UseVisualStyleBackColor = true;
+            this.btnThemDanhMuc.Click += new System.EventHandler(this.btnThemDanhMuc_Click);
             // 
-            // button1
+            // btnHuyThemMoi
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(486, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 25);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Hủy Thêm Mới";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHuyThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyThemMoi.Location = new System.Drawing.Point(486, 176);
+            this.btnHuyThemMoi.Name = "btnHuyThemMoi";
+            this.btnHuyThemMoi.Size = new System.Drawing.Size(129, 25);
+            this.btnHuyThemMoi.TabIndex = 24;
+            this.btnHuyThemMoi.Text = "Hủy Thêm Mới";
+            this.btnHuyThemMoi.UseVisualStyleBackColor = true;
+            this.btnHuyThemMoi.Click += new System.EventHandler(this.btnHuyThemMoi_Click);
             // 
-            // FrmDanhMucThemMoi
+            // errorTenDM
+            // 
+            this.errorTenDM.ContainerControl = this;
+            // 
+            // errorNoiDung
+            // 
+            this.errorNoiDung.ContainerControl = this;
+            // 
+            // FrmDanhMucThem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 212);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.BtnDanhMucCapNhat);
+            this.Controls.Add(this.btnHuyThemMoi);
+            this.Controls.Add(this.btnThemDanhMuc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtTenDanhMucMoi);
-            this.Controls.Add(this.richNoiDungDanhMucMoi);
+            this.Controls.Add(this.txtDanhMuc);
+            this.Controls.Add(this.richNoiDung);
             this.Controls.Add(this.label2);
-            this.Name = "FrmDanhMucThemMoi";
+            this.Name = "FrmDanhMucThem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Mới Danh Mục";
+            ((System.ComponentModel.ISupportInitialize)(this.errorTenDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNoiDung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +149,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTenDanhMucMoi;
-        private System.Windows.Forms.RichTextBox richNoiDungDanhMucMoi;
+        private System.Windows.Forms.TextBox txtDanhMuc;
+        private System.Windows.Forms.RichTextBox richNoiDung;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BtnDanhMucCapNhat;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThemDanhMuc;
+        private System.Windows.Forms.Button btnHuyThemMoi;
+        private System.Windows.Forms.ErrorProvider errorTenDM;
+        private System.Windows.Forms.ErrorProvider errorNoiDung;
     }
 }

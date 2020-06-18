@@ -14,6 +14,13 @@ namespace GUI
 {
     public partial class FrmSachQL : Form
     {
+        public static string PassMaSach = "";
+        public static string PassTen = "";
+        public static string PassTacGia = "";
+        public static string PassTenDanhMuc = "";
+        public static string PassNamSanXuat = "";
+        public static string PassNgonNgu = "";
+        public static string PassNoiDung = "";
         public FrmSachQL()
         {
             InitializeComponent();
@@ -29,8 +36,23 @@ namespace GUI
 
         private void BtnCapNhatThongTinSach_Click(object sender, EventArgs e)
         {
-            HienThiDanhSachSach();
-            
+            if (txtMa.Text == "")
+            {
+                MessageBox.Show("Chọn Danh Mục Cần Thay Đổi Thông Tin", "Thông Báo");
+            }
+            else
+            {
+                PassMaSach = txtMa.Text;
+                PassTen = TxtTenSach.Text;
+                PassTacGia = TxtTenTacGia.Text;
+                PassNgonNgu = TxtNgonNgu.Text;
+                PassNamSanXuat = TxtNamXuatBan.Text;
+                PassNoiDung = richNoiDungSach.Text;
+                PassTenDanhMuc = TxtTenDanhMuc.Text;
+                FrmSachCapNhat frm5 = new FrmSachCapNhat();
+                frm5.Show();
+            }
+
         }
 
         public void HienThiDanhSachSach()
@@ -46,10 +68,9 @@ namespace GUI
                 lvi.SubItems.Add(scBLL.TheLoai);
                 lvi.SubItems.Add(scBLL.NgonNgu);
                 lvi.SubItems.Add(scBLL.NamXuatBan+"");
-                
                 lvi.SubItems.Add(scBLL.NoiDungSach + "");
-                lvi.SubItems.Add(scBLL.TrangThai + "");
-
+                //lvi.SubItems.Add(scBLL.TrangThai + "");
+                lvi.SubItems.Add(scBLL.ID + "");
                 LvSachQL.Items.Add(lvi);
             }
         }
@@ -65,12 +86,14 @@ namespace GUI
                 string ngonngu = lvi.SubItems[3].Text;
                 string namxuatban = lvi.SubItems[4].Text;
                 string noidung = lvi.SubItems[5].Text;
+                string masach = lvi.SubItems[6].Text;
                 TxtTenSach.Text = tensach;
                 TxtTenTacGia.Text = tacgia;
                 TxtTenDanhMuc.Text = danhmuc;
                 TxtNgonNgu.Text = ngonngu;
                 TxtNamXuatBan.Text = namxuatban;
                 richNoiDungSach.Text = noidung;
+                txtMa.Text = masach;
             }    
         }
         private void CBBHienThiDSDanhMuc()
@@ -116,6 +139,17 @@ namespace GUI
         private void txtTimTenSach_Click(object sender, EventArgs e)
         {
             txtTimTenSach.Clear();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            HienThiDanhSachSach();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSachThem frm1 = new FrmSachThem();
+            frm1.Show();
         }
     }
 }

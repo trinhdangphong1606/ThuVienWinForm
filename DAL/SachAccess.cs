@@ -161,5 +161,29 @@ namespace DAL
             CloseConnection();
             return dsSach;
         }
+        public bool ThemSach(Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "insert into Sach(TenSach,TacGia,NamXuatBan,NgonNgu,NoiDungSach,DanhMucID,SoLuong,TrangThai)values" +
+                "(N'" + sac.TenSach + "', N'" + sac.TacGia + "', '" + sac.NamXuatBan + "', N'" + sac.NgonNgu + "', " +
+                "N'" + sac.NoiDungSach + "', '" + sac.DanhMucID + "','1',N'Trống')";
+            command.Connection = conn;
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+        }
+        public bool SuaSach(Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "Update Sach set TenSach =N'" + sac.TenSach + "', NamXuatBan ='" + sac.NamXuatBan + "'" +
+                ",DanhMucID =N'" + sac.DanhMucID + "', TacGia =N'" + sac.TacGia + "', NgonNgu =N'" + sac.NgonNgu + "'" +
+                ",NoiDungSach =N'" + sac.NoiDungSach + "' where ID='" + sac.ID + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
     }
 }

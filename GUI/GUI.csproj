@@ -79,6 +79,12 @@
     <Compile Include="FrmDanhMucThemMoi.Designer.cs">
       <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDanhMucUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDanhMucUpdate.Designer.cs">
+      <DependentUpon>FrmDanhMucUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNguoiMuonSachCapNhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,11 +139,23 @@
     <Compile Include="FrmQuanTriVienThemMoi.Designer.cs">
       <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSachCapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSachCapNhat.Designer.cs">
+      <DependentUpon>FrmSachCapNhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSachQL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSachQL.Designer.cs">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSachThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSachThem.Designer.cs">
+      <DependentUpon>FrmSachThem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSachXem.cs">
       <SubType>Form</SubType>
@@ -204,6 +222,9 @@
     <EmbeddedResource Include="FrmDanhMucThemMoi.resx">
       <DependentUpon>FrmDanhMucThemMoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDanhMucUpdate.resx">
+      <DependentUpon>FrmDanhMucUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNguoiMuonSachCapNhat.resx">
       <DependentUpon>FrmNguoiMuonSachCapNhat.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,8 +252,14 @@
     <EmbeddedResource Include="FrmQuanTriVienThemMoi.resx">
       <DependentUpon>FrmQuanTriVienThemMoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSachCapNhat.resx">
+      <DependentUpon>FrmSachCapNhat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSachQL.resx">
       <DependentUpon>FrmSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSachThem.resx">
+      <DependentUpon>FrmSachThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSachXem.resx">
       <DependentUpon>FrmSachXem.cs</DependentUpon>

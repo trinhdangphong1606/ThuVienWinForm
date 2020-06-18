@@ -34,7 +34,14 @@ namespace BLL
         {
             return sac.TimMaSach(sc);
         }
-            
+        public bool ThemSach(Sach Thems)
+        {
+            return sac.ThemSach(Thems);
+        }
+        public bool SuaSach(Sach Suas)
+        {
+            return sac.SuaSach(Suas);
+        }
 
     }
 }

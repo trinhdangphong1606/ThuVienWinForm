@@ -21,5 +21,9 @@ namespace BLL
         {
             return access.InsertDanhMuc(TenDanhMuc, NoiDungDanhMuc);
         }
+        public bool CapNhatDanhMuc(DanhMuc CapNhatDM)
+        {
+            return access.CapNhatDanhMuc(CapNhatDM);
+        }
     }
 }
