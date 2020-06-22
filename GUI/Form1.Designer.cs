@@ -28,127 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.lvSach = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.BtnHienThiSach = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.errorTest = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorTest)).BeginInit();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lvSach
+            // tabControl1
             // 
-            this.lvSach.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.lvSach.FullRowSelect = true;
-            this.lvSach.GridLines = true;
-            this.lvSach.HideSelection = false;
-            this.lvSach.Location = new System.Drawing.Point(23, 135);
-            this.lvSach.Name = "lvSach";
-            this.lvSach.Size = new System.Drawing.Size(606, 147);
-            this.lvSach.TabIndex = 0;
-            this.lvSach.UseCompatibleStateImageBehavior = false;
-            this.lvSach.View = System.Windows.Forms.View.Details;
-            this.lvSach.SelectedIndexChanged += new System.EventHandler(this.lvSach_SelectedIndexChanged);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 0;
             // 
-            // columnHeader1
+            // tabPage1
             // 
-            this.columnHeader1.Text = "Mã Sách";
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(792, 421);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Sách Chờ Duyệt";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // columnHeader2
+            // tabPage2
             // 
-            this.columnHeader2.Text = "Tên Sách";
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(792, 424);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Chờ Đọc Giả";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // columnHeader3
+            // tabPage3
             // 
-            this.columnHeader3.Text = "Năm XB";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Danh Mục";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Tác Giả";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Ngôn Ngữ";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Nội Dung";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Số Lượng";
-            // 
-            // BtnHienThiSach
-            // 
-            this.BtnHienThiSach.Location = new System.Drawing.Point(101, 70);
-            this.BtnHienThiSach.Name = "BtnHienThiSach";
-            this.BtnHienThiSach.Size = new System.Drawing.Size(75, 23);
-            this.BtnHienThiSach.TabIndex = 1;
-            this.BtnHienThiSach.Text = "button1";
-            this.BtnHienThiSach.UseVisualStyleBackColor = true;
-            this.BtnHienThiSach.Click += new System.EventHandler(this.BtnHienThiSach_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(297, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // errorTest
-            // 
-            this.errorTest.ContainerControl = this;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(792, 424);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Sách Đang Cho Mượn";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.BtnHienThiSach);
-            this.Controls.Add(this.lvSach);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errorTest)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView lvSach;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.Button BtnHienThiSach;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ErrorProvider errorTest;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
-

@@ -104,7 +104,7 @@ namespace GUI
 
         private void xemSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSachXem frm1 = new FrmSachXem();
+            FrmSachXem frm1 = new FrmSachXem(id);
             frm1.MdiParent = this;
             frm1.Show();
         }
@@ -118,8 +118,9 @@ namespace GUI
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Run(new FrmDangNhap());
+            FrmPMSUpdate frm1 = new FrmPMSUpdate();
+            frm1.MdiParent = this;
+            frm1.Show();
         }
 
         private void FrmTongThe_Leave(object sender, EventArgs e)

@@ -15,6 +15,8 @@ namespace DTO
         public DateTime NgayMuon { get; set; }
         public DateTime NgayDuKienTra { get; set; }
         public DateTime NgayTraSach { get; set; }
+
+        public string TrangThai { get; set; }
         
     }
 }

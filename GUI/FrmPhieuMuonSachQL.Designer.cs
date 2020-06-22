@@ -96,7 +96,7 @@
             this.BtnPMSDong.Name = "BtnPMSDong";
             this.BtnPMSDong.Size = new System.Drawing.Size(157, 51);
             this.BtnPMSDong.TabIndex = 2;
-            this.BtnPMSDong.Text = "Đóng Phiếu Mượn";
+            this.BtnPMSDong.Text = "Trả Sách Đã Mượn";
             this.BtnPMSDong.UseVisualStyleBackColor = true;
             this.BtnPMSDong.Click += new System.EventHandler(this.BtnPMSDong_Click);
             // 
@@ -107,7 +107,7 @@
             this.BtnPMSMo.Name = "BtnPMSMo";
             this.BtnPMSMo.Size = new System.Drawing.Size(158, 51);
             this.BtnPMSMo.TabIndex = 1;
-            this.BtnPMSMo.Text = "Mở Mới Phiếu";
+            this.BtnPMSMo.Text = "Tạo Yêu Cầu Mượn";
             this.BtnPMSMo.UseVisualStyleBackColor = true;
             this.BtnPMSMo.Click += new System.EventHandler(this.BtnPMSMo_Click);
             // 
@@ -515,9 +515,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(255, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 25);
+            this.label1.Size = new System.Drawing.Size(256, 25);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Quản Lý Phiếu Mượn Sách";
+            this.label1.Text = "Quản Lý Cho Mượn Sách";
             // 
             // columnHeader1
             // 

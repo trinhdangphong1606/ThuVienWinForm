@@ -63,6 +63,7 @@
             this.errorKey1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorQuyen = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorIntNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorHoTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDangNhap)).BeginInit();
@@ -193,6 +194,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnQuyenUser);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
             this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Controls.Add(this.btnQuyenAdmin);
@@ -225,7 +227,7 @@
             this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuyen.Location = new System.Drawing.Point(131, 188);
             this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Size = new System.Drawing.Size(252, 23);
+            this.txtQuyen.Size = new System.Drawing.Size(147, 23);
             this.txtQuyen.TabIndex = 9;
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -249,7 +251,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenAdmin.Location = new System.Drawing.Point(397, 186);
+            this.btnQuyenAdmin.Location = new System.Drawing.Point(408, 186);
             this.btnQuyenAdmin.Name = "btnQuyenAdmin";
             this.btnQuyenAdmin.Size = new System.Drawing.Size(118, 25);
             this.btnQuyenAdmin.TabIndex = 10;
@@ -384,6 +386,20 @@
             // 
             this.errorIntNamSinh.ContainerControl = this;
             // 
+            // btnQuyenUser
+            // 
+            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenUser.Location = new System.Drawing.Point(284, 186);
+            this.btnQuyenUser.Name = "btnQuyenUser";
+            this.btnQuyenUser.Size = new System.Drawing.Size(118, 25);
+            this.btnQuyenUser.TabIndex = 43;
+            this.btnQuyenUser.Text = "User";
+            this.btnQuyenUser.UseVisualStyleBackColor = true;
+            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
+            // 
             // FrmQuanTriVienThemMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,5 +466,6 @@
         private System.Windows.Forms.ErrorProvider errorKey1;
         private System.Windows.Forms.ErrorProvider errorQuyen;
         private System.Windows.Forms.ErrorProvider errorIntNamSinh;
+        private System.Windows.Forms.Button btnQuyenUser;
     }
 }

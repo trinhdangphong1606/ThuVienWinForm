@@ -31,13 +31,13 @@ namespace GUI
             errorUsername.SetError(txtUsername, "");
             if (txtUsername.Text == "")
             {
-                errorUsername.SetError(txtUsername, "Nhập");
+                errorUsername.SetError(txtUsername, "Nhập Tên Đăng Nhập");
                 return;
             }
             errorPassword.SetError(txtPassword, "");
             if (txtPassword.Text == "")
             {
-                errorPassword.SetError(txtPassword, "Nhập");
+                errorPassword.SetError(txtPassword, "Nhập Mật Khẩu");
                 return;
             }
             DangNhap();
@@ -63,9 +63,19 @@ namespace GUI
                 lbChao2.Text = "Mã     :";
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông báo");
                 this.Hide();
-                FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text,lbId.Text);
-                frm1.ShowDialog();
-                this.Close();
+                if(lbQuyen.Text=="Admin" || lbQuyen.Text == "Staff")
+                {
+                    FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text, lbId.Text);
+                    frm1.ShowDialog();
+                    this.Close();
+                }    
+                else
+                {
+                    FrmTongTheUser frm1 = new FrmTongTheUser(lbId.Text);
+                    frm1.ShowDialog();
+                    this.Close();
+                }    
+                
             }
             else
             {

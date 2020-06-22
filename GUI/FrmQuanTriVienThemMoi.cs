@@ -33,6 +33,10 @@ namespace GUI
         {
             txtQuyen.Text = "Staff";
         }
+        private void btnQuyenUser_Click(object sender, EventArgs e)
+        {
+            txtQuyen.Text = "User";
+        }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -111,7 +115,18 @@ namespace GUI
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
             bool qtvnew = qtvbll.ThemQuanTriVien(qtv);
-            if(qtvnew)
+
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.HoTen = txtTen.Text;
+            nms.NamSinh = int.Parse(txtNamSinh.Text);
+            nms.SoDienThoai = txtSoDienThoai.Text;
+            nms.DiaChi = txtDiaChi.Text;
+            nms.Email = txtEmail.Text;
+
+            NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
+            bool nmsnew = nmsbll.ThemDocGia(nms);
+
+            if (qtvnew&nmsnew)
             {
                 MessageBox.Show("Thêm Thành Công", "Thông báo");
                 this.Close();
@@ -122,5 +137,7 @@ namespace GUI
         {
             this.Close();
         }
+
+        
     }
 }

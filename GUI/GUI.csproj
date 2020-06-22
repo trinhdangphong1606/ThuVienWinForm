@@ -115,6 +115,12 @@
     <Compile Include="FrmPhieuMuonSachQL.Designer.cs">
       <DependentUpon>FrmPhieuMuonSachQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPMSUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPMSUpdate.Designer.cs">
+      <DependentUpon>FrmPMSUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanTriVienCapNhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,18 @@
     <Compile Include="FrmPhieuMuonSachDong.Designer.cs">
       <DependentUpon>FrmPhieuMuonSachDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTongTheAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTongTheAdmin.Designer.cs">
+      <DependentUpon>FrmTongTheAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTongTheUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTongTheUser.Designer.cs">
+      <DependentUpon>FrmTongTheUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmRestoreMatKhau.cs">
@@ -206,6 +224,11 @@
     </Compile>
     <Compile Include="FrmThongTinCaNhanDoiMK.Designer.cs">
       <DependentUpon>FrmThongTinCaNhanDoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -239,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuMuonSachQL.resx">
       <DependentUpon>FrmPhieuMuonSachQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPMSUpdate.resx">
+      <DependentUpon>FrmPMSUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanTriVienCapNhat.resx">
       <DependentUpon>FrmQuanTriVienCapNhat.cs</DependentUpon>
@@ -282,6 +308,9 @@
     <EmbeddedResource Include="FrmPhieuMuonSachDong.resx">
       <DependentUpon>FrmPhieuMuonSachDong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTongTheUser.resx">
+      <DependentUpon>FrmTongTheUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -303,6 +332,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="testDataSet.xsc">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testDataSet.xss">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -20,6 +20,10 @@ namespace BLL
         {
             return phieums.ThemPhieuMuon(newphieu);
         }
+        public bool DocGiaTaoPhieu(PhieuMuonSach newphieu)
+        {
+            return phieums.DocGiaTaoPhieu(newphieu);
+        }
         public bool DongPhieuMuon(PhieuMuonSach closephieu)
         {
             return phieums.DongPhieuMuon(closephieu);
@@ -48,6 +52,10 @@ namespace BLL
         public List<PhieuMuonSachDAO> TimphieuTheoNgay(PhieuMuonSachDAO timngayphieu)
         {
             return phieums.TimPhieuTheoNgay(timngayphieu);
+        }
+        public List<PhieuMuonSachDAO> LayPhieuMuonChoDuyet()
+        {
+            return phieums.LayPhieuMuonChoDuyet();
         }
     }
 }

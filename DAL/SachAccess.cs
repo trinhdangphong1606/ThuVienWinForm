@@ -126,6 +126,43 @@ namespace DAL
             reader.Close();
             return dsSach;
         }
+        public List<SachDAO> LayToanBoSachTrong()
+        {
+            List<SachDAO> dsSach = new List<SachDAO>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT s.Id, s.TenSach, s.NamXuatBan, dm.TenDanhMuc, s.TacGia, s.NgonNgu, s.NoiDungSach,s.TrangThai,s.SoLuong from Sach s,DanhMuc dm where TrangThai=N'Trống' and s.DanhMucID = dm.IdDanhMuc";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();// truy vấn trả về nhiều dòng dữ liệu, ExecuteReader trả về đầu đọc quản lý bảng dữ liệu đó 
+            while (reader.Read())//Đọc cho đến khi hết dữ liệu trả về từ db, khi hết dữ liệu sẽ trả về False -> dừng vòng lặp
+            {
+                int masach = reader.GetInt32(0); //gán vị trí đầu tiên trong đầu đọc là masach
+                string tensach = reader.GetString(1);
+                int namxuatban = reader.GetInt32(2);
+                string theloai = reader.GetString(3);
+                string tacgia = reader.GetString(4);
+                string ngonngu = reader.GetString(5);
+                string noidung = reader.GetString(6);
+                string trangthai = reader.GetString(7);
+                int soluong = reader.GetInt32(8);
+
+                SachDAO sc = new SachDAO(); //Nạp vào đối tượng SachDAO
+                sc.ID = masach;
+                sc.TenSach = tensach;
+                sc.NamXuatBan = namxuatban;
+                sc.TheLoai = theloai;
+                sc.TacGia = tacgia;
+                sc.NgonNgu = ngonngu;
+                sc.NoiDungSach = noidung;
+                sc.TrangThai = trangthai;
+                //sc.SoLuong = soluong;
+
+                dsSach.Add(sc); //đưa sach vào dssach
+            }
+            reader.Close();
+            return dsSach;
+        }
         public List<SachDAO> TimTenSach(SachDAO timsach)
         {
             List<SachDAO> dsSach = new List<SachDAO>();

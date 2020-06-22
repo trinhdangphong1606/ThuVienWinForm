@@ -19,6 +19,7 @@ namespace DAL.DAO
         public int ngay { get; set; }
         public int thang { get; set; }
         public int nam { get; set; }
+        public string TrangThai { get; set; }
 
     }
 }

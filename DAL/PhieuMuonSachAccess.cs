@@ -59,8 +59,20 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra) " +
-                "values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+ "')" +
+            command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra,TrangThai) " +
+                "values('"+pms.NguoiMuonSachId+"','"+pms.SachId+"','"+pms.NgayMuon+"','"+pms.NgayDuKienTra+ "',N'Chưa Trả Sách')" +
+                " update Sach set TrangThai=N'Đang cho mượn' where Id='" + pms.SachId + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
+        public bool DocGiaTaoPhieu(PhieuMuonSach pms)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "insert into PhieuMuonSach(NguoiMuonSachId,SachId,NgayMuon,NgayDuKienTra,TrangThai) " +
+                "values('" + pms.NguoiMuonSachId + "','" + pms.SachId + "','" + pms.NgayMuon + "','" + pms.NgayDuKienTra + "',N'Chờ duyệt')" +
                 " update Sach set TrangThai=N'Đang cho mượn' where Id='" + pms.SachId + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
@@ -71,11 +83,13 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' where PhieuId='"+pms.MaPhieuMuon  + "'";
+            command.CommandText = "Update PhieuMuonSach set NgayTraSach='"+pms.NgayTraSach+"' ,TrangThai=N'Đã Trả Sách' where PhieuId='"+pms.MaPhieuMuon  + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+
+
         public List<PhieuMuonSachDAO> TimPhieuTheoMa(PhieuMuonSachDAO pms)
         {
             List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
@@ -303,6 +317,50 @@ namespace DAL
                 pms.NgayMuon = ngaymuon;
                 pms.NgayDuKienTra = ngaydukientra;
                 pms.NgayTraSach = ngaytra;
+                dsPhieuMuon.Add(pms);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsPhieuMuon;
+        }
+
+
+        public List<PhieuMuonSachDAO> LayPhieuMuonChoDuyet()
+        {
+            List<PhieuMuonSachDAO> dsPhieuMuon = new List<PhieuMuonSachDAO>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select pms.PhieuId, nms.HoTen,s.TenSach,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach,pms.TrangThai " +
+                "from PhieuMuonSach pms, NguoiMuonSach nms,Sach s " +
+                "where nms.Id = pms.NguoiMuonSachId and s.Id = pms.SachId and pms.TrangThai = N'Chờ duyệt'";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int idphieu = reader.GetInt32(0);
+                string tennguoimuon = reader.GetString(1);
+                string tensach = reader.GetString(2);
+                DateTime ngaymuon = reader.GetDateTime(3);
+                DateTime ngaydukientra = reader.GetDateTime(4);
+                DateTime? ngaytra;
+                if (reader.IsDBNull(5))
+                {
+                    ngaytra = (DateTime?)null;
+                }
+                else
+                {
+                    ngaytra = reader.GetDateTime(5);
+                }
+                string trangthai = reader.GetString(6);
+                PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
+                pms.MaPhieuMuon = idphieu;
+                pms.TenNguoiMuonSach = tennguoimuon;
+                pms.TenSach = tensach;
+                pms.NgayMuon = ngaymuon;
+                pms.NgayDuKienTra = ngaydukientra;
+                pms.NgayTraSach = ngaytra;
+                pms.TrangThai = trangthai;
                 dsPhieuMuon.Add(pms);
             }
             reader.Close();
