@@ -17,6 +17,7 @@ namespace GUI
     public partial class FrmSachXem : Form
     {
         string iddg = "";
+        public string tendm = "";
         public FrmSachXem(string id)
         {
             InitializeComponent();
@@ -24,9 +25,25 @@ namespace GUI
         }
         private void FrmSachXem_Load(object sender, EventArgs e)
         {
+            txtMaDG.Text = iddg + "";
             HienThiDanhSachSach();
-            
+            HienThiDSDanhMuc();
         }
+
+        private void HienThiDSDanhMuc()
+        {
+            DanhMucBLL damuBLL = new DanhMucBLL();
+            List<DanhMuc> dsdanhmuc = damuBLL.LayToanBoDanhMuc();
+            LvDanhMucDS.Items.Clear();
+            foreach (DanhMuc damuc in dsdanhmuc)
+            {
+                ListViewItem lvi = new ListViewItem(damuc.IdDanhMuc + "");
+                lvi.SubItems.Add(damuc.TenDanhMuc);
+                lvi.SubItems.Add(damuc.NoiDungDanhMuc);
+                LvDanhMucDS.Items.Add(lvi);
+            }
+        }
+
         public void HienThiDanhSachSach()
         {
             SachBLL sacBLL = new SachBLL();
@@ -122,6 +139,34 @@ namespace GUI
                 return;
             }
             UserTaoPhieu();
+            HienThiDanhSachSach();
+        }
+
+        private void LvDanhMucDS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LvDanhMucDS.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = LvDanhMucDS.SelectedItems[0];
+                this.tendm = lvi.SubItems[1].Text;
+            }
+            SachDAO timdmc = new SachDAO();
+            timdmc.TheLoai = this.tendm;
+            SachBLL sacbll = new SachBLL();
+            List<SachDAO> dssach = sacbll.TimSachTheoDanhMuc(timdmc);
+            LvSachQL.Items.Clear();
+            foreach (SachDAO scbll in dssach)
+            {
+                ListViewItem lvi = new ListViewItem(scbll.TenSach + "");
+                lvi.SubItems.Add(scbll.TacGia);
+                lvi.SubItems.Add(scbll.TheLoai);
+                lvi.SubItems.Add(scbll.NgonNgu);
+                lvi.SubItems.Add(scbll.NamXuatBan + "");
+                lvi.SubItems.Add(scbll.TrangThai);
+                lvi.SubItems.Add(scbll.NoiDungSach);
+                lvi.SubItems.Add(scbll.ID + "");
+
+                LvSachQL.Items.Add(lvi);
+            }
         }
     }
 }

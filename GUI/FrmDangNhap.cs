@@ -63,7 +63,7 @@ namespace GUI
                 lbChao2.Text = "Mã     :";
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông báo");
                 this.Hide();
-                if(lbQuyen.Text=="Admin" || lbQuyen.Text == "Staff")
+                if (lbQuyen.Text=="Admin" || lbQuyen.Text == "Staff")
                 {
                     FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text, lbId.Text);
                     frm1.ShowDialog();

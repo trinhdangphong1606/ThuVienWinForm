@@ -20,11 +20,12 @@ namespace BLL
         {
 
             return sac.LayAllToanBoSachTrong();
-        }
+        } //trả về dữ liệu không cần đầu vào
         public bool CapNhatPhieuMuon(Sach trangthai)
         {
             return sac.CapNhatPhieuMuon(trangthai);
         }
+        
         public List<SachDAO> LayToanBoSach()
         {
 
@@ -39,7 +40,7 @@ namespace BLL
         public List<SachDAO> TimTenSach(SachDAO TenSach)
         {
             return sac.TimTenSach(TenSach);
-        }
+        } // trả về dữ liệu cần đầu vào
         public List<SachDAO> TimSachTrongTheoTen(SachDAO timsach)
         {
             return sac.TimSachTrongTheoTen(timsach);
@@ -60,11 +61,14 @@ namespace BLL
         {
             return sac.CapNhatTrangThaiLoi(SachLoi);
         }
-        public bool CapNhatDocGiaKhongDen(Sach travetrong)
+        public bool CapNhatDocGiaKhongDen(Sach travetrong) // update hoặc thêm dòng dữ liệu, cần đầu vào
         {
             return sac.CapNhatDocGiaKhongDen(travetrong);
         }
-
+        public List<SachDAO> TimSachTheoDanhMuc(SachDAO TenDM)
+        {
+            return sac.TimSachTheoDanhMuc(TenDM);
+        }
 
 
     }

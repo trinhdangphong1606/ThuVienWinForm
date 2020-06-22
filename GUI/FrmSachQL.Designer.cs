@@ -34,6 +34,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.txtMa = new System.Windows.Forms.TextBox();
@@ -55,8 +56,13 @@
             this.btnTimTenSach = new System.Windows.Forms.Button();
             this.txtTimTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LvDanhMucDS = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label9 = new System.Windows.Forms.Label();
             this.GrBChiTiet.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LvSachQL
@@ -75,7 +81,7 @@
             this.LvSachQL.HideSelection = false;
             this.LvSachQL.Location = new System.Drawing.Point(0, 313);
             this.LvSachQL.Name = "LvSachQL";
-            this.LvSachQL.Size = new System.Drawing.Size(700, 216);
+            this.LvSachQL.Size = new System.Drawing.Size(954, 216);
             this.LvSachQL.TabIndex = 10;
             this.LvSachQL.UseCompatibleStateImageBehavior = false;
             this.LvSachQL.View = System.Windows.Forms.View.Details;
@@ -106,11 +112,16 @@
             this.columnHeader3.Text = "Năm Xuất Bản";
             this.columnHeader3.Width = 121;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Trạng Thái";
+            this.columnHeader6.Width = 150;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 9);
+            this.label1.Location = new System.Drawing.Point(370, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 25);
             this.label1.TabIndex = 12;
@@ -137,9 +148,9 @@
             this.GrBChiTiet.Controls.Add(this.btnTimTenSach);
             this.GrBChiTiet.Controls.Add(this.txtTimTenSach);
             this.GrBChiTiet.Controls.Add(this.label2);
-            this.GrBChiTiet.Location = new System.Drawing.Point(0, 42);
+            this.GrBChiTiet.Location = new System.Drawing.Point(12, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(700, 265);
+            this.GrBChiTiet.Size = new System.Drawing.Size(699, 265);
             this.GrBChiTiet.TabIndex = 11;
             this.GrBChiTiet.TabStop = false;
             // 
@@ -171,7 +182,7 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Location = new System.Drawing.Point(566, 201);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(129, 28);
+            this.btnCapNhat.Size = new System.Drawing.Size(128, 28);
             this.btnCapNhat.TabIndex = 26;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
@@ -185,7 +196,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(345, 201);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(215, 28);
+            this.button3.Size = new System.Drawing.Size(214, 28);
             this.button3.TabIndex = 25;
             this.button3.Text = "Thêm Sách Mới\r\n";
             this.button3.UseVisualStyleBackColor = true;
@@ -199,7 +210,7 @@
             this.BtnCapNhatThongTinSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCapNhatThongTinSach.Location = new System.Drawing.Point(87, 201);
             this.BtnCapNhatThongTinSach.Name = "BtnCapNhatThongTinSach";
-            this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(253, 28);
+            this.BtnCapNhatThongTinSach.Size = new System.Drawing.Size(252, 28);
             this.BtnCapNhatThongTinSach.TabIndex = 24;
             this.BtnCapNhatThongTinSach.Text = "Chỉnh Sửa Thông Tin Sách";
             this.BtnCapNhatThongTinSach.UseVisualStyleBackColor = true;
@@ -323,7 +334,7 @@
             this.btnTimTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimTenSach.Location = new System.Drawing.Point(579, 234);
             this.btnTimTenSach.Name = "btnTimTenSach";
-            this.btnTimTenSach.Size = new System.Drawing.Size(114, 24);
+            this.btnTimTenSach.Size = new System.Drawing.Size(113, 24);
             this.btnTimTenSach.TabIndex = 5;
             this.btnTimTenSach.Text = "Tìm";
             this.btnTimTenSach.UseVisualStyleBackColor = true;
@@ -349,16 +360,60 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Sách ";
             // 
-            // columnHeader6
+            // groupBox1
             // 
-            this.columnHeader6.Text = "Trạng Thái";
-            this.columnHeader6.Width = 150;
+            this.groupBox1.Controls.Add(this.LvDanhMucDS);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(717, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 265);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // LvDanhMucDS
+            // 
+            this.LvDanhMucDS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8});
+            this.LvDanhMucDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LvDanhMucDS.FullRowSelect = true;
+            this.LvDanhMucDS.GridLines = true;
+            this.LvDanhMucDS.HideSelection = false;
+            this.LvDanhMucDS.Location = new System.Drawing.Point(7, 45);
+            this.LvDanhMucDS.Margin = new System.Windows.Forms.Padding(4);
+            this.LvDanhMucDS.Name = "LvDanhMucDS";
+            this.LvDanhMucDS.Size = new System.Drawing.Size(213, 213);
+            this.LvDanhMucDS.TabIndex = 15;
+            this.LvDanhMucDS.UseCompatibleStateImageBehavior = false;
+            this.LvDanhMucDS.View = System.Windows.Forms.View.Details;
+            this.LvDanhMucDS.SelectedIndexChanged += new System.EventHandler(this.LvDanhMucDS_SelectedIndexChanged);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Mã";
+            this.columnHeader7.Width = 50;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tên Danh Mục";
+            this.columnHeader8.Width = 300;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(214, 20);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Tìm Sách Theo Danh Mục";
             // 
             // FrmSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 529);
+            this.ClientSize = new System.Drawing.Size(954, 529);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LvSachQL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrBChiTiet);
@@ -369,6 +424,8 @@
             this.Load += new System.EventHandler(this.FrmSachQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +461,10 @@
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListView LvDanhMucDS;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -52,6 +52,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTuChoiChoMuon = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -99,9 +100,9 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.dtTSNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtTSDuKienTra = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTraSach = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtTSS = new System.Windows.Forms.TextBox();
             this.txtTSDG = new System.Windows.Forms.TextBox();
@@ -116,6 +117,7 @@
             this.errDuKienTra = new System.Windows.Forms.ErrorProvider(this.components);
             this.errCMTCTenDG = new System.Windows.Forms.ErrorProvider(this.components);
             this.errCMTCTenSach = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtTSMaS = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -183,9 +185,9 @@
             // 
             this.btnKhongDuyetPhieuMoi.BackColor = System.Drawing.Color.Tomato;
             this.btnKhongDuyetPhieuMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhongDuyetPhieuMoi.Location = new System.Drawing.Point(149, 227);
+            this.btnKhongDuyetPhieuMoi.Location = new System.Drawing.Point(136, 227);
             this.btnKhongDuyetPhieuMoi.Name = "btnKhongDuyetPhieuMoi";
-            this.btnKhongDuyetPhieuMoi.Size = new System.Drawing.Size(139, 35);
+            this.btnKhongDuyetPhieuMoi.Size = new System.Drawing.Size(152, 35);
             this.btnKhongDuyetPhieuMoi.TabIndex = 77;
             this.btnKhongDuyetPhieuMoi.Text = "Không Duyệt";
             this.btnKhongDuyetPhieuMoi.UseVisualStyleBackColor = false;
@@ -257,7 +259,7 @@
             this.btnDuyetPhieuMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyetPhieuMoi.Location = new System.Drawing.Point(6, 227);
             this.btnDuyetPhieuMoi.Name = "btnDuyetPhieuMoi";
-            this.btnDuyetPhieuMoi.Size = new System.Drawing.Size(115, 35);
+            this.btnDuyetPhieuMoi.Size = new System.Drawing.Size(124, 35);
             this.btnDuyetPhieuMoi.TabIndex = 41;
             this.btnDuyetPhieuMoi.Text = "Duyệt";
             this.btnDuyetPhieuMoi.UseVisualStyleBackColor = false;
@@ -382,6 +384,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.btnTuChoiChoMuon);
             this.groupBox2.Controls.Add(this.richTextBox2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
@@ -401,6 +404,18 @@
             this.groupBox2.Size = new System.Drawing.Size(646, 382);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
+            // 
+            // btnTuChoiChoMuon
+            // 
+            this.btnTuChoiChoMuon.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTuChoiChoMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuChoiChoMuon.Location = new System.Drawing.Point(183, 227);
+            this.btnTuChoiChoMuon.Name = "btnTuChoiChoMuon";
+            this.btnTuChoiChoMuon.Size = new System.Drawing.Size(105, 35);
+            this.btnTuChoiChoMuon.TabIndex = 77;
+            this.btnTuChoiChoMuon.Text = "Từ Chối";
+            this.btnTuChoiChoMuon.UseVisualStyleBackColor = false;
+            this.btnTuChoiChoMuon.Click += new System.EventHandler(this.btnTuChoiChoMuon_Click);
             // 
             // richTextBox2
             // 
@@ -468,7 +483,7 @@
             this.btnChoMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoMuon.Location = new System.Drawing.Point(6, 227);
             this.btnChoMuon.Name = "btnChoMuon";
-            this.btnChoMuon.Size = new System.Drawing.Size(282, 35);
+            this.btnChoMuon.Size = new System.Drawing.Size(171, 35);
             this.btnChoMuon.TabIndex = 41;
             this.btnChoMuon.Text = "Cho Mượn Sách";
             this.btnChoMuon.UseVisualStyleBackColor = false;
@@ -588,7 +603,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(655, 391);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Cho Mượn Sách Tại Chỗ";
+            this.tabPage3.Text = "Cho Mượn Sách Tại Thư Viện";
             // 
             // groupBox4
             // 
@@ -865,12 +880,13 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.txtTSMaS);
             this.groupBox3.Controls.Add(this.richTextBox3);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.dtNgayTra);
+            this.groupBox3.Controls.Add(this.dtTSNgayTra);
             this.groupBox3.Controls.Add(this.dtTSDuKienTra);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnTraSach);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.txtTSS);
             this.groupBox3.Controls.Add(this.txtTSDG);
@@ -914,20 +930,20 @@
             this.label14.TabIndex = 74;
             this.label14.Text = "Dự Kiến Trả";
             // 
-            // dtNgayTra
+            // dtTSNgayTra
             // 
-            this.dtNgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtTSNgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtNgayTra.CustomFormat = "dd-MM-yyyy";
-            this.dtNgayTra.Enabled = false;
-            this.dtNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgayTra.Location = new System.Drawing.Point(131, 195);
-            this.dtNgayTra.Name = "dtNgayTra";
-            this.dtNgayTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtNgayTra.Size = new System.Drawing.Size(138, 26);
-            this.dtNgayTra.TabIndex = 73;
+            this.dtTSNgayTra.CustomFormat = "dd-MM-yyyy";
+            this.dtTSNgayTra.Enabled = false;
+            this.dtTSNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTSNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTSNgayTra.Location = new System.Drawing.Point(131, 195);
+            this.dtTSNgayTra.Name = "dtTSNgayTra";
+            this.dtTSNgayTra.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTSNgayTra.Size = new System.Drawing.Size(138, 26);
+            this.dtTSNgayTra.TabIndex = 73;
             // 
             // dtTSDuKienTra
             // 
@@ -944,16 +960,17 @@
             this.dtTSDuKienTra.Size = new System.Drawing.Size(138, 26);
             this.dtTSDuKienTra.TabIndex = 72;
             // 
-            // button1
+            // btnTraSach
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 35);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Trả Sách";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTraSach.BackColor = System.Drawing.Color.Lime;
+            this.btnTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraSach.Location = new System.Drawing.Point(6, 227);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(282, 35);
+            this.btnTraSach.TabIndex = 41;
+            this.btnTraSach.Text = "Trả Sách";
+            this.btnTraSach.UseVisualStyleBackColor = false;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
             // 
             // label15
             // 
@@ -972,7 +989,7 @@
             this.txtTSS.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtTSS.Location = new System.Drawing.Point(88, 127);
             this.txtTSS.Name = "txtTSS";
-            this.txtTSS.Size = new System.Drawing.Size(200, 26);
+            this.txtTSS.Size = new System.Drawing.Size(170, 26);
             this.txtTSS.TabIndex = 45;
             this.txtTSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1043,6 +1060,7 @@
             this.lvTSPMS.TabIndex = 0;
             this.lvTSPMS.UseCompatibleStateImageBehavior = false;
             this.lvTSPMS.View = System.Windows.Forms.View.Details;
+            this.lvTSPMS.SelectedIndexChanged += new System.EventHandler(this.lvTSPMS_SelectedIndexChanged);
             // 
             // columnHeader7
             // 
@@ -1070,6 +1088,17 @@
             // errCMTCTenSach
             // 
             this.errCMTCTenSach.ContainerControl = this;
+            // 
+            // txtTSMaS
+            // 
+            this.txtTSMaS.Enabled = false;
+            this.txtTSMaS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTSMaS.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtTSMaS.Location = new System.Drawing.Point(264, 127);
+            this.txtTSMaS.Name = "txtTSMaS";
+            this.txtTSMaS.Size = new System.Drawing.Size(24, 26);
+            this.txtTSMaS.TabIndex = 77;
+            this.txtTSMaS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmPMSUpdate
             // 
@@ -1148,9 +1177,9 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtNgayTra;
+        private System.Windows.Forms.DateTimePicker dtTSNgayTra;
         private System.Windows.Forms.DateTimePicker dtTSDuKienTra;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTraSach;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtTSS;
         private System.Windows.Forms.TextBox txtTSDG;
@@ -1190,5 +1219,7 @@
         private System.Windows.Forms.ErrorProvider errCMTCTenDG;
         private System.Windows.Forms.ErrorProvider errCMTCTenSach;
         private System.Windows.Forms.Button btnKhongDuyetPhieuMoi;
+        private System.Windows.Forms.Button btnTuChoiChoMuon;
+        private System.Windows.Forms.TextBox txtTSMaS;
     }
 }

@@ -10,12 +10,15 @@ using System.Windows.Forms;
 using DAL.DAO;
 using BLL;
 using DTO;
+using System.Reflection;
+
 namespace GUI
 {
     public partial class FrmPMSUpdate : Form
     {
         public int madg = 0;
         public int masach = 0;
+        public int masachtra = 0;
         public FrmPMSUpdate()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace GUI
             HienThiDSChoDocGia();
             HienThiDSDocGia();
             HienThiDSSach();
+            HienThiDSChuaTraSach();
         }
 
         // start tab chờ duyệt
@@ -58,7 +62,8 @@ namespace GUI
                 txtCDS.Text = lvi.SubItems[2].Text;
                 dtNgayMuon.Value = Convert.ToDateTime(lvi.SubItems[3].Text);
                 dtDuKienTra.Value = Convert.ToDateTime(lvi.SubItems[4].Text);
-            }    
+            }
+            
         }
 
         private void btnDuyetPhieuMoi_Click(object sender, EventArgs e)
@@ -69,20 +74,30 @@ namespace GUI
             }
             else
             {
-                ChapThuanDuyet();
-                HienThiDSChoDocGia();
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn duyệt?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    ChapThuanDuyet();
+                    HienThiDSCanDuyet();
+                    HienThiDSChoDocGia();
+                }
             }
         }
         private void btnKhongDuyetPhieuMoi_Click(object sender, EventArgs e)
         {
             if (txtCDMaP.Text == "")
             {
-                MessageBox.Show("Chọn Phiếu Cần Duyệt", "Thông Báo");
+                MessageBox.Show("Chọn Phiếu Không Duyệt", "Thông Báo");
             }
             else
             {
-                TuChoiDuyet();
-                HienThiDSChoDocGia();
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn không duyệt?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    TuChoiDuyet();
+                    HienThiDSCanDuyet();
+                    HienThiDSChoDocGia();
+                }
             }    
         }
         private void ChapThuanDuyet()
@@ -184,16 +199,29 @@ namespace GUI
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Đã gửi sách cho đọc giả? \n" +
-                    "Đọc giả không đến nhận sách vui lòng chọn NO", "Thông Báo", MessageBoxButtons.YesNoCancel);
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn cho mượn sách?", "Thông Báo", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     ChapThuanPhieuChoMuon();
                     HienThiDSChoDocGia();
+                    HienThiDSChuaTraSach();
                 }
-                else if (dialogResult == DialogResult.No)
+            }
+
+        }
+        private void btnTuChoiChoMuon_Click(object sender, EventArgs e)
+        {
+            if (txtCMMaP.Text == "")
+            {
+                MessageBox.Show("Chọn đọc giả cần từ chối", "Thông Báo");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn từ chối?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
                     TuChoiPhieuChoMuon();
+                    HienThiDSChoDocGia();
                 }
             }
         }
@@ -248,9 +276,120 @@ namespace GUI
 
         private void btnCMTC_Click(object sender, EventArgs e)
         {
-            
+            errCMTCTenDG.SetError(txtCMTCDG, "");
+            errCMTCTenSach.SetError(txtCMTCTS, "");
+            errDuKienTra.SetError(dtCMTCDuKienTra, "");
+            if (txtCMTCDG.Text == "")
+            {
+                errCMTCTenDG.SetError(txtCMTCDG, "Xin chọn đọc giả ...");
+                return;
+            }
+            if (txtCMTCTS.Text == "")
+            {
+                errCMTCTenSach.SetError(txtCMTCTS, "Xin chọn sách mượn ...");
+                return;
+            }
+            if (dtCMTCDuKienTra.Value <= dtCMTCNgayMuon.Value)
+            {
+                errDuKienTra.SetError(dtCMTCDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
+                return;
+            }
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn cho mượn sách?", "Thông Báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ChoMuonSachTaiCho();
+                HienThiDSSach();
+                HienThiDSChuaTraSach();
+            }
+        }
+        private void ChoMuonSachTaiCho()
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.NguoiMuonSachId = this.madg;
+            pms.SachId = this.masach;
+            pms.NgayMuon = dtCMTCNgayMuon.Value;
+            pms.NgayDuKienTra = dtCMTCDuKienTra.Value;
+
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool phieumoi = pmsbll.ThemPhieuMuon(pms);
+            if (phieumoi)
+            {
+                MessageBox.Show("Đã Lưu thông tin mượn sách của đọc giả", "Thông Báo");
+            }
+        }
+        //End  tab Cho Mượn Tại Chỗ
+        // start  tab trả sách
+        private void HienThiDSChuaTraSach()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayPhieuDangMo();
+            lvTSPMS.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvTSPMS.Items.Add(lvi);
+            }
         }
 
-        
+        private void lvTSPMS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lvTSPMS.SelectedItems.Count>0)
+            {
+                ListViewItem lvi = lvTSPMS.SelectedItems[0];
+                txtTSMaP.Text = lvi.SubItems[0].Text;
+                txtTSDG.Text = lvi.SubItems[1].Text;
+                txtTSS.Text = lvi.SubItems[2].Text;
+                dtTSDuKienTra.Value = Convert.ToDateTime(lvi.SubItems[4].Text);
+                Sach sac = new Sach();
+                sac.TenSach = txtTSS.Text;
+                SachBLL sacbll = new SachBLL();
+                List<Sach> dsSach = sacbll.TimMaSach(sac);
+                foreach (Sach itemsach in dsSach)
+                {
+                    txtTSMaS.Text = itemsach.ID + "";
+                }
+            }    
+        }
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            if(txtTSMaP.Text=="")
+            {
+                MessageBox.Show("Xin chọn mã phiếu của đọc giả", "Thông Báo");
+            }    
+            else
+            {
+                TraSach();
+                HienThiDSChuaTraSach();
+            }    
+        }
+
+        private void TraSach()
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.MaPhieuMuon = int.Parse(txtTSMaP.Text);
+            pms.NgayTraSach = dtTSNgayTra.Value;
+            
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool trasach = pmsbll.DongPhieuMuon(pms);
+            Sach idtra = new Sach();
+            idtra.ID = int.Parse(txtTSMaS.Text);
+            SachBLL trasachbll = new SachBLL();
+            bool capnhat = trasachbll.CapNhatPhieuMuon(idtra);
+
+            if (trasach&&capnhat)
+            {
+                MessageBox.Show("Đã lưu thông tin", "Thông Báo");
+            }
+            else
+            {
+                MessageBox.Show("Stuck");
+            }    
+        }
     }
 }

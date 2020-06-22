@@ -170,9 +170,9 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT pms.PhieuId,nms.HoTen,s.TenSach,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach " +
+            command.CommandText = "SELECT pms.PhieuId,nms.HoTen,s.TenSach,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach,pms.TrangThai " +
                 "FROM PhieuMuonSach pms, NguoiMuonSach nms, Sach s WHERE pms.NguoiMuonSachId = nms.Id and pms.SachID = s.ID " +
-                "and pms.NgayTraSach is null  ORDER BY pms.PhieuId DESC";
+                "and pms.TrangThai=N'Chưa Trả Sách' ORDER BY pms.PhieuId DESC";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -434,7 +434,7 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "update PhieuMuonSach set TrangThai=N'Đã cho mượn' " +
+            command.CommandText = "update PhieuMuonSach set TrangThai=N'Chưa Trả Sách' " +
                 "where PhieuId='" + pms.MaPhieuMuon + "'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
