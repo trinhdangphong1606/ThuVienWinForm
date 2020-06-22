@@ -305,5 +305,25 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+        public bool CapNhatTrangThaiLoi(Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update Sach set TrangThai=N'Sách bị lỗi' where TenSach=N'"+sac.TenSach+"'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
+        public bool CapNhatDocGiaKhongDen(Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update Sach set TrangThai=N'Trống' where TenSach=N'" + sac.TenSach + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
     }
 }

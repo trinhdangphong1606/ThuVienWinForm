@@ -57,5 +57,25 @@ namespace BLL
         {
             return phieums.LayPhieuMuonChoDuyet();
         }
+        public bool ChapThuanPhieuDuyet(PhieuMuonSach chapthuan)
+        {
+            return phieums.ChapThuanPhieuDuyet(chapthuan);
+        }
+        public bool TuChoiPhieuDuyet(PhieuMuonSach tuchoi)
+        {
+            return phieums.TuChoiPhieuDuyet(tuchoi);
+        }
+        public List<PhieuMuonSachDAO> LayPhieuMuonChoDocGia()
+        {
+            return phieums.LayPhieuMuonChoDocGia();
+        }
+        public bool ChapThuanPhieuChoMuon(PhieuMuonSach chapthuan)
+        {
+            return phieums.ChapThuanPhieuChoMuon(chapthuan);
+        }
+        public bool TuChoiPhieuChoMuon(PhieuMuonSach tuchoi)
+        {
+            return phieums.TuChoiPhieuChoMuon(tuchoi);
+        }
     }
 }

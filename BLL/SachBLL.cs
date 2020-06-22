@@ -30,8 +30,7 @@ namespace BLL
 
             return sac.LayToanBoSach();
         }
-        
-            public List<SachDAO> LayToanBoSachTrong()
+        public List<SachDAO> LayToanBoSachTrong()
         {
 
             return sac.LayToanBoSachTrong();
@@ -57,6 +56,16 @@ namespace BLL
         {
             return sac.SuaSach(Suas);
         }
+        public bool CapNhatTrangThaiLoi(Sach SachLoi)
+        {
+            return sac.CapNhatTrangThaiLoi(SachLoi);
+        }
+        public bool CapNhatDocGiaKhongDen(Sach travetrong)
+        {
+            return sac.CapNhatDocGiaKhongDen(travetrong);
+        }
+
+
 
     }
 }

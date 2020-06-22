@@ -108,8 +108,8 @@ namespace GUI
             bool phieumoi = pmsbll.DocGiaTaoPhieu(pms);
             if (phieumoi)
             {
-                MessageBox.Show("Nhấn nút cập nhật nhé!!!", "Thông Báo");
-                this.Close();
+                MessageBox.Show("Mượn thành công, vui lòng chờ duyệt và đến thư viện nhận sách nhé.", "Thông Báo");
+                
             }
         }
 
