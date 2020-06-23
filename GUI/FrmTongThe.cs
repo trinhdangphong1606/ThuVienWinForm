@@ -41,7 +41,10 @@ namespace GUI
         {
             if (quyen != "User")
             {
-                FrmPhieuMuonSachQL frm1 = new FrmPhieuMuonSachQL();
+                //FrmPhieuMuonSachQL frm1 = new FrmPhieuMuonSachQL();
+                //frm1.MdiParent = this;
+                //frm1.Show();
+                FrmPMSUpdate frm1 = new FrmPMSUpdate();
                 frm1.MdiParent = this;
                 frm1.Show();
             }

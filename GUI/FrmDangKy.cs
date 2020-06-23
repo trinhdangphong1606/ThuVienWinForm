@@ -70,7 +70,7 @@ namespace GUI
                 errorMatKhau2.SetError(txtMatKhau2, "Xin Nhập Lại Mật Khẩu");
                 return;
             }
-            errorKey1.SetError(txtKey1, "");
+            /*errorKey1.SetError(txtKey1, "");
             if(txtKey1.Text=="")
             {
                 errorKey1.SetError(txtKey1, "Xin Nhập Key Restore Mật Khẩu");
@@ -81,19 +81,19 @@ namespace GUI
             {
                 errorKey2.SetError(txtKey2, "Xin Nhập Key Restore Mật Khẩu");
                 return;
-            }
+            }*/
             errorMatKhauRepeat.SetError(txtMatKhau2, "");
             if(txtMatKhau1.Text!=txtMatKhau2.Text)
             {
                 errorMatKhauRepeat.SetError(txtMatKhau2, "Mật Khẩu Phải Giống Nhau");
                 return;
             }
-            errorKeyRepeat.SetError(txtKey2, "");
+            /*errorKeyRepeat.SetError(txtKey2, "");
             if (txtKey1.Text != txtKey2.Text)
             {
                 errorKeyRepeat.SetError(txtKey2,"Key Restore Phải Giống Nhau");
                 return;
-            }
+            }*/
             errorIntNamSinh.SetError(txtNamSinh, "");
             if(!txtNamSinh.Text.All(char.IsDigit))
             {
@@ -113,7 +113,7 @@ namespace GUI
             qtvien.Email = txtEmail.Text;
             qtvien.DiaChi = txtDiaChi.Text;
             qtvien.MatKhau = txtMatKhau1.Text;
-            qtvien.KeyRestore = txtKey1.Text;
+            qtvien.KeyRestore = "resetpassword";
             qtvien.Quyen = txtQuyen.Text;
 
             QuanTriVienBLL qtvbbl = new QuanTriVienBLL();

@@ -325,6 +325,16 @@ namespace DAL
             int ketqua = command.ExecuteNonQuery();
             return ketqua > 0;
         }
+        public bool CapNhatDaSuaLoiSach(Sach sac)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update Sach set TrangThai=N'Trống' where TenSach=N'" + sac.ID + "'";
+            command.Connection = conn;
+            int ketqua = command.ExecuteNonQuery();
+            return ketqua > 0;
+        }
         public List<SachDAO> TimSachTheoDanhMuc(SachDAO timsachdm)
         {
             List<SachDAO> dsSachh = new List<SachDAO>();

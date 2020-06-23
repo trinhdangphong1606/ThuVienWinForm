@@ -138,7 +138,7 @@ namespace GUI
             PassMa = txtMa.Text;
             passAccount = txtAccount.Text;
 
-            FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau();
+            FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau(PassMa,passAccount);
             frm1.Show();
         }
 
@@ -175,7 +175,7 @@ namespace GUI
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             QuanTriVien qtv = new QuanTriVien();
-            qtv.Quyen = btnAdmin.Text;
+            qtv.Quyen = "Admin";
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
             List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);
@@ -200,7 +200,7 @@ namespace GUI
         private void btnStaff_Click(object sender, EventArgs e)
         {
             QuanTriVien qtv = new QuanTriVien();
-            qtv.Quyen = btnStaff.Text;
+            qtv.Quyen = "Staff";
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
             List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);
@@ -225,7 +225,7 @@ namespace GUI
         private void btnUser_Click(object sender, EventArgs e)
         {
             QuanTriVien qtv = new QuanTriVien();
-            qtv.Quyen = btnUser.Text;
+            qtv.Quyen = "User";
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
             List<QuanTriVien> dsquanntrivien = qtvbll.TimQTVTheoQuyen(qtv);

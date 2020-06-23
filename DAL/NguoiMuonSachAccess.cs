@@ -116,7 +116,7 @@ namespace DAL
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = "Update NguoiMuonSach set HoTen=N'"+nms.HoTen+"', SoDienThoai ='" + nms.SoDienThoai+"'," +
-                " DiaChi =N'" + nms.DiaChi+"', Email='" + nms.Email+"' where ID='"+nms.Id+"'";
+                " DiaChi =N'" + nms.DiaChi+"', Email='" + nms.Email+ "', NamSinh='" + nms.NamSinh + "' where ID='" + nms.Id+"'";
             command.Connection = conn;
             int ketqua = command.ExecuteNonQuery();
             return ketqua>0;

@@ -49,7 +49,6 @@
             this.txtTimTen = new System.Windows.Forms.TextBox();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnAllUser = new System.Windows.Forms.Button();
-            this.btnStaff = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnResetMatKhau = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
@@ -210,7 +209,6 @@
             this.GrBChiTiet.Controls.Add(this.txtTimTen);
             this.GrBChiTiet.Controls.Add(this.btnUser);
             this.GrBChiTiet.Controls.Add(this.btnAllUser);
-            this.GrBChiTiet.Controls.Add(this.btnStaff);
             this.GrBChiTiet.Controls.Add(this.btnAdmin);
             this.GrBChiTiet.Controls.Add(this.btnResetMatKhau);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
@@ -244,9 +242,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTen.Location = new System.Drawing.Point(303, 203);
+            this.btnTimTen.Location = new System.Drawing.Point(303, 204);
             this.btnTimTen.Name = "btnTimTen";
-            this.btnTimTen.Size = new System.Drawing.Size(78, 23);
+            this.btnTimTen.Size = new System.Drawing.Size(78, 24);
             this.btnTimTen.TabIndex = 45;
             this.btnTimTen.Text = "Tìm";
             this.btnTimTen.UseVisualStyleBackColor = true;
@@ -255,7 +253,7 @@
             // txtTimTen
             // 
             this.txtTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimTen.Location = new System.Drawing.Point(15, 204);
+            this.txtTimTen.Location = new System.Drawing.Point(15, 205);
             this.txtTimTen.Name = "txtTimTen";
             this.txtTimTen.Size = new System.Drawing.Size(282, 23);
             this.txtTimTen.TabIndex = 44;
@@ -269,11 +267,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.Location = new System.Drawing.Point(525, 204);
+            this.btnUser.Location = new System.Drawing.Point(482, 204);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(59, 23);
+            this.btnUser.Size = new System.Drawing.Size(102, 24);
             this.btnUser.TabIndex = 43;
-            this.btnUser.Text = "User";
+            this.btnUser.Text = "Đọc Giả";
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -285,25 +283,11 @@
             this.btnAllUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllUser.Location = new System.Drawing.Point(588, 204);
             this.btnAllUser.Name = "btnAllUser";
-            this.btnAllUser.Size = new System.Drawing.Size(80, 23);
+            this.btnAllUser.Size = new System.Drawing.Size(80, 24);
             this.btnAllUser.TabIndex = 42;
             this.btnAllUser.Text = "Tất Cả";
             this.btnAllUser.UseVisualStyleBackColor = true;
             this.btnAllUser.Click += new System.EventHandler(this.btnAllUser_Click);
-            // 
-            // btnStaff
-            // 
-            this.btnStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Location = new System.Drawing.Point(455, 204);
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(64, 23);
-            this.btnStaff.TabIndex = 41;
-            this.btnStaff.Text = "Staff";
-            this.btnStaff.UseVisualStyleBackColor = true;
-            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnAdmin
             // 
@@ -313,9 +297,9 @@
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.Location = new System.Drawing.Point(387, 204);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(62, 23);
+            this.btnAdmin.Size = new System.Drawing.Size(89, 24);
             this.btnAdmin.TabIndex = 40;
-            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.Text = "Thủ Thư";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
@@ -459,11 +443,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(184, 3);
+            this.label1.Location = new System.Drawing.Point(181, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 25);
+            this.label1.Size = new System.Drawing.Size(278, 25);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Quản Lý Quản Trị Viên Thư Viện ";
+            this.label1.Text = "Quản Lý Nhân Sự Thư Viện";
             // 
             // FrmQuanTriVienQL
             // 
@@ -475,7 +459,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmQuanTriVienQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Quản Trị Viên";
+            this.Text = "Quản Lý Nhân Sự Thư Viện";
             this.Load += new System.EventHandler(this.FrmQuanTriVienQL_Load);
             this.GrBChiTiet.ResumeLayout(false);
             this.GrBChiTiet.PerformLayout();
@@ -518,7 +502,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnAllUser;
-        private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnTimTen;
         private System.Windows.Forms.TextBox txtTimTen;

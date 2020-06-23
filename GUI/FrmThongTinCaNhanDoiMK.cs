@@ -17,13 +17,13 @@ namespace GUI
     {
         string ma = "";
         string account = "";
+        public string reset = "";
         public FrmThongTinCaNhanDoiMK(string ma, string account)
         {
             InitializeComponent();
             this.ma = ma;
             this.account = account;
         }
-
         private void FrmThongTinCaNhanDoiMK_Load(object sender, EventArgs e)
         {
             txtMa.Text = ma;
@@ -31,7 +31,7 @@ namespace GUI
         }
         private void btnKiemTra_Click(object sender, EventArgs e)
         {
-            KiemTraMatKhauCu();
+            
         }
         private void KiemTraMatKhauCu()
         {
@@ -43,11 +43,7 @@ namespace GUI
             List<QuanTriVien> dsqtv = qtvbll.DangNhap(qtv);
             foreach (QuanTriVien qtvien in dsqtv)
             {
-                lbOK.Text = "Nhập Mật Khẩu Mới và Đổi Nhé";
-            }
-            if (lbOK.Text == "Nhập Và Kiểm Tra Mật Khẩu Cũ")
-            {
-                MessageBox.Show("Kiểm Tra Lại Mật Khẩu Cũ Nhé");
+                this.reset = "OK";
             }
         }
 
@@ -59,13 +55,12 @@ namespace GUI
         private void BtnDoiMatKhau_Click(object sender, EventArgs e)
         {
             
-            DoiKey();
-
-
+            DoiMatKhau();
         }
-        private void DoiKey()
+        private void DoiMatKhau()
         {
-            if (lbOK.Text == "Nhập Mật Khẩu Mới và Đổi Nhé")
+            KiemTraMatKhauCu();
+            if (this.reset=="OK")
             {
                 errorMatKhau1.SetError(txtMatKhauMoi1, "");
                 if (txtMatKhauMoi1.Text == "")
@@ -79,6 +74,7 @@ namespace GUI
                     errorMatKhau2.SetError(txtMatKhauMoi2, "Kiểm Tra Nhập Lại Mật Khẩu");
                     return;
                 }
+                
                 QuanTriVien qtvbll = new QuanTriVien();
                 qtvbll.ID = int.Parse(txtMa.Text);
                 qtvbll.TenDangNhap = txtAccount.Text;

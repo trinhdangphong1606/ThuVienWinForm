@@ -65,6 +65,11 @@ namespace BLL
         {
             return sac.CapNhatDocGiaKhongDen(travetrong);
         }
+        public bool CapNhatDaSuaLoiSach(Sach SachOK)
+        {
+            return sac.CapNhatDaSuaLoiSach(SachOK);
+        }
+        
         public List<SachDAO> TimSachTheoDanhMuc(SachDAO TenDM)
         {
             return sac.TimSachTheoDanhMuc(TenDM);

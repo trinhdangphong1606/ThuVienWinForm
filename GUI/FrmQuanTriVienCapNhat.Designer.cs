@@ -33,7 +33,6 @@
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
             this.btnQuyenUser = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
-            this.btnQuyenStaff = new System.Windows.Forms.Button();
             this.btnQuyenAdmin = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtAccount = new System.Windows.Forms.TextBox();
@@ -83,7 +82,6 @@
             // 
             this.GrBChiTiet.Controls.Add(this.btnQuyenUser);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
-            this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Controls.Add(this.btnQuyenAdmin);
             this.GrBChiTiet.Controls.Add(this.label11);
             this.GrBChiTiet.Controls.Add(this.txtAccount);
@@ -114,11 +112,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenUser.Location = new System.Drawing.Point(345, 128);
+            this.btnQuyenUser.Location = new System.Drawing.Point(555, 130);
             this.btnQuyenUser.Name = "btnQuyenUser";
             this.btnQuyenUser.Size = new System.Drawing.Size(102, 25);
             this.btnQuyenUser.TabIndex = 8;
-            this.btnQuyenUser.Text = "User";
+            this.btnQuyenUser.Text = "Đọc Giả";
             this.btnQuyenUser.UseVisualStyleBackColor = true;
             this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
             // 
@@ -128,23 +126,9 @@
             this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuyen.Location = new System.Drawing.Point(123, 130);
             this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Size = new System.Drawing.Size(216, 23);
+            this.txtQuyen.Size = new System.Drawing.Size(325, 23);
             this.txtQuyen.TabIndex = 7;
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnQuyenStaff
-            // 
-            this.btnQuyenStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuyenStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenStaff.Location = new System.Drawing.Point(453, 128);
-            this.btnQuyenStaff.Name = "btnQuyenStaff";
-            this.btnQuyenStaff.Size = new System.Drawing.Size(103, 25);
-            this.btnQuyenStaff.TabIndex = 9;
-            this.btnQuyenStaff.Text = "Staff";
-            this.btnQuyenStaff.UseVisualStyleBackColor = true;
-            this.btnQuyenStaff.Click += new System.EventHandler(this.btnQuyenStaff_Click);
             // 
             // btnQuyenAdmin
             // 
@@ -152,11 +136,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenAdmin.Location = new System.Drawing.Point(562, 130);
+            this.btnQuyenAdmin.Location = new System.Drawing.Point(454, 130);
             this.btnQuyenAdmin.Name = "btnQuyenAdmin";
             this.btnQuyenAdmin.Size = new System.Drawing.Size(95, 25);
             this.btnQuyenAdmin.TabIndex = 10;
-            this.btnQuyenAdmin.Text = "Admin";
+            this.btnQuyenAdmin.Text = "Thủ Thư";
             this.btnQuyenAdmin.UseVisualStyleBackColor = true;
             this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
             // 
@@ -406,7 +390,6 @@
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtQuyen;
-        private System.Windows.Forms.Button btnQuyenStaff;
         private System.Windows.Forms.Button btnQuyenAdmin;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnQuyenUser;

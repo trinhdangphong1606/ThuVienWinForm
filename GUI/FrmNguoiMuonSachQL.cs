@@ -15,12 +15,13 @@ namespace GUI
 {
     public partial class FrmNguoiMuonSachQL : Form
     {
-        public static string PassMa="";
+        public static string PassMa ="";
         public static string PassTen = "";
         public static string PassSoDienThoai = "";
         public static string PassNamSinh = "";
         public static string PassDiaChi = "";
         public static string PassEmail = "";
+        public static string PassAccount = "";
         public FrmNguoiMuonSachQL()
         {
             InitializeComponent();
@@ -189,6 +190,33 @@ namespace GUI
                 lvi.SubItems.Add(nmsbll.NamSinh + "");
                 lvNguoiMuonSachDS.Items.Add(lvi);
             }
+        }
+
+        private void btnResetPass_Click(object sender, EventArgs e)
+        {
+            if(txtNMSMa.Text=="")
+            {
+                MessageBox.Show("Xin chọn đọc giả muốn reset", "Thông Báo");
+            }
+            else
+            {
+                ResetMatKhauQuanTriVien();
+            }
+        }
+        private void ResetMatKhauQuanTriVien()
+        {
+            PassMa = txtNMSMa.Text;
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.ID = int.Parse(txtNMSMa.Text);
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            List<QuanTriVien> dsqtv = qtvbll.TimTenQTVTheoMa(qtv);
+            foreach(QuanTriVien tenqtv in dsqtv)
+            {
+                PassAccount = tenqtv.TenDangNhap;
+            }    
+
+            FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau(PassMa,PassAccount);
+            frm1.Show();
         }
     }
 }

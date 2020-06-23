@@ -28,6 +28,11 @@ namespace BLL
         {
             return qtvien.DangNhap(qtv);
         }
+        public List<QuanTriVien> TimTenDangNhap(QuanTriVien qtv)
+        {
+            return qtvien.TimTenDangNhap(qtv);
+        }
+        
         public bool DangKy(QuanTriVien qtv)
         {
             return qtvien.DangKy(qtv);

@@ -71,7 +71,7 @@ namespace GUI
                 }    
                 else
                 {
-                    FrmTongTheUser frm1 = new FrmTongTheUser(lbId.Text);
+                    FrmTongTheUser frm1 = new FrmTongTheUser(lbId.Text,lbQuyen.Text);
                     frm1.ShowDialog();
                     this.Close();
                 }    
@@ -97,8 +97,9 @@ namespace GUI
 
         private void btnRestoreMatKhau_Click(object sender, EventArgs e)
         {
-            FrmRestoreMatKhau frm1 = new FrmRestoreMatKhau();
-            frm1.Show();
+            MessageBox.Show("Bạn vui lòng liên hệ Thủ thư để lấy lại mật khẩu", "Thông Báo");
+            //FrmRestoreMatKhau frm1 = new FrmRestoreMatKhau();
+            //frm1.Show();
         }
 
         private void txtPassword_Enter(object sender, EventArgs e)

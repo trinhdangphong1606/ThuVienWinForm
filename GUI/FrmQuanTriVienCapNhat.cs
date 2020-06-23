@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class FrmQuanTriVienCapNhat : Form
     {
+        public string quyen = "";
         public FrmQuanTriVienCapNhat()
         {
             InitializeComponent();
@@ -28,7 +29,14 @@ namespace GUI
             txtNamSinh.Text = FrmQuanTriVienQL.passNamSinh;
             txtSoDienThoai.Text = FrmQuanTriVienQL.PassSoDT;
             txtTen.Text = FrmQuanTriVienQL.PassTen;
-            txtQuyen.Text = FrmQuanTriVienQL.passQuyen;
+            if(FrmQuanTriVienQL.passQuyen=="Admin")
+            {
+                txtQuyen.Text = "Thủ Thư";
+            }
+            else
+            {
+                txtQuyen.Text = "Đọc Giả";
+            }
         }
         private void ThayDoiThongTin()
         {
@@ -40,11 +48,31 @@ namespace GUI
             qtv.NamSinh = int.Parse(txtNamSinh.Text);
             qtv.SoDienThoai = txtSoDienThoai.Text;
             qtv.HoTen = txtTen.Text;
-            qtv.Quyen = txtQuyen.Text;
+            if(txtQuyen.Text=="Thủ Thư")
+            {
+                this.quyen = "Admin";
+            }    
+            else
+            {
+                this.quyen = "User";
+            }    
+            qtv.Quyen = this.quyen ;
 
             QuanTriVienBLL qtvbll = new QuanTriVienBLL();
-            bool capnhat = qtvbll.ChinhSuaQuanTriVien(qtv);
-            if(capnhat)
+            bool capnhatqtv = qtvbll.ChinhSuaQuanTriVien(qtv);
+
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.Id = int.Parse(txtMa.Text);
+            nms.HoTen = txtTen.Text;
+            nms.NamSinh = int.Parse(txtNamSinh.Text);
+            nms.SoDienThoai = txtSoDienThoai.Text;
+            nms.DiaChi = txtDiaChi.Text;
+            nms.Email = txtEmail.Text;
+
+            NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
+            bool capnhatnms = nmsbll.CapNhatDocGia(nms);
+
+            if (capnhatqtv && capnhatnms)
             {
                 MessageBox.Show("Đã thay đổi thông tin \n Nhấn nút cập nhật nhé.", "Thông Báo");
                 this.Close();
@@ -100,17 +128,19 @@ namespace GUI
 
         private void btnQuyenAdmin_Click(object sender, EventArgs e)
         {
-            txtQuyen.Text = "Admin";
+            txtQuyen.Text = "Thủ Thư";
+            this.quyen = "Admin";
         }
 
         private void btnQuyenStaff_Click(object sender, EventArgs e)
         {
-            txtQuyen.Text = "Staff";
+            //txtQuyen.Text = "Staff";
         }
 
         private void btnQuyenUser_Click(object sender, EventArgs e)
         {
-            txtQuyen.Text = "User";
+            txtQuyen.Text = "Đọc Giả";
+            this.quyen = "User";
         }
 
         private void btnHuyThaoTac_Click(object sender, EventArgs e)

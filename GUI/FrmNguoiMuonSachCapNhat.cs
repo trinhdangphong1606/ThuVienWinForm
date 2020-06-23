@@ -36,10 +36,21 @@ namespace GUI
             nms.SoDienThoai = txtSoDienThoai.Text;
             nms.DiaChi = txtDiaChi.Text;
             nms.Email = txtEmail.Text;
-
             NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
-            bool capnhat = nmsbll.CapNhatDocGia(nms);
-            if(capnhat)
+            bool capnhatnms = nmsbll.CapNhatDocGia(nms);
+
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.DiaChi = txtDiaChi.Text;
+            qtv.Email = txtEmail.Text;
+            qtv.ID = int.Parse(txtMa.Text);
+            qtv.NamSinh = int.Parse(txtNamSinh.Text);
+            qtv.SoDienThoai = txtSoDienThoai.Text;
+            qtv.HoTen = txtTen.Text;
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            bool capnhatqtv = qtvbll.ChinhSuaQuanTriVien(qtv);
+
+            
+            if(capnhatnms&& capnhatqtv)
             {
                 MessageBox.Show("Đã Thay Đổi Thành Công, Nhấn Cập Nhật Nhé ...", "Thông Báo");
                 this.Close();

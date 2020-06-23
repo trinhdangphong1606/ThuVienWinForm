@@ -103,6 +103,12 @@
     <Compile Include="FrmNguoiMuonSachThemMoi.Designer.cs">
       <DependentUpon>FrmNguoiMuonSachThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPhieuMuonDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhieuMuonDG.Designer.cs">
+      <DependentUpon>FrmPhieuMuonDG.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPhieuMuonSachMo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNguoiMuonSachThemMoi.resx">
       <DependentUpon>FrmNguoiMuonSachThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhieuMuonDG.resx">
+      <DependentUpon>FrmPhieuMuonDG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuMuonSachMo.resx">
       <DependentUpon>FrmPhieuMuonSachMo.cs</DependentUpon>

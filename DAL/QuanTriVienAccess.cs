@@ -19,7 +19,7 @@ namespace DAL
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "Select * from QuanTriVien";
+            command.CommandText = "Select * from QuanTriVien where Quyen='Admin'";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -348,6 +348,28 @@ namespace DAL
                 qtv.DiaChi = diachi;
                 qtv.Quyen = quyen;
 
+                dsQuanTriVien.Add(qtv);
+            }
+            reader.Close();
+            CloseConnection();
+            return dsQuanTriVien;
+        }
+        public List<QuanTriVien> TimTenDangNhap(QuanTriVien qtvien)
+        {
+            List<QuanTriVien> dsQuanTriVien = new List<QuanTriVien>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select Id,TenDangNhap from QuanTriVien where ID='"+qtvien.ID+"";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string tendangnhap = reader.GetString(1);
+                QuanTriVien qtv = new QuanTriVien();
+                qtv.ID = id;
+                qtv.TenDangNhap = tendangnhap;
                 dsQuanTriVien.Add(qtv);
             }
             reader.Close();

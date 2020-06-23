@@ -53,6 +53,11 @@ namespace BLL
         {
             return phieums.TimPhieuTheoNgay(timngayphieu);
         }
+        public List<PhieuMuonSachDAO> PhieuCuaDG(PhieuMuonSachDAO phieudg)
+        {
+            return phieums.PhieuCuaDG(phieudg);
+        }
+        
         public List<PhieuMuonSachDAO> LayPhieuMuonChoDuyet()
         {
             return phieums.LayPhieuMuonChoDuyet();
@@ -69,6 +74,26 @@ namespace BLL
         {
             return phieums.LayPhieuMuonChoDocGia();
         }
+        public List<PhieuMuonSachDAO> LayTatCaPhieuDaTao()
+        {
+            return phieums.LayTatCaPhieuDaTao();
+        }
+        public List<PhieuMuonSachDAO> LayPhieuChoDuyetVaDoiDG()
+        {
+            return phieums.LayPhieuChoDuyetVaDoiDG();
+        }
+        public List<PhieuMuonSachDAO> LayPhieuLoi()
+        {
+            return phieums.LayPhieuLoi();
+        }
+        public List<PhieuMuonSachDAO> DaXuLyLoi()
+        {
+            return phieums.DaXuLyLoi();
+        }
+        public List<PhieuMuonSachDAO> DGKhongDen()
+        {
+            return phieums.DGKhongDen();
+        }
         public bool ChapThuanPhieuChoMuon(PhieuMuonSach chapthuan)
         {
             return phieums.ChapThuanPhieuChoMuon(chapthuan);
@@ -77,5 +102,10 @@ namespace BLL
         {
             return phieums.TuChoiPhieuChoMuon(tuchoi);
         }
+        public bool XuLySachLoi(PhieuMuonSach sualoi)
+        {
+            return phieums.XuLySachLoi(sualoi);
+        }
+        
     }
 }

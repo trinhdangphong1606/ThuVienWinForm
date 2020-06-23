@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
-            this.btnDoiKey = new System.Windows.Forms.Button();
             this.BtnHuy = new System.Windows.Forms.Button();
             this.BtnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
@@ -70,7 +69,6 @@
             // 
             // GrBChiTiet
             // 
-            this.GrBChiTiet.Controls.Add(this.btnDoiKey);
             this.GrBChiTiet.Controls.Add(this.BtnHuy);
             this.GrBChiTiet.Controls.Add(this.BtnDoiMatKhau);
             this.GrBChiTiet.Controls.Add(this.btnCapNhat);
@@ -96,29 +94,15 @@
             this.GrBChiTiet.TabIndex = 19;
             this.GrBChiTiet.TabStop = false;
             // 
-            // btnDoiKey
-            // 
-            this.btnDoiKey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDoiKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiKey.Location = new System.Drawing.Point(289, 195);
-            this.btnDoiKey.Name = "btnDoiKey";
-            this.btnDoiKey.Size = new System.Drawing.Size(254, 31);
-            this.btnDoiKey.TabIndex = 40;
-            this.btnDoiKey.Text = "Đổi Key Reset Mật Khẩu";
-            this.btnDoiKey.UseVisualStyleBackColor = true;
-            this.btnDoiKey.Click += new System.EventHandler(this.btnDoiKey_Click);
-            // 
             // BtnHuy
             // 
             this.BtnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHuy.Location = new System.Drawing.Point(288, 235);
+            this.BtnHuy.Location = new System.Drawing.Point(19, 235);
             this.BtnHuy.Name = "BtnHuy";
-            this.BtnHuy.Size = new System.Drawing.Size(254, 36);
+            this.BtnHuy.Size = new System.Drawing.Size(523, 36);
             this.BtnHuy.TabIndex = 42;
             this.BtnHuy.Text = "Hủy Thao Tác";
             this.BtnHuy.UseVisualStyleBackColor = true;
@@ -130,7 +114,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDoiMatKhau.Location = new System.Drawing.Point(19, 195);
+            this.BtnDoiMatKhau.Location = new System.Drawing.Point(288, 192);
             this.BtnDoiMatKhau.Name = "BtnDoiMatKhau";
             this.BtnDoiMatKhau.Size = new System.Drawing.Size(254, 31);
             this.BtnDoiMatKhau.TabIndex = 39;
@@ -144,9 +128,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(19, 235);
+            this.btnCapNhat.Location = new System.Drawing.Point(19, 192);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(254, 36);
+            this.btnCapNhat.Size = new System.Drawing.Size(263, 31);
             this.btnCapNhat.TabIndex = 41;
             this.btnCapNhat.Text = "Cập Nhật Thông Tin";
             this.btnCapNhat.UseVisualStyleBackColor = true;
@@ -388,7 +372,6 @@
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDoiKey;
         private System.Windows.Forms.Button BtnDoiMatKhau;
         private System.Windows.Forms.ErrorProvider errorAccount;
         private System.Windows.Forms.ErrorProvider errorTen;

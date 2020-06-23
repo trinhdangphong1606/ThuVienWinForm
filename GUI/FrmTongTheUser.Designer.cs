@@ -37,34 +37,37 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tìmSáchToolStripMenuItem,
             this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem,
             this.tHÔNGTINCÁNHÂNToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(708, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tìmSáchToolStripMenuItem
             // 
             this.tìmSáchToolStripMenuItem.Name = "tìmSáchToolStripMenuItem";
-            this.tìmSáchToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.tìmSáchToolStripMenuItem.Size = new System.Drawing.Size(153, 23);
             this.tìmSáchToolStripMenuItem.Text = "TÌM VÀ MƯỢN SÁCH";
             this.tìmSáchToolStripMenuItem.Click += new System.EventHandler(this.tìmSáchToolStripMenuItem_Click);
             // 
             // pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem
             // 
             this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem.Name = "pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem";
-            this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem.Size = new System.Drawing.Size(161, 23);
             this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem.Text = "SÁCH MƯỢN CỦA TÔI";
+            this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem.Click += new System.EventHandler(this.pHIẾUMƯỢNSÁCHCỦATÔIToolStripMenuItem_Click);
             // 
             // tHÔNGTINCÁNHÂNToolStripMenuItem
             // 
             this.tHÔNGTINCÁNHÂNToolStripMenuItem.Name = "tHÔNGTINCÁNHÂNToolStripMenuItem";
-            this.tHÔNGTINCÁNHÂNToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.tHÔNGTINCÁNHÂNToolStripMenuItem.Size = new System.Drawing.Size(159, 23);
             this.tHÔNGTINCÁNHÂNToolStripMenuItem.Text = "THÔNG TIN CÁ NHÂN";
+            this.tHÔNGTINCÁNHÂNToolStripMenuItem.Click += new System.EventHandler(this.tHÔNGTINCÁNHÂNToolStripMenuItem_Click);
             // 
             // FrmTongTheUser
             // 

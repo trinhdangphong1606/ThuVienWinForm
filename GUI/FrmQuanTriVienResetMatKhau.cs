@@ -15,15 +15,19 @@ namespace GUI
 {
     public partial class FrmQuanTriVienResetMatKhau : Form
     {
-        public FrmQuanTriVienResetMatKhau()
+        public string id = "";
+        public string tendangnhap = "";
+        public FrmQuanTriVienResetMatKhau(string id, string tendangnhap)
         {
             InitializeComponent();
+            this.id = id;
+            this.tendangnhap = tendangnhap;
         }
 
         private void FrmQuanTriVienResetMatKhau_Load(object sender, EventArgs e)
         {
-            txtMa.Text = FrmQuanTriVienQL.PassMa;
-            txtTenDangNhap.Text = FrmQuanTriVienQL.passAccount;
+            txtMa.Text = id;
+            txtTenDangNhap.Text = tendangnhap;
 
         }
 

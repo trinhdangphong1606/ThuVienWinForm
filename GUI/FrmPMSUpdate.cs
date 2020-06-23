@@ -26,13 +26,17 @@ namespace GUI
 
         private void FrmPMSUpdate_Load(object sender, EventArgs e)
         {
+            LoadLDS();
+        }
+        private void LoadLDS()
+        {
             HienThiDSCanDuyet();
             HienThiDSChoDocGia();
             HienThiDSDocGia();
             HienThiDSSach();
             HienThiDSChuaTraSach();
+            HienThiDSTatCaPhieu();
         }
-
         // start tab chờ duyệt
         private void HienThiDSCanDuyet()
         {
@@ -78,8 +82,7 @@ namespace GUI
                 if (dialogResult == DialogResult.Yes)
                 {
                     ChapThuanDuyet();
-                    HienThiDSCanDuyet();
-                    HienThiDSChoDocGia();
+                    LoadLDS();
                 }
             }
         }
@@ -95,8 +98,7 @@ namespace GUI
                 if (dialogResult == DialogResult.Yes)
                 {
                     TuChoiDuyet();
-                    HienThiDSCanDuyet();
-                    HienThiDSChoDocGia();
+                    LoadLDS();
                 }
             }    
         }
@@ -126,7 +128,7 @@ namespace GUI
             if(capnhat && tuchoi)
             {
                 MessageBox.Show("Bạn Đã Từ Chối Phiếu Duyệt \n Xử lý sách bị lỗi nhé", "Thông Báo");
-                HienThiDSCanDuyet();
+                LoadLDS();
             }    
         }
         // end tab chờ duyệt
@@ -203,8 +205,7 @@ namespace GUI
                 if (dialogResult == DialogResult.Yes)
                 {
                     ChapThuanPhieuChoMuon();
-                    HienThiDSChoDocGia();
-                    HienThiDSChuaTraSach();
+                    LoadLDS();
                 }
             }
 
@@ -221,13 +222,43 @@ namespace GUI
                 if (dialogResult == DialogResult.Yes)
                 {
                     TuChoiPhieuChoMuon();
-                    HienThiDSChoDocGia();
+                    LoadLDS();
                 }
             }
         }
         // End tab chờ đọc giả nhận sách
 
         // Start tab cho đọc giả mượn tại chỗ
+        private void btnCMTCTimTenDG_Click(object sender, EventArgs e)
+        {
+            NguoiMuonSach nms = new NguoiMuonSach();
+            nms.HoTen = txtCMTCTimTenDG.Text;
+
+            NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
+            List<NguoiMuonSach> dsngmsach = ngmsachbll.TimTenNguoiMuon(nms);
+            lvCMTCDSDG.Items.Clear();
+            foreach (NguoiMuonSach nmsbll in dsngmsach)
+            {
+                ListViewItem lvi = new ListViewItem(nmsbll.Id + "");
+                lvi.SubItems.Add(nmsbll.HoTen);
+                lvCMTCDSDG.Items.Add(lvi);
+            }
+        }
+        private void btnCMTCTimTenS_Click(object sender, EventArgs e)
+        {
+            SachDAO sac = new SachDAO();
+            sac.TenSach = txtCMTCTimTenS.Text;
+
+            SachBLL sacbll = new SachBLL();
+            List<SachDAO> dssachtim = sacbll.TimSachTrongTheoTen(sac);
+            lvCMTCDSSach.Items.Clear();
+            foreach (SachDAO sachtim in dssachtim)
+            {
+                ListViewItem lvi = new ListViewItem(sachtim.ID + "");
+                lvi.SubItems.Add(sachtim.TenSach);
+                lvCMTCDSSach.Items.Add(lvi);
+            }
+        }
         private void HienThiDSDocGia()
         {
             NguoiMuonSachBLL ngmsachbll = new NguoiMuonSachBLL();
@@ -298,8 +329,7 @@ namespace GUI
             if (dialogResult == DialogResult.Yes)
             {
                 ChoMuonSachTaiCho();
-                HienThiDSSach();
-                HienThiDSChuaTraSach();
+                LoadLDS();
             }
         }
         private void ChoMuonSachTaiCho()
@@ -364,8 +394,12 @@ namespace GUI
             }    
             else
             {
-                TraSach();
-                HienThiDSChuaTraSach();
+                DialogResult dialogResult = MessageBox.Show("Đọc giả đã trả sách?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    TraSach();
+                    LoadLDS();
+                }
             }    
         }
 
@@ -391,5 +425,207 @@ namespace GUI
                 MessageBox.Show("Stuck");
             }    
         }
+        // End tab Trả sách .
+
+        // start tab tổng hợp
+        private void BtnXemTatCa_Click(object sender, EventArgs e)
+        {
+            HienThiDSTatCaPhieu();
+        }
+        private void btnXemChoDuyetVaDoiDG_Click(object sender, EventArgs e)
+        {
+            HienThiDSChoDuyetVaDoiDG();
+        }
+        private void btnTHPhieuLoi_Click(object sender, EventArgs e)
+        {
+            HienThiDSPhieuLoi();
+        }
+        private void btTHXuLyLoi_Click(object sender, EventArgs e)
+        {
+            if(txtTHTrangThai.Text=="Sách bị lỗi")
+            {
+                DialogResult dialogResult = MessageBox.Show("Sách lỗi đã được xử lý?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    XuLySachLoi();
+                    LoadLDS();
+                }
+                
+            }
+        }
+        private void btnTHDaXuLyLoi_Click(object sender, EventArgs e)
+        {
+            HienThiDSPhieuLoiDaXuLy();
+        }
+        private void btnTHDGKhongDen_Click(object sender, EventArgs e)
+        {
+            HienThiDSPhieuDGKhongDen();
+        }
+        private void btnTHTimMaP_Click(object sender, EventArgs e)
+        {
+            if (txtTHTimMaP.Text == "")
+            {
+                HienThiDSTatCaPhieu();
+            }
+            else
+            {
+                errIntMaPhieu.SetError(txtTHTimMaP, "");
+                if (!txtTHTimMaP.Text.All(char.IsDigit))
+                {
+                    errIntMaPhieu.SetError(txtTHTimMaP, "Mã Phiếu là số");
+                    return;
+                }
+                PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
+                pms.MaPhieuMuon = int.Parse(txtTHTimMaP.Text);
+
+                PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+                List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.TimPhieuTheoMa(pms);
+                lvTHDSP.Items.Clear();
+                foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+                {
+                    ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                    lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                    lvi.SubItems.Add(pmsBLL.TenSach);
+                    lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                    lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                    lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                    lvTHDSP.Items.Add(lvi);
+                }
+            }
+        }
+        private void HienThiDSTatCaPhieu()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayTatCaPhieuDaTao();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+        }
+        private void HienThiDSChoDuyetVaDoiDG()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayPhieuChoDuyetVaDoiDG();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+        }
+        private void HienThiDSPhieuLoi()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayPhieuLoi();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+        }
+        private void HienThiDSPhieuLoiDaXuLy()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.DaXuLyLoi();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+        }
+        private void HienThiDSPhieuDGKhongDen()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.DGKhongDen();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+        }
+
+        private void lvTHDSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lvTHDSP.SelectedItems.Count>0)
+            {
+                ListViewItem lvi = lvTHDSP.SelectedItems[0];
+                txtTHMaP.Text = lvi.SubItems[0].Text;
+                txtTHDG.Text = lvi.SubItems[1].Text;
+                txtTHTrangThai.Text = lvi.SubItems[2].Text;
+                dtTHNgayMuon.Value = Convert.ToDateTime(lvi.SubItems[3].Text);
+                dtTHDuKienTra.Value = Convert.ToDateTime(lvi.SubItems[4].Text);
+                if(lvi.SubItems[5].Text!="")
+                {
+                    dtTHNgayTra.Value = Convert.ToDateTime(lvi.SubItems[5].Text);
+                }
+                txtTHS.Text = lvi.SubItems[6].Text;
+                Sach sac = new Sach();
+                sac.TenSach = txtTHS.Text;
+                SachBLL sacbll = new SachBLL();
+                List<Sach> dsSach = sacbll.TimMaSach(sac);
+                foreach (Sach itemsach in dsSach)
+                {
+                    txtTHMaS.Text = itemsach.ID + "";
+                }
+            }
+            
+        }
+        private void XuLySachLoi()
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.MaPhieuMuon = int.Parse(txtTHMaP.Text);
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool xyly = pmsbll.XuLySachLoi(pms);
+
+            Sach idsach = new Sach();
+            idsach.ID = int.Parse(txtTHMaS.Text);
+            SachBLL trasachbll = new SachBLL();
+            bool capnhat = trasachbll.CapNhatPhieuMuon(idsach);
+
+            if (xyly && capnhat)
+            {
+                MessageBox.Show("Đã lưu thông tin", "Thông Báo");
+            }
+            else
+            {
+                MessageBox.Show("Stuck");
+            }
+        }
+        //End tab Tổng Hợp
     }
 }

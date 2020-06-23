@@ -52,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TxtNMSEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnNguoiMuonThem = new System.Windows.Forms.Button();
             this.BtnNguoiMuonCapNhat = new System.Windows.Forms.Button();
             this.TxtNMSDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.errorTimMa = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTimTen = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorIntTimMa = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnResetPass = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMa)).BeginInit();
@@ -75,6 +75,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnResetPass);
             this.GrBChiTiet.Controls.Add(this.groupBox1);
             this.GrBChiTiet.Controls.Add(this.btnTimMa);
             this.GrBChiTiet.Controls.Add(this.txtTimMa);
@@ -86,7 +87,6 @@
             this.GrBChiTiet.Controls.Add(this.label3);
             this.GrBChiTiet.Controls.Add(this.TxtNMSEmail);
             this.GrBChiTiet.Controls.Add(this.label6);
-            this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonThem);
             this.GrBChiTiet.Controls.Add(this.BtnNguoiMuonCapNhat);
             this.GrBChiTiet.Controls.Add(this.TxtNMSDiaChi);
             this.GrBChiTiet.Controls.Add(this.label7);
@@ -288,9 +288,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhatForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatForm.Location = new System.Drawing.Point(548, 130);
+            this.btnCapNhatForm.Location = new System.Drawing.Point(491, 130);
             this.btnCapNhatForm.Name = "btnCapNhatForm";
-            this.btnCapNhatForm.Size = new System.Drawing.Size(109, 36);
+            this.btnCapNhatForm.Size = new System.Drawing.Size(166, 36);
             this.btnCapNhatForm.TabIndex = 31;
             this.btnCapNhatForm.Text = "Cập Nhật";
             this.btnCapNhatForm.UseVisualStyleBackColor = true;
@@ -337,20 +337,6 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Email";
             // 
-            // BtnNguoiMuonThem
-            // 
-            this.BtnNguoiMuonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNguoiMuonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNguoiMuonThem.Location = new System.Drawing.Point(333, 130);
-            this.BtnNguoiMuonThem.Name = "BtnNguoiMuonThem";
-            this.BtnNguoiMuonThem.Size = new System.Drawing.Size(209, 36);
-            this.BtnNguoiMuonThem.TabIndex = 25;
-            this.BtnNguoiMuonThem.Text = "Thêm Mới Đọc Giả";
-            this.BtnNguoiMuonThem.UseVisualStyleBackColor = true;
-            this.BtnNguoiMuonThem.Click += new System.EventHandler(this.BtnNguoiMuonThem_Click);
-            // 
             // BtnNguoiMuonCapNhat
             // 
             this.BtnNguoiMuonCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -359,7 +345,7 @@
             this.BtnNguoiMuonCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(15, 130);
             this.BtnNguoiMuonCapNhat.Name = "BtnNguoiMuonCapNhat";
-            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(312, 36);
+            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(265, 36);
             this.BtnNguoiMuonCapNhat.TabIndex = 24;
             this.BtnNguoiMuonCapNhat.Text = "Thay Đổi Thông Tin Đọc Giả";
             this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
@@ -467,6 +453,20 @@
             // 
             this.errorIntTimMa.ContainerControl = this;
             // 
+            // btnResetPass
+            // 
+            this.btnResetPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPass.Location = new System.Drawing.Point(286, 131);
+            this.btnResetPass.Name = "btnResetPass";
+            this.btnResetPass.Size = new System.Drawing.Size(199, 36);
+            this.btnResetPass.TabIndex = 77;
+            this.btnResetPass.Text = "Reset Mật Khẩu";
+            this.btnResetPass.UseVisualStyleBackColor = true;
+            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
+            // 
             // FrmNguoiMuonSachQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,7 +495,6 @@
         private System.Windows.Forms.GroupBox GrBChiTiet;
         private System.Windows.Forms.TextBox TxtNMSEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnNguoiMuonThem;
         private System.Windows.Forms.Button BtnNguoiMuonCapNhat;
         private System.Windows.Forms.TextBox TxtNMSDiaChi;
         private System.Windows.Forms.Label label7;
@@ -529,5 +528,6 @@
         private System.Windows.Forms.ErrorProvider errorTimMa;
         private System.Windows.Forms.ErrorProvider errorTimTen;
         private System.Windows.Forms.ErrorProvider errorIntTimMa;
+        private System.Windows.Forms.Button btnResetPass;
     }
 }

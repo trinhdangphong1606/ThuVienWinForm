@@ -138,8 +138,12 @@ namespace GUI
                 erDuKienTra.SetError(dateDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
                 return;
             }
-            UserTaoPhieu();
-            HienThiDanhSachSach();
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn mượn sách này?", "Thông Báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                UserTaoPhieu();
+                HienThiDanhSachSach();
+            }
         }
 
         private void LvDanhMucDS_SelectedIndexChanged(object sender, EventArgs e)
