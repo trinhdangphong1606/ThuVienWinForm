@@ -144,7 +144,8 @@ namespace GUI
             PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
             bool tuchoichomuon = pmsbll.TuChoiPhieuChoMuon(pms);
             Sach sac = new Sach();
-            sac.TenSach = txtCMS.Text;
+
+            sac.TenSach = txtCDS.Text;
             SachBLL sacbll = new SachBLL();
             bool dgkhongden = sacbll.CapNhatDocGiaKhongDen(sac);
             if (dgkhongden && tuchoichomuon)
@@ -372,6 +373,8 @@ namespace GUI
             {
                 ChoMuonSachTaiCho();
                 LoadLDS();
+                txtCMTCDG.Text = "";
+                txtCMTCTS.Text = "";
             }
         }
         private void ChoMuonSachTaiCho()

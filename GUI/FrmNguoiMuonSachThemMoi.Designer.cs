@@ -269,7 +269,6 @@
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(140, 128);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.PasswordChar = '*';
             this.txtTenDangNhap.Size = new System.Drawing.Size(247, 23);
             this.txtTenDangNhap.TabIndex = 37;
             this.txtTenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

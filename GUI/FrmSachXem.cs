@@ -163,6 +163,13 @@ namespace GUI
                 {
                     UserTaoPhieu();
                     HienThiDanhSachSach();
+                    TxtTenSach.Text = "";
+                    TxtTenTacGia.Text = "";
+                    TxtNamXuatBan.Text = "";
+                    txtMaSach.Text = "";
+                    TxtTenDanhMuc.Text = "";
+                    TxtNgonNgu.Text = "";
+                    richNoiDungSach.Text = "";
                 }
             }
         }

@@ -455,7 +455,7 @@
             this.btnTuChoiChoMuon.Name = "btnTuChoiChoMuon";
             this.btnTuChoiChoMuon.Size = new System.Drawing.Size(105, 35);
             this.btnTuChoiChoMuon.TabIndex = 77;
-            this.btnTuChoiChoMuon.Text = "Từ Chối";
+            this.btnTuChoiChoMuon.Text = "Hủy Mượn";
             this.btnTuChoiChoMuon.UseVisualStyleBackColor = false;
             this.btnTuChoiChoMuon.Click += new System.EventHandler(this.btnTuChoiChoMuon_Click);
             // 
