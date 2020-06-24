@@ -66,14 +66,15 @@ namespace GUI
                 if (lbQuyen.Text=="Admin" || lbQuyen.Text == "Staff")
                 {
                     FrmTongThe frm1 = new FrmTongThe(lbQuyen.Text, lbId.Text);
-                    frm1.ShowDialog();
-                    this.Close();
+                    frm1.Show();
+
+                    //this.Close();
                 }    
                 else
                 {
                     FrmTongTheUser frm1 = new FrmTongTheUser(lbId.Text,lbQuyen.Text);
-                    frm1.ShowDialog();
-                    this.Close();
+                    frm1.Show();
+                    //this.Close();
                 }    
                 
             }
@@ -105,6 +106,10 @@ namespace GUI
         private void txtPassword_Enter(object sender, EventArgs e)
         {
             DangNhap();
+        }
+        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
         }
     }
 }

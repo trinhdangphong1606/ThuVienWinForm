@@ -130,5 +130,16 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmDangNhap form = new FrmDangNhap();
+            form.Show();
+        }
+        private void FrmTongThe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -41,5 +41,16 @@ namespace GUI
             frm1.MdiParent = this;
             frm1.Show();
         }
+
+        private void đĂNGXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmDangNhap form = new FrmDangNhap();
+            form.Show();
+        }
+        private void FrmTongTheUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
