@@ -55,7 +55,6 @@ namespace GUI
                 lvCDPMS.Items.Add(lvi);
             }
         }
-
         private void lvPMSCD_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lvCDPMS.SelectedItems.Count > 0)
@@ -69,7 +68,6 @@ namespace GUI
             }
             
         }
-
         private void btnDuyetPhieuMoi_Click(object sender, EventArgs e)
         {
             if(txtCDMaP.Text=="")
@@ -83,10 +81,13 @@ namespace GUI
                 {
                     ChapThuanDuyet();
                     LoadLDS();
+                    txtCDMaP.Text = "";
+                    txtCDDG.Text = "";
+                    txtCDS.Text = "";
                 }
             }
         }
-        private void btnKhongDuyetPhieuMoi_Click(object sender, EventArgs e)
+        private void btnKhongDuyet_Click(object sender, EventArgs e)
         {
             if (txtCDMaP.Text == "")
             {
@@ -99,6 +100,28 @@ namespace GUI
                 {
                     TuChoiDuyet();
                     LoadLDS();
+                    txtCDMaP.Text = "";
+                    txtCDDG.Text = "";
+                    txtCDS.Text = "";
+                }
+            }
+        }
+        private void btnKhongDuyetPhieuMoi_Click(object sender, EventArgs e)
+        {
+            if (txtCDMaP.Text == "")
+            {
+                MessageBox.Show("Chọn phiếu có sách lỗi.", "Thông Báo");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Sách này đang bị lỗi?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    SachBiLoi();
+                    LoadLDS();
+                    txtCDMaP.Text = "";
+                    txtCDDG.Text = "";
+                    txtCDS.Text = "";
                 }
             }    
         }
@@ -115,6 +138,21 @@ namespace GUI
             }
         }
         private void TuChoiDuyet()
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.MaPhieuMuon = int.Parse(txtCDMaP.Text);
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool tuchoichomuon = pmsbll.TuChoiPhieuChoMuon(pms);
+            Sach sac = new Sach();
+            sac.TenSach = txtCMS.Text;
+            SachBLL sacbll = new SachBLL();
+            bool dgkhongden = sacbll.CapNhatDocGiaKhongDen(sac);
+            if (dgkhongden && tuchoichomuon)
+            {
+                MessageBox.Show("Đã cập nhật thông tin", "Thông báo");
+            }
+        }
+        private void SachBiLoi()
         {
             PhieuMuonSach pms = new PhieuMuonSach();
             pms.MaPhieuMuon = int.Parse(txtCDMaP.Text);
@@ -153,7 +191,6 @@ namespace GUI
                 lvCMPMS.Items.Add(lvi);
             }
         }
-
         private void lvCMPMS_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lvCMPMS.SelectedItems.Count > 0)
@@ -192,7 +229,6 @@ namespace GUI
                 MessageBox.Show("Đã cập nhật thông tin", "Thông báo");
             }
         }
-
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
             if(txtCMMaP.Text=="")
@@ -206,6 +242,9 @@ namespace GUI
                 {
                     ChapThuanPhieuChoMuon();
                     LoadLDS();
+                    txtCMMaP.Text = "";
+                    txtCMDG.Text = "";
+                    txtCMS.Text = "";
                 }
             }
 
@@ -223,6 +262,9 @@ namespace GUI
                 {
                     TuChoiPhieuChoMuon();
                     LoadLDS();
+                    txtCMMaP.Text = "";
+                    txtCMDG.Text = "";
+                    txtCMS.Text = "";
                 }
             }
         }
@@ -347,7 +389,9 @@ namespace GUI
                 MessageBox.Show("Đã Lưu thông tin mượn sách của đọc giả", "Thông Báo");
             }
         }
+
         //End  tab Cho Mượn Tại Chỗ
+
         // start  tab trả sách
         private void HienThiDSChuaTraSach()
         {
@@ -365,7 +409,6 @@ namespace GUI
                 lvTSPMS.Items.Add(lvi);
             }
         }
-
         private void lvTSPMS_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lvTSPMS.SelectedItems.Count>0)
@@ -385,7 +428,6 @@ namespace GUI
                 }
             }    
         }
-
         private void btnTraSach_Click(object sender, EventArgs e)
         {
             if(txtTSMaP.Text=="")
@@ -399,10 +441,34 @@ namespace GUI
                 {
                     TraSach();
                     LoadLDS();
+                    txtTSMaP.Text = "";
+                    txtTSDG.Text = "";
+                    txtTSMaS.Text = "";
+                    txtTSS.Text = "";
                 }
             }    
         }
-
+        private void btnTHKhongTraSach_Click(object sender, EventArgs e)
+        {
+            if(txtTSMaP.Text == "")
+            {
+                MessageBox.Show("Xin chọn mã phiếu của đọc giả", "Thông Báo");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Đọc giả không trả sách này hoặc " +
+                    "\n sách này đọc giả bị hỏng?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    KhongTraSach();
+                    LoadLDS();
+                    txtTSMaP.Text = "";
+                    txtTSDG.Text = "";
+                    txtTSMaS.Text = "";
+                    txtTSS.Text = "";
+                }
+            }
+        }
         private void TraSach()
         {
             PhieuMuonSach pms = new PhieuMuonSach();
@@ -425,20 +491,54 @@ namespace GUI
                 MessageBox.Show("Stuck");
             }    
         }
+        private void KhongTraSach()
+        {
+            PhieuMuonSach pms = new PhieuMuonSach();
+            pms.MaPhieuMuon = int.Parse(txtTSMaP.Text);
+            PhieuMuonSachBLL pmsbll = new PhieuMuonSachBLL();
+            bool tuchoi = pmsbll.TuChoiPhieuDuyet(pms);
+
+            Sach sac = new Sach();
+            sac.TenSach = txtTSS.Text;
+            SachBLL sacbll = new SachBLL();
+            bool capnhat = sacbll.CapNhatTrangThaiLoi(sac);
+            if (capnhat && tuchoi)
+            {
+                MessageBox.Show("Đã lưu thông tin", "Thông Báo");
+                LoadLDS();
+            }
+        }
+
         // End tab Trả sách .
 
         // start tab tổng hợp
+        private void LoadText()
+        {
+            txtTHMaP.Text = "";
+            txtTHDG.Text = "";
+            txtTHS.Text = "";
+            txtTHMaS.Text = "";
+            txtTHTrangThai.Text = "";
+        }
         private void BtnXemTatCa_Click(object sender, EventArgs e)
         {
             HienThiDSTatCaPhieu();
+            LoadText();
+        }
+        private void btnTHChuaTraSach_Click(object sender, EventArgs e)
+        {
+            HienThiTHDSChuaTraSach();
+            LoadText();
         }
         private void btnXemChoDuyetVaDoiDG_Click(object sender, EventArgs e)
         {
             HienThiDSChoDuyetVaDoiDG();
+            LoadText();
         }
         private void btnTHPhieuLoi_Click(object sender, EventArgs e)
         {
             HienThiDSPhieuLoi();
+            LoadText();
         }
         private void btTHXuLyLoi_Click(object sender, EventArgs e)
         {
@@ -449,6 +549,7 @@ namespace GUI
                 {
                     XuLySachLoi();
                     LoadLDS();
+                    LoadText();
                 }
                 
             }
@@ -456,10 +557,12 @@ namespace GUI
         private void btnTHDaXuLyLoi_Click(object sender, EventArgs e)
         {
             HienThiDSPhieuLoiDaXuLy();
+            LoadText();
         }
         private void btnTHDGKhongDen_Click(object sender, EventArgs e)
         {
             HienThiDSPhieuDGKhongDen();
+            LoadText();
         }
         private void btnTHTimMaP_Click(object sender, EventArgs e)
         {
@@ -492,6 +595,7 @@ namespace GUI
                     lvTHDSP.Items.Add(lvi);
                 }
             }
+            LoadText();
         }
         private void HienThiDSTatCaPhieu()
         {
@@ -578,7 +682,6 @@ namespace GUI
                 lvTHDSP.Items.Add(lvi);
             }
         }
-
         private void lvTHDSP_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lvTHDSP.SelectedItems.Count>0)
@@ -626,6 +729,26 @@ namespace GUI
                 MessageBox.Show("Stuck");
             }
         }
+        private void HienThiTHDSChuaTraSach()
+        {
+            PhieuMuonSachBLL phieumsBLL = new PhieuMuonSachBLL();
+            List<PhieuMuonSachDAO> dsphieumuon = phieumsBLL.LayPhieuDangMo();
+            lvTHDSP.Items.Clear();
+            foreach (PhieuMuonSachDAO pmsBLL in dsphieumuon)
+            {
+                ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
+                lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
+                lvi.SubItems.Add(pmsBLL.TrangThai);
+                lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
+                lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                lvi.SubItems.Add(pmsBLL.TenSach);
+                lvTHDSP.Items.Add(lvi);
+            }
+
+        }
+
+        
         //End tab Tổng Hợp
     }
 }

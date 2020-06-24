@@ -66,6 +66,15 @@ namespace GUI
                 txtMaP.Text = lvi.SubItems[0].Text;
                 txtTenSach.Text = lvi.SubItems[1].Text;
                 txtTrangThai.Text = lvi.SubItems[2].Text;
+                dtNgayMuon.Value = Convert.ToDateTime(lvi.SubItems[3].Text);
+                dtDuKienTra.Value = Convert.ToDateTime(lvi.SubItems[4].Text);
+                if (lvi.SubItems[5].Text == "")
+                {
+                }
+                else
+                {
+                    dtNgayTra.Value = Convert.ToDateTime(lvi.SubItems[5].Text);
+                }
                 HienThiGhiChu();
             }    
 

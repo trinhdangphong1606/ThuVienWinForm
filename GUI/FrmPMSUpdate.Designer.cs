@@ -151,6 +151,9 @@
             this.errCMTCTenSach = new System.Windows.Forms.ErrorProvider(this.components);
             this.errTimMaPhieu = new System.Windows.Forms.ErrorProvider(this.components);
             this.errIntMaPhieu = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnKhongDuyet = new System.Windows.Forms.Button();
+            this.btnTHChuaTraSach = new System.Windows.Forms.Button();
+            this.btnTHKhongTraSach = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -198,6 +201,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.btnKhongDuyet);
             this.groupBox1.Controls.Add(this.btnKhongDuyetPhieuMoi);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.label10);
@@ -223,11 +227,11 @@
             // 
             this.btnKhongDuyetPhieuMoi.BackColor = System.Drawing.Color.Tomato;
             this.btnKhongDuyetPhieuMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhongDuyetPhieuMoi.Location = new System.Drawing.Point(136, 227);
+            this.btnKhongDuyetPhieuMoi.Location = new System.Drawing.Point(198, 227);
             this.btnKhongDuyetPhieuMoi.Name = "btnKhongDuyetPhieuMoi";
-            this.btnKhongDuyetPhieuMoi.Size = new System.Drawing.Size(152, 35);
+            this.btnKhongDuyetPhieuMoi.Size = new System.Drawing.Size(90, 35);
             this.btnKhongDuyetPhieuMoi.TabIndex = 77;
-            this.btnKhongDuyetPhieuMoi.Text = "Không Duyệt";
+            this.btnKhongDuyetPhieuMoi.Text = "Sách Lỗi";
             this.btnKhongDuyetPhieuMoi.UseVisualStyleBackColor = false;
             this.btnKhongDuyetPhieuMoi.Click += new System.EventHandler(this.btnKhongDuyetPhieuMoi_Click);
             // 
@@ -293,11 +297,11 @@
             // 
             // btnDuyetPhieuMoi
             // 
-            this.btnDuyetPhieuMoi.BackColor = System.Drawing.Color.Yellow;
+            this.btnDuyetPhieuMoi.BackColor = System.Drawing.Color.Lime;
             this.btnDuyetPhieuMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyetPhieuMoi.Location = new System.Drawing.Point(6, 227);
             this.btnDuyetPhieuMoi.Name = "btnDuyetPhieuMoi";
-            this.btnDuyetPhieuMoi.Size = new System.Drawing.Size(124, 35);
+            this.btnDuyetPhieuMoi.Size = new System.Drawing.Size(70, 35);
             this.btnDuyetPhieuMoi.TabIndex = 41;
             this.btnDuyetPhieuMoi.Text = "Duyệt";
             this.btnDuyetPhieuMoi.UseVisualStyleBackColor = false;
@@ -920,6 +924,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.btnTHKhongTraSach);
             this.groupBox3.Controls.Add(this.richTextBox5);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.label32);
@@ -956,7 +961,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(6, 227);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 35);
+            this.button1.Size = new System.Drawing.Size(119, 35);
             this.button1.TabIndex = 81;
             this.button1.Text = "Trả Sách";
             this.button1.UseVisualStyleBackColor = false;
@@ -1142,6 +1147,7 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox5.Controls.Add(this.btnTHChuaTraSach);
             this.groupBox5.Controls.Add(this.label34);
             this.groupBox5.Controls.Add(this.btnTHTimMaP);
             this.groupBox5.Controls.Add(this.txtTHTimMaP);
@@ -1278,7 +1284,7 @@
             this.BtnXemTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnXemTatCa.Location = new System.Drawing.Point(6, 47);
             this.BtnXemTatCa.Name = "BtnXemTatCa";
-            this.BtnXemTatCa.Size = new System.Drawing.Size(282, 30);
+            this.BtnXemTatCa.Size = new System.Drawing.Size(121, 30);
             this.BtnXemTatCa.TabIndex = 85;
             this.BtnXemTatCa.Text = "Xem Tất Cả ";
             this.BtnXemTatCa.UseVisualStyleBackColor = false;
@@ -1507,6 +1513,42 @@
             // 
             this.errIntMaPhieu.ContainerControl = this;
             // 
+            // btnKhongDuyet
+            // 
+            this.btnKhongDuyet.BackColor = System.Drawing.Color.Yellow;
+            this.btnKhongDuyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhongDuyet.Location = new System.Drawing.Point(77, 227);
+            this.btnKhongDuyet.Name = "btnKhongDuyet";
+            this.btnKhongDuyet.Size = new System.Drawing.Size(120, 35);
+            this.btnKhongDuyet.TabIndex = 78;
+            this.btnKhongDuyet.Text = "Không Duyệt";
+            this.btnKhongDuyet.UseVisualStyleBackColor = false;
+            this.btnKhongDuyet.Click += new System.EventHandler(this.btnKhongDuyet_Click);
+            // 
+            // btnTHChuaTraSach
+            // 
+            this.btnTHChuaTraSach.BackColor = System.Drawing.Color.Tomato;
+            this.btnTHChuaTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHChuaTraSach.Location = new System.Drawing.Point(133, 47);
+            this.btnTHChuaTraSach.Name = "btnTHChuaTraSach";
+            this.btnTHChuaTraSach.Size = new System.Drawing.Size(155, 30);
+            this.btnTHChuaTraSach.TabIndex = 117;
+            this.btnTHChuaTraSach.Text = "Chưa Trả Sách";
+            this.btnTHChuaTraSach.UseVisualStyleBackColor = false;
+            this.btnTHChuaTraSach.Click += new System.EventHandler(this.btnTHChuaTraSach_Click);
+            // 
+            // btnTHKhongTraSach
+            // 
+            this.btnTHKhongTraSach.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnTHKhongTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHKhongTraSach.Location = new System.Drawing.Point(131, 227);
+            this.btnTHKhongTraSach.Name = "btnTHKhongTraSach";
+            this.btnTHKhongTraSach.Size = new System.Drawing.Size(157, 35);
+            this.btnTHKhongTraSach.TabIndex = 87;
+            this.btnTHKhongTraSach.Text = "Hỏng / Không Trả";
+            this.btnTHKhongTraSach.UseVisualStyleBackColor = false;
+            this.btnTHKhongTraSach.Click += new System.EventHandler(this.btnTHKhongTraSach_Click);
+            // 
             // FrmPMSUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1666,5 +1708,8 @@
         private System.Windows.Forms.TextBox txtTHTimMaP;
         private System.Windows.Forms.ErrorProvider errTimMaPhieu;
         private System.Windows.Forms.ErrorProvider errIntMaPhieu;
+        private System.Windows.Forms.Button btnKhongDuyet;
+        private System.Windows.Forms.Button btnTHChuaTraSach;
+        private System.Windows.Forms.Button btnTHKhongTraSach;
     }
 }

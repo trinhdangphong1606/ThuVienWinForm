@@ -191,6 +191,7 @@ namespace DAL
                 {
                     ngaytra = reader.GetDateTime(5);
                 }
+                string trangthai = reader.GetString(6);
                 PhieuMuonSachDAO pms = new PhieuMuonSachDAO();
                 pms.MaPhieuMuon = idphieu;
                 pms.TenNguoiMuonSach = tennguoimuon;
@@ -198,6 +199,7 @@ namespace DAL
                 pms.NgayMuon = ngaymuon;
                 pms.NgayDuKienTra = ngaydukientra;
                 pms.NgayTraSach = ngaytra;
+                pms.TrangThai = trangthai;
                 dsPhieuMuon.Add(pms);
             }
             reader.Close();
@@ -500,7 +502,7 @@ namespace DAL
             command.CommandText = "select pms.PhieuId, nms.HoTen,s.TenSach,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach,pms.TrangThai " +
                 "from PhieuMuonSach pms, NguoiMuonSach nms, Sach s " +
                 "where nms.Id = pms.NguoiMuonSachId and s.Id = pms.SachId and pms.TrangThai<>N'Đã Trả Sách' and pms.TrangThai<>N'Sách bị lỗi' " +
-                "and pms.TrangThai<>N'Sách lỗi đã được xử lý' and pms.TrangThai<>N'Đọc giả không đến'" +
+                "and pms.TrangThai<>N'Sách lỗi đã được xử lý' and pms.TrangThai<>N'Đọc giả không đến' and pms.TrangThai<>N'Chưa Trả Sách'" +
                 " ORDER BY pms.PhieuId DESC";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();

@@ -151,6 +151,7 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(598, 273);
             this.GrBChiTiet.TabIndex = 14;
             this.GrBChiTiet.TabStop = false;
+            this.GrBChiTiet.Enter += new System.EventHandler(this.GrBChiTiet_Enter);
             // 
             // txtMaSach
             // 

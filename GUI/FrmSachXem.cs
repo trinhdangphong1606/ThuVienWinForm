@@ -18,6 +18,7 @@ namespace GUI
     {
         string iddg = "";
         public string tendm = "";
+        public string trangthai = "";
         public FrmSachXem(string id)
         {
             InitializeComponent();
@@ -47,7 +48,8 @@ namespace GUI
         public void HienThiDanhSachSach()
         {
             SachBLL sacBLL = new SachBLL();
-            List<SachDAO> dssach = sacBLL.LayToanBoSachTrong(); //call sachbll để trả về dssach
+            //List<SachDAO> dssach = sacBLL.LayToanBoSachTrong();
+            List<SachDAO> dssach = sacBLL.LayToanBoSachOderTrong(); //call sachbll để trả về dssach
             LvSachQL.Items.Clear();
             foreach (SachDAO scBLL in dssach)
             //duyệt tuần tự các phần tử trong mảng dssach
@@ -84,6 +86,7 @@ namespace GUI
                 TxtNamXuatBan.Text = namxuatban;
                 richNoiDungSach.Text = noidung;
                 txtMaSach.Text = id;
+                this.trangthai = trangthai;
             }
         }
         private void txtTimTenSach_Click(object sender, EventArgs e)
@@ -92,25 +95,34 @@ namespace GUI
         }
         private void btnTimTenSach_Click(object sender, EventArgs e)
         {
-            SachDAO tims = new SachDAO();
-            tims.TenSach = txtTimTenSach.Text;
-
-            SachBLL sacBLL = new SachBLL();
-            List<SachDAO> dssach = sacBLL.TimSachTrongTheoTen(tims); //call sachbll để trả về dssach
-            LvSachQL.Items.Clear();
-            foreach (SachDAO scBLL in dssach)
-            //duyệt tuần tự các phần tử trong mảng dssach
+            if (txtTimTenSach.Text == "")
             {
-                ListViewItem lvi = new ListViewItem(scBLL.TenSach + "");
-                lvi.SubItems.Add(scBLL.TacGia);
-                lvi.SubItems.Add(scBLL.TheLoai);
-                lvi.SubItems.Add(scBLL.NgonNgu);
-                lvi.SubItems.Add(scBLL.NamXuatBan + "");
-                lvi.SubItems.Add(scBLL.TrangThai + "");
-                lvi.SubItems.Add(scBLL.NoiDungSach + "");
-                lvi.SubItems.Add(scBLL.ID + "");
-                LvSachQL.Items.Add(lvi);
+                HienThiDanhSachSach();
+            }
+            else
+            {
 
+                SachDAO tims = new SachDAO();
+                tims.TenSach = txtTimTenSach.Text;
+
+                SachBLL sacBLL = new SachBLL();
+                //List<SachDAO> dssach = sacBLL.TimSachTrongTheoTen(tims);
+                List<SachDAO> dssach = sacBLL.TimTenSach(tims);//call sachbll để trả về dssach
+                LvSachQL.Items.Clear();
+                foreach (SachDAO scBLL in dssach)
+                //duyệt tuần tự các phần tử trong mảng dssach
+                {
+                    ListViewItem lvi = new ListViewItem(scBLL.TenSach + "");
+                    lvi.SubItems.Add(scBLL.TacGia);
+                    lvi.SubItems.Add(scBLL.TheLoai);
+                    lvi.SubItems.Add(scBLL.NgonNgu);
+                    lvi.SubItems.Add(scBLL.NamXuatBan + "");
+                    lvi.SubItems.Add(scBLL.TrangThai + "");
+                    lvi.SubItems.Add(scBLL.NoiDungSach + "");
+                    lvi.SubItems.Add(scBLL.ID + "");
+                    LvSachQL.Items.Add(lvi);
+
+                }
             }
         }
         private void UserTaoPhieu()
@@ -125,24 +137,33 @@ namespace GUI
             bool phieumoi = pmsbll.DocGiaTaoPhieu(pms);
             if (phieumoi)
             {
-                MessageBox.Show("Mượn thành công, vui lòng chờ duyệt và đến thư viện nhận sách nhé.", "Thông Báo");
+                MessageBox.Show("Mượn thành công, vui lòng chờ duyệt và đến thư viện nhận sách nhé." +
+                    "\n Bạn có thể kiểm tra trạng thái ở tab Sách Mượn Của Tôi", "Thông Báo");
                 
             }
         }
 
         private void btnUserTaoPhieu_Click(object sender, EventArgs e)
         {
-            erDuKienTra.SetError(dateDuKienTra, "");
-            if (dateDuKienTra.Value <= dateNgayMuon.Value)
+            if (trangthai != "Trống")
             {
-                erDuKienTra.SetError(dateDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
-                return;
+                MessageBox.Show("Sách đã được cho mượn. \n" +
+                    "Bạn vui lòng mượn sách khác hoặc đợi sách được trả nhé");
             }
-            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn mượn sách này?", "Thông Báo", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            else
             {
-                UserTaoPhieu();
-                HienThiDanhSachSach();
+                erDuKienTra.SetError(dateDuKienTra, "");
+                if (dateDuKienTra.Value <= dateNgayMuon.Value)
+                {
+                    erDuKienTra.SetError(dateDuKienTra, "Ngày dự kiến trả sau ngày bắt đầu mượn ...");
+                    return;
+                }
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn mượn sách này?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    UserTaoPhieu();
+                    HienThiDanhSachSach();
+                }
             }
         }
 
@@ -171,6 +192,11 @@ namespace GUI
 
                 LvSachQL.Items.Add(lvi);
             }
+        }
+
+        private void GrBChiTiet_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

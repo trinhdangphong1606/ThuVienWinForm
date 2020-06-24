@@ -36,6 +36,12 @@ namespace BLL
 
             return sac.LayToanBoSachTrong();
         }
+        public List<SachDAO> LayToanBoSachOderTrong()
+        {
+
+            return sac.LayToanBoSachOderTrong();
+        }
+        
 
         public List<SachDAO> TimTenSach(SachDAO TenSach)
         {
