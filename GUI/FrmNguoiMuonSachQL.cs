@@ -218,5 +218,11 @@ namespace GUI
             FrmQuanTriVienResetMatKhau frm1 = new FrmQuanTriVienResetMatKhau(PassMa,PassAccount);
             frm1.Show();
         }
+
+        private void btnThemMoiNMS_Click(object sender, EventArgs e)
+        {
+            FrmNguoiMuonSachThemMoi frm = new FrmNguoiMuonSachThemMoi();
+            frm.Show();
+        }
     }
 }

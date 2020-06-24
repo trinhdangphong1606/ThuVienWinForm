@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnResetPass = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@
             this.errorTimMa = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTimTen = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorIntTimMa = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnResetPass = new System.Windows.Forms.Button();
+            this.btnThemMoiNMS = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTimMa)).BeginInit();
@@ -75,6 +76,7 @@
             // 
             // GrBChiTiet
             // 
+            this.GrBChiTiet.Controls.Add(this.btnThemMoiNMS);
             this.GrBChiTiet.Controls.Add(this.btnResetPass);
             this.GrBChiTiet.Controls.Add(this.groupBox1);
             this.GrBChiTiet.Controls.Add(this.btnTimMa);
@@ -101,6 +103,20 @@
             this.GrBChiTiet.Size = new System.Drawing.Size(670, 380);
             this.GrBChiTiet.TabIndex = 17;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // btnResetPass
+            // 
+            this.btnResetPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPass.Location = new System.Drawing.Point(401, 130);
+            this.btnResetPass.Name = "btnResetPass";
+            this.btnResetPass.Size = new System.Drawing.Size(141, 36);
+            this.btnResetPass.TabIndex = 77;
+            this.btnResetPass.Text = "Reset Mật Khẩu";
+            this.btnResetPass.UseVisualStyleBackColor = true;
+            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 
             // groupBox1
             // 
@@ -288,9 +304,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhatForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatForm.Location = new System.Drawing.Point(491, 130);
+            this.btnCapNhatForm.Location = new System.Drawing.Point(548, 130);
             this.btnCapNhatForm.Name = "btnCapNhatForm";
-            this.btnCapNhatForm.Size = new System.Drawing.Size(166, 36);
+            this.btnCapNhatForm.Size = new System.Drawing.Size(109, 36);
             this.btnCapNhatForm.TabIndex = 31;
             this.btnCapNhatForm.Text = "Cập Nhật";
             this.btnCapNhatForm.UseVisualStyleBackColor = true;
@@ -345,7 +361,7 @@
             this.BtnNguoiMuonCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNguoiMuonCapNhat.Location = new System.Drawing.Point(15, 130);
             this.BtnNguoiMuonCapNhat.Name = "BtnNguoiMuonCapNhat";
-            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(265, 36);
+            this.BtnNguoiMuonCapNhat.Size = new System.Drawing.Size(243, 36);
             this.BtnNguoiMuonCapNhat.TabIndex = 24;
             this.BtnNguoiMuonCapNhat.Text = "Thay Đổi Thông Tin Đọc Giả";
             this.BtnNguoiMuonCapNhat.UseVisualStyleBackColor = true;
@@ -453,19 +469,19 @@
             // 
             this.errorIntTimMa.ContainerControl = this;
             // 
-            // btnResetPass
+            // btnThemMoiNMS
             // 
-            this.btnResetPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnThemMoiNMS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPass.Location = new System.Drawing.Point(286, 131);
-            this.btnResetPass.Name = "btnResetPass";
-            this.btnResetPass.Size = new System.Drawing.Size(199, 36);
-            this.btnResetPass.TabIndex = 77;
-            this.btnResetPass.Text = "Reset Mật Khẩu";
-            this.btnResetPass.UseVisualStyleBackColor = true;
-            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
+            this.btnThemMoiNMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMoiNMS.Location = new System.Drawing.Point(264, 131);
+            this.btnThemMoiNMS.Name = "btnThemMoiNMS";
+            this.btnThemMoiNMS.Size = new System.Drawing.Size(131, 36);
+            this.btnThemMoiNMS.TabIndex = 78;
+            this.btnThemMoiNMS.Text = "Thêm Mới";
+            this.btnThemMoiNMS.UseVisualStyleBackColor = true;
+            this.btnThemMoiNMS.Click += new System.EventHandler(this.btnThemMoiNMS_Click);
             // 
             // FrmNguoiMuonSachQL
             // 
@@ -529,5 +545,6 @@
         private System.Windows.Forms.ErrorProvider errorTimTen;
         private System.Windows.Forms.ErrorProvider errorIntTimMa;
         private System.Windows.Forms.Button btnResetPass;
+        private System.Windows.Forms.Button btnThemMoiNMS;
     }
 }

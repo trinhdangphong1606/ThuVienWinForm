@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.txtQuyen = new System.Windows.Forms.TextBox();
             this.btnQuyenStaff = new System.Windows.Forms.Button();
             this.btnQuyenAdmin = new System.Windows.Forms.Button();
@@ -60,10 +61,8 @@
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDiaChi = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMatKhau1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorKey1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorQuyen = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorIntNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnQuyenUser = new System.Windows.Forms.Button();
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorHoTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTenDangNhap)).BeginInit();
@@ -72,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDiaChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).BeginInit();
             this.SuspendLayout();
@@ -83,9 +81,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(228, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 25);
+            this.label1.Size = new System.Drawing.Size(280, 25);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Thêm Mới Quản Trị Viên";
+            this.label1.Text = "Thêm Mới Nhân Sự Trị Viên";
             // 
             // txtEmail
             // 
@@ -196,11 +194,8 @@
             // 
             this.GrBChiTiet.Controls.Add(this.btnQuyenUser);
             this.GrBChiTiet.Controls.Add(this.txtQuyen);
-            this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Controls.Add(this.btnQuyenAdmin);
             this.GrBChiTiet.Controls.Add(this.label11);
-            this.GrBChiTiet.Controls.Add(this.txtKey1);
-            this.GrBChiTiet.Controls.Add(this.label10);
             this.GrBChiTiet.Controls.Add(this.txtAccount);
             this.GrBChiTiet.Controls.Add(this.label9);
             this.GrBChiTiet.Controls.Add(this.txtEmail);
@@ -215,19 +210,36 @@
             this.GrBChiTiet.Controls.Add(this.txtTen);
             this.GrBChiTiet.Controls.Add(this.label4);
             this.GrBChiTiet.Controls.Add(this.label2);
+            this.GrBChiTiet.Controls.Add(this.txtKey1);
+            this.GrBChiTiet.Controls.Add(this.label10);
+            this.GrBChiTiet.Controls.Add(this.btnQuyenStaff);
             this.GrBChiTiet.Location = new System.Drawing.Point(1, 42);
             this.GrBChiTiet.Name = "GrBChiTiet";
-            this.GrBChiTiet.Size = new System.Drawing.Size(676, 222);
+            this.GrBChiTiet.Size = new System.Drawing.Size(676, 194);
             this.GrBChiTiet.TabIndex = 34;
             this.GrBChiTiet.TabStop = false;
+            // 
+            // btnQuyenUser
+            // 
+            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyenUser.Location = new System.Drawing.Point(389, 160);
+            this.btnQuyenUser.Name = "btnQuyenUser";
+            this.btnQuyenUser.Size = new System.Drawing.Size(118, 24);
+            this.btnQuyenUser.TabIndex = 43;
+            this.btnQuyenUser.Text = "Đọc Giả";
+            this.btnQuyenUser.UseVisualStyleBackColor = true;
+            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
             // 
             // txtQuyen
             // 
             this.txtQuyen.Enabled = false;
             this.txtQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuyen.Location = new System.Drawing.Point(131, 188);
+            this.txtQuyen.Location = new System.Drawing.Point(131, 159);
             this.txtQuyen.Name = "txtQuyen";
-            this.txtQuyen.Size = new System.Drawing.Size(147, 23);
+            this.txtQuyen.Size = new System.Drawing.Size(252, 23);
             this.txtQuyen.TabIndex = 9;
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -237,9 +249,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyenStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenStaff.Location = new System.Drawing.Point(532, 186);
+            this.btnQuyenStaff.Location = new System.Drawing.Point(532, 160);
             this.btnQuyenStaff.Name = "btnQuyenStaff";
-            this.btnQuyenStaff.Size = new System.Drawing.Size(125, 25);
+            this.btnQuyenStaff.Size = new System.Drawing.Size(86, 20);
             this.btnQuyenStaff.TabIndex = 11;
             this.btnQuyenStaff.Text = "Staff";
             this.btnQuyenStaff.UseVisualStyleBackColor = true;
@@ -251,11 +263,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenAdmin.Location = new System.Drawing.Point(408, 186);
+            this.btnQuyenAdmin.Location = new System.Drawing.Point(513, 160);
             this.btnQuyenAdmin.Name = "btnQuyenAdmin";
-            this.btnQuyenAdmin.Size = new System.Drawing.Size(118, 25);
+            this.btnQuyenAdmin.Size = new System.Drawing.Size(144, 24);
             this.btnQuyenAdmin.TabIndex = 10;
-            this.btnQuyenAdmin.Text = "Admin";
+            this.btnQuyenAdmin.Text = "Thủ Thư";
             this.btnQuyenAdmin.UseVisualStyleBackColor = true;
             this.btnQuyenAdmin.Click += new System.EventHandler(this.btnQuyenAdmin_Click);
             // 
@@ -263,7 +275,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 191);
+            this.label11.Location = new System.Drawing.Point(13, 162);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 17);
             this.label11.TabIndex = 42;
@@ -272,10 +284,10 @@
             // txtKey1
             // 
             this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKey1.Location = new System.Drawing.Point(131, 159);
+            this.txtKey1.Location = new System.Drawing.Point(379, 130);
             this.txtKey1.Name = "txtKey1";
             this.txtKey1.PasswordChar = '*';
-            this.txtKey1.Size = new System.Drawing.Size(526, 23);
+            this.txtKey1.Size = new System.Drawing.Size(278, 23);
             this.txtKey1.TabIndex = 8;
             this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -283,7 +295,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 162);
+            this.label10.Location = new System.Drawing.Point(181, 133);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 17);
             this.label10.TabIndex = 39;
@@ -324,7 +336,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuyThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 270);
+            this.btnHuyThaoTac.Location = new System.Drawing.Point(338, 242);
             this.btnHuyThaoTac.Name = "btnHuyThaoTac";
             this.btnHuyThaoTac.Size = new System.Drawing.Size(320, 39);
             this.btnHuyThaoTac.TabIndex = 13;
@@ -338,7 +350,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMoi.Location = new System.Drawing.Point(10, 270);
+            this.btnThemMoi.Location = new System.Drawing.Point(12, 242);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(320, 39);
             this.btnThemMoi.TabIndex = 12;
@@ -374,10 +386,6 @@
             // 
             this.errorMatKhau1.ContainerControl = this;
             // 
-            // errorKey1
-            // 
-            this.errorKey1.ContainerControl = this;
-            // 
             // errorQuyen
             // 
             this.errorQuyen.ContainerControl = this;
@@ -385,20 +393,6 @@
             // errorIntNamSinh
             // 
             this.errorIntNamSinh.ContainerControl = this;
-            // 
-            // btnQuyenUser
-            // 
-            this.btnQuyenUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuyenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuyenUser.Location = new System.Drawing.Point(284, 186);
-            this.btnQuyenUser.Name = "btnQuyenUser";
-            this.btnQuyenUser.Size = new System.Drawing.Size(118, 25);
-            this.btnQuyenUser.TabIndex = 43;
-            this.btnQuyenUser.Text = "User";
-            this.btnQuyenUser.UseVisualStyleBackColor = true;
-            this.btnQuyenUser.Click += new System.EventHandler(this.btnQuyenUser_Click);
             // 
             // FrmQuanTriVienThemMoi
             // 
@@ -422,7 +416,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorDiaChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMatKhau1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorKey1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorQuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIntNamSinh)).EndInit();
             this.ResumeLayout(false);
@@ -463,7 +456,6 @@
         private System.Windows.Forms.ErrorProvider errorEmail;
         private System.Windows.Forms.ErrorProvider errorDiaChi;
         private System.Windows.Forms.ErrorProvider errorMatKhau1;
-        private System.Windows.Forms.ErrorProvider errorKey1;
         private System.Windows.Forms.ErrorProvider errorQuyen;
         private System.Windows.Forms.ErrorProvider errorIntNamSinh;
         private System.Windows.Forms.Button btnQuyenUser;

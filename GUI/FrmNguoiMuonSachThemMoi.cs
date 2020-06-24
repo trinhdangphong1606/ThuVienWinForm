@@ -55,7 +55,13 @@ namespace GUI
             {
                 errorEmail.SetError(txtEmail, "Xin Nhập Email");
                 return;
-            }ThemMoiDG();
+            }
+            if (txtEmail.Text == "")
+            {
+                errorEmail.SetError(txtEmail, "Xin Nhập Email");
+                return;
+            }
+            ThemMoiDG();
             
 
         }
@@ -71,11 +77,25 @@ namespace GUI
 
             NguoiMuonSachBLL nmsbll = new NguoiMuonSachBLL();
             bool nmsnew = nmsbll.ThemDocGia(nms);
-            if (nmsnew)
+
+            QuanTriVien qtv = new QuanTriVien();
+            qtv.HoTen = txtTen.Text;
+            qtv.NamSinh = int.Parse(txtNamSinh.Text);
+            qtv.TenDangNhap = txtTenDangNhap.Text;
+            qtv.SoDienThoai = txtSoDienThoai.Text;
+            qtv.Email = txtEmail.Text;
+            qtv.DiaChi = txtDiaChi.Text;
+            qtv.MatKhau = txtPass.Text;
+            qtv.KeyRestore = "123";
+            qtv.Quyen = "User";
+
+            QuanTriVienBLL qtvbll = new QuanTriVienBLL();
+            bool qtvnew = qtvbll.ThemQuanTriVien(qtv);
+
+            if (nmsnew&&qtvnew)
             {
                 MessageBox.Show("Nhấn Nút Cập Nhật Nhé.", "Thông Báo");
                 this.Close();
-
             }
         }
     }

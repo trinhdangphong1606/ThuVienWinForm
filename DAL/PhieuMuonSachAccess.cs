@@ -113,6 +113,7 @@ namespace DAL
                 {
                     ngaytra = reader.GetDateTime(5);
                 }
+                string trangthai = reader.GetString(6);
                 PhieuMuonSachDAO pmsdao = new PhieuMuonSachDAO();
                 pmsdao.MaPhieuMuon = idphieu;
                 pmsdao.TenNguoiMuonSach = tennguoimuon;
@@ -120,6 +121,7 @@ namespace DAL
                 pmsdao.NgayMuon = ngaymuon;
                 pmsdao.NgayDuKienTra = ngaydukientra;
                 pmsdao.NgayTraSach = ngaytra;
+                pmsdao.TrangThai = trangthai;
                 dsPhieuMuon.Add(pmsdao);
             }
             reader.Close();
@@ -295,7 +297,7 @@ namespace DAL
             command.CommandText = "  select pms.PhieuId,pms.NgayMuon,pms.NgayDuKienTra,pms.NgayTraSach " +
                 "from PhieuMuonSach pms,Sach s,NguoiMuonSach nms " +
                 "where pms.SachId=s.Id and pms.NguoiMuonSachId=nms.Id and nms.HoTen=N'" + pmss.TenNguoiMuonSach+"' " +
-                "and pms.NgayTraSach is null";
+                "and pms.NgayTraSach is null and pms.TrangThai=N'Chưa Trả Sách'";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())

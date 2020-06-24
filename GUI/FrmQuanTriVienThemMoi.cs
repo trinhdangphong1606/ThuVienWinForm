@@ -82,13 +82,13 @@ namespace GUI
                 errorMatKhau1.SetError(txtMatKhau1, "Xin Nhập Mật Khẩu:");
                 return;
             }
-            
+            /*
             errorKey1.SetError(txtKey1, "");
             if (txtKey1.Text == "")
             {
                 errorKey1.SetError(txtKey1, "Xin Nhập Key Restore Mật Khẩu:");
                 return;
-            }
+            }*/
             
             errorQuyen.SetError(txtQuyen, "");
             if(txtQuyen.Text=="")

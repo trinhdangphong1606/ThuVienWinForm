@@ -588,10 +588,11 @@ namespace GUI
                 {
                     ListViewItem lvi = new ListViewItem(pmsBLL.MaPhieuMuon + "");
                     lvi.SubItems.Add(pmsBLL.TenNguoiMuonSach);
-                    lvi.SubItems.Add(pmsBLL.TenSach);
+                    lvi.SubItems.Add(pmsBLL.TrangThai);
                     lvi.SubItems.Add(pmsBLL.NgayMuon.ToString());
                     lvi.SubItems.Add(pmsBLL.NgayDuKienTra.ToString());
                     lvi.SubItems.Add(pmsBLL.NgayTraSach.ToString());
+                    lvi.SubItems.Add(pmsBLL.TenSach);
                     lvTHDSP.Items.Add(lvi);
                 }
             }
