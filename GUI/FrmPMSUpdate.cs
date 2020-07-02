@@ -553,6 +553,7 @@ namespace GUI
                     XuLySachLoi();
                     LoadLDS();
                     LoadText();
+                    HienThiDSPhieuLoi();
                 }
                 
             }
@@ -752,7 +753,19 @@ namespace GUI
 
         }
 
-        
+        private void txtTHTrangThai_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTHTrangThai.Text== "Sách bị lỗi")
+            {
+                btTHXuLyLoi.Enabled = true;
+            }
+            else
+            {
+                btTHXuLyLoi.Enabled = false;
+            }
+        }
+
+
         //End tab Tổng Hợp
     }
 }

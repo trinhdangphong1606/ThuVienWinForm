@@ -33,8 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtQuyen = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtKey2 = new System.Windows.Forms.TextBox();
-            this.txtKey1 = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMatKhau2 = new System.Windows.Forms.TextBox();
@@ -50,6 +48,8 @@
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtKey2 = new System.Windows.Forms.TextBox();
+            this.txtKey1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.errorTen = new System.Windows.Forms.ErrorProvider(this.components);
@@ -128,7 +128,7 @@
             this.txtQuyen.Name = "txtQuyen";
             this.txtQuyen.Size = new System.Drawing.Size(240, 23);
             this.txtQuyen.TabIndex = 44;
-            this.txtQuyen.Text = "User";
+            this.txtQuyen.Text = "Đọc Giả";
             this.txtQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
@@ -140,28 +140,6 @@
             this.label11.Size = new System.Drawing.Size(55, 17);
             this.label11.TabIndex = 42;
             this.label11.Text = "Quyền";
-            // 
-            // txtKey2
-            // 
-            this.txtKey2.BackColor = System.Drawing.SystemColors.Control;
-            this.txtKey2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKey2.Location = new System.Drawing.Point(432, 130);
-            this.txtKey2.Name = "txtKey2";
-            this.txtKey2.PasswordChar = '*';
-            this.txtKey2.Size = new System.Drawing.Size(225, 23);
-            this.txtKey2.TabIndex = 10;
-            this.txtKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtKey1
-            // 
-            this.txtKey1.BackColor = System.Drawing.SystemColors.Control;
-            this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKey1.Location = new System.Drawing.Point(154, 130);
-            this.txtKey1.Name = "txtKey1";
-            this.txtKey1.PasswordChar = '*';
-            this.txtKey1.Size = new System.Drawing.Size(217, 23);
-            this.txtKey1.TabIndex = 9;
-            this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTenDangNhap
             // 
@@ -306,6 +284,28 @@
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Họ Tên";
+            // 
+            // txtKey2
+            // 
+            this.txtKey2.BackColor = System.Drawing.SystemColors.Control;
+            this.txtKey2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKey2.Location = new System.Drawing.Point(432, 130);
+            this.txtKey2.Name = "txtKey2";
+            this.txtKey2.PasswordChar = '*';
+            this.txtKey2.Size = new System.Drawing.Size(225, 23);
+            this.txtKey2.TabIndex = 10;
+            this.txtKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtKey1
+            // 
+            this.txtKey1.BackColor = System.Drawing.SystemColors.Control;
+            this.txtKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKey1.Location = new System.Drawing.Point(154, 130);
+            this.txtKey1.Name = "txtKey1";
+            this.txtKey1.PasswordChar = '*';
+            this.txtKey1.Size = new System.Drawing.Size(217, 23);
+            this.txtKey1.TabIndex = 9;
+            this.txtKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 

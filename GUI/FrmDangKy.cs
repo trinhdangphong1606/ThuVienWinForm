@@ -114,7 +114,7 @@ namespace GUI
             qtvien.DiaChi = txtDiaChi.Text;
             qtvien.MatKhau = txtMatKhau1.Text;
             qtvien.KeyRestore = "resetpassword";
-            qtvien.Quyen = txtQuyen.Text;
+            qtvien.Quyen = "User";
 
             QuanTriVienBLL qtvbbl = new QuanTriVienBLL();
             bool qtvienbll = qtvbbl.DangKy(qtvien);

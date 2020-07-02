@@ -242,7 +242,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTen.Location = new System.Drawing.Point(303, 204);
+            this.btnTimTen.Location = new System.Drawing.Point(318, 203);
             this.btnTimTen.Name = "btnTimTen";
             this.btnTimTen.Size = new System.Drawing.Size(78, 24);
             this.btnTimTen.TabIndex = 45;
@@ -255,7 +255,7 @@
             this.txtTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimTen.Location = new System.Drawing.Point(15, 205);
             this.txtTimTen.Name = "txtTimTen";
-            this.txtTimTen.Size = new System.Drawing.Size(282, 23);
+            this.txtTimTen.Size = new System.Drawing.Size(297, 23);
             this.txtTimTen.TabIndex = 44;
             this.txtTimTen.Text = "Nhập Tên Cần Tim";
             this.txtTimTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -267,9 +267,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.Location = new System.Drawing.Point(482, 204);
+            this.btnUser.Location = new System.Drawing.Point(537, 205);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(102, 24);
+            this.btnUser.Size = new System.Drawing.Size(131, 24);
             this.btnUser.TabIndex = 43;
             this.btnUser.Text = "Đọc Giả";
             this.btnUser.UseVisualStyleBackColor = true;
@@ -295,9 +295,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(387, 204);
+            this.btnAdmin.Location = new System.Drawing.Point(402, 204);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(89, 24);
+            this.btnAdmin.Size = new System.Drawing.Size(129, 24);
             this.btnAdmin.TabIndex = 40;
             this.btnAdmin.Text = "Thủ Thư";
             this.btnAdmin.UseVisualStyleBackColor = true;

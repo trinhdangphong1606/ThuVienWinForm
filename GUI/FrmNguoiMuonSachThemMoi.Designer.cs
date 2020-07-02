@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.GrBChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnHuyThaoTac = new System.Windows.Forms.Button();
             this.btnThemMoiDG = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -48,11 +52,7 @@
             this.errorNamSinh = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorDiaChi = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.errorPass = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.GrBChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSoDienThoai)).BeginInit();
@@ -97,6 +97,45 @@
             this.GrBChiTiet.TabIndex = 32;
             this.GrBChiTiet.TabStop = false;
             // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(140, 128);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(247, 23);
+            this.txtTenDangNhap.TabIndex = 6;
+            this.txtTenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 17);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Tên Đăng Nhập";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(491, 128);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(169, 23);
+            this.txtPass.TabIndex = 7;
+            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(408, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Mật Khẩu";
+            // 
             // btnHuyThaoTac
             // 
             this.btnHuyThaoTac.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -128,10 +167,10 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(123, 101);
+            this.txtEmail.Location = new System.Drawing.Point(140, 101);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(537, 23);
-            this.txtEmail.TabIndex = 28;
+            this.txtEmail.Size = new System.Drawing.Size(520, 23);
+            this.txtEmail.TabIndex = 5;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -147,10 +186,10 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(123, 72);
+            this.txtDiaChi.Location = new System.Drawing.Point(140, 72);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(537, 23);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.Size = new System.Drawing.Size(520, 23);
+            this.txtDiaChi.TabIndex = 4;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -169,7 +208,7 @@
             this.txtNamSinh.Location = new System.Drawing.Point(491, 43);
             this.txtNamSinh.Name = "txtNamSinh";
             this.txtNamSinh.Size = new System.Drawing.Size(169, 23);
-            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.TabIndex = 3;
             this.txtNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -185,19 +224,19 @@
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(123, 43);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(140, 43);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(260, 23);
-            this.txtSoDienThoai.TabIndex = 14;
+            this.txtSoDienThoai.Size = new System.Drawing.Size(243, 23);
+            this.txtSoDienThoai.TabIndex = 2;
             this.txtSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTen
             // 
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(123, 14);
+            this.txtTen.Location = new System.Drawing.Point(140, 14);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(537, 23);
-            this.txtTen.TabIndex = 13;
+            this.txtTen.Size = new System.Drawing.Size(520, 23);
+            this.txtTen.TabIndex = 1;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -240,48 +279,9 @@
             // 
             this.errorEmail.ContainerControl = this;
             // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(491, 128);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(169, 23);
-            this.txtPass.TabIndex = 35;
-            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(408, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Mật Khẩu";
-            // 
             // errorPass
             // 
             this.errorPass.ContainerControl = this;
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.Location = new System.Drawing.Point(140, 128);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(247, 23);
-            this.txtTenDangNhap.TabIndex = 37;
-            this.txtTenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 17);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Tên Đăng Nhập";
             // 
             // FrmNguoiMuonSachThemMoi
             // 
